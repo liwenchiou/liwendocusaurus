@@ -74,7 +74,9 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/og-image.png",
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: "LW Docusaurus",
