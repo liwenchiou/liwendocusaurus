@@ -21,7 +21,7 @@ sidebar_position: 28
 當某個路由（Page）出錯時，Next.js 會尋找最近的 `error.tsx` 並渲染它，而頁面的其他部分（如 Navigation 或 Sidebar）依然可以正常運作。
 
 [檔案：src/app/dashboard/error.tsx]
-```typescript=
+```typescript
 'use client'; // 錯誤元件必須是 Client Component
 
 import &#123; useEffect &#125; from 'react';
@@ -61,7 +61,7 @@ export default function Error(&#123;
 
 Server Actions 的錯誤不會觸發 `error.tsx` 的顯示（因為它們是異步動作而非渲染錯誤）。我們應該在 Action 中捕捉錯誤並回傳狀態。
 
-```typescript=
+```typescript
 export async function deleteData(id: string) &#123;
   try &#123;
     await db.data.delete(&#123; where: &#123; id &#125; &#125;);

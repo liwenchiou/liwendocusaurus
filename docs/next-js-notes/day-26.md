@@ -32,7 +32,7 @@ npm install next-cloudinary
 ```
 
 [範例程式碼：上傳按鈕組件]
-```typescript=
+```typescript
 'use client';
 
 import &#123; CldUploadWidget &#125; from 'next-cloudinary';
@@ -63,7 +63,7 @@ export default function ImageUpload(&#123; onUpload &#125;: &#123; onUpload: (ur
 當 Cloudinary 回傳圖片網址後，我們只需透過 Server Action 將該字串存入 Prisma 即可。
 
 [範例程式碼]
-```typescript=
+```typescript
 // src/app/actions.ts
 export async function updateCover(imageUrl: string) &#123;
   await db.post.update(&#123;

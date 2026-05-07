@@ -24,7 +24,7 @@ sidebar_position: 25
 
 防抖的原理是：當使用者停止輸入超過一段時間（例如 500ms），我們才正式發送請求。
 
-```typescript=
+```typescript
 'use client';
 
 import &#123; usePathname, useRouter, useSearchParams &#125; from 'next/navigation';
@@ -61,7 +61,7 @@ export default function SearchBar() &#123;
 
 在 Server Component 中，我們根據網址參數進行 Prisma 的模糊查詢。
 
-```typescript=
+```typescript
 // src/app/posts/page.tsx
 export default async function Page(&#123; searchParams &#125;) &#123;
   const query = searchParams?.query || '';

@@ -3,7 +3,7 @@ slug: react-cdn-usage
 title: "直接在 HTML 中使用 React (CDN 版)"
 date: 2026-04-21T06:36:45.243399+00:00
 authors: [liwen]
-tags: [React, 技術]
+tags: [React]
 ---
 
 # 直接在 HTML 中使用 React
@@ -29,20 +29,20 @@ tags: [React, 技術]
 4. 在 script 中快樂的寫 React
 ```html
 <script type="text/babel">
-    const { useState } = React;
+    const &#123; useState &#125; = React;
 
-    function MyComponent() {
+    function MyComponent() &#123;
         const [status, setStatus] = useState("正在學習 React");
 
         return (
             <div>
-                <h1>狀態：{status}</h1>
-                <button onClick={() => setStatus("已經學會了！")}>
+                <h1>狀態：&#123;status&#125;</h1>
+                <button onClick=&#123;() => setStatus("已經學會了！")&#125;>
                     點我更新
                 </button>
             </div>
         );
-    }
+    &#125;
 
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(<MyComponent />);

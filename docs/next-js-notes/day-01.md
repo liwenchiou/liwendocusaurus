@@ -27,7 +27,9 @@ sidebar_position: 1
 在建構系統前，穩定的環境是首要條件。
 
 :::info 環境要求
+
 請確保您的 Node.js 版本符合官方建議 (**v18.18+**)。考量到長期維護，建議使用 **Node.js v20 (LTS)** 以上版本。建議安裝 [nvm](https://github.com/nvm-sh/nvm) 進行版本管理。
+
 :::
 
 執行以下指令開啟專案：
@@ -45,7 +47,9 @@ npx create-next-app@latest
 | **No, customize settings** | 不，我要自定義設定 | (手動挑選) |
 
 :::success 專家建議
+
 如果您是初學者，選擇第一個 **"Yes, use recommended defaults"** 是最穩妥的做法。這會為您配置目前業界主流的開發環境。
+
 :::
 
 :::details 點擊展開：專案初始化截圖
@@ -63,6 +67,7 @@ npx create-next-app@latest
 4. 開啟瀏覽器訪問 [http://localhost:3000](http://localhost:3000)。
 
 :::tip 成功畫面
+
 看到下圖表示您的 Next.js 環境已成功啟動！
 
 ![啟動成功](https://hackmd.io/_uploads/S1hOKAT6bl.png)

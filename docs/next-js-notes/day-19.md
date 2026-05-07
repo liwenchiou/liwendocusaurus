@@ -32,7 +32,7 @@ AUTH_SECRET=你的隨機字串
 我們建議將 Auth 的邏輯獨立出來，方便在 Server 端與 Client 端共用。
 
 [檔案：src/auth.ts]
-```typescript=
+```typescript
 import NextAuth from "next-auth";
 import GitHub from "next-auth/providers/github";
 
@@ -46,7 +46,7 @@ export const &#123; handlers, signIn, signOut, auth &#125; = NextAuth(&#123;
 利用 Day 18 學過的 Route Handlers，我們需要為 Auth 建立一個全捕捉路徑來處理回傳的請求。
 
 [檔案：src/app/api/auth/[...nextauth]/route.ts]
-```typescript=
+```typescript
 import &#123; handlers &#125; from "@/auth";
 export const &#123; GET, POST &#125; = handlers;
 ```
@@ -55,7 +55,7 @@ export const &#123; GET, POST &#125; = handlers;
 
 在 Server Component 中，獲取當前登入者資訊變得極其簡單。
 
-```typescript=
+```typescript
 import &#123; auth &#125; from "@/auth";
 
 export default async function ProfilePage() &#123;
@@ -78,7 +78,7 @@ export default async function ProfilePage() &#123;
 配合 Day 15 的 Middleware，我們可以一行代碼實現「未登入禁止進入管理後台」。
 
 [檔案：src/middleware.ts]
-```typescript=
+```typescript
 export &#123; auth as middleware &#125; from "@/auth"
 
 export const config = &#123;

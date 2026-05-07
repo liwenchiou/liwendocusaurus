@@ -3,7 +3,7 @@ slug: imposter-syndrome
 title: "冒名頂替症候群 (Imposter Syndrome) 深度解析"
 date: 2026-04-21T06:46:36.190887+00:00
 authors: [liwen]
-tags: [生活筆記, 生活]
+tags: [生活]
 ---
 
 # 冒名頂替症候群 (Imposter Syndrome) 深度解析

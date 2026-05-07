@@ -31,7 +31,7 @@ Next.js 15 (React 19) 引入了官方的 `useOptimistic` Hook，讓這種複雜�
 假設我們有一個留言列表，我們希望使用者一按送出，留言就立刻出現在清單底部。
 
 [範例程式碼：Client Component]
-```typescript=
+```typescript
 'use client';
 
 import &#123; useOptimistic &#125; from 'react';

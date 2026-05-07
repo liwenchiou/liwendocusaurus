@@ -21,7 +21,7 @@ sidebar_position: 15
 在 `src` 目錄下（與 `app` 同級）建立一個名為 `middleware.ts` 的檔案。Next.js 會自動識別它。
 
 [檔案：src/middleware.ts]
-```typescript=
+```typescript
 import &#123; NextResponse &#125; from 'next/server';
 import type &#123; NextRequest &#125; from 'next/server';
 

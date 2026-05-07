@@ -3,7 +3,7 @@ slug: 雲端邊緣的折翼nextjs-部署到-cloudflare-pages-的-48-小時奮鬥
 title: "雲端邊緣的折翼：Next.js 部署到 Cloudflare Pages 的 48 小時奮鬥實錄"
 date: 2026-04-23T00:56:25.022951+00:00
 authors: [liwen]
-tags: [技術]
+tags: [cloudflare,NextJs]
 ---
 
 在 Web 開發的世界裡，我們通常會從 Vercel 開始。它很美、很快、很有質感，就像是一個精心裝潢的豪華公寓。但隨著專案成長，我們開始在想：有沒有那種既能擁有極致性能，成本又更平易近人的「自由之地」？

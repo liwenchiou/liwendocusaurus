@@ -45,7 +45,7 @@ model Tag &#123;
 
 
 [範例程式碼：src/app/actions.ts]
-```typescript=
+```typescript
 import &#123; db &#125; from "@/lib/db";
 
 export async function createPostWithTags(formData: FormData) &#123;
@@ -74,7 +74,7 @@ export async function createPostWithTags(formData: FormData) &#123;
 * **include**：抓取主體的所有欄位，並加上關聯資料。
 * **select**：精確指定要回傳的欄位（效能最佳化首選）。
 
-```typescript=
+```typescript
 const posts = await db.post.findMany(&#123;
   where: &#123; published: true &#125;,
   include: &#123;

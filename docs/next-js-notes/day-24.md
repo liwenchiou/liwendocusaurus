@@ -22,7 +22,7 @@ sidebar_position: 24
 
 這是最常見的做法，優點是 SEO 友善，且使用者可以透過連結分享特定的頁碼。
 
-```typescript=
+```typescript
 // src/app/posts/page.tsx
 import &#123; db &#125; from "@/lib/db";
 
@@ -64,7 +64,7 @@ export default async function PostsPage(&#123;
 
 不要去監聽 `window.onscroll`，那太耗效能。我們在列表底部放一個「感應元件」，當它出現在視窗中時才觸發載入。
 
-```typescript=
+```typescript
 "use client";
 import &#123; useEffect, useState &#125; from "react";
 import &#123; useInView &#125; from "react-intersection-observer"; // 推薦套件

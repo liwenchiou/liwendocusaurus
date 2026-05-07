@@ -3,7 +3,7 @@ slug: redux-toolkit
 title: "Redux Toolkit (RTK) 狀態管理實戰"
 date: 2026-04-21T06:36:46.633577+00:00
 authors: [liwen]
-tags: [React, 技術]
+tags: [React]
 ---
 
 ## 核心概念
@@ -21,68 +21,68 @@ Selector：從倉庫裡挑出你要的那筆資料。
  */
 
 // 1. 從全域變數解構工具 (這兩行是為了讓瀏覽器認得 RTK 與 ReactRedux)
-const { createSlice, configureStore } = window.RTK || {};
-const { Provider, useSelector, useDispatch } = window.ReactRedux || {};
+const &#123; createSlice, configureStore &#125; = window.RTK || &#123;&#125;;
+const &#123; Provider, useSelector, useDispatch &#125; = window.ReactRedux || &#123;&#125;;
 
 // ---------------------------------------------------
 // 2. 建立 Slice (定義資料表與操作方法)
 // ---------------------------------------------------
-const inventorySlice = createSlice({
+const inventorySlice = createSlice(&#123;
   name: 'inventory',      // 模組名稱
-  initialState: {         // 初始狀態
+  initialState: &#123;         // 初始狀態
     stock: 100 
-  },
-  reducers: {             
-    restock: (state, action) => {
+  &#125;,
+  reducers: &#123;             
+    restock: (state, action) => &#123;
       // 在 RTK 裡可以直接修改 state (Immer.js 處理)
       state.stock += action.payload; 
-    },
-    sell: (state) => {
+    &#125;,
+    sell: (state) => &#123;
       if (state.stock > 0) state.stock -= 1;
-    }
-  }
-});
+    &#125;
+  &#125;
+&#125;);
 
-const { restock, sell } = inventorySlice.actions;
+const &#123; restock, sell &#125; = inventorySlice.actions;
 
 // ---------------------------------------------------
 // 3. 建立 Store (建立大倉庫)
 // ---------------------------------------------------
-const store = configureStore({
-  reducer: {
+const store = configureStore(&#123;
+  reducer: &#123;
     inventory: inventorySlice.reducer
-  }
-});
+  &#125;
+&#125;);
 
 // ---------------------------------------------------
 // 4. React 組件 (UI 層)
 // ---------------------------------------------------
-function InventoryApp() {
+function InventoryApp() &#123;
   const stock = useSelector((state) => state.inventory.stock);
   const dispatch = useDispatch();
 
   return (
-    <div style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '10px' }}>
+    <div style=&#123;&#123; padding: '20px', border: '1px solid #ddd', borderRadius: '10px' &#125;&#125;>
       <h2>ERP 庫存系統 (RTK 版)</h2>
-      <p>目前剩餘庫存：<strong>{stock}</strong></p>
+      <p>目前剩餘庫存：<strong>&#123;stock&#125;</strong></p>
       
-      <button onClick={() => dispatch(sell())}>
+      <button onClick=&#123;() => dispatch(sell())&#125;>
         賣出一件 (-1)
       </button>
 
-      <button onClick={() => dispatch(restock(10))} style={{ marginLeft: '10px' }}>
+      <button onClick=&#123;() => dispatch(restock(10))&#125; style=&#123;&#123; marginLeft: '10px' &#125;&#125;>
         進貨 (+10)
       </button>
     </div>
   );
-}
+&#125;
 
 // ---------------------------------------------------
 // 5. 使用 Provider 包裹 App
 // ---------------------------------------------------
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Provider store={store}>
+  <Provider store=&#123;store&#125;>
     <InventoryApp />
   </Provider>
 );

@@ -24,7 +24,7 @@ Next.js 為了極致的效能，預設會對渲染結果進行積極的快取。
 
 這是最簡單直接的方法。如果你在 `/posts` 頁面新增了資料，就告訴 Next.js 重新驗證該路徑。
 
-```typescript=
+```typescript
 // src/app/actions.ts
 import &#123; revalidatePath &#125; from 'next/cache';
 import &#123; db &#125; from '@/lib/db';
@@ -42,7 +42,7 @@ export async function deletePost(id: string) &#123;
 
 當你的資料出現在多個不同的頁面（例如：首頁的「最新文章」與文章列表頁），使用 `revalidatePath` 就顯得力不從心。這時我們應該在抓取資料時打上「標籤 (Tag)」。
 
-```typescript=
+```typescript
 1. **抓取資料時設定 Tag：**
    const data = await fetch('...', &#123; next: &#123; tags: ['posts'] &#125; &#125;);
 
@@ -61,7 +61,7 @@ export async function deletePost(id: string) &#123;
 
 通常在 Server Action 執行成功後，我們會希望跳轉回列表頁。記得 `redirect` 必須寫在 `revalidate` 之後。
 
-```typescript=
+```typescript
 import &#123; redirect &#125; from 'next/navigation';
 
 export async function updatePost(formData: FormData) &#123;

@@ -1,51 +1,39 @@
 ---
-title: "Day 09 - 錯誤處理：優雅地面對程式崩潰"
+title: "Day 09 - 錯誤處理：優雅的降級與崩潰防護"
 sidebar_label: "Day 09 - 錯誤處理"
 sidebar_position: 9
 ---
 
-# Next.js 30 天全端實戰：Day 09 - 錯誤處理：優雅地面對程式崩潰
+# Day 09 - 錯誤處理：優雅的降級與崩潰防護
 
-## 一、 前言
-
-身為開發者，我們無法保證後端 API 永遠正常，也無法保證網路永遠順暢。如果程式噴錯了，直接顯示 React 的紅色報錯畫面或是一片空白，會讓使用者對產品失去信心。
-
-Next.js 透過特定的檔案規範，讓我們能以「局部化」的方式捕捉錯誤。這意味著如果側邊欄的小元件出錯了，主頁面依然可以運作。今天我們就來學習如何架設這道「防火牆」。
+在複雜的應用中，API 噴錯或伺服器異常是不可避免的。Next.js 的 App Router 引入了 **「階層式錯誤處理」**，讓您能針對局部故障進行降級，而不至於讓整個網站白屏。
 
 ---
 
-## 二、 本文：錯誤處理的核心機制
+## 💡 本文：Error Boundary 與降級機制
 
-### 1. 使用 error.tsx (自動化錯誤邊界)
+### 1. error.tsx 檔案規範
 
-就像 `loading.tsx` 一樣，只要在資料夾內建立 `error.tsx`，它就會成為該路由的「錯誤邊界 (Error Boundary)」。
+在 Next.js 中，當某個路由發生錯誤時，系統會自動尋找最近的 `error.tsx` 並顯示它。
 
-* 運作方式：當該層級或子層級的組件出錯時，Next.js 會自動「攔截」錯誤，並顯示 `error.tsx` 的內容，而不是整頁壞掉。
+*   **Client Component**：注意，`error.tsx` 必須宣告為 `"use client"`。
+*   **重試機制**：它預設會收到 `reset()` 函式，讓使用者能點擊按鈕重新嘗試渲染。
 
 ```javascript
-"use client"; // 錯誤組件必須是 Client Component
+// src/app/dashboard/error.tsx
+'use client'
 
-import &#123; useEffect &#125; from 'react';
-
-export default function Error(&#123;
-  error,
-  reset,
-&#125;: &#123;
+export default function Error(&#123; error, reset &#125;: &#123; 
   error: Error & &#123; digest?: string &#125;;
   reset: () => void;
 &#125;) &#123;
-  useEffect(() => &#123;
-    // 你可以將錯誤記錄到 Sentry 或其他監控服務
-    console.error(error);
-  &#125;, [error]);
-
   return (
-    <div className="p-6 text-center border-2 border-red-500 rounded-lg">
-      <h2 className="text-xl font-bold text-red-600">哎呀！出錯了</h2>
-      <p className="my-4 text-gray-600">我們在搬運資料時遇到了一點小麻煩。</p>
-      <button
-        onClick=&#123;() => reset()&#125; // 嘗試重新渲染，看能不能修復錯誤
-        className="px-4 py-2 bg-blue-500 text-white rounded"
+    <div className="p-4 bg-red-50 border border-red-200 rounded">
+      <h2 className="text-red-700">糟糕！出錯了</h2>
+      <p className="text-sm text-red-500 mb-4">&#123;error.message&#125;</p>
+      <button 
+        onClick=&#123;() => reset()&#125;
+        className="px-4 py-2 bg-red-600 text-white rounded"
       >
         再試一次
       </button>
@@ -54,58 +42,42 @@ export default function Error(&#123;
 &#125;
 ```
 
+### 2. 局部崩潰 vs 全域崩貫
 
-### 2. 局部化攔截：不讓錯誤擴散
+Next.js 的強大之處在於 **「錯誤氣泡 (Error Bubbling)」**：
+*   **局部錯誤**：如果在 `/dashboard/settings` 出錯，只有設定頁面會顯示錯誤 UI，側邊欄與導覽列依然可以運作。
+*   **全域錯誤**：如果您要攔截最外層 Root Layout 的錯誤，需要建立 `global-error.tsx`。
 
-Next.js 的錯誤攔截是有「層級性」的。
+### 3. 如何主動觸發錯誤？
 
-
-* 如果錯誤發生在 `/dashboard/settings`：
-  - 優先尋找 `/dashboard/settings/error.tsx`。
-  - 如果沒有，則向上尋找 `/dashboard/error.tsx`。
-  - 關鍵點：外層的 Layout（如導覽列）通常會被保留，使用者依然可以點擊其他選單離開錯誤頁面。
-
-### 3. 處理「找不到網頁」：not-found.tsx
-
-當你抓取不到特定的資料（例如 ID 不存在的文章），應該主動拋出 404 狀態。
+您可以使用內建的 `notFound()` 函式來觸發 404 頁面，這對於處理「找不到商品」或「無權限文章」非常方便。
 
 ```javascript
 import &#123; notFound &#125; from 'next/navigation';
 
 export default async function PostPage(&#123; params &#125;) &#123;
   const post = await fetchPost(params.id);
-
+  
   if (!post) &#123;
-    notFound(); // 這會觸發最近的 not-found.tsx
+    notFound(); // 這會自動顯示附近的 not-found.tsx
   &#125;
-
+  
   return <div>&#123;post.title&#125;</div>;
 &#125;
 ```
 
+---
 
-### 4. 根層級的終極保護：global-error.tsx
+## 🏁 結論
 
-雖然 `app/error.tsx` 能捕捉大部分錯誤，但它抓不到最外層 `app/layout.tsx` 本身的錯誤。這時你需要 `app/global-error.tsx` 來作為最後一道防線。
+| 工具檔案 | 作用範圍 | 特性 |
+| :--- | :--- | :--- |
+| **error.tsx** | 路由層級 | 攔截該目錄下的所有錯誤，支援 reset。 |
+| **not-found.tsx** | 404 頁面 | 透過 `notFound()` 函式觸發。 |
+| **global-error.tsx** | 根路徑 (Root) | 唯一的全站崩潰保護，必須包含 `<html>` 標籤。 |
 
 ---
 
-## 三、 結論：把錯誤變成熟的使用者體驗
-
-錯誤處理不只是為了 debug，更是為了 UX。
-提供一個「再試一次」的按鈕，往往能解決 80% 的暫時性網路問題。
-
-* 今日小結：
-  - `error.tsx` 必須標註 `use client`。
-  - `reset()` 函式能讓使用者嘗試重新渲染，不需要手動重新整理整頁。
-  - `notFound()` 配合 `not-found.tsx` 處理資源不存在的情況。
-
-* 專家筆記：
-    * 在開發模式下，Next.js 依然會顯示詳細的錯誤堆疊（Dev Overlay）方便你修復；
-    * 但在部署後的生產環境中，使用者只會看到你精美設計的 `error.tsx` 畫面。
-
----
-
-參考來源：
-1. Next.js Documentation - Error Handling (https://nextjs.org/docs/app/building-your-application/routing/error-handling)
-2. React Error Boundaries (https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary)
+> **參考來源：**
+> 1. [Next.js - Error Handling Guide](https://nextjs.org/docs/app/building-your-application/routing/error-handling)
+> 2. [Next.js API - notFound Function](https://nextjs.org/docs/app/api-reference/functions/not-found)

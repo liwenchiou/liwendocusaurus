@@ -48,7 +48,7 @@ src/app/
 這兩者通常是「組合技」。我們在 Layout 中定義一個 `@modal` 插槽：
 
 [檔案：src/app/layout.tsx]
-```typescript=
+```typescript
 export default function Layout(&#123; children, modal &#125;) &#123;
   return (
     <html>

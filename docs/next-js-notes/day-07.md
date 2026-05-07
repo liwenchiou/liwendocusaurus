@@ -4,79 +4,72 @@ sidebar_label: "Day 07 - 快取與更新"
 sidebar_position: 7
 ---
 
-# Next.js 30 天全端實戰：Day 07 - 快取與更新：超直覺的貨架管理學
+# Day 07 - 快取與更新：超直覺的貨架管理學
 
-## 一、 前言
+Next.js 預設會對資料進行極致的快取 (Caching)，這能讓您的網站快如閃電，但有時也會導致「資料不更新」的困擾。
 
-在 Next.js 中，「快取 (Caching)」就是你的貨架。
-我們的目標是：讓客人拿貨最快（效能高），且確保貨架上的牛奶沒有過期（資料更新）。
-今天我們就用「連鎖超商」的邏輯來拆解 Next.js 的快取策略。
+理解快取機制就像管理超級市場的貨架：您需要決定什麼時候上新貨，什麼時候把舊貨撤下來。
 
 ---
 
-## 二、 本文：三種白話貨架管理法
+## 💡 本文：Next.js 快取策略與重新驗證
 
-### 1. 靜態渲染 (Static Rendering) ——「預製便當」
-這是 Next.js 的預設行為，也是最快的模式。
+### 1. 靜態渲染 vs 動態渲染
 
-* 概念：你在總部（建置專案時）就把便當做好了，送到全台門市。
-* 狀況：除非你重新部署專案（總部改版），否則客人永遠拿到同樣的便當。
-* 適用：關於我們、公司介紹、歷史文章。
+*   **靜態渲染 (Static)**：在建置時 (Build Time) 抓取資料，適合部落格或說明頁面。
+*   **動態渲染 (Dynamic)**：在請求時 (Request Time) 抓取資料，適合個人化頁面（如購物車）。
 
-### 2. 定時重新驗證 (Time-based Revalidation) ——「自動補貨」
-如果你希望資料每隔一段時間自動更新，不需要手動干預。
+### 2. 資料重新驗證 (Revalidation)
 
-* 概念：你規定貨架每 60 分鐘要檢查一次。
-* 運作：
-  1. 前 60 分鐘，客人都拿舊貨（極速）。
-  2. 60 分鐘後的「第一個」客人進來，雖然他還是拿到舊貨，但他會「觸發」後台趕快去做新便當。
-  3. 下一個客人進來，就有新鮮便當可以吃了。
+如果您希望快取資料能定期更新，可以使用以下兩種方式：
 
-
+#### ⏰ 基於時間的更新 (Time-based)
+設定資料在一定時間後自動過期。
 
 ```javascript
-// 每 3600 秒 (1小時) 自動更新一次資料
-const res = await fetch('https://api.example.com/price', &#123; 
-  next: &#123; revalidate: 3600 &#125; 
-&#125;);
+fetch('https://api.example.com/data', &#123; next: &#123; revalidate: 3600 &#125; &#125;);
+// 這表示資料每小時會自動重新驗證一次
 ```
 
-
-### 3. 按需重新驗證 (On-demand Revalidation) ——「標籤快遞」
-這是最聰明、最省資源的做法，也就是「沒壞就別換，壞了馬上換」。
-
-* 概念：給貨架貼上標籤。只要總部發出「這類產品改版」的通知，門市會立刻丟掉舊貨。
-* 適用：電商庫存、個人資料修改、部落格後台存檔。
+#### ⚡ 隨選更新 (On-demand)
+當資料庫變動時，主動通知 Next.js 清除快取。
 
 ```javascript
-//1. 抓資料時貼標籤：
-const res = await fetch('https://api.example.com/data', &#123; 
-  next: &#123; tags: ['my-data-tag'] &#125; 
-&#125;);
+import &#123; revalidatePath, revalidateTag &#125; from 'next/cache';
 
-//2. 資料變動時「撕標籤」（清除快取）：
-import &#123; revalidateTag &#125; from 'next/cache';
-// 在 Server Action 中呼叫，瞬間讓所有貼有 my-data-tag 的快取失效
-revalidateTag('my-data-tag'); 
+// 在 Server Action 中使用
+export async function updatePost() &#123;
+  await db.update();
+  revalidatePath('/posts'); // 立即更新 /posts 頁面的所有快取
+&#125;
 ```
----
 
-## 三、 結論：快取是為了把資源留給對的人
+### 3. 強制切換為動態渲染
 
-理解了這三種模式，你就能隨心所欲地控制網頁的「新鮮度」。
+如果您希望某個頁面永遠不要被快取，可以使用以下配置：
 
-* 今日小結：
-  - 想要最快 -> 用預設快取。
-  - 資料會變但不必即時 -> 設定 revalidate 時間。
-  - 資料一變網頁就要同步 -> 使用 revalidateTag。
+```javascript
+export const dynamic = 'force-dynamic';
 
-* 專家筆記：
-    - 在開發模式 (`npm run dev`) 下，你會發現快取行為有時不如預期，這是正常的。
-    - 為了開發方便，Next.js 在開發模式會減少快取干擾。
-    - 真正的快取威力要在生產模式 (`npm run build && npm start`) 才能完整體會。
+export default async function AdminDashboard() &#123;
+  // 這裡的資料每次造訪都會重新抓取
+&#125;
+```
 
 ---
 
-參考來源：
-1. Next.js Documentation - Caching Overview (https://nextjs.org/docs/app/building-your-application/caching)
-2. Next.js Data Fetching - Revalidating (https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating#revalidating-data)
+## 🏁 結論
+
+快取是 Next.js 的雙面刃：用得好，效能頂天；用不好，資料失真。
+
+| 更新方式 | 適用場景 | 核心指令 |
+| :--- | :--- | :--- |
+| **靜態生成** | 不常變動的內容 | 預設行為 |
+| **定時更新** | 新聞列表、股市（非秒級） | `revalidate: 60` |
+| **手動更新** | 留言板、後台編輯完成後 | `revalidatePath()` |
+
+---
+
+> **參考來源：**
+> 1. [Next.js - Caching Guide](https://nextjs.org/docs/app/building-your-application/caching)
+> 2. [Next.js API - revalidatePath](https://nextjs.org/docs/app/api-reference/functions/revalidatePath)

@@ -29,7 +29,7 @@ src/app/
 ```
 ### 2. 基本用法：處理 GET 與 POST
 
-```typescript=
+```typescript
 import &#123; NextResponse &#125; from 'next/server';
 
 // 處理 GET 請求：獲取資料

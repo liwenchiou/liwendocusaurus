@@ -3,7 +3,7 @@ slug: engineer-evaluation-psychology
 title: "工程師評價心理學：深度學習筆記"
 date: 2026-04-21T06:46:35.933454+00:00
 authors: [liwen]
-tags: [生活筆記, 生活]
+tags: [生活]
 ---
 
 # 工程師評價心理學：深度學習筆記

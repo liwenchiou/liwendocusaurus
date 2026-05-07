@@ -62,7 +62,7 @@ npx prisma migrate dev --name init
 為了避免在開發環境中因為 Next.js 的 Hot Reload 導致建立過多資料庫連線，我們通常會寫一個單例（Singleton）。
 
 [檔案：src/lib/db.ts]
-```typescript=
+```typescript
 import &#123; PrismaClient &#125; from "@prisma/client";
 
 const prismaClientSingleton = () => new PrismaClient();
@@ -76,7 +76,7 @@ if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = db;
 
 現在，你可以在 Server Component 裡直接呼叫 `db`，且享有完整的 TypeScript 補全。
 
-```typescript=
+```typescript
 import &#123; db &#125; from "@/lib/db";
 
 export default async function PostsPage() &#123;

@@ -3,7 +3,7 @@ slug: vite-setup-guide
 title: "使用 Vite 建立 React 專案"
 date: 2026-04-21T06:36:44.990481+00:00
 authors: [liwen]
-tags: [React, 技術]
+tags: [React]
 ---
 
 # 使用 Vite 建立 React 專案

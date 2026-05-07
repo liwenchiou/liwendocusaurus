@@ -23,7 +23,7 @@ sidebar_position: 20
 首先，在 `auth.ts` 設定中告訴 Auth.js：當需要登入時，請導向我們自己寫的路徑。
 
 [檔案：src/auth.ts]
-```typescript=
+```typescript
 export const &#123; handlers, signIn, signOut, auth &#125; = NextAuth(&#123;
   providers: [GitHub, Google],
   pages: &#123;
@@ -33,7 +33,7 @@ export const &#123; handlers, signIn, signOut, auth &#125; = NextAuth(&#123;
 ```
 接著，你就可以在 `src/app/login/page.tsx` 隨意設計你的 UI，並調用 `signIn` 函式。
 
-```typescript=
+```typescript
 import &#123; signIn &#125; from "@/auth";
 
 export default function LoginPage() &#123;
@@ -58,7 +58,7 @@ export default function LoginPage() &#123;
 預設的 Session 只會包含使用者的姓名、Email 與圖片。如果你的資料庫裡有 `role` 欄位（例如：admin, user），你需要透過 `callbacks` 將它傳遞給前端。
 
 [檔案：src/auth.ts]
-```typescript=
+```typescript
 export const &#123; handlers, signIn, signOut, auth &#125; = NextAuth(&#123;
   // ... 其他設定
   callbacks: &#123;
@@ -81,7 +81,7 @@ export const &#123; handlers, signIn, signOut, auth &#125; = NextAuth(&#123;
 
 現在你可以在 Server Component 中輕鬆實現權限判斷：
 
-```typescript=
+```typescript
 import &#123; auth &#125; from "@/auth";
 import &#123; redirect &#125; from "next/navigation";
 

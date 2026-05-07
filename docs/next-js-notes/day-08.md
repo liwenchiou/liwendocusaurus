@@ -1,93 +1,79 @@
 ---
 title: "Day 08 - Loading UI 與 Streaming：別讓使用者對著白框發呆"
-sidebar_label: "Day 08 - Loading UI 與 Streaming"
+sidebar_label: "Day 08 - Loading UI"
 sidebar_position: 8
 ---
 
-# Next.js 30 天全端實戰：Day 08 - Loading UI 與 Streaming：別讓使用者對著白框發呆
+# Day 08 - Loading UI 與 Streaming：別讓使用者對著白框發呆
 
-## 一、 前言
-
-身為開發者，我們最怕遇到資料庫回應慢、API 塞車。在傳統開發中，如果資料沒抓完，整頁就會卡住，或者我們得手動寫一大堆 `if (isLoading) return <Spinner />`。
-
-Next.js 內建了「串流渲染 (Streaming)」技術。它允許伺服器先將已經準備好的部分（如導覽列、版型）傳送給瀏覽器，而慢吞吞的資料部分則在後續補上。今天我們就來學習如何輕鬆實作這種專業級的載入體驗。
+在資料獲取量大的頁面中，等待資料的時間往往會造成「白屏」現象。Next.js 透過 **Loading UI** 與 **Streaming** 技術，讓網頁能夠「邊下載邊顯示」，大幅提升感官效能。
 
 ---
 
-## 二、 本文：漸進式渲染實作
+## 💡 本文：載入體驗優化實戰
 
-### 1. 使用 loading.tsx (自動化整頁載入)
+### 1. 內建 Loading 檔案
 
-這是最簡單的方法。只要在路由資料夾內建立一個 `loading.tsx`，Next.js 就會自動幫你處理一切。
+在 App Router 中，您只需要在資料夾下建立一個 `loading.tsx`，Next.js 就會自動在該路由載入資料時顯示此畫面。
 
-* 運作方式：當該路由正在抓取資料（await）時，Next.js 會自動顯示 `loading.tsx` 的內容，直到資料準備好為止。
+*   **自動封裝**：Next.js 會自動將該層級的 `page.tsx` 包裹在 `<Suspense>` 中。
+*   **立即反應**：當使用者點擊連結時，導航會立即發生，並顯示 Loading UI。
 
 ```javascript
 // src/app/dashboard/loading.tsx
 export default function Loading() &#123;
   return (
-    <div className="animate-pulse p-6">
-      <div className="h-4 bg-gray-200 rounded w-1/4 mb-4"></div>
-      <div className="h-10 bg-gray-200 rounded mb-2"></div>
-      <div className="h-10 bg-gray-200 rounded"></div>
-      <p className="mt-4 text-gray-500">正在努力搬運資料中...</p>
+    <div className="animate-pulse p-4">
+      <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></div>
+      <div className="h-4 bg-gray-200 rounded w-1/2"></div>
     </div>
   );
 &#125;
 ```
 
+### 2. 何謂串流渲染 (Streaming)？
 
-### 2. 使用 Suspense (精準的局部載入)
+傳統 SSR 需要等「整頁」資料都抓完才能發送 HTML，而 Streaming 允許伺服器先將靜態內容發送過去，非同步載入的部分等抓完再「補上」。
 
-有時候我們不希望「整頁」都在轉圈圈，而是希望「只有慢的部分」在載入。這時我們可以使用 React 的 `<Suspense>`。
+:::tip 優點
+*   **TTFB (Time to First Byte)**：大幅縮短，瀏覽器能更快開始解析網頁。
+*   **FCP (First Contentful Paint)**：使用者能立刻看到標題與選單，而非等待全部內容。
+:::
+
+### 3. 精細控制：使用 React Suspense
+
+如果您不想要整頁 Loading，而是局部組件 Loading，可以手動使用 `<Suspense>`：
 
 ```javascript
 import &#123; Suspense &#125; from 'react';
-import SlowComponent from '@/components/SlowComponent';
+import PostsList from './PostsList';
 
 export default function Page() &#123;
   return (
     <section>
       <h1>我的儀表板</h1>
       
-      &#123;/* 導覽列和標題會立即出現 */&#125;
-      <nav>快速選單</nav>
-
-      &#123;/* 只有這個很慢的組件會被暫時替換成 Skeleton */&#125;
-      <Suspense fallback=&#123;<p>載入推薦商品中...</p>&#125;>
-        <SlowComponent />
+      {/* 只有這個組件會顯示 Loading */}
+      <Suspense fallback=&#123;<p>正在讀取文章...</p>&#125;>
+        <PostsList />
       </Suspense>
     </section>
   );
 &#125;
 ```
-### 3. 什麼是 Streaming (串流)？
-
-想像你在看線上影片，你不需要等整部電影下載完才能看，而是「邊載邊看」。Next.js 的 Streaming 也是一樣：
-1. 伺服器先傳送 Layout（導覽列、側邊欄）。
-2. 瀏覽器立刻渲染出這些「靜態」部分。
-3. 同時，伺服器繼續在後台抓資料。
-4. 資料抓完後，伺服器把剩下的 HTML 片段「噴」給瀏覽器，補上空缺。
-
-
 
 ---
 
-## 三、 結論：體感速度比實際速度更重要
+## 🏁 結論
 
-在 UX 設計中，給使用者一個「正在處理」的視覺回饋（如 Skeleton Screen），比讓他們看著白屏轉圈圈更能減少焦慮。
-
-* 今日小結：
-  - 快速處理：直接建立 `loading.tsx` 處理整頁。
-  - 精細控制：使用 `<Suspense>` 包住特定的異步組件。
-  - 核心原理：利用 Streaming 實現邊抓邊傳，打破「整頁抓完才顯示」的舊規。
-
-* 專家筆記：
-    - Skeleton Screen（骨架屏）是目前主流的 Loading UI。
-    - 在設計時，盡量讓 Loading 狀態的形狀與實際內容相近，這樣資料跳出來時才不會有明顯的位移感 (Layout Shift)。
+| 技術工具 | 適用對象 | 優勢 |
+| :--- | :--- | :--- |
+| **loading.tsx** | 整頁路由載入 | 全自動、代碼最簡潔 |
+| **Suspense** | 組件級局部載入 | 高度彈性、可控性強 |
+| **Skeleton UI** | fallback 的內容 | 提供更專業的視覺引導 |
 
 ---
 
-參考來源：
-1. Next.js Documentation - Loading UI and Streaming (https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming)
-2. React Documentation - Suspense (https://react.dev/reference/react/Suspense)
+> **參考來源：**
+> 1. [Next.js - Loading UI and Streaming](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming)
+> 2. [Next.js - Fundamentals of Streaming](https://nextjs.org/docs/app/building-your-application/rendering/server-components#streaming)
