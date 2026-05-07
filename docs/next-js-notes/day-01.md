@@ -49,7 +49,9 @@ npx create-next-app@latest
 :::
 
 :::details 點擊展開：專案初始化截圖
+
 ![初始化成功](https://hackmd.io/_uploads/Sk3tdC66-g.png)
+
 :::
 
 ### 3. 啟動與目錄結構
@@ -62,7 +64,9 @@ npx create-next-app@latest
 
 :::tip 成功畫面
 看到下圖表示您的 Next.js 環境已成功啟動！
+
 ![啟動成功](https://hackmd.io/_uploads/S1hOKAT6bl.png)
+
 :::
 
 #### 目錄結構初探
