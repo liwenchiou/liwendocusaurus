@@ -23,9 +23,9 @@ tags: [security, ai]
 
 ```javascript
 /* ⚠️ 這是自殺式寫法：千萬別學 */
-const openai = new OpenAI({
+const openai = new OpenAI(&#123;
   apiKey: "sk-proj-xxxxxxxxxxxxxxxxxxxxxxxx", // AI 為了方便，直接幫你填在這裡了
-});
+&#125;);
 ```
 
 如果你直接 `git push` 上 GitHub，不到一分鐘，全世界的爬蟲機器人都會拿到你的金鑰，開始瘋狂盜刷。
@@ -49,7 +49,7 @@ AI 的天性是「解決問題」，它不太會主動考慮到「被惡搞的�
 
 ```python
 # 經典的 SQL 注入溫床
-db.execute(f"INSERT INTO notes VALUES ('{user_input_text}')")
+db.execute(f"INSERT INTO notes VALUES ('&#123;user_input_text&#125;')")
 ```
 
 這在資安領域叫做 **SQL Injection**。只要有人輸入一句特殊的代碼，你的整個資料庫內容可能就會被洗劫一空。

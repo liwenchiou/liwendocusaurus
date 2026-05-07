@@ -44,53 +44,53 @@ tags: [JavaScript, 學習筆記, 技術]
 
 ## CSS
 ```css
-.swiper-slide {
+.swiper-slide &#123;
   height: auto;
-}
+&#125;
 
-img {
+img &#123;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+&#125;
 ```
 
 ## JavaScript
 ```javascript
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".swiper", &#123;
   // 間距 24px
   spaceBetween: 24,
-  pagination: {
+  pagination: &#123;
     el: ".swiper-pagination"
-  },
+  &#125;,
   // 左右箭頭
-  navigation: {
+  navigation: &#123;
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
-  },
+  &#125;,
   // 一次呈現三個
   slidesPerView: 3,
   // 滾動條
-  scrollbar: {
+  scrollbar: &#123;
     el: ".swiper-scrollbar"
-  },
+  &#125;,
   autoplay: true,
 
   // 響應式設定（類似 Bootstrap 的斷點）
-  breakpoints: {
+  breakpoints: &#123;
     // 0px 以上（手機）
-    0: {
+    0: &#123;
       slidesPerView: 1
-    },
+    &#125;,
     // 768px 以上（平板）
-    768: {
+    768: &#123;
       slidesPerView: 2
-    },
+    &#125;,
     // 992px 以上（桌機）
-    992: {
+    992: &#123;
       slidesPerView: 3
-    }
-  }
-});
+    &#125;
+  &#125;
+&#125;);
 ```

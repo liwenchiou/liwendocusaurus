@@ -15,14 +15,14 @@ tags: [六角學院, 學習筆記, 技術]
 
 ### `async` / `await` 語法
 ```javascript
-async function fetchUserData(){
+async function fetchUserData()&#123;
     // await 會等待 Promise 完成
     const response = await fetch('/api/user');
     const data = await response.json();
     
     console.log(data); // 資料已經拿到
     return data;
-}
+&#125;
 
 fetchUserData(); // 呼叫執行
 ```
@@ -35,37 +35,37 @@ fetchUserData(); // 呼叫執行
 #### 延伸寫法與錯誤處理
 ```javascript
 // #1 箭頭函式
-const fn = async () => {
+const fn = async () => &#123;
     const data = await promiseSetTimeout(1);
-};
+&#125;;
 
 // #2 立即執行函式 (IIFE)
-(async function(){
+(async function()&#123;
     const data = await promiseSetTimeout(1);
-})();
+&#125;)();
 
 // #3 try...catch 錯誤解決方案
-(async function(){
-    try {
+(async function()&#123;
+    try &#123;
         const data = await promiseSetTimeout(1);
-    } catch(error) {
+    &#125; catch(error) &#123;
         console.log('發生錯誤：', error);
-    }
-})();
+    &#125;
+&#125;)();
 ```
 
 ### Axios 的使用
 [官方文件](https://axios-http.com/docs/intro)
 ```javascript
-(async () => {
-    try {
+(async () => &#123;
+    try &#123;
         const res = await axios.get('https://randomuser.me/api/');
-        const { results } = res.data;
+        const &#123; results &#125; = res.data;
         console.log(results);
-    } catch(error) {
+    &#125; catch(error) &#123;
         console.log(error);
-    }
-})();
+    &#125;
+&#125;)();
 
 // 全域設定：每次請求都帶上 Token
 axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
