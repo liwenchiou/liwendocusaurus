@@ -115,7 +115,7 @@ export default function NavLinks() &#123;
 Next.js 的導覽之所以流暢，是因為它結合了「軟導覽 (Soft Navigation)」與「預取機制」。
 
 * 今日小結：
-    - 一般連結用 <Link>，邏輯跳轉用 useRouter，伺服器邏輯用 redirect，判斷路徑用 usePathname。
+    - 一般連結用 &lt;Link>，邏輯跳轉用 useRouter，伺服器邏輯用 redirect，判斷路徑用 usePathname。
 * 專家筆記：
     - 雖然預取很強大，但如果一個頁面有上百個連結，會造成不必要的網路負擔。
     - 對於非核心路徑，可以適時使用 prefetch=&#123;false&#125; 來優化效能。
