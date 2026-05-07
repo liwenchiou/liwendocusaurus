@@ -13,11 +13,11 @@ slug: /
 
 ### 🛠️ 現代網頁架構 (Modern Web Architecture)
 主要專注於 Next.js 與前端效能優化，從基礎的渲染機制到複雜的系統設計都有紀錄。
-- [Next.js 30 天學習筆記](./next-js-notes/day-01.md)
+- [Next.js 30 天學習筆記](/docs/next-js-notes/day-01)
 
 ### 📚 基礎建設與社群課程 (Fundamentals & Courses)
 記錄我在六角學院等優質社群中的學習軌跡，包含 JavaScript 核心、React 應用等。
-- [六角學院課程筆記](./hexschool/react-course/course-notes-js-fundamentals.md)
+- [六角學院課程筆記](/docs/hexschool/react-course/course-notes-js-fundamentals)
 
 ### 🤖 AI 與工作流 (AI & Workflow)
 探索如何將 AI (如 Agentic AI, Cursor, Vibe Coding) 融入開發流程，提升開發者的創造力。
