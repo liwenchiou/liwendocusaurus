@@ -235,7 +235,12 @@ pre code {
    Blog Card Style (Grid Layout)
    ============================================================ */
 
-/* 網格容器設定 */
+/* 網格容器設定 - 全寬化 */
+.blog-list-page main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .blog-list-page main > div > div > article {
   display: flex;
   flex-direction: column;
@@ -245,7 +250,6 @@ pre code {
   border-radius: 20px;
   padding: 2.5rem;
   margin-bottom: 2rem;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
@@ -264,14 +268,6 @@ pre code {
   }
 }
 
-/* 懸浮效果：霓虹紫光與縮放 */
-.blog-list-page article:hover {
-  transform: translateY(-10px) scale(1.02);
-  border-color: rgba(187, 134, 252, 0.6);
-  box-shadow: 0 20px 50px rgba(187, 134, 252, 0.2);
-  background: rgba(45, 45, 45, 0.9) !important;
-}
-
 /* 標題與連結樣式 */
 .blog-list-page article header h2 a {
   color: #ffffff;
@@ -280,11 +276,6 @@ pre code {
   line-height: 1.3;
   text-decoration: none;
   transition: all 0.3s;
-}
-
-.blog-list-page article:hover header h2 a {
-  color: #bb86fc;
-  text-shadow: 0 0 10px rgba(187, 134, 252, 0.5);
 }
 
 /* 閱讀更多按鈕 - 精品發光樣式 */
