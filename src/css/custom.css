@@ -288,9 +288,147 @@ pre code {
    Blog Card Style (Grid Layout)
    ============================================================ */
 
-/* 網格容器設定 - 全寬化 */
-.blog-list-page main {
-  max-width: 1200px;
+/* Blog Layout Fix - Badge Style Tags & Hidden Author */
+.blog-list-page article {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2.5rem !important;
+  transition: all 0.3s ease;
+}
+
+/* Hide the "Tags:" label */
+.blog-list-page article footer b,
+.blog-list-page article footer i {
+  display: none !important;
+}
+
+/* Blog Layout Fix - Compact Header & Clean Excerpt */
+.blog-list-page article {
+  display: flex !important;
+  flex-direction: column !important;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2.5rem !important;
+}
+
+/* 1. Row 1: Tags + Title on the same line */
+.blog-list-page article header {
+  display: block !important; /* Allow internal flow */
+  margin-bottom: 0.5rem !important;
+}
+
+.blog-list-page article header h2 {
+  font-size: 1.6rem !important;
+  line-height: 1.3 !important;
+  margin: 0 !important;
+  display: inline !important; /* Make it inline to allow tags before it */
+}
+
+/* Move footer/tags into the header flow via CSS (hack-free way) */
+.blog-list-page article footer {
+  display: inline-flex !important;
+  vertical-align: middle;
+  margin-right: 0.75rem !important;
+  margin-bottom: 0.25rem !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Force Tag Smallness */
+.blog-list-page .tags a {
+  font-size: 0.65rem !important;
+  font-weight: 800;
+  padding: 0.1rem 0.4rem !important;
+  border-radius: 4px !important;
+  background: rgba(163, 113, 247, 0.2) !important;
+  color: #a371f7 !important;
+  border: 1px solid rgba(163, 113, 247, 0.3) !important;
+  margin: 0 0.3rem 0 0 !important;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+/* 2. Row 2: Metadata */
+.blog-list-page article header > div {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+  font-size: 0.85rem;
+}
+
+/* 3. Row 3: Markdown Excerpt - Fix HUGE HEADINGS */
+.blog-list-page article .markdown h1,
+.blog-list-page article .markdown h2,
+.blog-list-page article .markdown h3 {
+  font-size: 1.1rem !important;
+  margin: 0.75rem 0 0.4rem 0 !important;
+  color: inherit !important; /* Remove primary color to keep it neutral */
+  font-weight: 700;
+}
+
+.blog-list-page article .markdown p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Hide labels and authors */
+.blog-list-page article footer b,
+.blog-list-page article footer i,
+.blog-list-page article .avatar,
+.blog-post-page article .avatar {
+  display: none !important;
+}
+
+/* Badge styling for tags when used with order */
+.blog-list-page article .tags a {
+  font-size: 0.65rem !important;
+  font-weight: 700;
+  padding: 0.15rem 0.4rem !important;
+  border-radius: 4px !important;
+  background: rgba(53, 120, 229, 0.1) !important;
+  color: #3578e5 !important;
+  border: 1px solid rgba(53, 120, 229, 0.2) !important;
+  margin-right: 0.5rem !important;
+  vertical-align: middle;
+}
+
+/* Hide labels and authors */
+.blog-list-page article footer b,
+.blog-list-page article footer i,
+.blog-list-page article .avatar,
+.blog-post-page article .avatar {
+  display: none !important;
+}
+
+/* Read More Button styling */
+.blog-list-page article .markdown a:last-child[href*="/blog/"] {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 6px;
+  color: var(--ifm-color-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.blog-list-page article .markdown a:last-child[href*="/blog/"]:hover {
+  background: var(--ifm-color-primary);
+  color: #fff;
+}
+
+/* Fix sidebar alignment if needed */
+.blog-list-page .container .row {
+  max-width: 1400px;
   margin: 0 auto;
 }
 
