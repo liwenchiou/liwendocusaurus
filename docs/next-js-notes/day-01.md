@@ -53,7 +53,7 @@ npx create-next-app@latest
 如果您是初學者或想快速開始，選擇第一個 "Yes, use recommended defaults" 是最穩妥的做法。這會為您配置目前業界主流的開發環境（如 TypeScript 和 Tailwind CSS）。
 :::
 
-:::spoiler 預設配置清單解析
+:::details 
 ![image](https://hackmd.io/_uploads/Sk3tdC66-g.png)
 
 

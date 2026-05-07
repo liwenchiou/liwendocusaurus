@@ -60,7 +60,7 @@ Layout 是可以層層堆疊的。如果你在某個子資料夾（如 `/dashboa
 * Template (特殊用途)：
   - 在路由切換時，Template **會**為每個頁面重新建立實例。
   - 適合：需要依賴頁面切換來觸發的動畫（CSS Transition）、需要重新初始化狀態的表單。
-:::spoiler 比較表
+:::details 
 ![image](https://hackmd.io/_uploads/SymgPyA6bl.png)
 :::
 
