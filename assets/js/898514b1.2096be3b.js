@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([["9528"],{9187(e){e.exports=JSON.parse('{"tags":[{"label":"React","permalink":"/docs/tags/react","count":9},{"label":"\u516D\u89D2\u5B78\u9662","permalink":"/docs/tags/\u516D\u89D2\u5B78\u9662","count":2}]}')}}]);
