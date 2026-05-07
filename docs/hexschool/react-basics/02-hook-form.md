@@ -92,7 +92,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<EmployeeForm />);
 ```
 
-> **為什麼要用 {...register}？**
+> **為什麼要用 `{`...register`}`？**
 > 這是 JavaScript 的「展開運算子」。register 函式執行後會回傳一個物件，裡面包含：`onChange`, `onBlur`, `ref`, `name`。透過 `...` 展開，這四個屬性就會自動塞進您的 `<input />` 標籤裡。這就是為什麼您的程式碼會變得很乾淨的原因！
 
 ## 補充說明
