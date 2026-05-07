@@ -33,7 +33,7 @@ Next.js 使用資料夾來定義路由。每個在 `src/app` 資料夾下的子�
 *   `src/app/page.tsx` (網址: `/`)
 *   `src/app/about/page.tsx` (網址: `/about`)
 
-:::tip 視覺參考
+:::tip[視覺參考]
 ![頁面預覽](https://hackmd.io/_uploads/r1A82CaaZx.png)
 :::
 

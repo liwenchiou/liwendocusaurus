@@ -65,7 +65,7 @@ export default async function ProductPage(&#123; params &#125;) &#123;
 
 在設計系統架構時，請遵循 **「盡量將元件留在 Server 端」** 的原則，只有非互動不可的地方才使用 Client。
 
-:::tip 渲染決策圖
+:::tip[渲染決策圖]
 ![Server vs Client](https://hackmd.io/_uploads/HJGRuJ0TZe.png)
 :::
 

@@ -5,14 +5,14 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  img: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: '技術深耕',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    img: '/img/feature_tech.png',
     description: (
       <>
         從技術底層到系統架構的實戰紀錄。我追求程式碼的品質與系統的穩定性，並把這些學習過程都記錄下來。
@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: '工程文化',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    img: '/img/feature_culture.png',
     description: (
       <>
         除了寫程式，我也很在意人的成長。這裡會討論工程師的心理壓力、職涯發展，以及如何優化我們的工作流程。
@@ -30,7 +30,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'AI 協作',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    img: '/img/feature_ai.png',
     description: (
       <>
         擁抱 AI 時代。透過實踐 Vibe Coding 與 AI 工具，重新定義開發流程，把時間留給更有創造力的思考。
@@ -39,11 +39,11 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, img, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img src={img} className={styles.featureSvg} alt={title} style={{ borderRadius: '16px', marginBottom: '1.5rem' }} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

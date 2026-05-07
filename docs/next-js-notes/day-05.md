@@ -37,7 +37,7 @@ export default function Navbar() &#123;
 
 有時候您需要在邏輯執行完（例如表單提交後）才跳轉頁面，這時就要用到 `useRouter`。
 
-:::warning 注意事項
+:::warning[注意事項]
 `useRouter` 只能在 **Client Component** 中使用。
 :::
 

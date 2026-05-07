@@ -35,7 +35,7 @@ export default function RootLayout(&#123; children &#125;: &#123; children: Reac
 &#125;
 ```
 
-:::tip 結構預覽
+:::tip[結構預覽]
 ![Layout 結構](https://hackmd.io/_uploads/ryx6CRppWe.png)
 :::
 
@@ -58,7 +58,7 @@ Layout 是可以層層堆疊的。如果您在某個子資料夾（如 `/dashboa
 | **狀態保留** | 保留輸入內容、捲軸位置 | **不保留** 狀態，每次重新初始化 |
 | **適用場景** | 導覽列、搜尋列、持久化 UI | 進入動畫 (CSS Transition)、表單重置 |
 
-:::details 點擊展開：渲染差異圖解
+:::details[點擊展開：渲染差異圖解]
 ![Layout vs Template](https://hackmd.io/_uploads/SymgPyA6bl.png)
 :::
 

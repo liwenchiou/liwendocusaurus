@@ -35,7 +35,7 @@ export default function Loading() &#123;
 
 傳統 SSR 需要等「整頁」資料都抓完才能發送 HTML，而 Streaming 允許伺服器先將靜態內容發送過去，非同步載入的部分等抓完再「補上」。
 
-:::tip 優點
+:::tip[優點]
 *   **TTFB (Time to First Byte)**：大幅縮短，瀏覽器能更快開始解析網頁。
 *   **FCP (First Contentful Paint)**：使用者能立刻看到標題與選單，而非等待全部內容。
 :::

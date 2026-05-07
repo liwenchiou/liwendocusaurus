@@ -32,7 +32,7 @@ const user = {
 const { username, age, favorite } = user;
 ```
 
-:::info React 中的實戰應用
+:::info[React 中的實戰應用]
 *   **useState**：利用陣列解構取得狀態值與更新函式。
 *   **Props**：利用物件解構直接在參數中取得組件屬性。
 ```javascript
@@ -85,7 +85,7 @@ function ProductList() {
 
 ## ⚛️ React 開發規範與對比
 
-:::warning 注意事項
+:::warning[注意事項]
 在撰寫 JSX 時，務必遵守以下規範：
 1.  **標籤閉合**：所有 HTML 標籤都必須有結尾 (如 `<img />`)。
 2.  **小駝峰命名**：屬性需採用 camelCase (如 `onClick`, `colSpan`)。

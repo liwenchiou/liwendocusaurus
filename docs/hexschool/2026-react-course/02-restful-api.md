@@ -32,7 +32,7 @@ async function fetchUserData() {
 }
 ```
 
-:::warning 常見地雷
+:::warning[常見地雷]
 1.  **遺漏 `async`**：`await` 只能在 `async` 函式內部使用。
 2.  **遺漏 `await`**：如果您忘了寫 `await`，拿到的會是一個狀態為 `Pending` 的 Promise 物件，而不是實際的資料。
 3.  **錯誤處理**：務必搭配 `try...catch` 語法，避免網路異常導致整個程式崩潰。

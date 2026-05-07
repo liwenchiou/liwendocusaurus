@@ -87,8 +87,46 @@
   transform: translateY(-5px);
 }
 
-p, li, span, div {
+/* Improve readability without breaking specific components like alerts */
+.markdown p, 
+.markdown li {
   color: var(--ifm-font-color-base);
+  line-height: 1.75;
+}
+
+/* Fix and Enhance Admonitions (Alerts) */
+.alert {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.alert--info {
+  background-color: rgba(53, 120, 229, 0.1) !important;
+  border-left: 5px solid #3578e5 !important;
+}
+
+.alert--success {
+  background-color: rgba(0, 164, 0, 0.1) !important;
+  border-left: 5px solid #00a400 !important;
+}
+
+.alert--warning {
+  background-color: rgba(255, 186, 0, 0.1) !important;
+  border-left: 5px solid #ffba00 !important;
+}
+
+.alert--danger {
+  background-color: rgba(250, 56, 62, 0.1) !important;
+  border-left: 5px solid #fa383e !important;
+}
+
+.alert a {
+  text-decoration: underline;
+  font-weight: 600;
 }
 
 h3 {
@@ -354,9 +392,14 @@ pre code {
    Mobile Optimization & Bug Fixes
    ============================================================ */
 
-/* Fix for hamburger menu potentially being covered */
+/* Fix for hamburger menu potentially being covered and transparency issues */
 .navbar-sidebar {
   z-index: 1000 !important;
+  background-color: #121212 !important; /* 強制改為實色背景，避免透出後方文字 */
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-right: 1px solid var(--ifm-border-color);
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 996px) {
