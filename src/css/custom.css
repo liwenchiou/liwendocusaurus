@@ -127,6 +127,28 @@ h3 {
   color: var(--ifm-color-primary);
 }
 
+/* Enforce dark theme for code blocks */
+code {
+  background-color: #1a1a1a !important;
+  color: #f0f6fc !important;
+  border: 1px solid #333;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+pre {
+  background-color: #1a1a1a !important;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem !important;
+}
+
+pre code {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
 /* Fix for high-contrast cards in Docs */
 .card {
   background-color: #1c1c1c !important; /* Lighter surface */
