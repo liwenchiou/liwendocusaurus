@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([["838"],{6072(e){e.exports=JSON.parse('{"metadata":{"permalink":"/liwendocusaurus/blog/page/2","page":2,"postsPerPage":10,"totalPages":2,"totalCount":20,"previousPage":"/liwendocusaurus/blog","blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
