@@ -99,7 +99,7 @@ function ProductList() {
 | `class` | **`className`** | 避開 JS 保留字 |
 | `for` | **`htmlFor`** | 避開 JS 保留字 |
 | `onclick` | **`onClick`** | 小駝峰規範 |
-| `style` | **`style=`{``{` color: 'red' `}`}`** | 需傳入 JS 物件 |
+| `style` | **`style={{ color: 'red' }}`** | 需傳入 JS 物件 |
 
 ### 表達式與陳述式
 
