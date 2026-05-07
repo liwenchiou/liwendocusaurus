@@ -1,12 +1,7 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;400;700&display=swap');
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #6366f1; /* Indigo 500 */
+  --ifm-color-primary: #6366f1;
   --ifm-color-primary-dark: #4f46e5;
   --ifm-color-primary-darker: #4338ca;
   --ifm-color-primary-darkest: #3730a3;
@@ -16,11 +11,11 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   
-  /* Custom Font */
-  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  /* Typography */
+  --ifm-font-family-base: 'Inter', system-ui, sans-serif;
+  --ifm-heading-font-family: 'Outfit', sans-serif;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-color-primary: #818cf8;
   --ifm-color-primary-dark: #6366f1;
@@ -30,57 +25,93 @@
   --ifm-color-primary-lighter: #a5f3fc;
   --ifm-color-primary-lightest: #cffafe;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-background-color: #0f172a; /* Slate 900 */
+  --ifm-background-color: #0f172a;
 }
 
+/* Hero Section Enhancement */
 .hero {
-  background: url('/img/hero.png') no-repeat center center;
+  background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.15), transparent 40%),
+              radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.1), transparent 40%),
+              url('/img/hero.png') no-repeat center center;
   background-size: cover;
-  color: white;
-  padding: 8rem 0;
-  position: relative;
-  overflow: hidden;
+  padding: 10rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(15, 23, 42, 0.6); /* Overlay */
-  z-index: 1;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 2;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%);
 }
 
 .hero__title {
-  font-weight: 800;
-  font-size: 4rem;
-  letter-spacing: -0.025em;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 1;
+  background: linear-gradient(to bottom right, #fff 30%, rgba(255, 255, 255, 0.5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
 }
 
 .hero__subtitle {
-  font-weight: 400;
-  font-size: 1.5rem;
-  opacity: 0.9;
-  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.75rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #94a3b8;
 }
 
+/* Feature Cards */
+.features_src-components-HomepageFeatures-styles-module__featureSvg__ZpX {
+  filter: grayscale(1) brightness(1.5) opacity(0.8);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.col:hover .features_src-components-HomepageFeatures-styles-module__featureSvg__ZpX {
+  filter: grayscale(0) brightness(1) opacity(1);
+  transform: scale(1.05) translateY(-10px);
+}
+
+.features_src-components-HomepageFeatures-styles-module__features__... {
+  padding: 6rem 0;
+  background: #0f172a;
+}
+
+h3 {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Glassmorphism Buttons */
 .button--secondary {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 2.5rem;
+  border-radius: 100px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all 0.4s ease;
 }
 
 .button--secondary:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+}
+
+/* Navbar & Footer Blur */
+.navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer {
+  background: #020617;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }

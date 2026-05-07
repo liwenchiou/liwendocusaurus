@@ -11,29 +11,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: '易於使用',
+    title: '設計策略',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus 旨在讓您輕鬆安裝並快速啟動網站。您可以專注於內容創作。
+        我們從底層邏輯出發，為您的數位產品打造穩固且具擴展性的架構藍圖。
       </>
     ),
   },
   {
-    title: '專注於核心內容',
+    title: '技術卓越',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus 讓您專注於文檔編寫，剩下的瑣事交給我們。只需將文檔放入 <code>docs</code> 目錄。
+        追求極致的性能與代碼質量。我們利用最新的技術棧，將複雜的設計轉化為流暢的用戶體驗。
       </>
     ),
   },
   {
-    title: 'React 強力驅動',
+    title: '創新方案',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        通過重用 React 來擴展或自定義您的網站佈局。Docusaurus 在保持一致性的同時提供極大的靈活性。
+        不滿足於現狀。我們持續探索數位邊界，為您的商業挑戰提供前瞻性的解決方案。
       </>
     ),
   },
