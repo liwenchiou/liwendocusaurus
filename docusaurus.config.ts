@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Liwen Docusaurus',
   tagline: '專業的文件管理與知識庫',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/og-image.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -71,7 +71,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/og-image.png',
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -79,7 +79,7 @@ const config: Config = {
       title: 'Liwen Docusaurus',
       logo: {
         alt: 'Liwen Docusaurus Logo',
-        src: 'img/logo.svg',
+        src: 'img/og-image.png',
       },
       items: [
         {
