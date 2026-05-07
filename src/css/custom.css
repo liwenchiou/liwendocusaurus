@@ -312,8 +312,34 @@ pre code {
 }
 
 /* 標籤樣式優化 */
-.blog-list-page article .badge {
-  background-color: rgba(187, 134, 252, 0.2);
-  color: #bb86fc;
-  border: 1px solid rgba(187, 134, 252, 0.3);
+/* 讓整張卡片變成可點擊區域 (Stretched Link Effect) */
+.blog-list-page article {
+  position: relative;
+  cursor: pointer;
+}
+
+.blog-list-page article header h2 a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* 移除預設多餘的間距與線條 */
+.blog-list-page article .markdown {
+  margin-bottom: 1rem;
+  color: #a0a0a0;
+  font-size: 0.95rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-list-page article footer {
+  margin-top: auto;
+  z-index: 2; /* 確保閱讀更多按鈕依然在最上層 */
 }

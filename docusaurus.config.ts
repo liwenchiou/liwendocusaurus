@@ -89,11 +89,11 @@ const config: Config = {
           label: "技術筆記",
         },
         { to: "/blog", label: "生活分享", position: "left" },
-        {
-          href: "https://github.com/facebook/docusaurus",
-          label: "GitHub",
-          position: "right",
-        },
+        // {
+        //   href: "https://github.com/facebook/docusaurus",
+        //   label: "GitHub",
+        //   position: "right",
+        // },
       ],
     },
     footer: {

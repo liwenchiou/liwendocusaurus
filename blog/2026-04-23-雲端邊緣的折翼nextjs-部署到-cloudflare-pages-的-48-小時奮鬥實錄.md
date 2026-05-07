@@ -10,6 +10,10 @@ tags: [cloudflare,NextJs]
 
 於是，我們把目光投向了 Cloudflare。這兩天，我們就像是一群試圖帶著行李從 Vercel 搬家到 Cloudflare 邊緣計算之城的旅人。雖然最終我們因為行李太重而暫時撤退，但這場「失敗」留下的經驗教訓，或許比成功搬家更值得記錄。
 
+
+<!-- truncate -->
+
+
 ## 為什麼想告別 Vercel，擁抱 Cloudflare？
 
 LiwenBlog CMS 雖然目前在 Vercel 運行良好，但我們心中一直有個「邊緣夢」：
