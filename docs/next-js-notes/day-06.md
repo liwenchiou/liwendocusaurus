@@ -28,30 +28,30 @@ Next.js 的 Server Components 徹底改變了這個遊戲規則：您可以像�
 
 ```javascript
 // src/app/posts/page.tsx
-async function getPosts() &#123;
+async function getPosts() {
   const res = await fetch('https://api.example.com/posts');
   
-  if (!res.ok) &#123;
+  if (!res.ok) {
     throw new Error('資料獲取失敗');
-  &#125;
+  }
   
   return res.json();
-&#125;
+}
 
-export default async function PostsPage() &#123;
+export default async function PostsPage() {
   const posts = await getPosts(); // 直接在 Server 端獲取資料
 
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold">最新文章</h1>
       <ul>
-        &#123;posts.map((post) => (
-          <li key=&#123;post.id&#125; className="mt-2">&#123;post.title&#125;</li>
-        ))&#125;
+        {posts.map((post) => (
+          <li key={post.id} className="mt-2">{post.title}</li>
+        ))}
       </ul>
     </div>
   );
-&#125;
+}
 ```
 
 ### 3. Fetch 的自動記憶化 (Request Memoization)
@@ -64,7 +64,7 @@ export default async function PostsPage() &#123;
 *   **並行請求 (Parallel)**：當請求互不干擾時，應使用 `Promise.all` 以極大化速度。
 
 ```javascript
-export default async function ProfilePage(&#123; params &#125;) &#123;
+export default async function ProfilePage({ params }) {
   // 並行啟動兩個請求
   const userData = getUser(params.id);
   const userPosts = getPosts(params.id);
@@ -74,11 +74,11 @@ export default async function ProfilePage(&#123; params &#125;) &#123;
 
   return (
     <div>
-      <h1>&#123;user.name&#125; 的個人檔案</h1>
-      <PostList posts=&#123;posts&#125; />
+      <h1>{user.name} 的個人檔案</h1>
+      <PostList posts={posts} />
     </div>
   );
-&#125;
+}
 ```
 
 ---

@@ -37,30 +37,30 @@ src/app/dashboard/
 
 [檔案：src/app/dashboard/layout.tsx]
 ```typescript
-export default function DashboardLayout(&#123;
+export default function DashboardLayout({
   children,
   analytics,
   team,
-&#125;: &#123;
+}: {
   children: React.ReactNode;
   analytics: React.ReactNode;
   team: React.ReactNode;
-&#125;) &#123;
+}) {
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">管理儀表板</h1>
       
-      &#123;/* 主要內容區 */&#125;
-      <section className="mb-8">&#123;children&#125;</section>
+      {/* 主要內容區 */}
+      <section className="mb-8">{children}</section>
       
-      &#123;/* 平行路由區 */&#125;
+      {/* 平行路由區 */}
       <div className="grid grid-cols-2 gap-4">
-        <div className="border p-4 rounded shadow">&#123;analytics&#125;</div>
-        <div className="border p-4 rounded shadow">&#123;team&#125;</div>
+        <div className="border p-4 rounded shadow">{analytics}</div>
+        <div className="border p-4 rounded shadow">{team}</div>
       </div>
     </div>
   );
-&#125;
+}
 ```
 ### 3. 優勢：局部渲染與錯誤隔離
 

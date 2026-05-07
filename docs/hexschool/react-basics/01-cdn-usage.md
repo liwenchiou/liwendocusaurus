@@ -29,20 +29,20 @@ tags: [React]
 4. 在 script 中快樂的寫 React
 ```html
 <script type="text/babel">
-    const &#123; useState &#125; = React;
+    const { useState } = React;
 
-    function MyComponent() &#123;
+    function MyComponent() {
         const [status, setStatus] = useState("正在學習 React");
 
         return (
             <div>
-                <h1>狀態：&#123;status&#125;</h1>
-                <button onClick=&#123;() => setStatus("已經學會了！")&#125;>
+                <h1>狀態：{status}</h1>
+                <button onClick={() => setStatus("已經學會了！")}>
                     點我更新
                 </button>
             </div>
         );
-    &#125;
+    }
 
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(<MyComponent />);

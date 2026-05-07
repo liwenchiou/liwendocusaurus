@@ -21,14 +21,14 @@ sidebar_position: 8
 
 ```javascript
 // src/app/dashboard/loading.tsx
-export default function Loading() &#123;
+export default function Loading() {
   return (
     <div className="animate-pulse p-4">
       <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></div>
       <div className="h-4 bg-gray-200 rounded w-1/2"></div>
     </div>
   );
-&#125;
+}
 ```
 
 ### 2. 何謂串流渲染 (Streaming)？
@@ -45,21 +45,21 @@ export default function Loading() &#123;
 如果您不想要整頁 Loading，而是局部組件 Loading，可以手動使用 `<Suspense>`：
 
 ```javascript
-import &#123; Suspense &#125; from 'react';
+import { Suspense } from 'react';
 import PostsList from './PostsList';
 
-export default function Page() &#123;
+export default function Page() {
   return (
     <section>
       <h1>我的儀表板</h1>
       
       {/* 只有這個組件會顯示 Loading */}
-      <Suspense fallback=&#123;<p>正在讀取文章...</p>&#125;>
+      <Suspense fallback={<p>正在讀取文章...</p>}>
         <PostsList />
       </Suspense>
     </section>
   );
-&#125;
+}
 ```
 
 ---

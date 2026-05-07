@@ -44,53 +44,53 @@ tags: [React]
 
 ## CSS
 ```css
-.swiper-slide &#123;
+.swiper-slide {
   height: auto;
-&#125;
+}
 
-img &#123;
+img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-&#125;
+}
 ```
 
 ## JavaScript
 ```javascript
-const swiper = new Swiper(".swiper", &#123;
+const swiper = new Swiper(".swiper", {
   // 間距 24px
   spaceBetween: 24,
-  pagination: &#123;
+  pagination: {
     el: ".swiper-pagination"
-  &#125;,
+  },
   // 左右箭頭
-  navigation: &#123;
+  navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
-  &#125;,
+  },
   // 一次呈現三個
   slidesPerView: 3,
   // 滾動條
-  scrollbar: &#123;
+  scrollbar: {
     el: ".swiper-scrollbar"
-  &#125;,
+  },
   autoplay: true,
 
   // 響應式設定（類似 Bootstrap 的斷點）
-  breakpoints: &#123;
+  breakpoints: {
     // 0px 以上（手機）
-    0: &#123;
+    0: {
       slidesPerView: 1
-    &#125;,
+    },
     // 768px 以上（平板）
-    768: &#123;
+    768: {
       slidesPerView: 2
-    &#125;,
+    },
     // 992px 以上（桌機）
-    992: &#123;
+    992: {
       slidesPerView: 3
-    &#125;
-  &#125;
-&#125;);
+    }
+  }
+});
 ```

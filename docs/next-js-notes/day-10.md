@@ -28,29 +28,29 @@ Server Actions 是在伺服器執行的非同步函式。它們不僅能在 Serv
 ```javascript
 // src/app/posts/new/page.tsx
 
-export default function NewPostPage() &#123;
+export default function NewPostPage() {
   // 1. 定義 Server Action
-  async function createPost(formData: FormData) &#123;
+  async function createPost(formData: FormData) {
     'use server' // 關鍵指令
  
     const title = formData.get('title');
     const content = formData.get('content');
 
     // 這裡可以直接操作資料庫 (Prisma, Supabase 等)
-    console.log('正在寫入資料庫：', &#123; title, content &#125;);
+    console.log('正在寫入資料庫：', { title, content });
     
     // 成功後跳轉頁面
     redirect('/posts');
-  &#125;
+  }
 
   return (
-    <form action=&#123;createPost&#125; className="flex flex-col gap-4">
+    <form action={createPost} className="flex flex-col gap-4">
       <input name="title" placeholder="標題" className="border p-2" />
       <textarea name="content" placeholder="內容" className="border p-2" />
       <button type="submit" className="bg-blue-500 text-white p-2">提交</button>
     </form>
   );
-&#125;
+}
 ```
 
 ### 3. 如何重用 Action？
@@ -61,13 +61,13 @@ export default function NewPostPage() &#123;
 // src/app/actions.ts
 'use server'
 
-export async function login(formData: FormData) &#123;
+export async function login(formData: FormData) {
   // 登入邏輯...
-&#125;
+}
 
-export async function logout() &#123;
+export async function logout() {
   // 登出邏輯...
-&#125;
+}
 ```
 
 ---

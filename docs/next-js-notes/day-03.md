@@ -23,16 +23,16 @@ Next.js 透過 **Layout** 機制，讓我們能以層級化的方式管理共用
 
 ```javascript
 // src/app/layout.tsx
-export default function RootLayout(&#123; children &#125;: &#123; children: React.ReactNode &#125;) &#123;
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-TW">
       <body>
         <nav>這是全站導覽列</nav>
-        &#123;children&#125; {/* 這裡會渲染各個頁面的內容 */}
+        {children} {/* 這裡會渲染各個頁面的內容 */}
       </body>
     </html>
   );
-&#125;
+}
 ```
 
 :::tip[結構預覽]

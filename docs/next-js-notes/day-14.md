@@ -28,15 +28,15 @@ src/app/
 ```
 ```javascript
 // src/app/posts/[id]/page.tsx
-export default function PostPage(&#123; params &#125;: &#123; params: &#123; id: string &#125; &#125;) &#123;
+export default function PostPage({ params }: { params: { id: string } }) {
   // 當網址是 /posts/123 時，params.id 就會是 "123"
   return (
     <div className="p-6">
-      <h1 className="text-xl font-bold">文章編號：&#123;params.id&#125;</h1>
-      &#123;/* 接下來你可以拿這個 ID 去資料庫抓資料 */&#125;
+      <h1 className="text-xl font-bold">文章編號：{params.id}</h1>
+      {/* 接下來你可以拿這個 ID 去資料庫抓資料 */}
     </div>
   );
-&#125;
+}
 ```
 ### 2. 全捕捉路由 (Catch-all Segments)
 
@@ -46,11 +46,11 @@ export default function PostPage(&#123; params &#125;: &#123; params: &#123; id:
 * `[...slug]`：匹配 `/docs/a`、`/docs/a/b`、`/docs/a/b/c`。
 
 ```javascript
-export default function DocsPage(&#123; params &#125;: &#123; params: &#123; slug: string[] &#125; &#125;) &#123;
+export default function DocsPage({ params }: { params: { slug: string[] } }) {
   // 若網址是 /docs/nextjs/routing
   // params.slug 會是一個陣列：['nextjs', 'routing']
-  return <div>目前路徑：&#123;params.slug.join(' / ')&#125;</div>;
-&#125;
+  return <div>目前路徑：{params.slug.join(' / ')}</div>;
+}
 ```
 ### 3. 生成靜態路徑 (generateStaticParams)
 
@@ -58,30 +58,30 @@ export default function DocsPage(&#123; params &#125;: &#123; params: &#123; slu
 
 ```javascript
 // 告訴 Next.js 提前預載 ID 為 1, 2, 3 的頁面
-export async function generateStaticParams() &#123;
+export async function generateStaticParams() {
   const posts = await fetch('https://api.example.com/posts').then(res => res.json());
 
-  return posts.map((post) => (&#123;
+  return posts.map((post) => ({
     id: post.id.toString(),
-  &#125;));
-&#125;
+  }));
+}
 ```
 ### 4. 處理參數不存在的情況
 
 如果使用者輸入了一個資料庫找不到的 ID，我們可以搭配 Day 09 學過的 `notFound()`。
 
 ```javascript
-import &#123; notFound &#125; from 'next/navigation';
+import { notFound } from 'next/navigation';
 
-export default async function Page(&#123; params &#125;) &#123;
+export default async function Page({ params }) {
   const data = await getData(params.id);
   
-  if (!data) &#123;
+  if (!data) {
     notFound(); // 導向 404 頁面
-  &#125;
+  }
   
-  return <Content data=&#123;data&#125; />;
-&#125;
+  return <Content data={data} />;
+}
 ```
 ---
 

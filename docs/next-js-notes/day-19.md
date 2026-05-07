@@ -36,9 +36,9 @@ AUTH_SECRET=你的隨機字串
 import NextAuth from "next-auth";
 import GitHub from "next-auth/providers/github";
 
-export const &#123; handlers, signIn, signOut, auth &#125; = NextAuth(&#123;
+export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [GitHub], // 支援 GitHub 快速登入
-&#125;);
+});
 ```
 
 ### 3. 設定 API Route Handlers
@@ -47,8 +47,8 @@ export const &#123; handlers, signIn, signOut, auth &#125; = NextAuth(&#123;
 
 [檔案：src/app/api/auth/[...nextauth]/route.ts]
 ```typescript
-import &#123; handlers &#125; from "@/auth";
-export const &#123; GET, POST &#125; = handlers;
+import { handlers } from "@/auth";
+export const { GET, POST } = handlers;
 ```
 
 ### 4. 取得使用者資訊 (Session)
@@ -56,20 +56,20 @@ export const &#123; GET, POST &#125; = handlers;
 在 Server Component 中，獲取當前登入者資訊變得極其簡單。
 
 ```typescript
-import &#123; auth &#125; from "@/auth";
+import { auth } from "@/auth";
 
-export default async function ProfilePage() &#123;
+export default async function ProfilePage() {
   const session = await auth();
 
   if (!session?.user) return <div>請先登入</div>;
 
   return (
     <div>
-      <p>歡迎回來，&#123;session.user.name&#125;</p>
-      <img src=&#123;session.user.image&#125; alt="頭像" />
+      <p>歡迎回來，{session.user.name}</p>
+      <img src={session.user.image} alt="頭像" />
     </div>
   );
-&#125;
+}
 
 ```
 
@@ -79,11 +79,11 @@ export default async function ProfilePage() &#123;
 
 [檔案：src/middleware.ts]
 ```typescript
-export &#123; auth as middleware &#125; from "@/auth"
+export { auth as middleware } from "@/auth"
 
-export const config = &#123;
+export const config = {
   matcher: ["/dashboard/:path*", "/admin/:path*"],
-&#125;;
+};
 ```
 ---
 

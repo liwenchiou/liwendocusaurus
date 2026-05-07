@@ -30,9 +30,9 @@ myRef.current = "新資料";
 ### 1. 為什麼是 `.current`？
 當您執行 `const myRef = useRef(0);` 時，React 實際上是幫您建立了一個像這樣的物件：
 ```javascript
-&#123;
+{
   current: 0  // 這是您傳進去的 initialValue
-&#125;
+}
 ```
 為什麼非要包成物件？因為在 JavaScript 中，物件是**傳址（Pass by Reference）**。這能保證 React 在多次重新渲染組件時，手上拿到的始終是同一個「儲物櫃」，所以裡面的 `current` 才能一直保存著。
 
@@ -50,33 +50,33 @@ myRef.current = "新資料";
 [codepen 範例](https://codepen.io/liwenchiou/pen/yyJQxPm?editors=0011)
 
 ```javascript
-const &#123; useState, useEffect, useRef &#125; = React;
+const { useState, useEffect, useRef } = React;
 
-function OrderSystem() &#123;
+function OrderSystem() {
   const [orderId, setOrderId] = useState("");
   const inputRef = useRef(null);
 
-  useEffect(() => &#123;
-    if (inputRef.current) &#123;
+  useEffect(() => {
+    if (inputRef.current) {
       inputRef.current.focus();
-    &#125;
-  &#125;, []);
+    }
+  }, []);
 
   return (
-    <div style=&#123;&#123; padding: '20px' &#125;&#125;>
+    <div style={{ padding: '20px' }}>
       <h2>ERP 訂單系統</h2>
       <label>訂單編號：</label>
       <input 
-        ref=&#123;inputRef&#125;
+        ref={inputRef}
         type="text" 
-        value=&#123;orderId&#125;
-        onChange=&#123;(e) => setOrderId(e.target.value)&#125;
+        value={orderId}
+        onChange={(e) => setOrderId(e.target.value)}
         placeholder="例如：2026021001"
       />
-      <button onClick=&#123;() => alert(`正處理訂單：$&#123;orderId&#125;`)&#125;>處理訂單</button>
+      <button onClick={() => alert(`正處理訂單：${orderId}`)}>處理訂單</button>
     </div>
   );
-&#125;
+}
 ```
 
 ## 範例：儲存不觸發渲染的變數
@@ -84,27 +84,27 @@ function OrderSystem() &#123;
 [codepen 範例](https://codepen.io/liwenchiou/pen/WbxYgzm?editors=0011)
 
 ```javascript
-const &#123; useState, useRef &#125; = React;
+const { useState, useRef } = React;
 
-function SilentCounter() &#123;
+function SilentCounter() {
   const countRef = useRef(0);
   const [renderCount, setRenderCount] = useState(0);
 
-  const handleClick = () => &#123;
+  const handleClick = () => {
     countRef.current += 1;
     console.log("偷偷記錄點擊次數：", countRef.current);
-  &#125;;
+  };
 
   return (
-    <div style=&#123;&#123; padding: '20px', border: '1px solid #ccc' &#125;&#125;>
+    <div style={{ padding: '20px', border: '1px solid #ccc' }}>
       <h3>useRef：偷偷計數 (看 Console)</h3>
-      <button onClick=&#123;handleClick&#125;>點擊 (不更新畫面)</button>
-      <button onClick=&#123;() => setRenderCount(renderCount + 1)&#125;>
-        更新畫面 (目前渲染第 &#123;renderCount&#125; 次)
+      <button onClick={handleClick}>點擊 (不更新畫面)</button>
+      <button onClick={() => setRenderCount(renderCount + 1)}>
+        更新畫面 (目前渲染第 {renderCount} 次)
       </button>
     </div>
   );
-&#125;
+}
 ```
 
 ## useRef vs useState

@@ -26,17 +26,17 @@ Next.js 為了極致的效能，預設會對渲染結果進行積極的快取。
 
 ```typescript
 // src/app/actions.ts
-import &#123; revalidatePath &#125; from 'next/cache';
-import &#123; db &#125; from '@/lib/db';
+import { revalidatePath } from 'next/cache';
+import { db } from '@/lib/db';
 
-export async function deletePost(id: string) &#123;
-  await db.post.delete(&#123; where: &#123; id &#125; &#125;);
+export async function deletePost(id: string) {
+  await db.post.delete({ where: { id } });
 
   // 告訴 Next.js：這個路徑下的快取已經過期了，下次訪問時請重新生成
   revalidatePath('/posts');
   // 如果你希望相關的動態路由也一併更新，可以使用：
   // revalidatePath('/posts/[id]', 'page');
-&#125;
+}
 ```
 ### 3. revalidateTag：精準的標籤更新 (推薦)
 
@@ -44,16 +44,16 @@ export async function deletePost(id: string) &#123;
 
 ```typescript
 1. **抓取資料時設定 Tag：**
-   const data = await fetch('...', &#123; next: &#123; tags: ['posts'] &#125; &#125;);
+   const data = await fetch('...', { next: { tags: ['posts'] } });
 
 2. **更新資料後清除 Tag：**
    // src/app/actions.ts
-   import &#123; revalidateTag &#125; from 'next/cache';
+   import { revalidateTag } from 'next/cache';
 
-   export async function addPost() &#123;
+   export async function addPost() {
      // ... 寫入資料庫邏輯
      revalidateTag('posts'); // 只要有標註 'posts' 的區塊都會被更新
-   &#125;
+   }
 ```
 
 
@@ -62,13 +62,13 @@ export async function deletePost(id: string) &#123;
 通常在 Server Action 執行成功後，我們會希望跳轉回列表頁。記得 `redirect` 必須寫在 `revalidate` 之後。
 
 ```typescript
-import &#123; redirect &#125; from 'next/navigation';
+import { redirect } from 'next/navigation';
 
-export async function updatePost(formData: FormData) &#123;
+export async function updatePost(formData: FormData) {
   // ... 更新邏輯
   revalidatePath('/posts');
   redirect('/posts'); // 成功後跳轉
-&#125;
+}
 ```
 ---
 

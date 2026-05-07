@@ -49,16 +49,16 @@ src/app/
 
 [檔案：src/app/layout.tsx]
 ```typescript
-export default function Layout(&#123; children, modal &#125;) &#123;
+export default function Layout({ children, modal }) {
   return (
     <html>
       <body>
-        &#123;children&#125;
-        &#123;modal&#125; &#123;/* 這裡用來顯示攔截到的彈窗內容 */&#125;
+        {children}
+        {modal} {/* 這裡用來顯示攔截到的彈窗內容 */}
       </body>
     </html>
   );
-&#125;
+}
 ```
 ---
 

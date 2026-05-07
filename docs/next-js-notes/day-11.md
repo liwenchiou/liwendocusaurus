@@ -33,62 +33,62 @@ sidebar_position: 11
 ```javascript
 'use server'
 
-export async function createUser(prevState: any, formData: FormData) &#123;
+export async function createUser(prevState: any, formData: FormData) {
   const email = formData.get('email');
 
   // 1. 模擬後端驗證
-  if (!email || !email.toString().includes('@')) &#123;
-    return &#123; message: '請輸入有效的 Email 地址', status: 'error' &#125;;
-  &#125;
+  if (!email || !email.toString().includes('@')) {
+    return { message: '請輸入有效的 Email 地址', status: 'error' };
+  }
 
   // 2. 模擬處理延遲
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
-  return &#123; message: '註冊成功！', status: 'success' &#125;;
-&#125;
+  return { message: '註冊成功！', status: 'success' };
+}
 ```
 [檔案：src/components/SignupForm.tsx (用戶端)]
 ```javascript
 'use client'
 
-import &#123; useActionState &#125; from 'react';
-import &#123; createUser &#125; from '@/app/actions';
+import { useActionState } from 'react';
+import { createUser } from '@/app/actions';
 
-export default function SignupForm() &#123;
+export default function SignupForm() {
   // state：Action 回傳的結果
   // formAction：綁定給 form action 的函式
   // isPending：是否正在執行中
-  const [state, formAction, isPending] = useActionState(createUser, &#123;
+  const [state, formAction, isPending] = useActionState(createUser, {
     message: '',
     status: 'idle'
-  &#125;);
+  });
 
   return (
-    <form action=&#123;formAction&#125; className="p-4 border rounded max-w-sm">
+    <form action={formAction} className="p-4 border rounded max-w-sm">
       <input 
         name="email" 
         type="text" 
         placeholder="Email" 
         className="border p-2 w-full text-black" 
-        disabled=&#123;isPending&#125;
+        disabled={isPending}
       />
       
-      &#123;/* 根據後端回傳的狀態顯示訊息 */&#125;
-      &#123;state.message && (
-        <p className=&#123;`mt-2 $&#123;state.status === 'error' ? 'text-red-500' : 'text-green-500'&#125;`&#125;>
-          &#123;state.message&#125;
+      {/* 根據後端回傳的狀態顯示訊息 */}
+      {state.message && (
+        <p className={`mt-2 ${state.status === 'error' ? 'text-red-500' : 'text-green-500'}`}>
+          {state.message}
         </p>
-      )&#125;
+      )}
 
       <button 
-        disabled=&#123;isPending&#125; 
+        disabled={isPending} 
         className="bg-black text-white p-2 mt-2 w-full disabled:bg-gray-400"
       >
-        &#123;isPending ? '註冊中...' : '立即註冊'&#125;
+        {isPending ? '註冊中...' : '立即註冊'}
       </button>
     </form>
   );
-&#125;
+}
 ```
 
 
@@ -97,24 +97,24 @@ export default function SignupForm() &#123;
 在真實專案中，我們不會手寫 `if/else` 檢查。我們會定義一個 **Zod Schema**，這能確保資料在進入資料庫前就已經通過嚴格的格式檢查。
 
 ```javascript
-import &#123; z &#125; from 'zod';
+import { z } from 'zod';
 
-const signupSchema = z.object(&#123;
+const signupSchema = z.object({
   email: z.string().email("Email 格式不正確"),
-&#125;);
+});
 
-export async function action(prevState: any, formData: FormData) &#123;
+export async function action(prevState: any, formData: FormData) {
   const result = signupSchema.safeParse(Object.fromEntries(formData));
 
-  if (!result.success) &#123;
-    return &#123;
+  if (!result.success) {
+    return {
       errors: result.error.flatten().fieldErrors,
       message: '驗證失敗',
       status: 'error'
-    &#125;;
-  &#125;
+    };
+  }
   // 繼續執行寫入資料庫的邏輯...
-&#125;```
+}```
 
 ---
 

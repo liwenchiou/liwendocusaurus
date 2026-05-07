@@ -23,23 +23,23 @@ sidebar_position: 9
 // src/app/dashboard/error.tsx
 'use client'
 
-export default function Error(&#123; error, reset &#125;: &#123; 
-  error: Error & &#123; digest?: string &#125;;
+export default function Error({ error, reset }: { 
+  error: Error & { digest?: string };
   reset: () => void;
-&#125;) &#123;
+}) {
   return (
     <div className="p-4 bg-red-50 border border-red-200 rounded">
       <h2 className="text-red-700">糟糕！出錯了</h2>
-      <p className="text-sm text-red-500 mb-4">&#123;error.message&#125;</p>
+      <p className="text-sm text-red-500 mb-4">{error.message}</p>
       <button 
-        onClick=&#123;() => reset()&#125;
+        onClick={() => reset()}
         className="px-4 py-2 bg-red-600 text-white rounded"
       >
         再試一次
       </button>
     </div>
   );
-&#125;
+}
 ```
 
 ### 2. 局部崩潰 vs 全域崩貫
@@ -53,17 +53,17 @@ Next.js 的強大之處在於 **「錯誤氣泡 (Error Bubbling)」**：
 您可以使用內建的 `notFound()` 函式來觸發 404 頁面，這對於處理「找不到商品」或「無權限文章」非常方便。
 
 ```javascript
-import &#123; notFound &#125; from 'next/navigation';
+import { notFound } from 'next/navigation';
 
-export default async function PostPage(&#123; params &#125;) &#123;
+export default async function PostPage({ params }) {
   const post = await fetchPost(params.id);
   
-  if (!post) &#123;
+  if (!post) {
     notFound(); // 這會自動顯示附近的 not-found.tsx
-  &#125;
+  }
   
-  return <div>&#123;post.title&#125;</div>;
-&#125;
+  return <div>{post.title}</div>;
+}
 ```
 
 ---

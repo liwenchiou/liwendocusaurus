@@ -21,16 +21,16 @@ Next.js 內建的 `<Link>` 組件是對 `<a>` 標籤的增強版。它支援 **�
 ```javascript
 import Link from 'next/link';
 
-export default function Navbar() &#123;
+export default function Navbar() {
   return (
     <nav>
       <Link href="/">首頁</Link>
-      <Link href="/dashboard" prefetch=&#123;false&#125;>
+      <Link href="/dashboard" prefetch={false}>
         後台 (關閉預取)
       </Link>
     </nav>
   );
-&#125;
+}
 ```
 
 ### 2. useRouter Hook (程式化導覽)
@@ -44,18 +44,18 @@ export default function Navbar() &#123;
 ```javascript
 "use client";
 
-import &#123; useRouter &#125; from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
-export default function LoginForm() &#123;
+export default function LoginForm() {
   const router = useRouter();
 
-  const handleSubmit = async () => &#123;
+  const handleSubmit = async () => {
     // 執行登入邏輯...
     router.push('/dashboard'); 
-  &#125;;
+  };
 
-  return <button onClick=&#123;handleSubmit&#125;>登入</button>;
-&#125;
+  return <button onClick={handleSubmit}>登入</button>;
+}
 ```
 
 ### 3. redirect 函式 (伺服器端導覽)
@@ -63,17 +63,17 @@ export default function LoginForm() &#123;
 如果您在 Server Component 中需要判斷權限並導向頁面，請使用 `redirect`。
 
 ```javascript
-import &#123; redirect &#125; from 'next/navigation';
+import { redirect } from 'next/navigation';
 
-export default async function ProfilePage() &#123;
+export default async function ProfilePage() {
   const user = await fetchUser();
   
-  if (!user) &#123;
+  if (!user) {
     redirect('/login'); // 直接在伺服器端完成跳轉
-  &#125;
+  }
   
   return <div>個人資料內容</div>;
-&#125;
+}
 ```
 
 ### 4. 實戰：Active Link 樣式判斷
@@ -83,29 +83,29 @@ export default async function ProfilePage() &#123;
 ```javascript
 "use client";
 
-import &#123; usePathname &#125; from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
-export default function NavLinks() &#123;
+export default function NavLinks() {
   const pathname = usePathname();
 
   return (
     <nav>
       <Link 
-        className=&#123;pathname === '/' ? 'text-blue-500 font-bold' : ''&#125; 
+        className={pathname === '/' ? 'text-blue-500 font-bold' : ''} 
         href="/"
       >
         首頁
       </Link>
       <Link 
-        className=&#123;pathname === '/about' ? 'text-blue-500 font-bold' : ''&#125; 
+        className={pathname === '/about' ? 'text-blue-500 font-bold' : ''} 
         href="/about"
       >
         關於
       </Link>
     </nav>
   );
-&#125;
+}
 ```
 
 ---

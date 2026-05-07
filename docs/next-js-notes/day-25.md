@@ -27,35 +27,35 @@ sidebar_position: 25
 ```typescript
 'use client';
 
-import &#123; usePathname, useRouter, useSearchParams &#125; from 'next/navigation';
-import &#123; useDebouncedCallback &#125; from 'use-debounce'; // 推薦使用此套件
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useDebouncedCallback } from 'use-debounce'; // 推薦使用此套件
 
-export default function SearchBar() &#123;
+export default function SearchBar() {
   const searchParams = useSearchParams();
   const pathname = usePathname();
-  const &#123; replace &#125; = useRouter();
+  const { replace } = useRouter();
 
   // 使用防抖處理輸入事件
-  const handleSearch = useDebouncedCallback((term: string) => &#123;
+  const handleSearch = useDebouncedCallback((term: string) => {
     const params = new URLSearchParams(searchParams);
-    if (term) &#123;
+    if (term) {
       params.set('query', term);
-    &#125; else &#123;
+    } else {
       params.delete('query');
-    &#125;
+    }
     // 更新網址，但不觸發整頁重新整理
-    replace(`$&#123;pathname&#125;?$&#123;params.toString()&#125;`);
-  &#125;, 500);
+    replace(`${pathname}?${params.toString()}`);
+  }, 500);
 
   return (
     <input
       placeholder="搜尋文章..."
-      onChange=&#123;(e) => handleSearch(e.target.value)&#125;
-      defaultValue=&#123;searchParams.get('query')?.toString()&#125;
+      onChange={(e) => handleSearch(e.target.value)}
+      defaultValue={searchParams.get('query')?.toString()}
       className="border p-2 rounded w-full"
     />
   );
-&#125;
+}
 ```
 ### 3. 後端：資料庫模糊搜尋
 
@@ -63,20 +63,20 @@ export default function SearchBar() &#123;
 
 ```typescript
 // src/app/posts/page.tsx
-export default async function Page(&#123; searchParams &#125;) &#123;
+export default async function Page({ searchParams }) {
   const query = searchParams?.query || '';
   
-  const posts = await db.post.findMany(&#123;
-    where: &#123;
+  const posts = await db.post.findMany({
+    where: {
       OR: [
-        &#123; title: &#123; contains: query, mode: 'insensitive' &#125; &#125;,
-        &#123; content: &#123; contains: query, mode: 'insensitive' &#125; &#125;,
+        { title: { contains: query, mode: 'insensitive' } },
+        { content: { contains: query, mode: 'insensitive' } },
       ],
-    &#125;,
-  &#125;);
+    },
+  });
 
-  return <PostList posts=&#123;posts&#125; />;
-&#125;
+  return <PostList posts={posts} />;
+}
 ```
 ### 4. 搭配 Suspense 提升體驗
 

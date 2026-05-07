@@ -27,7 +27,7 @@ Next.js 預設會對資料進行極致的快取 (Caching)，這能讓您的網�
 設定資料在一定時間後自動過期。
 
 ```javascript
-fetch('https://api.example.com/data', &#123; next: &#123; revalidate: 3600 &#125; &#125;);
+fetch('https://api.example.com/data', { next: { revalidate: 3600 } });
 // 這表示資料每小時會自動重新驗證一次
 ```
 
@@ -35,13 +35,13 @@ fetch('https://api.example.com/data', &#123; next: &#123; revalidate: 3600 &#125
 當資料庫變動時，主動通知 Next.js 清除快取。
 
 ```javascript
-import &#123; revalidatePath, revalidateTag &#125; from 'next/cache';
+import { revalidatePath, revalidateTag } from 'next/cache';
 
 // 在 Server Action 中使用
-export async function updatePost() &#123;
+export async function updatePost() {
   await db.update();
   revalidatePath('/posts'); // 立即更新 /posts 頁面的所有快取
-&#125;
+}
 ```
 
 ### 3. 強制切換為動態渲染
@@ -51,9 +51,9 @@ export async function updatePost() &#123;
 ```javascript
 export const dynamic = 'force-dynamic';
 
-export default async function AdminDashboard() &#123;
+export default async function AdminDashboard() {
   // 這裡的資料每次造訪都會重新抓取
-&#125;
+}
 ```
 
 ---
