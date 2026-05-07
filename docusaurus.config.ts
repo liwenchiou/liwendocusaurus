@@ -25,7 +25,7 @@ const config: Config = {
   projectName: "liwendocusaurus", // Usually your repo name.
   trailingSlash: false,
 
-  onBrokenLinks: "warn",
+  onBrokenLinks: "throw",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -105,12 +105,12 @@ const config: Config = {
           title: "技術筆記",
           items: [
             {
-              label: "Next.js 系列",
+              label: "Next.js 30 天學習筆記",
               to: "/docs/next-js-notes/day-01",
             },
             {
-              label: "六角學院紀錄",
-              to: "/docs/hexschool",
+              label: "六角學院",
+              to: "/docs/hexschool/react-course/course-notes-js-fundamentals",
             },
           ],
         },

@@ -17,7 +17,7 @@ slug: /
 
 ### 📚 基礎建設與社群課程 (Fundamentals & Courses)
 記錄我在六角學院等優質社群中的學習軌跡，包含 JavaScript 核心、React 應用等。
-- [六角學院課程筆記](hexschool/react-course/course-notes-js-fundamentals.md)
+- [六角學院課程筆記](./hexschool/react-course/course-notes-js-fundamentals.md)
 
 ### 🤖 AI 與工作流 (AI & Workflow)
 探索如何將 AI (如 Agentic AI, Cursor, Vibe Coding) 融入開發流程，提升開發者的創造力。
