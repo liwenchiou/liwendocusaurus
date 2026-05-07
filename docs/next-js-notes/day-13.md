@@ -20,7 +20,7 @@ Next.js 的 Metadata API 徹底解決了這個問題。它不僅支援靜態設�
 
 最簡單的方式是在 `layout.tsx` 或 `page.tsx` 中匯出一個 `metadata` 物件。
 
-```javascript=
+```javascript
 // src/app/layout.tsx
 import &#123; Metadata &#125; from 'next';
 
@@ -33,7 +33,7 @@ export const metadata: Metadata = &#123;
 
 對於文章頁面，標題應該是「文章標題 - 部落格名稱」。這時我們可以使用 `generateMetadata` 函式。它支援非同步操作，你可以先抓取資料，再決定 Meta 標籤的內容。
 
-```javascript=
+```javascript
 // src/app/posts/[id]/page.tsx
 export async function generateMetadata(&#123; params &#125;) &#123;
   const post = await fetchPost(params.id);
@@ -51,7 +51,7 @@ export async function generateMetadata(&#123; params &#125;) &#123;
 
 在 `layout.tsx` 設定標題模板，可以讓你省去在每個子頁面重複輸入網站名稱的麻煩。
 
-```javascript=
+```javascript
 // src/app/layout.tsx
 export const metadata: Metadata = &#123;
   title: &#123;

@@ -29,7 +29,7 @@ Next.js 的 `next/image` 是對原生 <img /> 的強力封裝。它具備以下�
 
 ### 2. 實戰示範：基礎用法與優先權
 
-```javascript=
+```javascript
 import Image from 'next/image';
 
 export default function HeroSection() &#123;
@@ -70,7 +70,7 @@ export default function HeroSection() &#123;
 - 瀏覽器不再需要連線到 Google Fonts，減少一次 DNS 查詢。
 - 字體檔案會跟著你的網頁一起部署，速度更快且隱私更佳。
 
-```javascript=
+```javascript
 // src/app/layout.tsx
 import &#123; Inter &#125; from 'next/font/google';
 

@@ -26,7 +26,7 @@ src/app/
     └── [id]/
         └── page.tsx
 ```
-```javascript=
+```javascript
 // src/app/posts/[id]/page.tsx
 export default function PostPage(&#123; params &#125;: &#123; params: &#123; id: string &#125; &#125;) &#123;
   // 當網址是 /posts/123 時，params.id 就會是 "123"
@@ -45,7 +45,7 @@ export default function PostPage(&#123; params &#125;: &#123; params: &#123; id:
 * `[slug]`：匹配 `/posts/abc`。
 * `[...slug]`：匹配 `/docs/a`、`/docs/a/b`、`/docs/a/b/c`。
 
-```javascript=
+```javascript
 export default function DocsPage(&#123; params &#125;: &#123; params: &#123; slug: string[] &#125; &#125;) &#123;
   // 若網址是 /docs/nextjs/routing
   // params.slug 會是一個陣列：['nextjs', 'routing']
@@ -56,7 +56,7 @@ export default function DocsPage(&#123; params &#125;: &#123; params: &#123; slu
 
 這是 Next.js 效能最強大的功能之一。你可以預先告訴 Next.js 哪些 ID 是存在的，它會在「編譯時 (Build Time)」就先幫你把這些網頁通通生好（變成靜態 HTML）。
 
-```javascript=
+```javascript
 // 告訴 Next.js 提前預載 ID 為 1, 2, 3 的頁面
 export async function generateStaticParams() &#123;
   const posts = await fetch('https://api.example.com/posts').then(res => res.json());
@@ -70,7 +70,7 @@ export async function generateStaticParams() &#123;
 
 如果使用者輸入了一個資料庫找不到的 ID，我們可以搭配 Day 09 學過的 `notFound()`。
 
-```javascript=
+```javascript
 import &#123; notFound &#125; from 'next/navigation';
 
 export default async function Page(&#123; params &#125;) &#123;

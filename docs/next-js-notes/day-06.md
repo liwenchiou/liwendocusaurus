@@ -26,7 +26,7 @@ Next.js 的 Server Components 徹底改變了這個遊戲規則。今天我們�
 
 在 Next.js 中，你可以直接將組件宣告為 `async`，並在裡面直接 `fetch` 資料。
 
-```javascript=
+```javascript
 // src/app/posts/page.tsx
 
 async function getPosts() &#123;
@@ -67,7 +67,7 @@ export default async function PostsPage() &#123;
 * 順序獲取 (Sequential)：當 A 請求結果是 B 請求的參數時。
 * 並行獲取 (Parallel)：當兩個請求互不干擾時，應使用 `Promise.all` 以節省時間。
 
-```javascript=
+```javascript
 export default async function ProfilePage(&#123; params &#125;) &#123;
   // 並行啟動兩個請求
   const userData = getUser(params.id);

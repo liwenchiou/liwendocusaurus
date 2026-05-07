@@ -45,7 +45,7 @@ sidebar_position: 4
 * 收藏按鈕與購物車數量 (Client Component)：
   - 需要點擊互動與狀態變換，所以標註為 "use client"。
 
-```javascript=
+```javascript
 // src/app/products/[id]/page.tsx (Server Component)
 import AddToCartButton from '@/components/AddToCartButton';
 

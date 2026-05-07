@@ -22,7 +22,7 @@ Next.js 內建的 `<Link>` 組件是對 `<a>` 標籤的增強版。它支援客�
 
 * 預取功能 (Prefetching)：當 `<Link>` 出現在使用者的視窗中時，Next.js 會自動在背景下載目標頁面的代碼，讓跳轉瞬間完成。
 
-```javascript=
+```javascript
 import Link from 'next/link';
 
 export default function Navbar() &#123;
@@ -44,7 +44,7 @@ export default function Navbar() &#123;
 
 * 注意：useRouter 只能在 Client Component 中使用。
 
-```javascript=
+```javascript
 "use client";
 
 import &#123; useRouter &#125; from 'next/navigation';
@@ -66,7 +66,7 @@ export default function LoginForm() &#123;
 
 如果你在 Server Component 中需要判斷權限並導向頁面，請使用 redirect。
 
-```javascript=
+```javascript
 import &#123; redirect &#125; from 'next/navigation';
 
 export default async function ProfilePage() &#123;
@@ -85,7 +85,7 @@ export default async function ProfilePage() &#123;
 
 在導覽列中，我們通常希望「當前頁面」的連結有不同的樣式。我們可以使用 `usePathname()` 來判斷。
 
-```javascript=
+```javascript
 "use client";
 
 import &#123; usePathname &#125; from 'next/navigation';

@@ -22,7 +22,7 @@ Next.js 透過 Layout 機制，讓我們能以層級化的方式管理共用介�
 
 * 作用：定義全站通用的字體、SEO Meta 標籤、全域樣式。
 * 特性：它是最外層的包裝，影響範圍涵蓋所有頁面。
-```javascript=
+```javascript
 // src/app/layout.tsx
 export default function RootLayout(&#123; children &#125;: &#123; children: React.ReactNode &#125;) &#123;
   return (

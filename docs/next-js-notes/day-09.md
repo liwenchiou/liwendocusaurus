@@ -22,7 +22,7 @@ Next.js 透過特定的檔案規範，讓我們能以「局部化」的方式捕
 
 * 運作方式：當該層級或子層級的組件出錯時，Next.js 會自動「攔截」錯誤，並顯示 `error.tsx` 的內容，而不是整頁壞掉。
 
-```javascript=
+```javascript
 "use client"; // 錯誤組件必須是 Client Component
 
 import &#123; useEffect &#125; from 'react';
@@ -69,7 +69,7 @@ Next.js 的錯誤攔截是有「層級性」的。
 
 當你抓取不到特定的資料（例如 ID 不存在的文章），應該主動拋出 404 狀態。
 
-```javascript=
+```javascript
 import &#123; notFound &#125; from 'next/navigation';
 
 export default async function PostPage(&#123; params &#125;) &#123;

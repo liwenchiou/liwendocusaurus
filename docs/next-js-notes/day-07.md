@@ -34,7 +34,7 @@ sidebar_position: 7
 
 
 
-```javascript=
+```javascript
 // 每 3600 秒 (1小時) 自動更新一次資料
 const res = await fetch('https://api.example.com/price', &#123; 
   next: &#123; revalidate: 3600 &#125; 
@@ -48,7 +48,7 @@ const res = await fetch('https://api.example.com/price', &#123;
 * 概念：給貨架貼上標籤。只要總部發出「這類產品改版」的通知，門市會立刻丟掉舊貨。
 * 適用：電商庫存、個人資料修改、部落格後台存檔。
 
-```javascript=
+```javascript
 //1. 抓資料時貼標籤：
 const res = await fetch('https://api.example.com/data', &#123; 
   next: &#123; tags: ['my-data-tag'] &#125; 

@@ -22,7 +22,7 @@ Next.js 內建了「串流渲染 (Streaming)」技術。它允許伺服器先將
 
 * 運作方式：當該路由正在抓取資料（await）時，Next.js 會自動顯示 `loading.tsx` 的內容，直到資料準備好為止。
 
-```javascript=
+```javascript
 // src/app/dashboard/loading.tsx
 export default function Loading() &#123;
   return (
@@ -41,7 +41,7 @@ export default function Loading() &#123;
 
 有時候我們不希望「整頁」都在轉圈圈，而是希望「只有慢的部分」在載入。這時我們可以使用 React 的 `<Suspense>`。
 
-```javascript=
+```javascript
 import &#123; Suspense &#125; from 'react';
 import SlowComponent from '@/components/SlowComponent';
 

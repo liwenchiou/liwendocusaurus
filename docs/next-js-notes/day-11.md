@@ -30,7 +30,7 @@ sidebar_position: 11
 我們將前後端邏輯整合，當後端驗證失敗時，直接將錯誤訊息回傳給前端顯示。
 
 [檔案：src/app/actions.ts (伺服器端)]
-```javascript=
+```javascript
 'use server'
 
 export async function createUser(prevState: any, formData: FormData) &#123;
@@ -48,7 +48,7 @@ export async function createUser(prevState: any, formData: FormData) &#123;
 &#125;
 ```
 [檔案：src/components/SignupForm.tsx (用戶端)]
-```javascript=
+```javascript
 'use client'
 
 import &#123; useActionState &#125; from 'react';
@@ -96,7 +96,7 @@ export default function SignupForm() &#123;
 
 在真實專案中，我們不會手寫 `if/else` 檢查。我們會定義一個 **Zod Schema**，這能確保資料在進入資料庫前就已經通過嚴格的格式檢查。
 
-```javascript=
+```javascript
 import &#123; z &#125; from 'zod';
 
 const signupSchema = z.object(&#123;

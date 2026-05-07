@@ -34,7 +34,7 @@ export function middleware(request: NextRequest) &#123;
 
 你肯定不希望所有的圖片、字體請求都經過 Middleware，這樣會浪費效能。我們可以透過 `config` 來過濾特定的路徑。
 
-```javascript=
+```javascript
 export const config = &#123;
   // 只針對 /dashboard 以及 /admin 開頭的路徑執行
   matcher: ['/dashboard/:path*', '/admin/:path*'],

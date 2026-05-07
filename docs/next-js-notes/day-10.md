@@ -28,7 +28,7 @@ Server Actions 是建立在 HTTP POST 之上的功能。你定義一個標註為
 
 我們不需要額外寫 API 檔案，直接在組件裡就能完成。
 
-```javascript=
+```javascript
 import &#123; revalidateTag &#125; from 'next/cache';
 
 export default function Guestbook() &#123;
@@ -65,7 +65,7 @@ export default function Guestbook() &#123;
 
 雖然 Server Actions 很方便，但當伺服器在處理資料時，我們應該讓按鈕變成「處理中」的狀態。
 
-```javascript=
+```javascript
 "use client";
 
 import &#123; useFormStatus &#125; from 'react-dom';
