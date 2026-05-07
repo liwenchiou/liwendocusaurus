@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --ifm-color-primary: #a885ff; /* Brighter, more visible Purple */
+  --ifm-color-primary: #a885ff;
   --ifm-color-primary-dark: #9366ff;
   --ifm-color-primary-darker: #8857ff;
   --ifm-color-primary-darkest: #6d28d9;
@@ -11,16 +11,16 @@
   --ifm-code-font-size: 90%;
   
   --ifm-font-family-base: 'Inter', system-ui, sans-serif;
-  --ifm-font-size-base: 18px; /* Increased by 2px from standard 16px */
-  --ifm-background-color: #0d1117;
-  --ifm-font-color-base: #a1a1a6; /* Brighter grey for text readability */
-  --ifm-heading-color: #f0f6fc;
-  --ifm-navbar-background-color: rgba(13, 17, 23, 0.8);
-  --ifm-border-color: #30363d;
+  --ifm-font-size-base: 18px;
+  --ifm-background-color: #121212; /* Slightly lighter for comfort */
+  --ifm-font-color-base: #e1e1e1;   /* Much brighter silver for readability */
+  --ifm-heading-color: #ffffff;
+  --ifm-navbar-background-color: rgba(18, 18, 18, 0.8);
+  --ifm-border-color: #2a2a2a;
 }
 
 [data-theme='dark'] {
-  --ifm-background-color: #0d1117;
+  --ifm-background-color: #121212;
 }
 
 /* Balanced Hero */
@@ -87,17 +87,15 @@
   transform: translateY(-5px);
 }
 
+p, li, span, div {
+  color: var(--ifm-font-color-base);
+}
+
 h3 {
   font-size: 24px; /* Increased heading size */
   font-weight: 600;
-  color: #f0f6fc;
+  color: var(--ifm-heading-color);
   margin-bottom: 1rem;
-}
-
-p {
-  font-size: 18px; /* Increased body size */
-  line-height: 1.6;
-  color: #a1a1a6;
 }
 
 /* Navbar */
@@ -131,14 +129,14 @@ p {
 
 /* Fix for high-contrast cards in Docs */
 .card {
-  background-color: #161b22 !important;
-  border: 1px solid #30363d !important;
-  color: #a1a1a6 !important;
+  background-color: #1c1c1c !important; /* Lighter surface */
+  border: 1px solid #333 !important;
+  color: var(--ifm-font-color-base) !important;
   padding: 2rem !important; /* More breathing room */
 }
 
 .card h2, .card h3 {
-  color: #f0f6fc !important;
+  color: var(--ifm-heading-color) !important;
 }
 
 /* Footer */
@@ -149,13 +147,13 @@ p {
 }
 
 .footer__title {
-  color: #f0f6fc;
+  color: var(--ifm-heading-color);
   font-weight: 600;
   font-size: 16px;
 }
 
 .footer__link-item {
-  color: #8b949e;
+  color: var(--ifm-font-color-base);
   font-size: 15px;
 }
 
