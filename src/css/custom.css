@@ -127,10 +127,10 @@ h3 {
   color: var(--ifm-color-primary);
 }
 
-/* Enforce dark theme for code blocks */
+/* Enforce dark theme for code blocks with high-contrast syntax highlighting */
 code {
   background-color: #1a1a1a !important;
-  color: #f0f6fc !important;
+  color: #e1e1e1 !important;
   border: 1px solid #333;
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
@@ -140,7 +140,8 @@ pre {
   background-color: #1a1a1a !important;
   border: 1px solid #333;
   border-radius: 8px;
-  padding: 1rem !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 pre code {
@@ -148,6 +149,16 @@ pre code {
   padding: 0 !important;
   border: none !important;
 }
+
+/* Vibrant Syntax Highlighting Overrides */
+.token.keyword, .token.selector, .token.changed { color: #ff7b72 !important; } /* Soft Red */
+.token.function { color: #d2a8ff !important; } /* Soft Purple */
+.token.string, .token.attr-value { color: #a5d6ff !important; } /* Bright Blue */
+.token.comment { color: #8b949e !important; font-style: italic; } /* Muted Grey */
+.token.class-name, .token.constant { color: #ffa657 !important; } /* Orange */
+.token.punctuation, .token.operator { color: #e1e1e1 !important; } /* Bright White */
+.token.boolean, .token.number { color: #79c0ff !important; } /* Sky Blue */
+
 
 /* Fix for high-contrast cards in Docs */
 .card {
