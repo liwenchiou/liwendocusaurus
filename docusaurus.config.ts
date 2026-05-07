@@ -5,8 +5,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "Liwen Docusaurus",
-  tagline: "專業的文件管理與知識庫",
+  title: "Liwen's Digital Garden",
+  tagline: "技術深耕、工程文化與 AI 協作的實踐紀錄",
   favicon: "img/og-image.png",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -15,10 +15,9 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: "https://liwenchiou.github.io",
+  url: "https://garden.liwen.studio",
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.NODE_ENV === "production" ? "/liwendocusaurus/" : "/",
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -103,41 +102,33 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "文檔",
+          title: "技術筆記",
           items: [
             {
-              label: "Next.js 筆記",
+              label: "Next.js 系列",
               to: "/docs/next-js-notes/day-01",
             },
-          ],
-        },
-        {
-          title: "社群",
-          items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "X",
-              href: "https://x.com/docusaurus",
+              label: "六角學院紀錄",
+              to: "/docs/hexschool",
             },
           ],
         },
         {
-          title: "更多",
+          title: "生活分享",
           items: [
             {
-              label: "部落格",
+              label: "所有文章",
               to: "/blog",
             },
+          ],
+        },
+        {
+          title: "關於我",
+          items: [
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/liwenchiou",
             },
           ],
         },

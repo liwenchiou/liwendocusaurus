@@ -21,3 +21,27 @@
   align-items: center;
   justify-content: center;
 }
+
+.aboutSection {
+  padding: 100px 0;
+  background-color: #0d1117;
+  border-top: 1px solid var(--ifm-border-color);
+}
+
+.aboutContent p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #c9d1d9;
+}
+
+.aboutContent strong {
+  color: var(--ifm-color-primary);
+}
+
+.aboutContent .italic {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  font-style: italic;
+  opacity: 0.8;
+}

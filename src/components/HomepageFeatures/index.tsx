@@ -11,29 +11,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: '設計策略',
+    title: '技術深耕',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        我們從底層邏輯出發，為您的數位產品打造穩固且具擴展性的架構藍圖。
+        從技術底層到系統架構的實戰紀錄。我追求程式碼的品質與系統的穩定性，並把這些學習過程都記錄下來。
       </>
     ),
   },
   {
-    title: '技術卓越',
+    title: '工程文化',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        追求極致的性能與代碼質量。我們利用最新的技術棧，將複雜的設計轉化為流暢的用戶體驗。
+        除了寫程式，我也很在意人的成長。這裡會討論工程師的心理壓力、職涯發展，以及如何優化我們的工作流程。
       </>
     ),
   },
   {
-    title: '創新方案',
+    title: 'AI 協作',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        不滿足於現狀。我們持續探索數位邊界，為您的商業挑戰提供前瞻性的解決方案。
+        擁抱 AI 時代。透過實踐 Vibe Coding 與 AI 工具，重新定義開發流程，把時間留給更有創造力的思考。
       </>
     ),
   },

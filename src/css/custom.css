@@ -100,11 +100,26 @@ h3 {
 
 /* Navbar */
 .navbar {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  /* backdrop-filter: blur(12px);  -- 移至 ::before 避免影響子元素包含塊 */
+  /* -webkit-backdrop-filter: blur(12px); */
   border-bottom: 1px solid var(--ifm-border-color);
   box-shadow: none;
   height: 70px; /* Increased height for larger text */
+  z-index: var(--ifm-z-index-fixed); /* Ensure it is above hero */
+  background-color: transparent !important; /* 父層設為透明 */
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--ifm-navbar-background-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: -1; /* 置於內容後方 */
 }
 
 .navbar__inner {
@@ -333,4 +348,33 @@ pre code {
 .blog-list-page article footer {
   margin-top: auto;
   z-index: 2; /* 確保閱讀更多按鈕依然在最上層 */
+}
+
+/* ============================================================
+   Mobile Optimization & Bug Fixes
+   ============================================================ */
+
+/* Fix for hamburger menu potentially being covered */
+.navbar-sidebar {
+  z-index: 1000 !important;
+}
+
+@media (max-width: 996px) {
+  .hero {
+    padding: 80px 20px;
+  }
+  
+  .hero__title {
+    font-size: 48px; /* Smaller title for mobile */
+  }
+  
+  .hero__subtitle {
+    font-size: 18px;
+    margin-bottom: 2rem;
+  }
+  
+  .navbar__toggle {
+    margin-right: 0.5rem;
+    z-index: 1001; /* Extra layer for the toggle button */
+  }
 }
