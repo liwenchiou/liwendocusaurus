@@ -159,6 +159,27 @@ pre code {
 .token.punctuation, .token.operator { color: #e1e1e1 !important; } /* Bright White */
 .token.boolean, .token.number { color: #79c0ff !important; } /* Sky Blue */
 
+/* Admonitions (Alerts) Dark Theme Fix */
+[data-theme='dark'] div[class*='admonition'] {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  border-left-width: 6px !important;
+  color: #e1e1e1 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] .admonition-heading h5 {
+  color: #ffffff !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Specific Admonition Types */
+[data-theme='dark'] .alert--success { border-left-color: #2ea043 !important; }
+[data-theme='dark'] .alert--info { border-left-color: #388bfd !important; }
+[data-theme='dark'] .alert--warning { border-left-color: #d29922 !important; }
+[data-theme='dark'] .alert--danger { border-left-color: #f85149 !important; }
+[data-theme='dark'] .alert--secondary { border-left-color: #6e7681 !important; }
+
 
 /* Fix for high-contrast cards in Docs */
 .card {
