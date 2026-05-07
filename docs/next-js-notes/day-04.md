@@ -49,20 +49,20 @@ sidebar_position: 4
 // src/app/products/[id]/page.tsx (Server Component)
 import AddToCartButton from '@/components/AddToCartButton';
 
-export default async function ProductPage({ params }) {
+export default async function ProductPage(&#123; params &#125;) &#123;
   // 1. 直接在伺服器抓資料，不流向前端
   const product = await fetchProduct(params.id);
 
   return (
     <div className="p-6">
-      <h1>{product.name}</h1>
-      <p>{product.description}</p>
+      <h1>&#123;product.name&#125;</h1>
+      <p>&#123;product.description&#125;</p>
       
-      {/* 2. 只有互動部分切換成 Client Component */}
-      <AddToCartButton productId={product.id} />
+      &#123;/* 2. 只有互動部分切換成 Client Component */&#125;
+      <AddToCartButton productId=&#123;product.id&#125; />
     </div>
   );
-}
+&#125;
 ```
 ---
 

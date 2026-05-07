@@ -30,23 +30,23 @@ src/app/
 ### 2. 基本用法：處理 GET 與 POST
 
 ```typescript=
-import { NextResponse } from 'next/server';
+import &#123; NextResponse &#125; from 'next/server';
 
 // 處理 GET 請求：獲取資料
-export async function GET() {
-  const data = { message: "Hello, Developer!" };
+export async function GET() &#123;
+  const data = &#123; message: "Hello, Developer!" &#125;;
   return NextResponse.json(data);
-}
+&#125;
 
 // 處理 POST 請求：建立資料
-export async function POST(request: Request) {
+export async function POST(request: Request) &#123;
   const body = await request.json();
   
   // 這裡可以寫入資料庫
   console.log('收到資料:', body);
 
-  return NextResponse.json({ status: 'success' }, { status: 201 });
-}
+  return NextResponse.json(&#123; status: 'success' &#125;, &#123; status: 201 &#125;);
+&#125;
 ```
 ### 3. 動態 API 路徑 (Dynamic API Routes)
 
@@ -56,12 +56,12 @@ export async function POST(request: Request) {
 // src/app/api/posts/[id]/route.ts
 export async function GET(
   request: Request,
-  { params }: { params: { id: string } }
-) {
+  &#123; params &#125;: &#123; params: &#123; id: string &#125; &#125;
+) &#123;
   const id = params.id;
   // 根據 ID 查詢資料...
-  return NextResponse.json({ id, title: "測試文章" });
-}
+  return NextResponse.json(&#123; id, title: "測試文章" &#125;);
+&#125;
 ```
 
 ### 4. API 的快取行為

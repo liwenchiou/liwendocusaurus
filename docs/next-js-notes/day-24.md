@@ -24,29 +24,29 @@ sidebar_position: 24
 
 ```typescript=
 // src/app/posts/page.tsx
-import { db } from "@/lib/db";
+import &#123; db &#125; from "@/lib/db";
 
-export default async function PostsPage({
+export default async function PostsPage(&#123;
   searchParams,
-}: {
-  searchParams: { page?: string };
-}) {
+&#125;: &#123;
+  searchParams: &#123; page?: string &#125;;
+&#125;) &#123;
   const page = Number(searchParams.page) || 1;
   const pageSize = 10;
 
-  const posts = await db.post.findMany({
+  const posts = await db.post.findMany(&#123;
     skip: (page - 1) * pageSize, // 跳過前面的資料
     take: pageSize,               // 只抓取 10 筆
-    orderBy: { createdAt: 'desc' },
-  });
+    orderBy: &#123; createdAt: 'desc' &#125;,
+  &#125;);
 
   return (
     <div>
-      {/* 渲染文章列表... */}
-      <PaginationControls currentPage={page} />
+      &#123;/* 渲染文章列表... */&#125;
+      <PaginationControls currentPage=&#123;page&#125; />
     </div>
   );
-}
+&#125;
 ```
 ### 2. 無限滾動 (Cursor-based Pagination)
 
@@ -66,26 +66,26 @@ export default async function PostsPage({
 
 ```typescript=
 "use client";
-import { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer"; // 推薦套件
+import &#123; useEffect, useState &#125; from "react";
+import &#123; useInView &#125; from "react-intersection-observer"; // 推薦套件
 
-export function InfinitePostList({ initialPosts }) {
+export function InfinitePostList(&#123; initialPosts &#125;) &#123;
   const [posts, setPosts] = useState(initialPosts);
-  const { ref, inView } = useInView();
+  const &#123; ref, inView &#125; = useInView();
 
-  useEffect(() => {
-    if (inView) {
+  useEffect(() => &#123;
+    if (inView) &#123;
       // 呼叫 Server Action 抓取更多並 setPosts
-    }
-  }, [inView]);
+    &#125;
+  &#125;, [inView]);
 
   return (
     <div>
-      {posts.map(post => <PostCard key={post.id} data={post} />)}
-      <div ref={ref}>載入中...</div>
+      &#123;posts.map(post => <PostCard key=&#123;post.id&#125; data=&#123;post&#125; />)&#125;
+      <div ref=&#123;ref&#125;>載入中...</div>
     </div>
   );
-}
+&#125;
 ```
 ---
 

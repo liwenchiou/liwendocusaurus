@@ -29,29 +29,29 @@ Server Actions 是建立在 HTTP POST 之上的功能。你定義一個標註為
 我們不需要額外寫 API 檔案，直接在組件裡就能完成。
 
 ```javascript=
-import { revalidateTag } from 'next/cache';
+import &#123; revalidateTag &#125; from 'next/cache';
 
-export default function Guestbook() {
+export default function Guestbook() &#123;
   // 1. 定義 Server Action (這段程式碼只會在伺服器執行)
-  async function addEntry(formData: FormData) {
+  async function addEntry(formData: FormData) &#123;
     'use server';
     
     const message = formData.get('message');
     
     // 2. 直接操作資料庫 (例如使用 Prisma 或直接 fetch)
-    console.log(`收到留言：${message}`);
+    console.log(`收到留言：$&#123;message&#125;`);
 
     // 3. 告訴 Next.js 留言增加了，請重新整理快取 (還記得 Day 07 嗎？)
     revalidateTag('guestbook');
-  }
+  &#125;
 
   return (
-    <form action={addEntry} className="flex flex-col gap-4 p-6">
+    <form action=&#123;addEntry&#125; className="flex flex-col gap-4 p-6">
       <textarea name="message" className="border p-2" placeholder="想說什麼？" />
       <button type="submit" className="bg-black text-white p-2">送出留言</button>
     </form>
   );
-}
+&#125;
 ```
 
 
@@ -68,17 +68,17 @@ export default function Guestbook() {
 ```javascript=
 "use client";
 
-import { useFormStatus } from 'react-dom';
+import &#123; useFormStatus &#125; from 'react-dom';
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
+function SubmitButton() &#123;
+  const &#123; pending &#125; = useFormStatus();
 
   return (
-    <button disabled={pending} className="bg-blue-500 disabled:bg-gray-400 p-2">
-      {pending ? '儲存中...' : '送出'}
+    <button disabled=&#123;pending&#125; className="bg-blue-500 disabled:bg-gray-400 p-2">
+      &#123;pending ? '儲存中...' : '送出'&#125;
     </button>
   );
-}
+&#125;
 ```
 
 

@@ -25,16 +25,16 @@ Next.js 內建的 `<Link>` 組件是對 `<a>` 標籤的增強版。它支援客�
 ```javascript=
 import Link from 'next/link';
 
-export default function Navbar() {
+export default function Navbar() &#123;
   return (
     <nav>
       <Link href="/">首頁</Link>
-      <Link href="/dashboard" prefetch={false}>
+      <Link href="/dashboard" prefetch=&#123;false&#125;>
         後台 (關閉預取)
       </Link>
     </nav>
   );
-}
+&#125;
 ```
 
 
@@ -47,18 +47,18 @@ export default function Navbar() {
 ```javascript=
 "use client";
 
-import { useRouter } from 'next/navigation';
+import &#123; useRouter &#125; from 'next/navigation';
 
-export default function LoginForm() {
+export default function LoginForm() &#123;
   const router = useRouter();
 
-  const handleSubmit = async () => {
+  const handleSubmit = async () => &#123;
     // 執行登入邏輯...
     router.push('/dashboard'); // 跳轉至後台
-  };
+  &#125;;
 
-  return <button onClick={handleSubmit}>登入</button>;
-}
+  return <button onClick=&#123;handleSubmit&#125;>登入</button>;
+&#125;
 ```
 
 
@@ -67,17 +67,17 @@ export default function LoginForm() {
 如果你在 Server Component 中需要判斷權限並導向頁面，請使用 redirect。
 
 ```javascript=
-import { redirect } from 'next/navigation';
+import &#123; redirect &#125; from 'next/navigation';
 
-export default async function ProfilePage() {
+export default async function ProfilePage() &#123;
   const user = await fetchUser();
   
-  if (!user) {
+  if (!user) &#123;
     redirect('/login'); // 直接在伺服器端完成跳轉
-  }
+  &#125;
   
   return <div>個人資料內容</div>;
-}
+&#125;
 
 ```
 
@@ -88,23 +88,23 @@ export default async function ProfilePage() {
 ```javascript=
 "use client";
 
-import { usePathname } from 'next/navigation';
+import &#123; usePathname &#125; from 'next/navigation';
 import Link from 'next/link';
 
-export default function NavLinks() {
+export default function NavLinks() &#123;
   const pathname = usePathname();
 
   return (
     <nav>
-      <Link className={pathname === '/' ? 'text-blue-500' : ''} href="/">
+      <Link className=&#123;pathname === '/' ? 'text-blue-500' : ''&#125; href="/">
         首頁
       </Link>
-      <Link className={pathname === '/about' ? 'text-blue-500' : ''} href="/about">
+      <Link className=&#123;pathname === '/about' ? 'text-blue-500' : ''&#125; href="/about">
         關於
       </Link>
     </nav>
   );
-}
+&#125;
 ```
 
 
@@ -118,7 +118,7 @@ Next.js 的導覽之所以流暢，是因為它結合了「軟導覽 (Soft Navig
     - 一般連結用 <Link>，邏輯跳轉用 useRouter，伺服器邏輯用 redirect，判斷路徑用 usePathname。
 * 專家筆記：
     - 雖然預取很強大，但如果一個頁面有上百個連結，會造成不必要的網路負擔。
-    - 對於非核心路徑，可以適時使用 prefetch={false} 來優化效能。
+    - 對於非核心路徑，可以適時使用 prefetch=&#123;false&#125; 來優化效能。
 
 ---
 

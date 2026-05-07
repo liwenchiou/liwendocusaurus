@@ -35,28 +35,28 @@ npm install next-cloudinary
 ```typescript=
 'use client';
 
-import { CldUploadWidget } from 'next-cloudinary';
+import &#123; CldUploadWidget &#125; from 'next-cloudinary';
 
-export default function ImageUpload({ onUpload }: { onUpload: (url: string) => void }) {
+export default function ImageUpload(&#123; onUpload &#125;: &#123; onUpload: (url: string) => void &#125;) &#123;
   return (
     <CldUploadWidget 
       uploadPreset="your_preset_name" // 在 Cloudinary 後台設定
-      onSuccess={(result: any) => {
+      onSuccess=&#123;(result: any) => &#123;
         onUpload(result.info.secure_url); // 取得上傳後的雲端網址
-      }}
+      &#125;&#125;
     >
-      {({ open }) => (
+      &#123;(&#123; open &#125;) => (
         <button 
           type="button"
-          onClick={() => open()}
+          onClick=&#123;() => open()&#125;
           className="bg-blue-500 text-white p-2 rounded"
         >
           上傳圖片
         </button>
-      )}
+      )&#125;
     </CldUploadWidget>
   );
-}
+&#125;
 ```
 ### 3. 將網址存入資料庫
 
@@ -65,13 +65,13 @@ export default function ImageUpload({ onUpload }: { onUpload: (url: string) => v
 [範例程式碼]
 ```typescript=
 // src/app/actions.ts
-export async function updateCover(imageUrl: string) {
-  await db.post.update({
-    where: { id: '...' },
-    data: { coverImage: imageUrl }
-  });
+export async function updateCover(imageUrl: string) &#123;
+  await db.post.update(&#123;
+    where: &#123; id: '...' &#125;,
+    data: &#123; coverImage: imageUrl &#125;
+  &#125;);
   revalidatePath('/posts');
-}
+&#125;
 ```
 ### 4. 安全性考量：Signed Uploads
 

@@ -24,7 +24,7 @@ Next.js 內建了「串流渲染 (Streaming)」技術。它允許伺服器先將
 
 ```javascript=
 // src/app/dashboard/loading.tsx
-export default function Loading() {
+export default function Loading() &#123;
   return (
     <div className="animate-pulse p-6">
       <div className="h-4 bg-gray-200 rounded w-1/4 mb-4"></div>
@@ -33,7 +33,7 @@ export default function Loading() {
       <p className="mt-4 text-gray-500">正在努力搬運資料中...</p>
     </div>
   );
-}
+&#125;
 ```
 
 
@@ -42,24 +42,24 @@ export default function Loading() {
 有時候我們不希望「整頁」都在轉圈圈，而是希望「只有慢的部分」在載入。這時我們可以使用 React 的 `<Suspense>`。
 
 ```javascript=
-import { Suspense } from 'react';
+import &#123; Suspense &#125; from 'react';
 import SlowComponent from '@/components/SlowComponent';
 
-export default function Page() {
+export default function Page() &#123;
   return (
     <section>
       <h1>我的儀表板</h1>
       
-      {/* 導覽列和標題會立即出現 */}
+      &#123;/* 導覽列和標題會立即出現 */&#125;
       <nav>快速選單</nav>
 
-      {/* 只有這個很慢的組件會被暫時替換成 Skeleton */}
-      <Suspense fallback={<p>載入推薦商品中...</p>}>
+      &#123;/* 只有這個很慢的組件會被暫時替換成 Skeleton */&#125;
+      <Suspense fallback=&#123;<p>載入推薦商品中...</p>&#125;>
         <SlowComponent />
       </Suspense>
     </section>
   );
-}
+&#125;
 ```
 ### 3. 什麼是 Streaming (串流)？
 

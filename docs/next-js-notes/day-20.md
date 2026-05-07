@@ -24,34 +24,34 @@ sidebar_position: 20
 
 [檔案：src/auth.ts]
 ```typescript=
-export const { handlers, signIn, signOut, auth } = NextAuth({
+export const &#123; handlers, signIn, signOut, auth &#125; = NextAuth(&#123;
   providers: [GitHub, Google],
-  pages: {
+  pages: &#123;
     signIn: '/login', // 指定自定義的登入頁路徑
-  },
-});
+  &#125;,
+&#125;);
 ```
 接著，你就可以在 `src/app/login/page.tsx` 隨意設計你的 UI，並調用 `signIn` 函式。
 
 ```typescript=
-import { signIn } from "@/auth";
+import &#123; signIn &#125; from "@/auth";
 
-export default function LoginPage() {
+export default function LoginPage() &#123;
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <h1 className="text-2xl font-bold">歡迎回來</h1>
       <button 
-        onClick={async () => {
+        onClick=&#123;async () => &#123;
           "use server";
-          await signIn("github", { redirectTo: "/dashboard" });
-        }}
+          await signIn("github", &#123; redirectTo: "/dashboard" &#125;);
+        &#125;&#125;
         className="mt-4 p-2 bg-black text-white rounded"
       >
         使用 GitHub 登入
       </button>
     </div>
   );
-}
+&#125;
 ```
 ### 2. 在 Session 中加入角色資訊 (Callbacks)
 
@@ -59,42 +59,42 @@ export default function LoginPage() {
 
 [檔案：src/auth.ts]
 ```typescript=
-export const { handlers, signIn, signOut, auth } = NextAuth({
+export const &#123; handlers, signIn, signOut, auth &#125; = NextAuth(&#123;
   // ... 其他設定
-  callbacks: {
-    async session({ session, token }) {
-      if (session.user) {
+  callbacks: &#123;
+    async session(&#123; session, token &#125;) &#123;
+      if (session.user) &#123;
         session.user.role = token.role; // 從 token 轉發到 session
-      }
+      &#125;
       return session;
-    },
-    async jwt({ token, user }) {
-      if (user) {
+    &#125;,
+    async jwt(&#123; token, user &#125;) &#123;
+      if (user) &#123;
         token.role = user.role; // 初次登入時將資料庫的角色存入 token
-      }
+      &#125;
       return token;
-    },
-  },
-});
+    &#125;,
+  &#125;,
+&#125;);
 ```
 ### 3. 基於角色的頁面保護 (RBAC)
 
 現在你可以在 Server Component 中輕鬆實現權限判斷：
 
 ```typescript=
-import { auth } from "@/auth";
-import { redirect } from "next/navigation";
+import &#123; auth &#125; from "@/auth";
+import &#123; redirect &#125; from "next/navigation";
 
-export default async function AdminPage() {
+export default async function AdminPage() &#123;
   const session = await auth();
 
   // 如果不是管理員，直接踢走
-  if (session?.user?.role !== "admin") {
+  if (session?.user?.role !== "admin") &#123;
     redirect("/dashboard");
-  }
+  &#125;
 
   return <h1>秘密的管理後台</h1>;
-}
+&#125;
 
 ```
 

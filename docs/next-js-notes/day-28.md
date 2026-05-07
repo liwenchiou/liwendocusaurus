@@ -24,32 +24,32 @@ sidebar_position: 28
 ```typescript=
 'use client'; // 錯誤元件必須是 Client Component
 
-import { useEffect } from 'react';
+import &#123; useEffect &#125; from 'react';
 
-export default function Error({
+export default function Error(&#123;
   error,
   reset,
-}: {
-  error: Error & { digest?: string };
+&#125;: &#123;
+  error: Error & &#123; digest?: string &#125;;
   reset: () => void;
-}) {
-  useEffect(() => {
+&#125;) &#123;
+  useEffect(() => &#123;
     // 這裡可以將錯誤回報給 Sentry 或 LogRocket
     console.error(error);
-  }, [error]);
+  &#125;, [error]);
 
   return (
     <div className="p-4 border border-red-200 bg-red-50 rounded">
       <h2 className="text-red-700 font-bold">糟糕，儀表板出了一點問題</h2>
       <button
-        onClick={() => reset()} // 嘗試重新渲染（再次執行 Page 邏輯）
+        onClick=&#123;() => reset()&#125; // 嘗試重新渲染（再次執行 Page 邏輯）
         className="mt-2 bg-red-600 text-white px-4 py-1 rounded"
       >
         再試一次
       </button>
     </div>
   );
-}
+&#125;
 ```
 ### 2. 全域錯誤處理：global-error.tsx
 
@@ -62,14 +62,14 @@ export default function Error({
 Server Actions 的錯誤不會觸發 `error.tsx` 的顯示（因為它們是異步動作而非渲染錯誤）。我們應該在 Action 中捕捉錯誤並回傳狀態。
 
 ```typescript=
-export async function deleteData(id: string) {
-  try {
-    await db.data.delete({ where: { id } });
+export async function deleteData(id: string) &#123;
+  try &#123;
+    await db.data.delete(&#123; where: &#123; id &#125; &#125;);
     revalidatePath('/');
-  } catch (e) {
-    return { error: '刪除失敗，請檢查權限或網路連線' };
-  }
-}
+  &#125; catch (e) &#123;
+    return &#123; error: '刪除失敗，請檢查權限或網路連線' &#125;;
+  &#125;
+&#125;
 ```
 ### 4. 預期內的錯誤：notFound()
 

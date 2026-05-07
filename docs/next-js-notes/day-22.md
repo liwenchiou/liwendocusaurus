@@ -22,7 +22,7 @@ sidebar_position: 22
 
 [檔案：prisma/schema.prisma]
 ```bash=
-model Post {
+model Post &#123;
   id        String   @id @default(cuid())
   title     String
   content   String?
@@ -30,13 +30,13 @@ model Post {
   authorId  String
   author    User     @relation(fields: [authorId], references: [id])
   tags      Tag[]    // 一篇文章可以有多個標籤
-}
+&#125;
 
-model Tag {
+model Tag &#123;
   id    String @id @default(cuid())
   name  String @unique
   posts Post[] // 一個標籤也可以屬於多篇文章
-}
+&#125;
 ```
 ### 2. 巢狀寫入 (Nested Writes) 的威力
 
@@ -46,26 +46,26 @@ model Tag {
 
 [範例程式碼：src/app/actions.ts]
 ```typescript=
-import { db } from "@/lib/db";
+import &#123; db &#125; from "@/lib/db";
 
-export async function createPostWithTags(formData: FormData) {
+export async function createPostWithTags(formData: FormData) &#123;
   const title = formData.get("title") as string;
   const tagList = (formData.get("tags") as string).split(","); // 例如 "React,Nextjs"
 
-  await db.post.create({
-    data: {
+  await db.post.create(&#123;
+    data: &#123;
       title,
       authorId: "user-id-123", // 實際開發中會從 Session 取得
-      tags: {
+      tags: &#123;
         // 自動判斷：標籤若存在則連結(connect)，不存在則新增(create)
-        connectOrCreate: tagList.map(name => ({
-          where: { name },
-          create: { name }
-        }))
-      }
-    }
-  });
-}
+        connectOrCreate: tagList.map(name => (&#123;
+          where: &#123; name &#125;,
+          create: &#123; name &#125;
+        &#125;))
+      &#125;
+    &#125;
+  &#125;);
+&#125;
 ```
 ### 3. 進階查詢：include 與 select
 
@@ -75,21 +75,21 @@ export async function createPostWithTags(formData: FormData) {
 * **select**：精確指定要回傳的欄位（效能最佳化首選）。
 
 ```typescript=
-const posts = await db.post.findMany({
-  where: { published: true },
-  include: {
-    author: { select: { name: true } }, // 只抓作者姓名
+const posts = await db.post.findMany(&#123;
+  where: &#123; published: true &#125;,
+  include: &#123;
+    author: &#123; select: &#123; name: true &#125; &#125;, // 只抓作者姓名
     tags: true,                         // 抓取所有標籤內容
-  }
-});
+  &#125;
+&#125;);
 ```
 ### 4. 事務處理 (Transactions)
 
 當你的操作涉及多個資料表且必須「同生共死」時（例如註冊使用者同時建立預設設定），請使用 `$transaction` 確保資料一致性。
 
 ```typescript
-const [newUser, defaultSetting] = await db.$transaction(async (tx) => {
-  const user = await tx.user.create({ data: { email: 'liwen@example.com' } });
-  const setting = await tx.settings.create({ data: { userId: user.id, theme: 'dark' } });
+const [newUser, defaultSetting] = await db.$transaction(async (tx) => &#123;
+  const user = await tx.user.create(&#123; data: &#123; email: 'liwen@example.com' &#125; &#125;);
+  const setting = await tx.settings.create(&#123; data: &#123; userId: user.id, theme: 'dark' &#125; &#125;);
   return [user, setting];
-});
+&#125;);

@@ -36,9 +36,9 @@ sidebar_position: 7
 
 ```javascript=
 // 每 3600 秒 (1小時) 自動更新一次資料
-const res = await fetch('https://api.example.com/price', { 
-  next: { revalidate: 3600 } 
-});
+const res = await fetch('https://api.example.com/price', &#123; 
+  next: &#123; revalidate: 3600 &#125; 
+&#125;);
 ```
 
 
@@ -50,12 +50,12 @@ const res = await fetch('https://api.example.com/price', {
 
 ```javascript=
 //1. 抓資料時貼標籤：
-const res = await fetch('https://api.example.com/data', { 
-  next: { tags: ['my-data-tag'] } 
-});
+const res = await fetch('https://api.example.com/data', &#123; 
+  next: &#123; tags: ['my-data-tag'] &#125; 
+&#125;);
 
 //2. 資料變動時「撕標籤」（清除快取）：
-import { revalidateTag } from 'next/cache';
+import &#123; revalidateTag &#125; from 'next/cache';
 // 在 Server Action 中呼叫，瞬間讓所有貼有 my-data-tag 的快取失效
 revalidateTag('my-data-tag'); 
 ```

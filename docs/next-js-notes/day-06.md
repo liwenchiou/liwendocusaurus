@@ -29,30 +29,30 @@ Next.js 的 Server Components 徹底改變了這個遊戲規則。今天我們�
 ```javascript=
 // src/app/posts/page.tsx
 
-async function getPosts() {
+async function getPosts() &#123;
   const res = await fetch('https://api.example.com/posts');
   
-  if (!res.ok) {
+  if (!res.ok) &#123;
     throw new Error('資料獲取失敗');
-  }
+  &#125;
   
   return res.json();
-}
+&#125;
 
-export default async function PostsPage() {
+export default async function PostsPage() &#123;
   const posts = await getPosts(); // 直接在 Server 端獲取資料
 
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold">最新文章</h1>
       <ul>
-        {posts.map((post) => (
-          <li key={post.id} className="mt-2">{post.title}</li>
-        ))}
+        &#123;posts.map((post) => (
+          <li key=&#123;post.id&#125; className="mt-2">&#123;post.title&#125;</li>
+        ))&#125;
       </ul>
     </div>
   );
-}
+&#125;
 ```
 
 
@@ -68,7 +68,7 @@ export default async function PostsPage() {
 * 並行獲取 (Parallel)：當兩個請求互不干擾時，應使用 `Promise.all` 以節省時間。
 
 ```javascript=
-export default async function ProfilePage({ params }) {
+export default async function ProfilePage(&#123; params &#125;) &#123;
   // 並行啟動兩個請求
   const userData = getUser(params.id);
   const userPosts = getPosts(params.id);
@@ -78,11 +78,11 @@ export default async function ProfilePage({ params }) {
 
   return (
     <div>
-      <h1>{user.name} 的個人檔案</h1>
-      <PostList posts={posts} />
+      <h1>&#123;user.name&#125; 的個人檔案</h1>
+      <PostList posts=&#123;posts&#125; />
     </div>
   );
-}
+&#125;
 ```
 
 

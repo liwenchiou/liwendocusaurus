@@ -25,33 +25,33 @@ Next.js 透過特定的檔案規範，讓我們能以「局部化」的方式捕
 ```javascript=
 "use client"; // 錯誤組件必須是 Client Component
 
-import { useEffect } from 'react';
+import &#123; useEffect &#125; from 'react';
 
-export default function Error({
+export default function Error(&#123;
   error,
   reset,
-}: {
-  error: Error & { digest?: string };
+&#125;: &#123;
+  error: Error & &#123; digest?: string &#125;;
   reset: () => void;
-}) {
-  useEffect(() => {
+&#125;) &#123;
+  useEffect(() => &#123;
     // 你可以將錯誤記錄到 Sentry 或其他監控服務
     console.error(error);
-  }, [error]);
+  &#125;, [error]);
 
   return (
     <div className="p-6 text-center border-2 border-red-500 rounded-lg">
       <h2 className="text-xl font-bold text-red-600">哎呀！出錯了</h2>
       <p className="my-4 text-gray-600">我們在搬運資料時遇到了一點小麻煩。</p>
       <button
-        onClick={() => reset()} // 嘗試重新渲染，看能不能修復錯誤
+        onClick=&#123;() => reset()&#125; // 嘗試重新渲染，看能不能修復錯誤
         className="px-4 py-2 bg-blue-500 text-white rounded"
       >
         再試一次
       </button>
     </div>
   );
-}
+&#125;
 ```
 
 
@@ -70,17 +70,17 @@ Next.js 的錯誤攔截是有「層級性」的。
 當你抓取不到特定的資料（例如 ID 不存在的文章），應該主動拋出 404 狀態。
 
 ```javascript=
-import { notFound } from 'next/navigation';
+import &#123; notFound &#125; from 'next/navigation';
 
-export default async function PostPage({ params }) {
+export default async function PostPage(&#123; params &#125;) &#123;
   const post = await fetchPost(params.id);
 
-  if (!post) {
+  if (!post) &#123;
     notFound(); // 這會觸發最近的 not-found.tsx
-  }
+  &#125;
 
-  return <div>{post.title}</div>;
-}
+  return <div>&#123;post.title&#125;</div>;
+&#125;
 ```
 
 

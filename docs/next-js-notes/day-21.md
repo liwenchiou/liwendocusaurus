@@ -34,21 +34,21 @@ npx prisma init
 
 [檔案：prisma/schema.prisma]
 ```
-model User {
+model User &#123;
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
   posts Post[]  // 一個使用者可以擁有多篇文章
-}
+&#125;
 
-model Post {
+model Post &#123;
   id        Int     @id @default(autoincrement())
   title     String
   content   String?
   published Boolean @default(false)
   author    User    @relation(fields: [authorId], references: [id])
   authorId  Int
-}
+&#125;
 ```
 ### 3. 同步資料庫 (Migration)
 
@@ -63,10 +63,10 @@ npx prisma migrate dev --name init
 
 [檔案：src/lib/db.ts]
 ```typescript=
-import { PrismaClient } from "@prisma/client";
+import &#123; PrismaClient &#125; from "@prisma/client";
 
 const prismaClientSingleton = () => new PrismaClient();
-const globalForPrisma = globalThis as unknown as { prisma: PrismaClient | undefined };
+const globalForPrisma = globalThis as unknown as &#123; prisma: PrismaClient | undefined &#125;;
 
 export const db = globalForPrisma.prisma ?? prismaClientSingleton();
 
@@ -77,22 +77,22 @@ if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = db;
 現在，你可以在 Server Component 裡直接呼叫 `db`，且享有完整的 TypeScript 補全。
 
 ```typescript=
-import { db } from "@/lib/db";
+import &#123; db &#125; from "@/lib/db";
 
-export default async function PostsPage() {
-  const posts = await db.post.findMany({
-    where: { published: true },
-    include: { author: true } // 一併抓取關聯的作者資料
-  });
+export default async function PostsPage() &#123;
+  const posts = await db.post.findMany(&#123;
+    where: &#123; published: true &#125;,
+    include: &#123; author: true &#125; // 一併抓取關聯的作者資料
+  &#125;);
 
   return (
     <ul>
-      {posts.map(post => (
-        <li key={post.id}>{post.title} - by {post.author.name}</li>
-      ))}
+      &#123;posts.map(post => (
+        <li key=&#123;post.id&#125;>&#123;post.title&#125; - by &#123;post.author.name&#125;</li>
+      ))&#125;
     </ul>
   );
-}
+&#125;
 ```
 ---
 

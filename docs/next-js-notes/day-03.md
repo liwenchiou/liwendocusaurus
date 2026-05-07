@@ -24,16 +24,16 @@ Next.js 透過 Layout 機制，讓我們能以層級化的方式管理共用介�
 * 特性：它是最外層的包裝，影響範圍涵蓋所有頁面。
 ```javascript=
 // src/app/layout.tsx
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout(&#123; children &#125;: &#123; children: React.ReactNode &#125;) &#123;
   return (
     <html lang="zh-TW">
       <body>
         <nav>這是全站導覽列</nav>
-        {children} {/* 這裡會渲染各個頁面的內容 */}
+        &#123;children&#125; &#123;/* 這裡會渲染各個頁面的內容 */&#125;
       </body>
     </html>
   );
-}
+&#125;
 ```
 ![image](https://hackmd.io/_uploads/ryx6CRppWe.png)
 

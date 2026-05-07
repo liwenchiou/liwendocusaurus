@@ -22,12 +22,12 @@ Next.js 的 Metadata API 徹底解決了這個問題。它不僅支援靜態設�
 
 ```javascript=
 // src/app/layout.tsx
-import { Metadata } from 'next';
+import &#123; Metadata &#125; from 'next';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = &#123;
   title: '我的技術部落格',
   description: '分享 Next.js 與現代化全端開發的點點滴滴',
-};
+&#125;;
 ```
 ### 2. 動態 Metadata (Dynamic Metadata)
 
@@ -35,17 +35,17 @@ export const metadata: Metadata = {
 
 ```javascript=
 // src/app/posts/[id]/page.tsx
-export async function generateMetadata({ params }) {
+export async function generateMetadata(&#123; params &#125;) &#123;
   const post = await fetchPost(params.id);
 
-  return {
-    title: `${post.title} | Liwen.dev`,
+  return &#123;
+    title: `$&#123;post.title&#125; | Liwen.dev`,
     description: post.summary,
-    openGraph: {
+    openGraph: &#123;
       images: [post.coverImage], // 社群分享預覽圖 (OG Image)
-    },
-  };
-}
+    &#125;,
+  &#125;;
+&#125;
 ```
 ### 3. 使用 Title Template (標題模板)
 
@@ -53,12 +53,12 @@ export async function generateMetadata({ params }) {
 
 ```javascript=
 // src/app/layout.tsx
-export const metadata: Metadata = {
-  title: {
+export const metadata: Metadata = &#123;
+  title: &#123;
     template: '%s | Liwen.dev', // %s 會被子頁面的標題替換
     default: 'Liwen.dev - 數位建築師', // 若子頁面沒設定標題，則顯示此預設值
-  },
-};
+  &#125;,
+&#125;;
 ```
 ### 4. Open Graph 與 Twitter 卡片
 

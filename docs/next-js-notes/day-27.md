@@ -34,21 +34,21 @@ Next.js 15 (React 19) 引入了官方的 `useOptimistic` Hook，讓這種複雜�
 ```typescript=
 'use client';
 
-import { useOptimistic } from 'react';
-import { createComment } from './actions';
+import &#123; useOptimistic &#125; from 'react';
+import &#123; createComment &#125; from './actions';
 
-export function CommentList({ initialComments }) {
+export function CommentList(&#123; initialComments &#125;) &#123;
   // optimisticComments：目前的顯示狀態（可能是模擬的）
   // addOptimisticComment：觸發模擬更新的函式
   const [optimisticComments, addOptimisticComment] = useOptimistic(
     initialComments,
     (state, newCommentText) => [
       ...state,
-      { id: Math.random(), text: newCommentText, sending: true } // 標記為傳送中
+      &#123; id: Math.random(), text: newCommentText, sending: true &#125; // 標記為傳送中
     ]
   );
 
-  async function handleAction(formData: FormData) {
+  async function handleAction(formData: FormData) &#123;
     const text = formData.get('text') as string;
     
     // 1. 立即更新 UI
@@ -56,22 +56,22 @@ export function CommentList({ initialComments }) {
     
     // 2. 真正發送請求到 Server
     await createComment(text);
-  }
+  &#125;
 
   return (
     <div>
-      {optimisticComments.map((c) => (
-        <div key={c.id} className={c.sending ? 'opacity-50' : ''}>
-          {c.text} {c.sending && '(傳送中...)'}
+      &#123;optimisticComments.map((c) => (
+        <div key=&#123;c.id&#125; className=&#123;c.sending ? 'opacity-50' : ''&#125;>
+          &#123;c.text&#125; &#123;c.sending && '(傳送中...)'&#125;
         </div>
-      ))}
-      <form action={handleAction}>
+      ))&#125;
+      <form action=&#123;handleAction&#125;>
         <input name="text" className="border p-2" />
         <button type="submit">送出</button>
       </form>
     </div>
   );
-}
+&#125;
 ```
 ### 3. 優勢與注意事項
 

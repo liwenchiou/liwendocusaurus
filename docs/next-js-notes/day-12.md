@@ -32,21 +32,21 @@ Next.js 的 `next/image` 是對原生 <img> 的強力封裝。它具備以下黑
 ```javascript=
 import Image from 'next/image';
 
-export default function HeroSection() {
+export default function HeroSection() &#123;
   return (
     <div className="hero">
       <Image
         src="/banner.jpg"
         alt="首頁大圖"
-        width={1200}
-        height={600}
+        width=&#123;1200&#125;
+        height=&#123;600&#125;
         // 關鍵屬性：priority 會讓這張圖優先下載，適合用於首屏圖 (LCP)
         priority 
         className="rounded-lg"
       />
     </div>
   );
-}
+&#125;
 ```
 
 ### 3. 處理「不確定尺寸」的背景圖
@@ -72,17 +72,17 @@ export default function HeroSection() {
 
 ```javascript=
 // src/app/layout.tsx
-import { Inter } from 'next/font/google';
+import &#123; Inter &#125; from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter(&#123; subsets: ['latin'] &#125;);
 
-export default function RootLayout({ children }) {
+export default function RootLayout(&#123; children &#125;) &#123;
   return (
-    <html lang="en" className={inter.className}>
-      <body>{children}</body>
+    <html lang="en" className=&#123;inter.className&#125;>
+      <body>&#123;children&#125;</body>
     </html>
   );
-}```
+&#125;```
 
 ---
 

@@ -22,33 +22,33 @@ sidebar_position: 15
 
 [檔案：src/middleware.ts]
 ```typescript=
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import &#123; NextResponse &#125; from 'next/server';
+import type &#123; NextRequest &#125; from 'next/server';
 
-export function middleware(request: NextRequest) {
+export function middleware(request: NextRequest) &#123;
   // 這裡寫你的守門邏輯
   return NextResponse.next();
-}
+&#125;
 ```
 ### 2. 設定匹配路徑 (Matcher)
 
 你肯定不希望所有的圖片、字體請求都經過 Middleware，這樣會浪費效能。我們可以透過 `config` 來過濾特定的路徑。
 
 ```javascript=
-export const config = {
+export const config = &#123;
   // 只針對 /dashboard 以及 /admin 開頭的路徑執行
   matcher: ['/dashboard/:path*', '/admin/:path*'],
-};
+&#125;;
 ```
 ### 3. 常見應用場景
 
 #### A. 權限檢查 (Authentication)
 檢查使用者是否有 Token，若無則強制導回登入頁。
 ```typescript
-export function middleware(request: NextRequest) {
+export function middleware(request: NextRequest) &#123;
   const token = request.cookies.get('session-token');
 
-  if (!token && request.nextUrl.pathname.startsWith('/dashboard')) {
+  if (!token && request.nextUrl.pathname.startsWith('/dashboard')) &#123;
     return NextResponse.redirect(new URL('/login', request.url));
-  }
-}
+  &#125;
+&#125;
