@@ -26,7 +26,7 @@ npm install react-hook-form
 ## 核心語法：`useForm()`
 這是該套件最主要的 Hook，執行後會回傳幾個重要的工具：
 ```javascript
-const &#123; register, handleSubmit, formState: &#123; errors &#125; &#125; = useForm();
+const { register, handleSubmit, formState: { errors } } = useForm();
 ```
 - **register**：這是一個函式，用來「登記」您的輸入框。它會自動幫您處理 name, onChange, onBlur 和 ref。
 - **handleSubmit**：用來包裝您的提交函式，它會幫您執行 e.preventDefault() 並在驗證通過後才傳出資料。
@@ -35,47 +35,47 @@ const &#123; register, handleSubmit, formState: &#123; errors &#125; &#125; = us
 ## 範例：員工資料新增表單
 [codepen 範例](https://codepen.io/liwenchiou/pen/vEKQzbj?editors=0011)
 ```javascript
-const &#123; useForm &#125; = ReactHookForm;
+const { useForm } = ReactHookForm;
 
-function EmployeeForm() &#123;
+function EmployeeForm() {
   // 初始化 RHF
-  const &#123; register, handleSubmit, formState: &#123; errors &#125; &#125; = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
   // 成功提交時的邏輯
-  const onSubmit = (data) => &#123;
+  const onSubmit = (data) => {
     console.log("送出的員工資料：", data);
     alert("資料驗證通過！請看 Console 輸出結果");
-  &#125;;
+  };
 
   return (
-    <div style=&#123;&#123; padding: '20px', maxWidth: '400px' &#125;&#125;>
+    <div style={{ padding: '20px', maxWidth: '400px' }}>
       <h2>新增員工資料</h2>
-      <form onSubmit=&#123;handleSubmit(onSubmit)&#125;>
+      <form onSubmit={handleSubmit(onSubmit)}>
         
-        &#123;/* 1. 姓名欄位：必填 */&#125;
-        <div style=&#123;&#123; marginBottom: '15px' &#125;&#125;>
+        {/* 1. 姓名欄位：必填 */}
+        <div style={{ marginBottom: '15px' }}>
           <label>姓名：</label>
-          <input &#123;...register("name", &#123; required: "姓名是必填項" &#125;)&#125; />
-          &#123;errors.name && <p style=&#123;&#123; color: 'red', fontSize: '12px' &#125;&#125;>&#123;errors.name.message&#125;</p>&#125;
+          <input {...register("name", { required: "姓名是必填項" })} />
+          {errors.name && <p style={{ color: 'red', fontSize: '12px' }}>{errors.name.message}</p>}
         </div>
 
-        &#123;/* 2. Email 欄位：必填 + 格式驗證 */&#125;
-        <div style=&#123;&#123; marginBottom: '15px' &#125;&#125;>
+        {/* 2. Email 欄位：必填 + 格式驗證 */}
+        <div style={{ marginBottom: '15px' }}>
           <label>Email：</label>
-          <input &#123;...register("email", &#123; 
+          <input {...register("email", { 
             required: "Email 是必填項",
-            pattern: &#123;
+            pattern: {
               value: /^\S+@\S+$/i,
               message: "Email 格式不正確"
-            &#125;
-          &#125;)&#125; />
-          &#123;errors.email && <p style=&#123;&#123; color: 'red', fontSize: '12px' &#125;&#125;>&#123;errors.email.message&#125;</p>&#125;
+            }
+          })} />
+          {errors.email && <p style={{ color: 'red', fontSize: '12px' }}>{errors.email.message}</p>}
         </div>
 
-        &#123;/* 3. 職位欄位：下拉選單 */&#125;
-        <div style=&#123;&#123; marginBottom: '15px' &#125;&#125;>
+        {/* 3. 職位欄位：下拉選單 */}
+        <div style={{ marginBottom: '15px' }}>
           <label>職位：</label>
-          <select &#123;...register("position")&#125;>
+          <select {...register("position")}>
             <option value="engineer">軟體工程師</option>
             <option value="manager">專案經理</option>
             <option value="hr">人事專員</option>
@@ -86,7 +86,7 @@ function EmployeeForm() &#123;
       </form>
     </div>
   );
-&#125;
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<EmployeeForm />);
@@ -101,22 +101,22 @@ root.render(<EmployeeForm />);
 1. **defaultValues** (最常用：設定預設值)
 在 ERP 中，這常用於「編輯現有資料」。您會先把從資料庫（PHP）抓回來的舊資料填進去。
 ```javascript
-const &#123; register, handleSubmit &#125; = useForm(&#123;
-  defaultValues: &#123;
+const { register, handleSubmit } = useForm({
+  defaultValues: {
     productName: "原本的產品名稱",
     quantity: 10,
     isUrgent: true
-  &#125;
-&#125;);
+  }
+});
 ```
 
 2. **mode** (決定何時檢查錯誤)
 預設情況下，RHF 是在「按下送出 (Submit)」時才檢查錯誤。
 ```javascript
-const &#123; register, handleSubmit &#125; = useForm(&#123;
+const { register, handleSubmit } = useForm({
   mode: "onBlur" // 當游標離開輸入框時就進行驗證
   // 或者是 "onChange"（每打一個字就檢查）
-&#125;);
+});
 ```
 
 3. **resolver** (串接強大的驗證庫)

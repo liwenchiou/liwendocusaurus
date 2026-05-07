@@ -22,69 +22,69 @@ const [r,g,b]=['red','green','blue'];
 console.log(r,g,b); //red,green,blue
 
 //物件解構：對應屬性
-const user=&#123;
+const user={
     username:'漂亮阿姨',
     age: 21,
     favorite:'鍋燒意麵'
-&#125;
-const &#123;username,age,favorite&#125;=user;
+}
+const {username,age,favorite}=user;
 console.log(username,age,favorite);
 ```
 ---
 **React的解構**
 ```javascript
 //陣列解構
-function useState(initial)&#123;
+function useState(initial){
     let state=initial;
     return [initial,
-        (newState)=>&#123;
+        (newState)=>{
             state=newState
             return state;
-        &#125;
+        }
     ];
-&#125;
+}
 
 const [count,setCount]=useState(1)
 
 
 //物件解構
-function Card(&#123;title,content&#125;)&#123;
-    return <h1>&#123;title&#125;</h1>;
-&#125;
+function Card({title,content}){
+    return <h1>{title}</h1>;
+}
 ```
 
 ### 陣列方法
 ```javascript
 const people=[
-  &#123;
+  {
     "name": "王小明",
     "like": "炸雞",
     "price": 150
-  &#125;,
-  &#123;
+  },
+  {
     "name": "李華",
     "like": "牛肉麵",
     "price": 220
-  &#125;,
-  &#123;
+  },
+  {
     "name": "張曉芬",
     "like": "珍珠奶茶",
     "price": 65
-  &#125;
+  }
 ]
 
 //foreach
-// people.forEach((person,key,array)=>&#123;
+// people.forEach((person,key,array)=>{
 //     // person ：每一筆的物件資料
 //     // key： 每一筆的索引
 //     // array：原始物件（不常用）
-// &#125;)
+// })
 
-people.forEach((person,key)=>&#123;
+people.forEach((person,key)=>{
     console.log(person,key);
     const templateString=`$&#123;person.name&#125; 喜歡吃 $&#123;person.like&#125;`;
     console.log(templateString);
-&#125;)
+})
 
 //map
 const newPeople=people.map((person,key)=>
@@ -100,25 +100,25 @@ console.log(filterPeople[0].name); //李華
 ```
 **React的map**
 ```javascript
-function ProductList() &#123;
+function ProductList() {
   const products = [
-    &#123; id: 1, name: '鍋燒意麵', price: 95 &#125;,
-    &#123; id: 2, name: '炒麵', price: 80 &#125;,
-    &#123; id: 3, name: '黑胡椒燴飯', price: 120 &#125;
+    { id: 1, name: '鍋燒意麵', price: 95 },
+    { id: 2, name: '炒麵', price: 80 },
+    { id: 3, name: '黑胡椒燴飯', price: 120 }
   ];
 
   return (
     <ul>
-      &#123;/* 在 JSX 的 &#123;&#125; 裡面，放入 JS 表達式 */&#125;
-      &#123;products.map((product) => (
+      {/* 在 JSX 的 {} 裡面，放入 JS 表達式 */}
+      {products.map((product) => (
         // 這邊會回傳一個 <li>...</li> 的陣列
-        <li key=&#123;product.id&#125;>
-          &#123;product.name&#125; - $&#123;product.price&#125;
+        <li key={product.id}>
+          {product.name} - ${product.price}
         </li>
-      ))&#125;
+      ))}
     </ul>
   );
-&#125;
+}
 ```
 ---
 ## 關注點分離
@@ -155,9 +155,9 @@ function ProductList() &#123;
 ```javascript
 // 1. 資料層 (Data): 原始數據
 const cartItems = [
-  &#123; id: 1, name: '綠色馬卡龍', price: 120, qty: 3 &#125;,
-  &#123; id: 2, name: '粉係馬卡龍', price: 120, qty: 2 &#125;,
-  &#123; id: 3, name: '甜蜜左擁右抱', price: 200, qty: 7 &#125;,
+  { id: 1, name: '綠色馬卡龍', price: 120, qty: 3 },
+  { id: 2, name: '粉係馬卡龍', price: 120, qty: 2 },
+  { id: 3, name: '甜蜜左擁右抱', price: 200, qty: 7 },
 ];
 
 // 2. 邏輯層 (Logic): 負責計算
@@ -165,28 +165,28 @@ const calculateSubtotal = (price, qty) => price * qty;
 const total = cartItems.reduce((acc, item) => acc + (item.price * item.qty), 0);
 
 // 3. 呈現層 (View): 負責表格 HTML
-function ShoppingCart() &#123;
+function ShoppingCart() {
   return (
     <table>
       <thead>
         <tr><th>品名</th><th>單價</th><th>數量</th><th>小計</th></tr>
       </thead>
       <tbody>
-        &#123;cartItems.map(item => (
-          <tr key=&#123;item.id&#125;>
-            <td>&#123;item.name&#125;</td>
-            <td>&#123;item.price&#125;</td>
-            <td>&#123;item.qty&#125;</td>
-            <td>$ &#123;calculateSubtotal(item.price, item.qty)&#125;</td>
+        {cartItems.map(item => (
+          <tr key={item.id}>
+            <td>{item.name}</td>
+            <td>{item.price}</td>
+            <td>{item.qty}</td>
+            <td>$ {calculateSubtotal(item.price, item.qty)}</td>
           </tr>
-        ))&#125;
+        ))}
       </tbody>
       <tfoot>
-        <tr><td colSpan="3">總計：</td><td>NT$ &#123;total&#125;</td></tr>
+        <tr><td colSpan="3">總計：</td><td>NT$ {total}</td></tr>
       </tfoot>
     </table>
   );
-&#125;
+}
 ```
 
 ## React 的建構方式
@@ -203,11 +203,11 @@ function ShoppingCart() &#123;
 <div id="app"></div>
 
 <script type="text/babel">
-function App() &#123;
+function App() {
   return (
     <div>React App</div>
   );
-&#125;
+}
 
 const root = ReactDOM.createRoot(document.getElementById('app'));
 root.render(<App />);
@@ -227,7 +227,7 @@ root.render(<App />);
 | `class` | **`className`** | 避免與 JavaScript 關鍵字衝突 |
 | `for` | **`htmlFor`** | 避免與 JavaScript 關鍵字衝突 |
 | `onclick` | **`onClick`** | 採用小駝峰式命名 |
-| `style` | **`style=&#123;&#123;color: 'red'&#125;&#125;`** | 必須傳入 JavaScript 物件 |
+| `style` | **`style={{color: 'red'}}`** | 必須傳入 JavaScript 物件 |
 | `colspan` | **`colSpan`** | 屬性名稱改為小駝峰 |
 
 ### JavaScript 表達式與陳述式對照表
@@ -236,4 +236,4 @@ root.render(<App />);
 | :--- | :--- | :--- |
 | **定義** | 產生一個**值**的程式碼片段 | 執行一個**動作**的指令或宣告 |
 | **結果** | 會回傳一個結果（值） | 不會回傳值（純粹執行） |
-| **React 應用** | 可放在 JSX 的 `&#123; &#125;` 中渲染 | **不可**直接放在 JSX 的 `&#123; &#125;` 中 |
+| **React 應用** | 可放在 JSX 的 `{ }` 中渲染 | **不可**直接放在 JSX 的 `{ }` 中 |
