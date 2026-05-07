@@ -161,9 +161,25 @@ pre code {
   color: var(--ifm-heading-color) !important;
 }
 
+/* Table of Contents brightness */
+.table-of-contents__link {
+  color: var(--ifm-font-color-base) !important;
+  font-size: 14px;
+}
+
+.table-of-contents__link:hover {
+  color: var(--ifm-color-primary) !important;
+  text-decoration: none;
+}
+
+.table-of-contents__link--active {
+  color: var(--ifm-color-primary) !important;
+  font-weight: 600;
+}
+
 /* Footer */
 .footer {
-  background-color: #0d1117;
+  background-color: #121212;
   border-top: 1px solid var(--ifm-border-color);
   padding: 80px 0;
 }
