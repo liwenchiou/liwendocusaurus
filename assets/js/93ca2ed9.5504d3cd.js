@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([["7170"],{5303(s){s.exports=JSON.parse('{"tags":[{"label":"\u5B78\u7FD2\u7B46\u8A18","permalink":"/liwendocusaurus/docs/tags/\u5B78\u7FD2\u7B46\u8A18","count":1},{"label":"next.js","permalink":"/liwendocusaurus/docs/tags/next-js","count":1}]}')}}]);
