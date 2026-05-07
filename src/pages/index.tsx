@@ -14,14 +14,14 @@ function HomepageHeader() {
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          Architecting the Digital Future
+          Architecting the <br/> Digital Future.
         </Heading>
-        <p className="hero__subtitle">Liwen Studio — Digital Architecture & Design Practice</p>
+        <p className="hero__subtitle">Liwen Studio — Engineering precision into digital design. A professional practice for modern architectural documentation.</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            探索作品集
+            Get Started
           </Link>
         </div>
       </div>
