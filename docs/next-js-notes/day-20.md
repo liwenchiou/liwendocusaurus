@@ -2,6 +2,7 @@
 title: "Day 20 - 進階身份驗證：自定義 UI 與角色權限管理"
 sidebar_label: "Day 20 - 進階身份驗證"
 sidebar_position: 20
+description: "Next.js 30 天學習筆記系列 - 第 20 天：Day 20 - 進階身份驗證：自定義 UI 與角色權限管理。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Next.js 30 天全端實戰：Day 20 - 進階身份驗證：自定義 UI 與角色權限管理
@@ -98,6 +99,7 @@ export default async function AdminPage() {
 
 ```
 
+description: "Next.js 30 天學習筆記系列 - 第 20 天：Day 20 - 進階身份驗證：自定義 UI 與角色權限管理。深入探討 Next.js 開發實戰技巧。"
 ---
 
 ## 三、 結論：打造更穩健的會員系統

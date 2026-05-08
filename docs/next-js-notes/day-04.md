@@ -2,6 +2,7 @@
 title: "Day 04 - 混合渲染機制：Server vs Client Components"
 sidebar_label: "Day 04 - 混合渲染機制"
 sidebar_position: 4
+description: "Next.js 30 天學習筆記系列 - 第 04 天：Day 04 - 混合渲染機制：Server vs Client Components。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Day 04 - 混合渲染機制：Server vs Client Components
@@ -59,6 +60,7 @@ export default async function ProductPage({ params }) {
 }
 ```
 
+description: "Next.js 30 天學習筆記系列 - 第 04 天：Day 04 - 混合渲染機制：Server vs Client Components。深入探討 Next.js 開發實戰技巧。"
 ---
 
 ## 🏁 結論：該如何選擇？
@@ -74,6 +76,7 @@ export default async function ProductPage({ params }) {
 | **今日進度** | 區分 Server 與 Client Components 的使用邊界。 |
 | **專家筆記** | 將 Client Component 放在組件樹的末端 (Leaf Nodes)，能極大化效能。 |
 
+description: "Next.js 30 天學習筆記系列 - 第 04 天：Day 04 - 混合渲染機制：Server vs Client Components。深入探討 Next.js 開發實戰技巧。"
 ---
 
 > **參考來源：**

@@ -6,7 +6,7 @@ export default function GiscusComponent() {
   const { colorMode } = useColorMode();
 
   return (
-    <div style={{ marginTop: '4rem' }}>
+    <div style={{ marginTop: '4rem', paddingBottom: 'max(env(safe-area-inset-bottom), 4rem)' }}>
       <hr style={{ opacity: 0.1, marginBottom: '2rem' }} />
       <h3 style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
         <span>💬</span> 歡迎留言討論

@@ -1,6 +1,8 @@
 ---
 slug: ai-vibe-coding
 title: "Vibe Coding 很爽，但別讓 AI 隱藏的「安全地雷」毀掉你的產品"
+description: "探討 AI 輔助開發（Vibe Coding）帶來的安全風險，包含 API Key 洩漏、SQL 注入與部署安全等實戰保命指南。"
+image: /img/og-image.png
 date: 2026-04-23T05:10:26.330989+00:00
 authors: [liwen]
 tags: [security, ai]

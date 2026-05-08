@@ -2,6 +2,7 @@
 title: "Day 23 - 資料更新與快取同步：revalidatePath 與 revalidateTag"
 sidebar_label: "Day 23 - 資料更新與快取同步"
 sidebar_position: 23
+description: "Next.js 30 天學習筆記系列 - 第 23 天：Day 23 - 資料更新與快取同步：revalidatePath 與 revalidateTag。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Next.js 30 天全端實戰：Day 23 - 資料更新與快取同步：revalidatePath 與 revalidateTag
@@ -70,6 +71,7 @@ export async function updatePost(formData: FormData) {
   redirect('/posts'); // 成功後跳轉
 }
 ```
+description: "Next.js 30 天學習筆記系列 - 第 23 天：Day 23 - 資料更新與快取同步：revalidatePath 與 revalidateTag。深入探討 Next.js 開發實戰技巧。"
 ---
 
 ## 三、 結論：讓 UI 與資料庫同步呼吸

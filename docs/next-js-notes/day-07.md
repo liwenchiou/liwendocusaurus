@@ -2,6 +2,7 @@
 title: "Day 07 - 快取與更新：超直覺的貨架管理學"
 sidebar_label: "Day 07 - 快取與更新"
 sidebar_position: 7
+description: "Next.js 30 天學習筆記系列 - 第 07 天：Day 07 - 快取與更新：超直覺的貨架管理學。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Day 07 - 快取與更新：超直覺的貨架管理學
@@ -56,6 +57,7 @@ export default async function AdminDashboard() {
 }
 ```
 
+description: "Next.js 30 天學習筆記系列 - 第 07 天：Day 07 - 快取與更新：超直覺的貨架管理學。深入探討 Next.js 開發實戰技巧。"
 ---
 
 ## 🏁 結論
@@ -68,6 +70,7 @@ export default async function AdminDashboard() {
 | **定時更新** | 新聞列表、股市（非秒級） | `revalidate: 60` |
 | **手動更新** | 留言板、後台編輯完成後 | `revalidatePath()` |
 
+description: "Next.js 30 天學習筆記系列 - 第 07 天：Day 07 - 快取與更新：超直覺的貨架管理學。深入探討 Next.js 開發實戰技巧。"
 ---
 
 > **參考來源：**

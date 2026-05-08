@@ -2,6 +2,7 @@
 title: "Day 22 - 關聯式資料庫實戰：處理一對多與多對多關係"
 sidebar_label: "Day 22 - 關聯式資料庫實戰"
 sidebar_position: 22
+description: "Next.js 30 天學習筆記系列 - 第 22 天：Day 22 - 關聯式資料庫實戰：處理一對多與多對多關係。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Next.js 30 天全端實戰：Day 22 - 關聯式資料庫實戰：處理一對多與多對多關係

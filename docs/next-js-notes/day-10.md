@@ -2,6 +2,7 @@
 title: "Day 10 - Server Actions：告別 API Routes 的全端實戰"
 sidebar_label: "Day 10 - Server Actions"
 sidebar_position: 10
+description: "Next.js 30 天學習筆記系列 - 第 10 天：Day 10 - Server Actions：告別 API Routes 的全端實戰。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Day 10 - Server Actions：告別 API Routes 的全端實戰
@@ -70,6 +71,7 @@ export async function logout() {
 }
 ```
 
+description: "Next.js 30 天學習筆記系列 - 第 10 天：Day 10 - Server Actions：告別 API Routes 的全端實戰。深入探討 Next.js 開發實戰技巧。"
 ---
 
 ## 🏁 結論
@@ -83,6 +85,7 @@ Server Actions 讓「前後端開發」不再有割裂感。您不再需要去�
 | **資料類型** | 通常是 JSON | 自動處理 FormData |
 | **優點** | 跨平台 (可給 APP 使用) | 整合性最強、開發速度最快 |
 
+description: "Next.js 30 天學習筆記系列 - 第 10 天：Day 10 - Server Actions：告別 API Routes 的全端實戰。深入探討 Next.js 開發實戰技巧。"
 ---
 
 > **參考來源：**

@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
+import Head from '@docusaurus/Head';
 
 import styles from './index.module.css';
 
@@ -72,10 +73,28 @@ function HomepageDetailedAbout() {
 
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Liwen's Digital Garden",
+    "url": "https://garden.liwen.studio",
+    "description": "技術深耕、工程文化與 AI 協作的實踐紀錄。探討網頁架構、工程師心理與目標管理。",
+    "author": {
+      "@type": "Person",
+      "name": "Liwen Chiou"
+    }
+  };
+
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title="首頁 | Liwen's Digital Garden"
+      description="這裡是 Liwen 的數位花園。我喜歡研究網頁架構、觀察工程師的職涯心理，也會在這裡分享我如何跟 AI 協作來提升生產力。探索現代網頁技術與 12 週目標管理。">
+      <Head>
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Head>
       <HomepageHeader />
       <main>
         <HomepageFeatures />

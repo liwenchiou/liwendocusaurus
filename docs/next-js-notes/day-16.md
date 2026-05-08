@@ -2,6 +2,7 @@
 title: "Day 16 - 平行路由：解構複雜儀表板的利器"
 sidebar_label: "Day 16 - 平行路由"
 sidebar_position: 16
+description: "Next.js 30 天學習筆記系列 - 第 16 天：Day 16 - 平行路由：解構複雜儀表板的利器。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Next.js 30 天全端實戰：Day 16 - 平行路由：解構複雜儀表板的利器
@@ -75,6 +76,7 @@ export default function DashboardLayout({
 
 當使用者進行導覽（例如從 `/dashboard` 到 `/dashboard/settings`），如果某個插槽在新的路徑下沒有對應的頁面，Next.js 會尋找 `default.tsx` 來渲染。務必建立這個檔案以避免出現 404。
 
+description: "Next.js 30 天學習筆記系列 - 第 16 天：Day 16 - 平行路由：解構複雜儀表板的利器。深入探討 Next.js 開發實戰技巧。"
 ---
 
 ## 三、 結論：從「整頁」思維轉向「元件」思維

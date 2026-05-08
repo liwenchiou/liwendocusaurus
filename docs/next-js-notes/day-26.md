@@ -2,6 +2,7 @@
 title: "Day 26 - 檔案處理：整合 Cloudinary 實現高效圖片上傳"
 sidebar_label: "Day 26 - 檔案處理"
 sidebar_position: 26
+description: "Next.js 30 天學習筆記系列 - 第 26 天：Day 26 - 檔案處理：整合 Cloudinary 實現高效圖片上傳。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Next.js 30 天全端實戰：Day 26 - 檔案處理：整合 Cloudinary 實現高效圖片上傳
@@ -82,6 +83,7 @@ export async function updateCover(imageUrl: string) {
 1. **Unsigned Uploads**：適合簡單專案，任何人知道你的 Preset 名稱都能上傳。
 2. **Signed Uploads**：推薦做法。前端上傳前先向 Next.js Server 請求一個「簽名（Signature）」，確保只有登入的使用者能發送上傳請求。
 
+description: "Next.js 30 天學習筆記系列 - 第 26 天：Day 26 - 檔案處理：整合 Cloudinary 實現高效圖片上傳。深入探討 Next.js 開發實戰技巧。"
 ---
 
 ## 三、 結論：把儲存交給專業的來

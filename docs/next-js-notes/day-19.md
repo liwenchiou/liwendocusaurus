@@ -2,6 +2,7 @@
 title: "Day 19 - 身份驗證：使用 Auth.js 快速實作登入系統"
 sidebar_label: "Day 19 - 身份驗證"
 sidebar_position: 19
+description: "Next.js 30 天學習筆記系列 - 第 19 天：Day 19 - 身份驗證：使用 Auth.js 快速實作登入系統。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Next.js 30 天全端實戰：Day 19 - 身份驗證：使用 Auth.js 快速實作登入系統
@@ -85,6 +86,7 @@ export const config = {
   matcher: ["/dashboard/:path*", "/admin/:path*"],
 };
 ```
+description: "Next.js 30 天學習筆記系列 - 第 19 天：Day 19 - 身份驗證：使用 Auth.js 快速實作登入系統。深入探討 Next.js 開發實戰技巧。"
 ---
 
 ## 三、 結論：把安全性交給專業的來

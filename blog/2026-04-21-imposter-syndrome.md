@@ -1,9 +1,10 @@
 ---
 slug: imposter-syndrome
 title: "冒名頂替症候群 (Imposter Syndrome) 深度解析"
+description: "深入探討冒名頂替症候群的定義、五種類型以及實用的心態調整方式，幫助開發者克服內心不安，建立穩健的專業自信。"
 date: 2026-04-21T06:46:36.190887+00:00
 authors: [liwen]
-tags: [生活]
+tags: [心理學, 職涯發展]
 ---
 
 # 冒名頂替症候群 (Imposter Syndrome) 深度解析

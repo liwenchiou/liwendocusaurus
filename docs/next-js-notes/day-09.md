@@ -2,6 +2,7 @@
 title: "Day 09 - 錯誤處理：優雅的降級與崩潰防護"
 sidebar_label: "Day 09 - 錯誤處理"
 sidebar_position: 9
+description: "Next.js 30 天學習筆記系列 - 第 09 天：Day 09 - 錯誤處理：優雅的降級與崩潰防護。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Day 09 - 錯誤處理：優雅的降級與崩潰防護
@@ -66,6 +67,7 @@ export default async function PostPage({ params }) {
 }
 ```
 
+description: "Next.js 30 天學習筆記系列 - 第 09 天：Day 09 - 錯誤處理：優雅的降級與崩潰防護。深入探討 Next.js 開發實戰技巧。"
 ---
 
 ## 🏁 結論
@@ -76,6 +78,7 @@ export default async function PostPage({ params }) {
 | **not-found.tsx** | 404 頁面 | 透過 `notFound()` 函式觸發。 |
 | **global-error.tsx** | 根路徑 (Root) | 唯一的全站崩潰保護，必須包含 `<html>` 標籤。 |
 
+description: "Next.js 30 天學習筆記系列 - 第 09 天：Day 09 - 錯誤處理：優雅的降級與崩潰防護。深入探討 Next.js 開發實戰技巧。"
 ---
 
 > **參考來源：**
