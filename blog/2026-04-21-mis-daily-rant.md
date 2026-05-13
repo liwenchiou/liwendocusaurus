@@ -1,5 +1,8 @@
 ---
 slug: mis-daily-rant
+
+{/* truncate */}
+
 title: "身為全公司的避風港：MIS 的無奈日常與邊界感"
 date: 2026-04-21T06:46:35.682937+00:00
 authors: [liwen]

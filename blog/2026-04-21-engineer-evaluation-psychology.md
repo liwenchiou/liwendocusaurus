@@ -1,5 +1,8 @@
 ---
 slug: engineer-evaluation-psychology
+
+{/* truncate */}
+
 title: "工程師評價心理學：深度學習筆記"
 date: 2026-04-21T06:46:35.933454+00:00
 authors: [liwen]

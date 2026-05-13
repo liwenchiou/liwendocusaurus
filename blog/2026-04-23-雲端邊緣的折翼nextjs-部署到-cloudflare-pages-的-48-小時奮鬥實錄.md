@@ -1,5 +1,8 @@
 ---
 slug: 雲端邊緣的折翼nextjs-部署到-cloudflare-pages-的-48-小時奮鬥實錄
+
+{/* truncate */}
+
 title: "雲端邊緣的折翼：Next.js 部署到 Cloudflare Pages 的 48 小時奮鬥實錄"
 date: 2026-04-23T00:56:25.022951+00:00
 authors: [liwen]

@@ -1,5 +1,8 @@
 ---
 slug: ai-vibe-coding
+
+{/* truncate */}
+
 title: "Vibe Coding 很爽，但別讓 AI 隱藏的「安全地雷」毀掉你的產品"
 date: 2026-04-23T05:10:26.330989+00:00
 authors: [liwen]

@@ -469,20 +469,33 @@ pre code {
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* 閱讀更多按鈕 - 精品發光樣式 */
-.blog-list-page article footer a {
+/* 閱讀更多按鈕 - 精確排除標籤後的樣式 */
+.blog-list-page article footer a:not([class*='tag']) {
   display: inline-block;
-  padding: 0.6rem 1.5rem;
+  padding: 0.6rem 1.8rem;
   background: transparent;
   border: 2px solid #bb86fc;
   color: #bb86fc !important;
   border-radius: 50px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
   margin-top: 1.5rem;
   transition: all 0.3s;
   text-transform: uppercase;
+  font-size: 0 !important; /* 隱藏原本文字 */
+  text-decoration: none !important;
+  position: relative;
+  min-width: 160px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 注入文字 */
+.blog-list-page article footer a:not([class*='tag'])::after {
+  content: "READ MORE"; 
   font-size: 0.85rem;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .blog-list-page article footer a:hover {
@@ -493,7 +506,32 @@ pre code {
   transform: scale(1.05);
 }
 
-/* 標籤樣式優化 */
+/* 標籤「瞬間移動」到左上角 (Independent Line Style) */
+.blog-list-page article {
+  position: relative;
+  padding: 1.2rem 2.5rem !important; /* 讓卡片整體變緊湊 */
+  padding-top: 5rem !important;      /* 專門拉開標籤與標題的距離 */
+}
+
+/* 定位標籤容器：靠左上 */
+.blog-list-page article footer ul {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem !important;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 4px;
+  z-index: 10;
+}
+
+
+/* 移除標題右側推擠，回歸正常流 */
+.blog-list-page article header h2 {
+  padding-right: 0 !important; 
+}
+
 /* 讓整張卡片變成可點擊區域 (Stretched Link Effect) */
 .blog-list-page article {
   position: relative;
@@ -511,12 +549,45 @@ pre code {
 }
 
 /* 移除預設多餘的間距與線條 */
+/* 讓卡片內的預設大間距縮小為 md */
+.blog-list-page article .margin-bottom--xl {
+  margin-bottom: var(--ifm-spacing-vertical-md) !important;
+}
+
+/* ------------------------------------------------------------
+   標籤 (Badge/Tags) 樣式
+   ------------------------------------------------------------ */
+.blog-list-page article .badge, 
+.blog-list-page article a[class*='tag_'] {
+  background-color: rgba(187, 134, 252, 0.25) !important;
+  color: #bb86fc !important;
+  border: 1px solid rgba(187, 134, 252, 0.5) !important;
+  padding: 2px 10px !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  border-radius: 50px !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+  box-shadow: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.blog-list-page article a[class*='tag_']:hover {
+  background-color: #bb86fc !important;
+  color: #121212 !important;
+  transform: translateY(-2px);
+}
+
+/* ------------------------------------------------------------
+   卡片內容摘要樣式 (您可以底下的屬性來調整文字)
+   ------------------------------------------------------------ */
 .blog-list-page article .markdown {
-  margin-bottom: 1rem;
-  color: #a0a0a0;
-  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+  color: #a0a0a0;     /* 文字顏色 */
+  font-size: 0.95rem; /* 文字大小 */
+  line-height: 1.6;   /* 行高 */
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 3; /* 限制顯示 3 行，並自動產生省略符號 */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
