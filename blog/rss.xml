@@ -118,7 +118,7 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="三棲戰士的日常">三棲戰士的日常<a href="https://garden.liwen.studio/blog/weekend-dad-full-time-heart#%E4%B8%89%E6%A3%B2%E6%88%B0%E5%A3%AB%E7%9A%84%E6%97%A5%E5%B8%B8" class="hash-link" aria-label="三棲戰士的日常的直接連結" title="三棲戰士的日常的直接連結" translate="no">​</a></h2>
 <p>這段時間，我成了名副其實的「三棲戰士」：<br>
 <!-- -->每天在公司、月中、家裡三個點之間來回奔波，除了要應付公司裡的煩心事，還要抓緊時間學習育兒技能。</p>
-<p><code>{</code>/* truncate */<code>}</code></p>
+<!-- -->
 <p>雖然累到快被疲勞轟炸，但收穫也很多——從怎麼餵奶、洗澡，到解讀寶寶的需求，這些都是以前難以想像的挑戰。</p>
 <p>以前總覺得玩別人的小孩很簡單，自己動手才發現：要照顧好一個生命真的好難。看著小夕喝完奶扭來扭去不睡覺，到底是要換尿布還是沒吃飽？每一組肢體動作都是密碼，雖然燒腦，但也很有趣。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="出月中後的挑戰">出月中後的挑戰<a href="https://garden.liwen.studio/blog/weekend-dad-full-time-heart#%E5%87%BA%E6%9C%88%E4%B8%AD%E5%BE%8C%E7%9A%84%E6%8C%91%E6%88%B0" class="hash-link" aria-label="出月中後的挑戰的直接連結" title="出月中後的挑戰的直接連結" translate="no">​</a></h2>
@@ -233,7 +233,7 @@
             <description><![CDATA[記錄將 Next.js 應用從 Vercel 遷移至 Cloudflare Pages 的挑戰，深入分析 Edge Runtime 的 3MB 腳本限制、SDK 體積優化與 Node.js API 相容性問題。]]></description>
             <content:encoded><![CDATA[<p>在 Web 開發的世界裡，我們通常會從 Vercel 開始。它很美、很快、很有質感，就像是一個精心裝潢的豪華公寓。但隨著專案成長，我們開始在想：有沒有那種既能擁有極致性能，成本又更平易近人的「自由之地」？</p>
 <p>於是，我們把目光投向了 Cloudflare。這兩天，我們就像是一群試圖帶著行李從 Vercel 搬家到 Cloudflare 邊緣計算之城的旅人。雖然最終我們因為行李太重而暫時撤退，但這場「失敗」留下的經驗教訓，或許比成功搬家更值得記錄。</p>
-<p><code>{</code>/* truncate */<code>}</code></p>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="為什麼想告別-vercel擁抱-cloudflare">為什麼想告別 Vercel，擁抱 Cloudflare？<a href="https://garden.liwen.studio/blog/nextjs-deployment-cloudflare-pages-struggle#%E7%82%BA%E4%BB%80%E9%BA%BC%E6%83%B3%E5%91%8A%E5%88%A5-vercel%E6%93%81%E6%8A%B1-cloudflare" class="hash-link" aria-label="為什麼想告別 Vercel，擁抱 Cloudflare？的直接連結" title="為什麼想告別 Vercel，擁抱 Cloudflare？的直接連結" translate="no">​</a></h2>
 <p>LiwenBlog CMS 雖然目前在 Vercel 運行良好，但我們心中一直有個「邊緣夢」：</p>
 <ol>
@@ -371,6 +371,7 @@
             <description><![CDATA[深入探討工程師在面對職場評價時的心理機制（如生存本能、鏡像自我），並提供建立內在計分卡、自我與代碼解耦的實戰心法。]]></description>
             <content:encoded><![CDATA[<p>互動網站: <a href="https://gemini.google.com/share/6a9569c51762" target="_blank" rel="noopener noreferrer" class="">https://gemini.google.com/share/6a9569c51762</a></p>
 <p>這份筆記整理了工程師在職場中面對「評價」時的心理機制、常見行為模式，以及如何建立健康的自我認同體系。</p>
+<!-- -->
 <hr>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一核心問題為什麼我們如此在意評價">一、核心問題：為什麼我們如此在意評價？<a href="https://garden.liwen.studio/blog/engineer-evaluation-psychology#%E4%B8%80%E6%A0%B8%E5%BF%83%E5%95%8F%E9%A1%8C%E7%82%BA%E4%BB%80%E9%BA%BC%E6%88%91%E5%80%91%E5%A6%82%E6%AD%A4%E5%9C%A8%E6%84%8F%E8%A9%95%E5%83%B9" class="hash-link" aria-label="一、核心問題：為什麼我們如此在意評價？的直接連結" title="一、核心問題：為什麼我們如此在意評價？的直接連結" translate="no">​</a></h2>
 <p>工程師的工作產出（代碼、架構）高度抽象且具備創造性。當產出受到批評時，大腦往往無法區分「對工作的建議」與「對個人的否定」。</p>
@@ -437,6 +438,7 @@
             <pubDate>Tue, 21 Apr 2026 06:46:35 GMT</pubDate>
             <description><![CDATA[從一場突如其來的亞馬遜賣場求救事件，反思 MIS 職位在職場中被當成『避風港』的依賴心理，並探討如何建立工作邊界與專業所有權 (Ownership)。]]></description>
             <content:encoded><![CDATA[<p>這原本應該是個美好的補眠日。因為前一天沒睡好，索性請了一天假，打算好好充電後，再來專心處理最近一直沒空執行的資訊需求。沒想到，美好的早晨在八點多就被無情打斷。</p>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="在最後一刻才求救的亞馬遜賣場事件">在最後一刻才求救的「亞馬遜賣場」事件<a href="https://garden.liwen.studio/blog/mis-daily-rant#%E5%9C%A8%E6%9C%80%E5%BE%8C%E4%B8%80%E5%88%BB%E6%89%8D%E6%B1%82%E6%95%91%E7%9A%84%E4%BA%9E%E9%A6%AC%E9%81%9C%E8%B3%A3%E5%A0%B4%E4%BA%8B%E4%BB%B6" class="hash-link" aria-label="在最後一刻才求救的「亞馬遜賣場」事件的直接連結" title="在最後一刻才求救的「亞馬遜賣場」事件的直接連結" translate="no">​</a></h2>
 <p>一大早被吵醒，居然是因為行銷部門今天要開賣場，才發現當初申請的亞馬遜帳號還需要再申請 Seller 的相關認證。這讓我滿頭問號：幾個月前帳號申請完不就已經移交了嗎？為什麼現在還要我來幫忙申請？</p>
 <p>如果是我負責一個專案，拿到帳號的第一天，我一定會先登入進去點點看，確認能不能順利開賣場、熟悉一下流程。我實在無法理解，為什麼總是有人喜歡拖到「最後關頭」才在那邊驚慌求救，真的是會讓人理智線斷裂。</p>
