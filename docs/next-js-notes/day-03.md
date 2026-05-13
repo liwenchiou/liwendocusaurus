@@ -2,6 +2,7 @@
 title: "Day 03 - Layout 與 Template：構建可複用的 UI 架構"
 sidebar_label: "Day 03 - Layout 與 Template"
 sidebar_position: 3
+description: "Next.js 30 天學習筆記系列 - 第 03 天：Day 03 - Layout 與 Template：構建可複用的 UI 架構。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Day 03 - Layout 與 Template：構建可複用的 UI 架構
@@ -71,6 +72,7 @@ Layout 是可以層層堆疊的。如果您在某個子資料夾（如 `/dashboa
 
 當使用者在產品頁與訂單頁切換時，側邊欄完全不會跳動或重新加載，這種 **「局部刷新」** 是 Next.js 效能強大的秘密。
 
+description: "Next.js 30 天學習筆記系列 - 第 03 天：Day 03 - Layout 與 Template：構建可複用的 UI 架構。深入探討 Next.js 開發實戰技巧。"
 ---
 
 ## 🏁 結論
@@ -82,6 +84,7 @@ Layout 的設計反映了 Next.js 的美學：將「不變的」與「變動的�
 | **今日進度** | 學習 Root Layout 強制性、嵌套佈局與 Template 的差異。 |
 | **專家筆記** | 優先使用 Layout。只有在需要「頁面切換動畫」或「重置表單」時才使用 Template。 |
 
+description: "Next.js 30 天學習筆記系列 - 第 03 天：Day 03 - Layout 與 Template：構建可複用的 UI 架構。深入探討 Next.js 開發實戰技巧。"
 ---
 
 > **參考來源：**

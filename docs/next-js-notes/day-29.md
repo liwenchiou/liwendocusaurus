@@ -2,6 +2,7 @@
 title: "Day 29 - 上線最後一哩路：Vercel 部署與環境變數管理"
 sidebar_label: "Day 29 - 上線最後一哩路"
 sidebar_position: 29
+description: "Next.js 30 天學習筆記系列 - 第 29 天：Day 29 - 上線最後一哩路：Vercel 部署與環境變數管理。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Next.js 30 天全端實戰：Day 29 - 上線最後一哩路：Vercel 部署與環境變數管理
@@ -52,6 +53,7 @@ npm run start
 
 部署成功後，你可以開啟 Vercel 的 Speed Insights。它會蒐集真實使用者的 LCP、FID 等數據，讓你清楚知道網站到底快不快。
 
+description: "Next.js 30 天學習筆記系列 - 第 29 天：Day 29 - 上線最後一哩路：Vercel 部署與環境變數管理。深入探討 Next.js 開發實戰技巧。"
 ---
 
 ## 三、 結論：讓專案在雲端穩定運行

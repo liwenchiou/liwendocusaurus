@@ -94,6 +94,12 @@ const config: Config = {
         // },
       ],
     },
+    metadata: [
+      { name: 'keywords', content: '網頁開發, 全端工程師, 工程心理學, AI 協作, 12 週目標管理, Liwen Studio, 數位花園' },
+      { name: 'author', content: 'Liwen Chiou' },
+      { property: 'og:type', content: 'website' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+    ],
     footer: {
       style: "dark",
       links: [

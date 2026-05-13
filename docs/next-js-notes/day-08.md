@@ -2,6 +2,7 @@
 title: "Day 08 - Loading UI 與 Streaming：別讓使用者對著白框發呆"
 sidebar_label: "Day 08 - Loading UI"
 sidebar_position: 8
+description: "Next.js 30 天學習筆記系列 - 第 08 天：Day 08 - Loading UI 與 Streaming：別讓使用者對著白框發呆。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Day 08 - Loading UI 與 Streaming：別讓使用者對著白框發呆
@@ -62,6 +63,7 @@ export default function Page() {
 }
 ```
 
+description: "Next.js 30 天學習筆記系列 - 第 08 天：Day 08 - Loading UI 與 Streaming：別讓使用者對著白框發呆。深入探討 Next.js 開發實戰技巧。"
 ---
 
 ## 🏁 結論
@@ -72,6 +74,7 @@ export default function Page() {
 | **Suspense** | 組件級局部載入 | 高度彈性、可控性強 |
 | **Skeleton UI** | fallback 的內容 | 提供更專業的視覺引導 |
 
+description: "Next.js 30 天學習筆記系列 - 第 08 天：Day 08 - Loading UI 與 Streaming：別讓使用者對著白框發呆。深入探討 Next.js 開發實戰技巧。"
 ---
 
 > **參考來源：**

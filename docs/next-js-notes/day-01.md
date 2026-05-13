@@ -2,6 +2,7 @@
 title: "Day 01 - 從 React 邁向全端架構的思維轉型"
 sidebar_label: "Day 01 - 思維轉型"
 sidebar_position: 1
+description: "Next.js 30 天學習筆記系列開篇：探討從 React SPA 邁向 Next.js 全端架構的思維轉型，並引導完成開發環境的初始化與目錄結構解析。"
 ---
 
 # Day 01 - 從 React 邁向全端架構的思維轉型

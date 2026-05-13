@@ -2,6 +2,7 @@
 title: "Day 12 - 效能優化：別讓大圖與字體拖垮你的 LCP"
 sidebar_label: "Day 12 - 效能優化"
 sidebar_position: 12
+description: "Next.js 30 天學習筆記系列 - 第 12 天：Day 12 - 效能優化：別讓大圖與字體拖垮你的 LCP。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Next.js 30 天全端實戰：Day 12 - 效能優化：別讓大圖與字體拖垮你的 LCP
@@ -84,6 +85,7 @@ export default function RootLayout({ children }) {
   );
 }```
 
+description: "Next.js 30 天學習筆記系列 - 第 12 天：Day 12 - 效能優化：別讓大圖與字體拖垮你的 LCP。深入探討 Next.js 開發實戰技巧。"
 ---
 
 ## 三、 結論：把優化變成開發預設值

@@ -2,6 +2,7 @@
 title: "Day 18 - Route Handlers：在 Next.js 中建構 RESTful API"
 sidebar_label: "Day 18 - Route Handlers"
 sidebar_position: 18
+description: "Next.js 30 天學習筆記系列 - 第 18 天：Day 18 - Route Handlers：在 Next.js 中建構 RESTful API。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Next.js 30 天全端實戰：Day 18 - Route Handlers：在 Next.js 中建構 RESTful API
@@ -72,6 +73,7 @@ export async function GET(
 
 
 
+description: "Next.js 30 天學習筆記系列 - 第 18 天：Day 18 - Route Handlers：在 Next.js 中建構 RESTful API。深入探討 Next.js 開發實戰技巧。"
 ---
 
 ## 三、 結論：什麼時候該用 Route Handler？

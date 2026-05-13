@@ -2,6 +2,7 @@
 title: "Day 14 - 動態路由：打造具備擴充性的 URL 架構"
 sidebar_label: "Day 14 - 動態路由"
 sidebar_position: 14
+description: "Next.js 30 天學習筆記系列 - 第 14 天：Day 14 - 動態路由：打造具備擴充性的 URL 架構。深入探討 Next.js 開發實戰技巧。"
 ---
 
 # Next.js 30 天全端實戰：Day 14 - 動態路由：打造具備擴充性的 URL 架構
@@ -83,6 +84,7 @@ export default async function Page({ params }) {
   return <Content data={data} />;
 }
 ```
+description: "Next.js 30 天學習筆記系列 - 第 14 天：Day 14 - 動態路由：打造具備擴充性的 URL 架構。深入探討 Next.js 開發實戰技巧。"
 ---
 
 ## 三、 結論：讓路由為你的資料服務
