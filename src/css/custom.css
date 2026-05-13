@@ -332,10 +332,10 @@ pre code {
 
 /* Move footer/tags into the header flow via CSS (hack-free way) */
 .blog-list-page article footer {
-  display: inline-flex !important;
-  vertical-align: middle;
-  margin-right: 0.75rem !important;
-  margin-bottom: 0.25rem !important;
+  display: flex !important;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: auto;
   border: none !important;
   padding: 0 !important;
 }
@@ -485,9 +485,10 @@ pre code {
   font-size: 0 !important; /* 隱藏原本文字 */
   text-decoration: none !important;
   position: relative;
-  min-width: 160px;
+  min-width: 120px;
   text-align: center;
   white-space: nowrap;
+  align-self: flex-end; /* Ensure the button itself respects flex alignment */
 }
 
 /* 注入文字 */
