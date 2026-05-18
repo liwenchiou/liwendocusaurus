@@ -73,6 +73,11 @@ const config: Config = {
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
     navbar: {
       title: "LW Docusaurus",
       logo: {

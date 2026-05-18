@@ -631,3 +631,15 @@ pre code {
     z-index: 1001; /* Extra layer for the toggle button */
   }
 }
+
+/* 全域隱藏右側大綱目錄 */
+.theme-doc-toc-desktop,
+.theme-doc-toc-mobile {
+  display: none !important;
+}
+
+/* 讓主要內容區塊自動延伸填滿原本右側大綱的空間 */
+.theme-doc-markdown {
+  max-width: 100% !important;
+}
+
