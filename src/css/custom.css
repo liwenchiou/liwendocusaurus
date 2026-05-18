@@ -637,10 +637,21 @@ main .container .row > .col--3 {
   display: none !important;
 }
 
+/* 解除 Docusaurus 預設的 Container 最大寬度限制 */
+main.docMainContainer > .container {
+  max-width: 100% !important;
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+}
+
 /* 讓主要內容區塊自動延伸填滿原本右側大綱的空間 */
-main .container .row > .col:not(.col--3) {
+main .container .row > .col:not(.col--3),
+[class*='docItemContainer'],
+.theme-doc-markdown,
+article {
   max-width: 100% !important;
   flex: 1 !important;
+  width: 100% !important;
 }
 
 .theme-doc-toc-mobile,
