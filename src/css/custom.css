@@ -632,14 +632,18 @@ pre code {
   }
 }
 
-/* 全域隱藏右側大綱目錄 */
-.theme-doc-toc-desktop,
-.theme-doc-toc-mobile {
+/* 全域隱藏右側大綱目錄並釋放排版空間 */
+main .container .row:has(.theme-doc-toc-desktop) > .col:last-child {
   display: none !important;
 }
 
 /* 讓主要內容區塊自動延伸填滿原本右側大綱的空間 */
-.theme-doc-markdown {
+main .container .row:has(.theme-doc-toc-desktop) > .col:first-child {
   max-width: 100% !important;
+  flex: 1 !important;
+}
+
+.theme-doc-toc-mobile {
+  display: none !important;
 }
 
