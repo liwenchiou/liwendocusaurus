@@ -637,8 +637,10 @@ main .container .row > .col--3 {
   display: none !important;
 }
 
-/* 解除 Docusaurus 預設的 Container 最大寬度限制 */
-main.docMainContainer > .container {
+/* 解除 Docusaurus 預設的 Container 最大寬度限制 (針對文件頁面) */
+html[class*="plugin-docs"] main .container,
+body[class*="plugin-docs"] main .container,
+main[class*="docMainContainer"] > .container {
   max-width: 100% !important;
   padding-left: 5% !important;
   padding-right: 5% !important;
