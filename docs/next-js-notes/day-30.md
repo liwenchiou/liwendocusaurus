@@ -27,8 +27,6 @@ description: "Next.js 30 天學習筆記系列 - 第 30 天：Day 30 - 終章：
 | **互動優化** | D24 - D27 | 效能與體驗 | 分頁 (Offset/Cursor), 防抖搜尋 (Debounce), 雲端儲存 (Cloudinary), 樂觀更新 |
 | **健壯上線** | D28 - D30 | 錯誤與部署 | 全域錯誤處理, 環境變數安全, Vercel CI/CD, 建置優化 (Build) |
 
-description: "Next.js 30 天學習筆記系列 - 第 30 天：Day 30 - 終章：回顧、反思與全端工程師的下一步。深入探討 Next.js 開發實戰技巧。"
----
 
 ## 三、 本文：Next.js 全端開發核心地圖
 
@@ -65,8 +63,6 @@ description: "Next.js 30 天學習筆記系列 - 第 30 天：Day 30 - 終章：
 
 * 開發者心得：恭喜完成 30 天的挑戰！這 30 天的內容可以作為你未來開發時的參考手冊。如果你在實作中遇到困難，記得回頭看看這張技術總覽表。期待看到你用這些技術，蓋出屬於你的數位建築！
 
-description: "Next.js 30 天學習筆記系列 - 第 30 天：Day 30 - 終章：回顧、反思與全端工程師的下一步。深入探討 Next.js 開發實戰技巧。"
----
 
 參考來源：
 1. Next.js Learn - Final Summary (https://nextjs.org/learn)

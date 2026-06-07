@@ -109,8 +109,6 @@ export default function NavLinks() {
 }
 ```
 
-description: "Next.js 30 天學習筆記系列 - 第 05 天：Day 05 - 導覽藝術：Link 組件與路由跳轉。深入探討 Next.js 開發實戰技巧。"
----
 
 ## 🏁 結論
 
@@ -123,8 +121,6 @@ Next.js 的導覽之所以流暢，是因為它結合了 **「軟導覽 (Soft Na
 | **權限/伺服器判斷** | `redirect` (Server Action) |
 | **當前路徑判斷** | `usePathname` |
 
-description: "Next.js 30 天學習筆記系列 - 第 05 天：Day 05 - 導覽藝術：Link 組件與路由跳轉。深入探討 Next.js 開發實戰技巧。"
----
 
 > **參考來源：**
 > 1. [Next.js - Linking and Navigating](https://nextjs.org/docs/app/building-your-application/routing/linking-and-navigating)

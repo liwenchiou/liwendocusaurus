@@ -76,8 +76,6 @@ export async function deleteData(id: string) {
 
 如果使用者存取一個不存在的 ID，這不是「崩潰」，而是「找不到」。請直接調用 `notFound()`，它會觸發同層級的 `not-found.tsx`。
 
-description: "Next.js 30 天學習筆記系列 - 第 28 天：Day 28 - 健壯性：使用 Error Boundaries 與 global-error 處理崩潰。深入探討 Next.js 開發實戰技巧。"
----
 
 ## 三、 結論：建立防禦性開發思維
 

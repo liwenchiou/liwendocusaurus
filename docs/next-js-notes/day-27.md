@@ -81,8 +81,6 @@ export function CommentList({ initialComments }) {
 
 
 
-description: "Next.js 30 天學習筆記系列 - 第 27 天：Day 27 - 互動極致：使用 useOptimistic 達成零延遲 UI。深入探討 Next.js 開發實戰技巧。"
----
 
 ## 三、 結論：把等待感降到最低
 

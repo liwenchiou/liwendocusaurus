@@ -82,8 +82,6 @@ export default async function ProfilePage({ params }) {
 }
 ```
 
-description: "Next.js 30 天學習筆記系列 - 第 06 天：Day 06 - 資料獲取：在 Server 端擁抱 async/await。深入探討 Next.js 開發實戰技巧。"
----
 
 ## 🏁 結論：告別 useEffect
 
@@ -94,8 +92,6 @@ description: "Next.js 30 天學習筆記系列 - 第 06 天：Day 06 - 資料獲
 | **今日進度** | 學習 Server-side async/await 資料獲取與並行優化。 |
 | **專家筆記** | 雖然 `fetch` 很強大，但使用資料庫 SDK (如 Prisma) 時，需搭配 React 的 `cache` 函式來手動實作記憶化。 |
 
-description: "Next.js 30 天學習筆記系列 - 第 06 天：Day 06 - 資料獲取：在 Server 端擁抱 async/await。深入探討 Next.js 開發實戰技巧。"
----
 
 > **參考來源：**
 > 1. [Next.js - Data Fetching](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating)

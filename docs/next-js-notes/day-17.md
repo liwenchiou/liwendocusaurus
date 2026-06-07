@@ -61,8 +61,6 @@ export default function Layout({ children, modal }) {
   );
 }
 ```
-description: "Next.js 30 天學習筆記系列 - 第 17 天：Day 17 - 攔截路由：打造流暢的燈箱與彈窗體驗。深入探討 Next.js 開發實戰技巧。"
----
 
 ## 三、 結論：讓 Web 擁有 App 般的絲滑感
 

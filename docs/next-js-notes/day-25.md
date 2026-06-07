@@ -83,8 +83,6 @@ export default async function Page({ searchParams }) {
 
 因為搜尋涉及資料庫查詢，我們可以用 `<Suspense>` 包住結果區塊，讓搜尋框維持可互動狀態，只有結果區塊顯示載入中。
 
-description: "Next.js 30 天學習筆記系列 - 第 25 天：Day 25 - 互動優化：實作高效能的即時搜尋與防抖機制。深入探討 Next.js 開發實戰技巧。"
----
 
 ## 三、 結論：讓搜尋變得「聰明」
 

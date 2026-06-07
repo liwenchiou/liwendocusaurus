@@ -61,8 +61,6 @@ Next.js 使用資料夾來定義路由。每個在 `src/app` 資料夾下的子�
 | **loading.tsx** | **載入**：定義資料抓取時的骨架屏 (Skeleton Screen)。 |
 | **error.tsx** | **錯誤**：定義發生錯誤時的降級畫面。 |
 
-description: "Next.js 30 天學習筆記系列 - 第 02 天：Day 02 - 路由架構：檔案即路徑的設計哲學。深入探討 Next.js 開發實戰技巧。"
----
 
 ## 🏁 結論
 
@@ -73,8 +71,6 @@ Next.js 的路由邏輯極大地減少了開發者的心智負擔。您不再需
 | **今日進度** | 學習基礎路徑對應、動態路由 `[id]` 與路由群組 `(group)`。 |
 | **專家筆記** | 頁面放在 `src/app`，通用組件建議放在 `src/components` 以保持架構清晰。 |
 
-description: "Next.js 30 天學習筆記系列 - 第 02 天：Day 02 - 路由架構：檔案即路徑的設計哲學。深入探討 Next.js 開發實戰技巧。"
----
 
 > **參考來源：**
 > 1. [Next.js - Routing Fundamentals](https://nextjs.org/docs/app/building-your-application/routing)

@@ -95,8 +95,6 @@ export default async function PostsPage() {
   );
 }
 ```
-description: "Next.js 30 天學習筆記系列 - 第 21 天：Day 21 - Prisma：讓資料庫操作像寫 JavaScript 一樣直覺。深入探討 Next.js 開發實戰技巧。"
----
 
 ## 三、 結論：讓開發重心回到業務邏輯
 

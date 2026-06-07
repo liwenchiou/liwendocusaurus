@@ -117,8 +117,6 @@ export async function action(prevState: any, formData: FormData) {
   // 繼續執行寫入資料庫的邏輯...
 }```
 
-description: "Next.js 30 天學習筆記系列 - 第 11 天：Day 11 - 表單回饋：用 useActionState 處理驗證與狀態。深入探討 Next.js 開發實戰技巧。"
----
 
 ## 三、 結論：讓互動更直覺
 
