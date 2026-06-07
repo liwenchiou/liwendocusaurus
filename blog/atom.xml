@@ -2,11 +2,65 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://garden.liwen.studio/blog</id>
     <title>Liwen's Digital Garden Blog</title>
-    <updated>2026-05-13T01:43:00.000Z</updated>
+    <updated>2026-06-07T13:30:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://garden.liwen.studio/blog"/>
     <subtitle>Liwen's Digital Garden Blog</subtitle>
     <icon>https://garden.liwen.studio/img/og-image.png</icon>
+    <entry>
+        <title type="html"><![CDATA[寫程式不如 AI？當我們陷入「開發恐怖谷」，工程師的價值該往哪裡擺？]]></title>
+        <id>https://garden.liwen.studio/blog/ai-development-uncanny-valley</id>
+        <link href="https://garden.liwen.studio/blog/ai-development-uncanny-valley"/>
+        <updated>2026-06-07T13:30:00.000Z</updated>
+        <summary type="html"><![CDATA[當 AI 展現出超越人類的開發能力，工程師該如何自處？探討在 AI 時代下，軟體工程師如何從「執行者」轉型為「系統建築師」的價值反思。]]></summary>
+        <content type="html"><![CDATA[<p>在與 AI 協作的過程中，你是否曾產生過一種不適感？</p>
+<p>這是一種微妙的「程式開發恐怖谷效應」。當 AI 在程式碼撰寫、邏輯推演上都展現出超越人類的能力時，我們不禁會產生懷疑：<strong>我們真的比 AI 厲害嗎？如果我硬要介入技術細節，反而成為了 AI 發揮能力的絆腳石？</strong></p>
+<p>這是我近期深刻的迷惘。</p>
+<!-- -->
+<p><img decoding="async" loading="lazy" src="https://truth.bahamut.com.tw/s01/202005/dfa5560a71d8b2b81279b273a352469b.JPG" alt="當 AI 成為開發主力" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="放手或許才是最高級的協作">放手，或許才是最高級的協作<a href="https://garden.liwen.studio/blog/ai-development-uncanny-valley#%E6%94%BE%E6%89%8B%E6%88%96%E8%A8%B1%E6%89%8D%E6%98%AF%E6%9C%80%E9%AB%98%E7%B4%9A%E7%9A%84%E5%8D%94%E4%BD%9C" class="hash-link" aria-label="放手，或許才是最高級的協作的直接連結" title="放手，或許才是最高級的協作的直接連結" translate="no">​</a></h3>
+<p>過去我們習慣思考如何用特定的技術（技術選型）來實作功能，但現在如果我們強行用自己有限的技術認知去規範 AI 的開發路徑，結果往往不如直接告訴 AI 目標，讓他自己尋找最優解。</p>
+<p>就像詠春拳教導的，「不要跟他拼拳，要切他中路」。與其在 AI 最擅長的「寫程式」與「邏輯運算」上硬碰硬，我們應該找到目前 AI 的「短板」，那才是人類工程師的核心戰場。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="工程師的切中路策略從執行者轉向設計師">工程師的「切中路」策略：從執行者轉向設計師<a href="https://garden.liwen.studio/blog/ai-development-uncanny-valley#%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E5%88%87%E4%B8%AD%E8%B7%AF%E7%AD%96%E7%95%A5%E5%BE%9E%E5%9F%B7%E8%A1%8C%E8%80%85%E8%BD%89%E5%90%91%E8%A8%AD%E8%A8%88%E5%B8%AB" class="hash-link" aria-label="工程師的「切中路」策略：從執行者轉向設計師的直接連結" title="工程師的「切中路」策略：從執行者轉向設計師的直接連結" translate="no">​</a></h3>
+<p>既然 AI 擅長產出，那麼我們就專注在產出前的「需求收斂」與產出後的「價值整合」。我分析了目前 AI 尚無法完美取代的四個核心領域：</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-跨部門工作流workflow的梳理與整合">1. 跨部門工作流（Workflow）的梳理與整合<a href="https://garden.liwen.studio/blog/ai-development-uncanny-valley#1-%E8%B7%A8%E9%83%A8%E9%96%80%E5%B7%A5%E4%BD%9C%E6%B5%81workflow%E7%9A%84%E6%A2%B3%E7%90%86%E8%88%87%E6%95%B4%E5%90%88" class="hash-link" aria-label="1. 跨部門工作流（Workflow）的梳理與整合的直接連結" title="1. 跨部門工作流（Workflow）的梳理與整合的直接連結" translate="no">​</a></h4>
+<p>AI 無法直接走進辦公室，理解各部門之間那些混亂、充滿人性與政治角力的溝通鏈。我們不可能直接把一台掛著 AI Agent 的電腦扔給業務部門，就指望他們梳理出自動化的邏輯。</p>
+<ul>
+<li class=""><strong>人類的價值：</strong> 我們扮演「翻譯者」與「架構師」，去洞察部門真實的痛點、梳理資源流程，並將這些充滿雜訊的訊息，轉化為 AI 可理解的精確規格。</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-專業需求分析與深度檢核">2. 專業需求分析與深度檢核<a href="https://garden.liwen.studio/blog/ai-development-uncanny-valley#2-%E5%B0%88%E6%A5%AD%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E8%88%87%E6%B7%B1%E5%BA%A6%E6%AA%A2%E6%A0%B8" class="hash-link" aria-label="2. 專業需求分析與深度檢核的直接連結" title="2. 專業需求分析與深度檢核的直接連結" translate="no">​</a></h4>
+<p>使用者往往無法清楚描述自己要什麼，他們說的是「結果」，而非「需求」。</p>
+<ul>
+<li class=""><strong>人類的價值：</strong> 我們用專業知識幫使用者收斂需求，確保 AI 產出的產品符合預期；並在產出後，扮演「品質守門員」，檢核效能、資安、可維護性等面向。雖然 AI 未來可能也會考慮這些，但這正是我們現在發揮經驗積累的關鍵。</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-系統架構設計與技術債治理">3. 系統架構設計與「技術債」治理<a href="https://garden.liwen.studio/blog/ai-development-uncanny-valley#3-%E7%B3%BB%E7%B5%B1%E6%9E%B6%E6%A7%8B%E8%A8%AD%E8%A8%88%E8%88%87%E6%8A%80%E8%A1%93%E5%82%B5%E6%B2%BB%E7%90%86" class="hash-link" aria-label="3. 系統架構設計與「技術債」治理的直接連結" title="3. 系統架構設計與「技術債」治理的直接連結" translate="no">​</a></h4>
+<p>AI 寫單一功能（Happy Path）非常快，但它往往缺乏對整個專案「宏觀架構」的想像力。如果完全放任 AI 寫程式，很容易產出看起來能動，但未來難以擴充的「義大利麵條程式碼」。</p>
+<ul>
+<li class=""><strong>人類的價值：</strong> 我們必須身兼「架構師」的角色，不只要確保模組化設計（如 MVC、Design Patterns），更要防堵 AI 產生幻覺或默默累積巨大的「技術債」，確保系統底層的健康與高擴充性。</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-邊界條件edge-cases與複雜除錯">4. 邊界條件（Edge Cases）與複雜除錯<a href="https://garden.liwen.studio/blog/ai-development-uncanny-valley#4-%E9%82%8A%E7%95%8C%E6%A2%9D%E4%BB%B6edge-cases%E8%88%87%E8%A4%87%E9%9B%9C%E9%99%A4%E9%8C%AF" class="hash-link" aria-label="4. 邊界條件（Edge Cases）與複雜除錯的直接連結" title="4. 邊界條件（Edge Cases）與複雜除錯的直接連結" translate="no">​</a></h4>
+<p>當系統在完美狀態下運行，AI 無懈可擊；但真實世界總是充滿意外，例如第三方 API 文件寫錯、網路不穩的玄學問題、或是各種奇葩的使用者行為，這時 AI 往往會陷入鬼打牆的死胡同。</p>
+<ul>
+<li class=""><strong>人類的價值：</strong> 我們憑藉著多年的踩雷經驗與「除錯直覺」，在處理極端邊界條件、效能瓶頸或冷門的底層環境問題時，依然是目前無可取代的終極救火隊長。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="未來的技能發展方向">未來的技能發展方向<a href="https://garden.liwen.studio/blog/ai-development-uncanny-valley#%E6%9C%AA%E4%BE%86%E7%9A%84%E6%8A%80%E8%83%BD%E7%99%BC%E5%B1%95%E6%96%B9%E5%90%91" class="hash-link" aria-label="未來的技能發展方向的直接連結" title="未來的技能發展方向的直接連結" translate="no">​</a></h3>
+<p>思考過後，我認為未來軟體工程師的職涯發展，應該朝向以下幾個維度進行自我優化：</p>
+<ul>
+<li class=""><strong>從「會用 AI」升級為「打造 AI 生態」：</strong> 當熟練操作 AI 工具已成為所有工程師的「基本盤」，未來的突圍方向將是「AI 產品化」。不再只是用 AI 寫扣，而是要具備設計 AI Agent 工作流、甚至是將企業內部痛點結合 LLM 轉化為自動化服務架構的能力。</li>
+<li class=""><strong>深耕業務邏輯優化：</strong> 成為更懂「業務」的開發者。利用 AI 高效率產出程式碼，我們則騰出時間去優化整體部門的邏輯結構與自動化流程。</li>
+<li class=""><strong>跨領域的技術整合（全端思維）：</strong> AI 大幅降低了語法的學習門檻，前端跨後端、甚至跨雲端部署的成本變得極低。未來不再死守單一技術棧，能運用 AI 串聯 Frontend、Backend 到 DevOps 的「全端整合者」將大放異彩。</li>
+<li class=""><strong>軟實力與影響力升級：</strong> 當「寫出能動的程式」變成基本盤，工程師的護城河將轉移到跨部門溝通、專案時程控管，以及將技術語言轉化為商業價值的說服力。這些充滿「人味」的軟實力，是 AI 最難以複製的籌碼。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="結語">結語<a href="https://garden.liwen.studio/blog/ai-development-uncanny-valley#%E7%B5%90%E8%AA%9E" class="hash-link" aria-label="結語的直接連結" title="結語的直接連結" translate="no">​</a></h3>
+<p>不要再糾結於「寫程式這件事我輸給了 AI」。當我們不再執著於拼拳，轉而專注於梳理邏輯與串連價值，你會發現，人類工程師並未被淘汰，我們只是從「磚塊搬運工」，變成了「系統建築師」。</p>]]></content>
+        <author>
+            <name>Liwen</name>
+            <uri>https://github.com/liwenchiou</uri>
+        </author>
+        <category label="AI協作" term="AI協作"/>
+        <category label="職涯發展" term="職涯發展"/>
+        <category label="隨筆" term="隨筆"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【開發者心聲】當「技術優化」變成「職場許願池」，我們該如何應對？]]></title>
         <id>https://garden.liwen.studio/blog/tech-optimization-vs-wishlist</id>
