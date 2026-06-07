@@ -53,11 +53,11 @@ npx create-next-app@latest
 
 :::
 
-:::details[點擊展開：專案初始化截圖]
+<details>
+  <summary>點擊展開：專案初始化截圖</summary>
 
-![初始化成功](https://hackmd.io/_uploads/Sk3tdC66-g.png)
-
-:::
+  ![初始化成功](https://hackmd.io/_uploads/Sk3tdC66-g.png)
+</details>
 
 ### 3. 啟動與目錄結構
 
