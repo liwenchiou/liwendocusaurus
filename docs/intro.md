@@ -17,8 +17,13 @@ description: "Liwen 的技術筆記首頁。這裡記錄了我在 Next.js、前�
 - [Next.js 30 天學習筆記](/docs/next-js-notes/day-01)
 
 ### 📚 基礎建設與社群課程 (Fundamentals & Courses)
-記錄我在六角學院等優質社群中的學習軌跡，包含 JavaScript 核心、React 應用等。
-- [六角學院課程筆記](/docs/hexschool/react-course/course-notes-js-fundamentals)
+記錄我在六角學院等優質社群中的學習軌跡，包含 JavaScript 核心、React 應用與 Node.js 後端開發等。
+- [2026 Node.js 實戰課程筆記](./hexschool/2026-nodejs-course/01-intro.md)
+- [六角學院前端課程筆記](/docs/hexschool/react-course/course-notes-js-fundamentals)
+
+### 🚀 個人專案與開源工具 (Side Projects & Open Source)
+記錄我為解決實際痛點而開發的小工具，以及開源套件的底層架構設計。
+- [ezdcbot 輕量推播套件開發筆記](./side-projects/ezdcbot/00-intro.md)
 
 ### 💻 軟體開發與工程實踐 (Software Development & Engineering)
 記錄通用軟體工程原則，如 Clean Code、設計模式、Git 工作流以及測試與自動化部署。
