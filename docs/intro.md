@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 0
 slug: /
 description: "Liwen 的技術筆記首頁。這裡記錄了我在 Next.js、前端架構、React 以及 AI 協作開發領域的學習筆記與實作心得。"
 ---
