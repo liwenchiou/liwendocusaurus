@@ -92,11 +92,12 @@ const config: Config = {
           label: "技術筆記",
         },
         { to: "/blog", label: "生活分享", position: "left" },
-        // {
-        //   href: "https://github.com/facebook/docusaurus",
-        //   label: "GitHub",
-        //   position: "right",
-        // },
+        { to: "/about", label: "關於我", position: "left" },
+        {
+          href: "https://www.liwen.studio",
+          label: "Liwen Studio 官網",
+          position: "right",
+        },
       ],
     },
     metadata: [
@@ -133,6 +134,10 @@ const config: Config = {
         {
           title: "關於我",
           items: [
+            {
+              label: "Liwen Studio 官網",
+              href: "https://www.liwen.studio",
+            },
             {
               label: "GitHub",
               href: "https://github.com/liwenchiou",

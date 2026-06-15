@@ -1,0 +1,196 @@
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  font-family: var(--ifm-font-family-base);
+  color: var(--ifm-font-color-base);
+}
+
+.header {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  color: var(--ifm-color-emphasis-1000);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--ifm-color-emphasis-600);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 16px;
+  padding: 2.5rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--ifm-color-emphasis-400);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-emphasis-900);
+  letter-spacing: -0.02em;
+}
+
+/* Specific Grid Placements */
+.philosophy {
+  grid-column: span 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.avatarCard {
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(10%) contrast(1.1);
+  transition: transform 0.3s ease;
+}
+
+.avatarCard:hover .avatar {
+  transform: scale(1.03);
+}
+
+.techStack {
+  grid-column: span 4;
+}
+
+.openSource {
+  grid-column: span 8;
+  background-color: var(--ifm-color-emphasis-1000);
+  color: var(--ifm-color-emphasis-100);
+}
+
+.openSource .cardTitle {
+  color: var(--ifm-color-emphasis-100);
+}
+
+.openSourceText {
+  color: var(--ifm-color-emphasis-300);
+  line-height: 1.6;
+}
+
+.community {
+  grid-column: span 12;
+}
+
+/* Tags */
+.tagContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-800);
+  background: var(--ifm-color-emphasis-100);
+  font-weight: 500;
+}
+
+/* Links */
+.link {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Community List */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.listItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.listItem:first-child {
+  padding-top: 0;
+}
+
+.listTitle {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-900);
+  margin-bottom: 0.25rem;
+}
+
+.listDesc {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.95rem;
+}
+
+.listDate {
+  color: var(--ifm-color-emphasis-500);
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 2.5rem; }
+  .philosophy, .avatarCard, .techStack, .openSource {
+    grid-column: span 12;
+  }
+  .listItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
