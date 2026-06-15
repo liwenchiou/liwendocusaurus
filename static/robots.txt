@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://garden.liwen.studio/sitemap-index.xml
+Sitemap: https://garden.liwen.studio/sitemap.xml
