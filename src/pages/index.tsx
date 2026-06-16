@@ -23,7 +23,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/next-js-notes/day-01">
+            to="/docs/intro">
             技術筆記 🛠️
           </Link>
           <Link
