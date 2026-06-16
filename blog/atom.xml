@@ -2,11 +2,62 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://garden.liwen.studio/blog</id>
     <title>Liwen's Digital Garden Blog</title>
-    <updated>2026-06-14T04:00:00.000Z</updated>
+    <updated>2026-06-16T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://garden.liwen.studio/blog"/>
     <subtitle>Liwen's Digital Garden Blog</subtitle>
     <icon>https://garden.liwen.studio/img/og-image.png</icon>
+    <entry>
+        <title type="html"><![CDATA[告別 F5！我開源了專門監聽 GitHub Actions 的 CLI 工具：ghaction-lis]]></title>
+        <id>https://garden.liwen.studio/blog/introducing-ghaction-lis</id>
+        <link href="https://garden.liwen.studio/blog/introducing-ghaction-lis"/>
+        <updated>2026-06-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[做前端開發或靜態網站管理（例如這個 Docusaurus 數位花園）時，我們常常會把 git push 和自動部署串在一起。但這衍生出一個惱人的日常痛點：每次 push 完，你總是要打開瀏覽器、點開 Actions 標籤、然後傻傻地按 F5 重新整理，直到進度條跑完為止。]]></summary>
+        <content type="html"><![CDATA[<p>做前端開發或靜態網站管理（例如這個 Docusaurus 數位花園）時，我們常常會把 <code>git push</code> 和自動部署串在一起。但這衍生出一個惱人的日常痛點：<strong>每次 push 完，你總是要打開瀏覽器、點開 Actions 標籤、然後傻傻地按 F5 重新整理，直到進度條跑完為止。</strong></p>
+<p>這不僅中斷開發心流，還非常破壞開發者體驗 (DevEx)。</p>
+<p>為了解決這個問題，我開發並開源了一個超輕量級的 CLI 工具：<strong><a href="https://github.com/liwenchiou/ghaction-lis" target="_blank" rel="noopener noreferrer" class="">ghaction-lis</a></strong>！</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="為什麼不用簡單的-curl-腳本就好">為什麼不用簡單的 <code>curl</code> 腳本就好？<a href="https://garden.liwen.studio/blog/introducing-ghaction-lis#%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E7%94%A8%E7%B0%A1%E5%96%AE%E7%9A%84-curl-%E8%85%B3%E6%9C%AC%E5%B0%B1%E5%A5%BD" class="hash-link" aria-label="為什麼不用簡單的-curl-腳本就好的直接連結" title="為什麼不用簡單的-curl-腳本就好的直接連結" translate="no">​</a></h2>
+<p>一開始，我（或者說我的 AI 助手）也想偷懶，寫了個簡單的 <code>bash</code> 迴圈去打 GitHub API，想說這樣就可以在 Terminal 裡面等結果。</p>
+<p>結果馬上踩到一個嚴重的 <strong>「時間差 (Race Condition)」陷阱</strong>：
+當你執行 <code>git push ; ./my-script.sh</code> 的時候，<code>git push</code> 一結束腳本就去打 API。但 GitHub 伺服器建立 Action 需要 2~5 秒的空窗期。這導致腳本抓到了<strong>上一次已經成功的歷史紀錄</strong>，瞬間回報「部署成功」，而實際上最新的部署根本還沒開始！</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ghaction-lis-的核心亮點">ghaction-lis 的核心亮點<a href="https://garden.liwen.studio/blog/introducing-ghaction-lis#ghaction-lis-%E7%9A%84%E6%A0%B8%E5%BF%83%E4%BA%AE%E9%BB%9E" class="hash-link" aria-label="ghaction-lis 的核心亮點的直接連結" title="ghaction-lis 的核心亮點的直接連結" translate="no">​</a></h2>
+<p>為了解決時間差與輪詢體驗，<code>ghaction-lis</code> 誕生了。它主打四大特點：</p>
+<ol>
+<li class=""><strong>🔒 精準鎖定 (SHA Matching)</strong>：
+程式會先自動抓取你本地端的最新 <code>git rev-parse HEAD</code>，去跟 GitHub API 撈下來的 <code>head_sha</code> 進行嚴格比對。如果 Hash 不符合，它會聰明地等待，絕對不會抓到幽靈紀錄！</li>
+<li class=""><strong>✨ 優雅的終端體驗 (DevEx)</strong>：
+內建 <code>ora</code> Spinner 與 <code>chalk</code> 顏色渲染。終端機會有漂亮的 Loading 動畫，成功顯示綠色打勾，失敗顯示紅色警告。</li>
+<li class=""><strong>🐛 智慧錯誤日誌擷取</strong>：
+如果部署不幸失敗，你連瀏覽器都不用開！<code>ghaction-lis</code> 會自動抓取 GitHub 上的 Error Log 並且高亮印在 Terminal 裡，讓你秒懂問題出在哪。</li>
+<li class=""><strong>🚀 零配置隨插即用</strong>：
+自動解析 Git remote 設定檔，完美整合 GitHub CLI (<code>gh</code>) 憑證，不需要繁瑣的 <code>.env</code> 設定。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="如何使用">如何使用？<a href="https://garden.liwen.studio/blog/introducing-ghaction-lis#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8" class="hash-link" aria-label="如何使用？的直接連結" title="如何使用？的直接連結" translate="no">​</a></h2>
+<p>我們提供兩種使用方式，讓您能根據開發習慣自由選擇：</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-隨插即用-推薦">1. 隨插即用 (推薦)<a href="https://garden.liwen.studio/blog/introducing-ghaction-lis#1-%E9%9A%A8%E6%8F%92%E5%8D%B3%E7%94%A8-%E6%8E%A8%E8%96%A6" class="hash-link" aria-label="1. 隨插即用 (推薦)的直接連結" title="1. 隨插即用 (推薦)的直接連結" translate="no">​</a></h3>
+<p>只要透過 <code>npx</code> 即可在任何 git 專案的資料夾下直接「免安裝執行」，保證零環境污染且隨時保持最新版：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#F8F8F2"><span class="token plain">npx ghaction-lis</span><br></div></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-全域安裝">2. 全域安裝<a href="https://garden.liwen.studio/blog/introducing-ghaction-lis#2-%E5%85%A8%E5%9F%9F%E5%AE%89%E8%A3%9D" class="hash-link" aria-label="2. 全域安裝的直接連結" title="2. 全域安裝的直接連結" translate="no">​</a></h3>
+<p>如果您希望在電腦上任何地方都能直接敲打指令，可以透過 npm 全域安裝：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#F8F8F2"><span class="token plain">npm install -g ghaction-lis</span><br></div></code></pre></div></div>
+<p>安裝後即可直接執行 <code>ghaction-lis</code> 指令。</p>
+<p>或是整合到你的 <code>package.json</code> 中，打造完美的一條龍部署體驗：</p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#F8F8F2"><span class="token property">"scripts"</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token property">"deploy"</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"git push &amp;&amp; npx ghaction-lis"</span><span class="token plain"></span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><br></div></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="結語">結語<a href="https://garden.liwen.studio/blog/introducing-ghaction-lis#%E7%B5%90%E8%AA%9E" class="hash-link" aria-label="結語的直接連結" title="結語的直接連結" translate="no">​</a></h2>
+<p>這個小工具原本只是為了解決我自己的痛點，但現在它已經成為這座數位花園不可或缺的基礎建設，甚至被強制寫入了我的 <strong><a class="" href="https://garden.liwen.studio/docs/engineering/ainotes/ai-deployment-sop">AI 部署守則</a></strong> 中。</p>
+<p>如果你也受夠了每次部署都要無腦切換瀏覽器，不妨試試看 <code>ghaction-lis</code>！
+歡迎到 <a href="https://github.com/liwenchiou/ghaction-lis" target="_blank" rel="noopener noreferrer" class="">GitHub 專案頁面</a> 給我個 Star，也期待大家的 PR 與回饋！</p>]]></content>
+        <author>
+            <name>Liwen</name>
+            <uri>https://github.com/liwenchiou</uri>
+        </author>
+        <category label="Open Source" term="Open Source"/>
+        <category label="CLI" term="CLI"/>
+        <category label="GitHub Actions" term="GitHub Actions"/>
+        <category label="DevEx" term="DevEx"/>
+        <category label="Node.js" term="Node.js"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[告別龐大的 discord.js：我如何打造零依賴的輕量 Discord 推播套件 ezdcbot]]></title>
         <id>https://garden.liwen.studio/blog/ezdcbot</id>
