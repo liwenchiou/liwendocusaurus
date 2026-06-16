@@ -29,6 +29,10 @@ description: "Liwen 的技術筆記首頁。這裡記錄了我在 Next.js、前�
 記錄通用軟體工程原則，如 Clean Code、設計模式、Git 工作流以及測試與自動化部署。
 - [軟體開發與工程實踐](/docs/software-development)
 
+### 📦 NPM 套件與開發工具 (NPM Packages & Tools)
+記錄我研究過的實用 Node.js / 前端套件，建立專屬的工具箱。
+- [NPM 套件探索總覽](./npm-packages/intro.md)
+
 ### 🤖 AI 與工作流 (AI & Workflow)
 探索如何將 AI (如 Agentic AI, Cursor, Vibe Coding) 融入開發流程，提升開發者的創造力。
 - [AI Agent 使用筆記](/docs/ainotes/antigravity-global-skills)
