@@ -114,11 +114,11 @@ const config: Config = {
           items: [
             {
               label: "Next.js 30 天學習筆記",
-              to: "/docs/01-learning/next-js-notes/day-01",
+              to: "/docs/learning/next-js-notes/day-01",
             },
             {
               label: "六角學院",
-              to: "/docs/01-learning/hexschool/react-course/course-notes-js-fundamentals",
+              to: "/docs/learning/hexschool/react-course/course-notes-js-fundamentals",
             },
           ],
         },

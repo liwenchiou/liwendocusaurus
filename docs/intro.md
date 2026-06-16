@@ -17,14 +17,14 @@ description: "Liwen 的技術筆記首頁。這裡記錄了我在 Next.js、前�
 ### 📚 系統化學習 (Learning)
 這裡記錄了我在各大平台與框架中，從零到一打底的系統化學習軌跡與課程筆記。
 - [2026 Node.js 實戰課程筆記](./01-learning/hexschool/2026-nodejs-course/01-intro.md)
-- [六角學院前端課程筆記](/docs/01-learning/hexschool/react-course/course-notes-js-fundamentals)
-- [Next.js 30 天學習筆記](/docs/01-learning/next-js-notes/day-01)
+- [六角學院前端課程筆記](/docs/learning/hexschool/react-course/course-notes-js-fundamentals)
+- [Next.js 30 天學習筆記](/docs/learning/next-js-notes/day-01)
 
 ### 🛠️ 工程與開發實踐 (Engineering & Tools)
 身為工程師，除了寫出能動的程式碼，更要追求架構的優雅與開發效率。
-- [軟體開發與工程實踐](/docs/02-engineering/software-development) (包含 Clean Code 與架構設計)
+- [軟體開發與工程實踐](/docs/engineering/software-development) (包含 Clean Code 與架構設計)
 - [NPM 套件探索總覽](./02-engineering/npm-packages/intro.md) (我的專屬工具箱)
-- [AI Agent 使用筆記](/docs/02-engineering/ainotes/antigravity-global-skills) (探討 Agentic AI 協作模式)
+- [AI Agent 使用筆記](/docs/engineering/ainotes/antigravity-global-skills) (探討 Agentic AI 協作模式)
 
 ### 🚀 專案與事業 (Projects & Business)
 技術最終必須落地創造價值。這裡收錄了我的開源作品以及經營技術事業的思考。
