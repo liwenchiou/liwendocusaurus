@@ -31,4 +31,4 @@ bot.sendMessage('123456789012345678', '這是一則來自 ezdcbot 的推播通�
 ## 📖 完整技術文件
 因為這是我自己的開源專案，我有為它撰寫了一系列非常完整的底層架構解析與使用教學。
 
-👉 **[點此前往：ezdcbot 完整開發文件與技術筆記](../../03-projects-business/side-projects/ezdcbot/00-intro)**
+👉 **[點此前往：ezdcbot 完整開發文件與技術筆記](../../03-projects-business/side-projects/ezdcbot/00-intro.md)**

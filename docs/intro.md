@@ -22,7 +22,7 @@ description: "Liwen 的技術筆記首頁。這裡記錄了我在 Next.js、前�
 
 ### 🛠️ 工程與開發實踐 (Engineering & Tools)
 身為工程師，除了寫出能動的程式碼，更要追求架構的優雅與開發效率。
-- [軟體開發與工程實踐](/docs/engineering/software-development) (包含 Clean Code 與架構設計)
+- [軟體開發與工程實踐](./02-engineering/software-development/intro.md) (包含 Clean Code 與架構設計)
 - [NPM 套件探索總覽](./02-engineering/npm-packages/intro.md) (我的專屬工具箱)
 - [AI Agent 使用筆記](/docs/engineering/ainotes/antigravity-global-skills) (探討 Agentic AI 協作模式)
 
