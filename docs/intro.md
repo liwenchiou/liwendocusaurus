@@ -10,32 +10,25 @@ description: "Liwen 的技術筆記首頁。這裡記錄了我在 Next.js、前�
 
 對我來說，學習新技術不只是為了學會工具的使用，更是為了理解背後的設計哲學與解決問題的思路。這裡的每一份筆記都是我實際實作、踩坑後留下的紀錄。
 
-## 目前正在深耕的領域
+## 核心知識體系架構
 
-### 🛠️ 現代網頁架構 (Modern Web Architecture)
-主要專注於 Next.js 與前端效能優化，從基礎的渲染機制到複雜的系統設計都有紀錄。
-- [Next.js 30 天學習筆記](/docs/next-js-notes/day-01)
+這座數位花園的架構呼應了左側邊欄的三大主軸，方便你快速找到感興趣的內容：
 
-### 📚 基礎建設與社群課程 (Fundamentals & Courses)
-記錄我在六角學院等優質社群中的學習軌跡，包含 JavaScript 核心、React 應用與 Node.js 後端開發等。
-- [2026 Node.js 實戰課程筆記](./hexschool/2026-nodejs-course/01-intro.md)
-- [六角學院前端課程筆記](/docs/hexschool/react-course/course-notes-js-fundamentals)
+### 📚 系統化學習 (Learning)
+這裡記錄了我在各大平台與框架中，從零到一打底的系統化學習軌跡與課程筆記。
+- [2026 Node.js 實戰課程筆記](./01-learning/hexschool/2026-nodejs-course/01-intro.md)
+- [六角學院前端課程筆記](/docs/01-learning/hexschool/react-course/course-notes-js-fundamentals)
+- [Next.js 30 天學習筆記](/docs/01-learning/next-js-notes/day-01)
 
-### 🚀 個人專案與開源工具 (Side Projects & Open Source)
-記錄我為解決實際痛點而開發的小工具，以及開源套件的底層架構設計。
-- [ezdcbot 輕量推播套件開發筆記](./side-projects/ezdcbot/00-intro.md)
+### 🛠️ 工程與開發實踐 (Engineering & Tools)
+身為工程師，除了寫出能動的程式碼，更要追求架構的優雅與開發效率。
+- [軟體開發與工程實踐](/docs/02-engineering/software-development) (包含 Clean Code 與架構設計)
+- [NPM 套件探索總覽](./02-engineering/npm-packages/intro.md) (我的專屬工具箱)
+- [AI Agent 使用筆記](/docs/02-engineering/ainotes/antigravity-global-skills) (探討 Agentic AI 協作模式)
 
-### 💻 軟體開發與工程實踐 (Software Development & Engineering)
-記錄通用軟體工程原則，如 Clean Code、設計模式、Git 工作流以及測試與自動化部署。
-- [軟體開發與工程實踐](/docs/software-development)
-
-### 📦 NPM 套件與開發工具 (NPM Packages & Tools)
-記錄我研究過的實用 Node.js / 前端套件，建立專屬的工具箱。
-- [NPM 套件探索總覽](./npm-packages/intro.md)
-
-### 🤖 AI 與工作流 (AI & Workflow)
-探索如何將 AI (如 Agentic AI, Cursor, Vibe Coding) 融入開發流程，提升開發者的創造力。
-- [AI Agent 使用筆記](/docs/ainotes/antigravity-global-skills)
+### 🚀 專案與事業 (Projects & Business)
+技術最終必須落地創造價值。這裡收錄了我的開源作品以及經營技術事業的思考。
+- [ezdcbot 輕量推播套件開發筆記](./03-projects-business/side-projects/ezdcbot/00-intro.md)
 
 ---
 

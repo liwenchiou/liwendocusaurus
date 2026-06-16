@@ -57,10 +57,10 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
-        gtag: {
+        gtag: process.env.NODE_ENV === 'production' ? {
           trackingID: "G-Q6K8KV1028",
           anonymizeIP: true,
-        },
+        } : undefined,
       } satisfies Preset.Options,
     ],
   ],
@@ -114,11 +114,11 @@ const config: Config = {
           items: [
             {
               label: "Next.js 30 天學習筆記",
-              to: "/docs/next-js-notes/day-01",
+              to: "/docs/01-learning/next-js-notes/day-01",
             },
             {
               label: "六角學院",
-              to: "/docs/hexschool/react-course/course-notes-js-fundamentals",
+              to: "/docs/01-learning/hexschool/react-course/course-notes-js-fundamentals",
             },
           ],
         },
