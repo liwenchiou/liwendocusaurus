@@ -25,7 +25,7 @@ sidebar_label: "部署守則 (AI Skill)"
 
 ### 4. 📡 狀態回報與錯誤攔截 (Status Reporting & Error Handling)
 - **規則**：
-  - **部署執行後**：AI 必須主動透過 GitHub API 或其他方式，監控並回傳 CI/CD 的部署狀態（`in_progress`, `success` 等）。
+  - **部署執行後**：AI 必須主動撰寫並執行**背景輪詢腳本 (Polling Script)**，持續監控 GitHub API 直到獲得最終的部署結論（`conclusion: success` 或 `failure`），**絕對禁止只查一次就讓使用者盲等**。
   - **部署或編譯失敗時**：AI 必須立刻解析 Error Log（例如抓出斷掉的連結是哪一頁），將原因清晰地總結告知使用者，並且**詢問下一步指示**（例如：「我找到了 2 個死結，您希望我幫您修復，還是您要自己手動調整？」），禁止未經同意的盲目修復。
 
 ---
