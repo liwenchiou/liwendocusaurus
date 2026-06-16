@@ -15,5 +15,6 @@ title: NPM 套件總覽
 | **`uuid`** | 產生符合 RFC 標準的絕對唯一識別碼 (UUID v4) | [👉 查看](./uuid) |
 | **`webserver`** | Node.js 原生內建 Web Server (`http`)，掌握 Req/Res 生命週期 | [👉 查看](./webserver) |
 | **`ezdcbot`** | 我個人開源的 Discord 零依賴輕量推播套件，專為 Serverless 打造 | [👉 查看](./ezdcbot) |
+| **`ghaction-lis`** | 我個人開源的 CLI 工具，專門解決 GitHub Actions 輪詢時間差與終端機監控 | [👉 查看](./ghaction-lis) |
 
 *(本清單將會隨著學習進度持續擴充更新)*

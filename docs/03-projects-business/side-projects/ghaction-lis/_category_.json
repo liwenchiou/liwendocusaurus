@@ -1,0 +1,8 @@
+{
+  "label": "ghaction-lis 監聽套件",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "關於開源套件 ghaction-lis 的開發筆記、架構設計與使用說明。"
+  }
+}
