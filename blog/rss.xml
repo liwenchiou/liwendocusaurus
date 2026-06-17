@@ -4,10 +4,41 @@
         <title>Liwen's Digital Garden Blog</title>
         <link>https://garden.liwen.studio/blog</link>
         <description>Liwen's Digital Garden Blog</description>
-        <lastBuildDate>Tue, 16 Jun 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 17 Jun 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-Hant</language>
+        <item>
+            <title><![CDATA[AI 時代下的軟體工程師：初階工程師的破局之道]]></title>
+            <link>https://garden.liwen.studio/blog/ai-era-junior-engineer-survival-guide</link>
+            <guid>https://garden.liwen.studio/blog/ai-era-junior-engineer-survival-guide</guid>
+            <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[現在是 AI 橫行的時代，我認為這對軟體工程師的職涯發展產生了深遠的影響。]]></description>
+            <content:encoded><![CDATA[<p>現在是 AI 橫行的時代，我認為這對軟體工程師的職涯發展產生了深遠的影響。</p>
+<p>過去，只要具備專業的程式開發能力——不管是前端、後端或是其他軟體工程技能，要找到一份不錯的工作並非難事。然而，隨著 AI 發展日益迅速，市場上「純粹寫扣」的初階工程師職缺反而變少了。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ai-帶來的成本與效率衝擊">AI 帶來的成本與效率衝擊<a href="https://garden.liwen.studio/blog/ai-era-junior-engineer-survival-guide#ai-%E5%B8%B6%E4%BE%86%E7%9A%84%E6%88%90%E6%9C%AC%E8%88%87%E6%95%88%E7%8E%87%E8%A1%9D%E6%93%8A" class="hash-link" aria-label="AI 帶來的成本與效率衝擊的直接連結" title="AI 帶來的成本與效率衝擊的直接連結" translate="no">​</a></h2>
+<p>我們來算一筆帳：一個初階工程師的月薪大約落在 3.5 萬到 4 萬台幣之間，但現在訂閱最高級的 AI 工具（例如 Claude Max）一個月可能不過 4000 塊不到。</p>
+<p>以我目前的開發習慣為例：我通常會先透過 AI 快速產出專案大綱與基礎程式碼，接著再親自去修改和微調。這個過程，不就等同於我請了一位初階工程師嗎？我同樣需要做 Code Review、調整內容邏輯；甚至在某些時候，AI 比人類初階工程師更能精準理解我的需求，還能給出更好的架構建議。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="程式能力從專業變成基礎技能">程式能力從「專業」變成「基礎技能」<a href="https://garden.liwen.studio/blog/ai-era-junior-engineer-survival-guide#%E7%A8%8B%E5%BC%8F%E8%83%BD%E5%8A%9B%E5%BE%9E%E5%B0%88%E6%A5%AD%E8%AE%8A%E6%88%90%E5%9F%BA%E7%A4%8E%E6%8A%80%E8%83%BD" class="hash-link" aria-label="程式能力從「專業」變成「基礎技能」的直接連結" title="程式能力從「專業」變成「基礎技能」的直接連結" translate="no">​</a></h2>
+<p>所以我認為，現在的「軟體開發技能」已經逐漸變成一種基礎能力。</p>
+<p>我並沒有貶低這項專業的意思，我只是想表達：寫程式這個能力已經變得越來越普及，幾乎人人都能擁有，當然，要做到「專精」依然需要大量的時間與 Know-how。</p>
+<p>但若把這個現狀放到現在的求職市場來看，以一個公司用人主管的角度，我現在更需要的是：</p>
+<ol>
+<li class=""><strong>更具即戰力</strong>的人員。</li>
+<li class=""><strong>更懂 AI、熟悉 Vibe Coding</strong> 的人，能利用 AI 大幅補足自己軟體開發的短板，一人當多人用。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="初階工程師的未來該何去何從">初階工程師的未來該何去何從？<a href="https://garden.liwen.studio/blog/ai-era-junior-engineer-survival-guide#%E5%88%9D%E9%9A%8E%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%9A%84%E6%9C%AA%E4%BE%86%E8%A9%B2%E4%BD%95%E5%8E%BB%E4%BD%95%E5%BE%9E" class="hash-link" aria-label="初階工程師的未來該何去何從？的直接連結" title="初階工程師的未來該何去何從？的直接連結" translate="no">​</a></h2>
+<p>對於剛入行或準備入行的初階工程師，我認為還是必須<strong>不間斷地增強專業能力</strong>，但方向要有所調整：<strong>多嘗試不同的技術組合與跨領域應用</strong>。</p>
+<p>例如，你可以嘗試用程式控制硬體（像是標籤機的列印），或者用程式去自動化輔助日常的流程進行與整合。程式能力已經不再是單純的「專業」，它應該是一種「基底技能」，關鍵在於：<strong>你能用這個技能結合什麼價值？</strong></p>
+<p>初期的練習就好像是在網路上發表網路小說：一開始只是寫寫文章，訓練語言組織能力與說故事的技巧，到最後不斷打磨才能出書成為作家。</p>
+<p>軟體開發也是一樣。一開始做些有趣的 Side Project（我常開玩笑把 Side Project 簡稱為 SB，我覺得很好笑也很有趣 😆）。但做著做著，你會慢慢發現這個「SB」可以延伸到更多不同的領域，可以結合其他的技術。</p>
+<p>不斷去思考「技術可以結合什麼場景」，我覺得這才是現在的初階工程師在 AI 時代最該具備的破局思維！</p>]]></content:encoded>
+            <category>Career</category>
+            <category>AI</category>
+            <category>Vibe Coding</category>
+            <category>Software Engineering</category>
+        </item>
         <item>
             <title><![CDATA[告別 F5！我開源了專門監聽 GitHub Actions 的 CLI 工具：ghaction-lis]]></title>
             <link>https://garden.liwen.studio/blog/introducing-ghaction-lis</link>
