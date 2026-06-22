@@ -1,0 +1,24 @@
+name: Supabase Keep Alive
+
+on:
+  schedule:
+    - cron: '0 0 */3 * *' # 每 3 天執行一次
+  workflow_dispatch: # 允許在 GitHub 頁面手動點擊執行測試
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      # 喚醒第一個專案
+      - name: Ping Supabase Project 1
+        run: |
+          curl -X GET "${{ secrets.SUPABASE_URL_1 }}" \
+          -H "apikey: ${{ secrets.SUPABASE_ANON_KEY_1 }}" \
+          -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY_1 }}"
+          
+      # 喚醒第二個專案
+      - name: Ping Supabase Project 2
+        run: |
+          curl -X GET "${{ secrets.SUPABASE_URL_2 }}" \
+          -H "apikey: ${{ secrets.SUPABASE_ANON_KEY_2 }}" \
+          -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY_2 }}"
