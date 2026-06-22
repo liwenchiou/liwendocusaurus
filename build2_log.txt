@@ -1,7 +1,0 @@
-
-> website@0.0.0 build
-> docusaurus build
-
-[INFO] [zh-Hant] Creating an optimized production build...
-[SUCCESS] Generated static files in "build".
-[INFO] Use `npm run serve` command to test your build locally.
