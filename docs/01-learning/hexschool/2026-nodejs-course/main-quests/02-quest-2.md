@@ -6,12 +6,10 @@ sidebar_position: 2
 
 # 🚀 Node.js 主線任務二：原生 HTTP 與檔案上傳 (Formidable)
 
-:::danger 🛑 劇透防護線 (Spoiler Alert)
+<details>
+<summary>🛑 劇透防護線：點擊展開解答與實作細節</summary>
 
-以下筆記包含**完整的主線任務解答與原始碼實作**。
-強烈建議同學先自己親手寫過一次，真的卡關再來對照參考，這樣學習效果才會最好喔！
-
-:::
+> **強烈建議**：請先親手寫過一次，真的卡關再來對照參考，學習效果才會最好喔！
 
 本次任務學習了如何使用 Node.js 原生的 `node:http` 模組建立伺服器，並結合第三方套件 `formidable` (v3) 來處理前端傳來的 `multipart/form-data`（檔案上傳）。
 
@@ -144,3 +142,5 @@ function createUploadServer(config) {
   return server;
 }
 ```
+
+</details>
