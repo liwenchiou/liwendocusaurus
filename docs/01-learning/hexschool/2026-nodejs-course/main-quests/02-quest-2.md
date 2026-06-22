@@ -1,10 +1,9 @@
 ---
 id: quest-2
-title: 第二週：主線任務實作
+title: 🚀 Node.js 主線任務二：原生 HTTP 與檔案上傳 (Formidable)
+sidebar_label: 第二週：主線任務實作
 sidebar_position: 2
 ---
-
-# 🚀 Node.js 主線任務二：原生 HTTP 與檔案上傳 (Formidable)
 
 <details>
 <summary>🛑 劇透防護線：點擊展開解答與實作細節</summary>
