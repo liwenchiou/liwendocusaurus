@@ -1,4 +1,8 @@
 {
-  "label": "2026 React 實戰課程",
-  "position": 1
+  "label": "⚛️ 2026 React 實戰課程",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "2026 React 實戰課程學習筆記總覽"
+  }
 }

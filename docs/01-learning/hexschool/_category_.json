@@ -1,4 +1,8 @@
 {
   "label": "六角學院",
-  "position": 2
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "六角學院課程筆記與實戰資源總覽"
+  }
 }
