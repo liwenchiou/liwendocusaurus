@@ -12,13 +12,13 @@ jobs:
       # 喚醒第一個專案
       - name: Ping Supabase Project 1
         run: |
-          curl -X GET "${{ secrets.SUPABASE_URL_1 }}/rest/v1/" \
+          curl -X GET "${{ secrets.SUPABASE_URL_1 }}/auth/v1/health" \
           -H "apikey: ${{ secrets.SUPABASE_ANON_KEY_1 }}" \
           -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY_1 }}"
           
       # 喚醒第二個專案
       - name: Ping Supabase Project 2
         run: |
-          curl -X GET "${{ secrets.SUPABASE_URL_2 }}/rest/v1/" \
+          curl -X GET "${{ secrets.SUPABASE_URL_2 }}/auth/v1/health" \
           -H "apikey: ${{ secrets.SUPABASE_ANON_KEY_2 }}" \
           -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY_2 }}"
