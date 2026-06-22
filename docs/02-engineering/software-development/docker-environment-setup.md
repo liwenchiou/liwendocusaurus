@@ -105,3 +105,34 @@ node
 ```
 console.log("這是我第一個docker 的 nodejs 環境")
 ```
+
+## 常見 Docker 實用指令
+
+在開發過程中，以下是幾組最常用到的 Docker 指令備忘錄：
+
+### 容器管理 (Container)
+- **`docker ps`**：列出目前正在執行的容器。
+- **`docker ps -a`**：列出所有容器（包含已停止的）。
+- **`docker stop <容器ID或名稱>`**：停止正在執行的容器。
+- **`docker start <容器ID或名稱>`**：啟動已經建立但停止中的容器。
+- **`docker rm <容器ID或名稱>`**：刪除指定的容器（必須先停止）。
+- **`docker rm -f <容器ID或名稱>`**：強制刪除正在執行的容器。
+
+### 映像檔管理 (Image)
+- **`docker images`**：列出本機已下載的所有映像檔。
+- **`docker rmi <映像檔ID>`**：刪除指定的映像檔。
+- **`docker pull <映像檔名稱>`**：從 Docker Hub 下載映像檔（例如 `docker pull node:20`）。
+
+### 進入運作中的容器 (Exec)
+若容器已經在背景執行中（例如跑了 Server），你可以使用 `exec` 指令新開一個終端機進入該容器：
+```bash
+docker exec -it <容器ID或名稱> bash
+```
+*(💡 小提醒：有些精簡版映像檔如 `alpine` 可能沒有 `bash`，此時需改用 `sh`)*
+
+### 系統大掃除 (Prune)
+當你發現 Docker 佔用太多 Mac 硬碟空間時，這招非常實用：
+```bash
+docker system prune
+```
+*(這會自動清除所有**未被使用**的容器、網路與暫存資料)*
