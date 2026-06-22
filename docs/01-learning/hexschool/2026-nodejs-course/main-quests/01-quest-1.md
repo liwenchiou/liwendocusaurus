@@ -7,9 +7,12 @@ sidebar_position: 1
 # 🚀 Node.js 主線任務一：檔案讀寫、陣列操作與環境變數
 
 :::danger 🛑 劇透防護線 (Spoiler Alert)
+
 以下筆記包含**完整的主線任務解答與原始碼實作**。
 強烈建議同學先自己親手寫過一次，真的卡關再來對照參考，這樣學習效果才會最好喔！
+
 :::
+
 本次任務涵蓋了 Node.js 開發中最常見的基礎資料處理操作，包含使用原生的 `fs/promises` 模組讀取本地 JSON 檔案、操作環境變數 `process.env`，以及熟練運用 JavaScript 的陣列高階方法 (`filter`, `reduce`, `map`) 來處理資料結構。
 
 ---
