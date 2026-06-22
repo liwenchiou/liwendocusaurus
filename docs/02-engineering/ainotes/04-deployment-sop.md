@@ -1,7 +1,7 @@
 ---
 id: deployment-sop
 title: "Antigravity Deployment SOP (AI 部署守則)"
-sidebar_label: 04. 部署防呆守則
+sidebar_label: 🛡️ 04. 部署防呆守則
 sidebar_position: 4
 ---
 

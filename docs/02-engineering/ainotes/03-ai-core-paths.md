@@ -1,7 +1,7 @@
 ---
 id: ai-core-paths
 title: AI 核心路徑速查表 (Cheat Sheet)
-sidebar_label: 03. 路徑速查表
+sidebar_label: 🗺️ 03. 路徑速查表
 sidebar_position: 3
 ---
 

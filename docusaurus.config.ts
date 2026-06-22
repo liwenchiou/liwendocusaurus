@@ -57,10 +57,10 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
-        gtag: process.env.NODE_ENV === 'production' ? {
+        gtag: {
           trackingID: "G-Q6K8KV1028",
           anonymizeIP: true,
-        } : undefined,
+        },
       } satisfies Preset.Options,
     ],
   ],

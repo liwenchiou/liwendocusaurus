@@ -1,7 +1,7 @@
 ---
 id: knowledge-items
 title: 全域知識庫與記憶管理 (Knowledge Items)
-sidebar_label: 02. KI 知識庫
+sidebar_label: 🧠 02. KI 知識庫
 sidebar_position: 2
 ---
 

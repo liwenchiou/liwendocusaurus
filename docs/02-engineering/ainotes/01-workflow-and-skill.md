@@ -1,7 +1,7 @@
 ---
 id: workflow-and-skill
 title: 主動指令與技能模組 (Workflow & Skill)
-sidebar_label: 01. 指令與模組
+sidebar_label: 🎮 01. 指令與模組
 sidebar_position: 1
 ---
 

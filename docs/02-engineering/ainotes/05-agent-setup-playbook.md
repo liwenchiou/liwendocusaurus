@@ -1,7 +1,7 @@
 ---
 id: agent-setup-playbook
 title: 實戰演練：跨專案 AI 防呆起手式
-sidebar_label: 05. 新專案起手式
+sidebar_label: 🚀 05. 新專案起手式
 sidebar_position: 5
 ---
 
