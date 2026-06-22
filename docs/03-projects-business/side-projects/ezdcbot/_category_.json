@@ -3,6 +3,7 @@
   "position": 1,
   "link": {
     "type": "generated-index",
+    "slug": "/projects-business/side-projects/ezdcbot",
     "description": "零依賴的輕量級 Discord 推播套件 ezdcbot 的底層實作與架構設計探討。"
   }
 }

@@ -3,6 +3,7 @@
   "position": 5,
   "link": {
     "type": "generated-index",
+    "slug": "/engineering/npm-packages",
     "description": "這裡記錄了我學習與研究過的各種實用 NPM 套件。"
   }
 }

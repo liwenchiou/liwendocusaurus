@@ -3,6 +3,7 @@
   "position": 5,
   "link": {
     "type": "generated-index",
+    "slug": "/projects-business/side-projects",
     "description": "這裡記錄了我業餘時間開發的各種開源套件與個人小工具的技術筆記。"
   }
 }
