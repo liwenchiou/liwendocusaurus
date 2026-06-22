@@ -2,7 +2,7 @@
   "label": "NPM 套件探索",
   "position": 5,
   "link": {
-    "type": "doc",
-    "id": "intro"
+    "type": "generated-index",
+    "description": "這裡記錄了我學習與研究過的各種實用 NPM 套件。"
   }
 }

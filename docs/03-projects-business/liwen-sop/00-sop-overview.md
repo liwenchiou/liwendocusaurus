@@ -1,5 +1,7 @@
 ---
-slug: /liwen-sop
+id: sop-overview
+title: Liwen Studio 專屬開發流程
+sidebar_position: 1
 description: "Liwen Studio 的專屬軟體開發流程，強調需求對焦、權責分離與敏捷迭代的 12 步實務指南。"
 ---
 

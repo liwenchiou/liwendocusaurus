@@ -1,4 +1,5 @@
 ---
+id: npm-overview
 sidebar_position: 1
 title: NPM 套件總覽
 ---
@@ -16,5 +17,7 @@ title: NPM 套件總覽
 | **`webserver`** | Node.js 原生內建 Web Server (`http`)，掌握 Req/Res 生命週期 | [👉 查看](./webserver) |
 | **`ezdcbot`** | 我個人開源的 Discord 零依賴輕量推播套件，專為 Serverless 打造 | [👉 查看](./ezdcbot) |
 | **`ghaction-lis`** | 我個人開源的 CLI 工具，專門解決 GitHub Actions 輪詢時間差與終端機監控 | [👉 查看](./ghaction-lis) |
+| **`express`** | Node.js 最主流的輕量 Web 框架，簡化路由與伺服器建置 | [👉 查看](./express) |
+| **`formidable`** | 專門用來解析上傳檔案與 `multipart/form-data` 的套件 | [👉 查看](./formidable) |
 
 *(本清單將會隨著學習進度持續擴充更新)*
