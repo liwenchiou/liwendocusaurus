@@ -99,6 +99,11 @@ function formatUploadLog(meta, config) {
 <summary>💻 點擊展開程式碼解答</summary>
 
 ```javascript
+function handleNotFound(req, res) {
+  res.writeHead(404, { "Content-Type": "application/json" });
+  res.end(JSON.stringify({ error: "Not Found" }));
+}
+
 function router(req, res, config) {
   if (req.method === "POST" && req.url === "/coaches/avatar") {
     handleUpload(req, res, config);
