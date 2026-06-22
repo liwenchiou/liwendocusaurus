@@ -32,6 +32,6 @@ sidebar_position: 1
 
 ## 工具定位與架構
 
-這個專案雖然小巧，但它已經成為我個人自動化工作流的基石，更是我的 AI 助手在 [AI 部署守則](../../../02-engineering/ainotes/ai-deployment-sop.md) 中強制規定的基礎建設工具。
+這個專案雖然小巧，但它已經成為我個人自動化工作流的基石，更是我的 AI 助手在 [AI 部署守則](../../../02-engineering/ainotes/04-deployment-sop.md) 中強制規定的基礎建設工具。
 
 接下來的系列文章，我將詳細拆解這套工具的架構設計、API 互動邏輯以及防呆機制的實作細節。

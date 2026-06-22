@@ -25,7 +25,7 @@ description: "Liwen 的技術筆記首頁。這裡記錄了我在 Next.js、前�
 身為工程師，除了寫出能動的程式碼，更要追求架構的優雅與開發效率。
 - [💻 軟體開發筆記](./02-engineering/software-development/01-sdlc-overview.md) (包含 Clean Code 與架構設計)
 - [📦 NPM 套件探索](./02-engineering/npm-packages/00-npm-overview.md) (我的專屬工具箱)
-- [🤖 AI Agent 使用筆記](./02-engineering/ainotes/antigravity-global-skills.md) (探討 Agentic AI 協作模式)
+- [🤖 AI Agent 協作筆記系列](./02-engineering/ainotes/01-workflow-and-skill.md) (探討 Agentic AI 協作模式)
 
 ### 🚀 專案與事業 (Projects & Business)
 技術最終必須落地創造價值。這裡收錄了我的開源作品以及經營技術事業的思考。

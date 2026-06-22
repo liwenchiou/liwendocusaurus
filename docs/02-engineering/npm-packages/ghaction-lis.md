@@ -96,6 +96,6 @@ $ npx ghaction-lis
 
 ## AI 部署守則標準配備
 
-這套工具現在已經正式成為我這座數位花園的基礎建設，並強制寫入了 [Antigravity Deployment SOP](../ainotes/ai-deployment-sop.md) 中。未來 AI 所有的自動化部署與監控回報，都將完全依賴 `ghaction-lis` 來完成！
+這套工具現在已經正式成為我這座數位花園的基礎建設，並強制寫入了 [Antigravity Deployment SOP](../ainotes/04-deployment-sop.md) 中。未來 AI 所有的自動化部署與監控回報，都將完全依賴 `ghaction-lis` 來完成！
 
 👉 **[點此前往 GitHub 專案：ghaction-lis](https://github.com/liwenchiou/ghaction-lis)**

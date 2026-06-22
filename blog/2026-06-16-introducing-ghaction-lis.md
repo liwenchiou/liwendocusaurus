@@ -66,7 +66,7 @@ npm install -g ghaction-lis
 
 ## 結語
 
-這個小工具原本只是為了解決我自己的痛點，但現在它已經成為這座數位花園不可或缺的基礎建設，甚至被強制寫入了我的 **[AI 部署守則](/docs/engineering/ainotes/ai-deployment-sop)** 中。
+這個小工具原本只是為了解決我自己的痛點，但現在它已經成為這座數位花園不可或缺的基礎建設，甚至被強制寫入了我的 **[AI 部署守則](/docs/engineering/ainotes/deployment-sop)** 中。
 
 如果你也受夠了每次部署都要無腦切換瀏覽器，不妨試試看 `ghaction-lis`！
 歡迎到 [GitHub 專案頁面](https://github.com/liwenchiou/ghaction-lis) 給我個 Star，也期待大家的 PR 與回饋！
