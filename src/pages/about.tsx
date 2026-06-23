@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import styles from './about.module.css';
 
 export default function About() {
+  const [currentProject, setCurrentProject] = useState(0);
+  const projects = [
+    {
+      title: 'ezdcbot',
+      desc: <>為了解決 Serverless 環境下 Discord Bot 部署的痛點，我從零打造了這個 <strong>完全零依賴 (Zero Dependency)</strong> 的輕量級推播套件。</>,
+      detail: <>捨棄笨重的 WebSocket 建立連線，改採原生 <code>fetch</code> 實作，專注於高效能的 HTTP 請求與 Thread 管理，完美適配無伺服器架構。</>,
+      github: 'https://github.com/liwenchiou/ezdcbot',
+      doc: '/docs/side-projects/ezdcbot/intro'
+    },
+    {
+      title: 'ghaction-lis',
+      desc: <>為了無縫追蹤 CI/CD 部署進度，我開發了這款 <strong>終端機專用的部署監聽器</strong>，能即時解析 GitHub Actions 狀態。</>,
+      detail: <>支援 PAT 認證與 CLI 自動串接，開發者能在終端機內直觀掌握部署成功或失敗原因，大幅降低在 IDE 與瀏覽器間頻繁切換的開發成本。</>,
+      github: 'https://github.com/liwenchiou/ghaction-lis',
+      doc: '/docs/side-projects/ghaction-lis/intro'
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentProject((prev) => (prev + 1) % projects.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [projects.length]);
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
@@ -74,22 +98,77 @@ export default function About() {
             </div>
           </div>
 
-          {/* Open Source Block */}
-          <div className={`${styles.card} ${styles.openSource}`}>
-            <h2 className={styles.cardTitle}>開源架構: ezdcbot</h2>
-            <p className={styles.openSourceText}>
-              為了解決 Serverless 環境下 Discord Bot 部署的痛點，我從零打造了這個 <strong>完全零依賴 (Zero Dependency)</strong> 的輕量級推播套件。
-            </p>
-            <p className={styles.openSourceText} style={{ marginBottom: 0 }}>
-              捨棄笨重的 WebSocket 建立連線，改採原生 <code>fetch</code> 實作，專注於高效能的 HTTP 請求與 Thread 管理，完美適配無伺服器架構。
-            </p>
-            <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1.5rem' }}>
-              <a href="https://github.com/liwenchiou/ezdcbot" target="_blank" rel="noreferrer" className={styles.link} style={{ color: 'var(--ifm-color-emphasis-100)' }}>
-                GitHub ↗
-              </a>
-              <a href="/docs/side-projects/ezdcbot/intro" className={styles.link} style={{ color: 'var(--ifm-color-emphasis-100)' }}>
-                技術筆記 ↗
-              </a>
+          {/* Open Source Block (Deck Carousel) */}
+          <div className={`${styles.card} ${styles.openSource}`} style={{ position: 'relative', padding: 0, backgroundColor: 'transparent', border: 'none' }}>
+            <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: '300px' }}>
+              {projects.map((project, idx) => {
+                const isActive = currentProject === idx;
+                
+                return (
+                  <div 
+                    key={idx}
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      backgroundColor: 'var(--ifm-color-emphasis-1000)',
+                      borderRadius: '16px',
+                      padding: '2.5rem',
+                      border: '1px solid var(--ifm-color-emphasis-800)',
+                      boxShadow: isActive ? '0 10px 40px rgba(0,0,0,0.3)' : '0 4px 10px rgba(0,0,0,0.1)',
+                      transform: isActive ? 'translateY(0) scale(1)' : 'translateY(18px) scale(0.95)',
+                      opacity: isActive ? 1 : 0.4,
+                      zIndex: isActive ? 10 : 1,
+                      transition: 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                      cursor: isActive ? 'default' : 'pointer',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'space-between'
+                    }}
+                    onClick={() => !isActive && setCurrentProject(idx)}
+                  >
+                    <div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                        <h2 className={styles.cardTitle} style={{ marginBottom: 0 }}>開源架構: {project.title}</h2>
+                        
+                        {/* Pagination Dots */}
+                        <div style={{ display: 'flex', gap: '8px' }}>
+                          {projects.map((_, dotIdx) => (
+                            <div 
+                              key={dotIdx}
+                              onClick={(e) => { e.stopPropagation(); setCurrentProject(dotIdx); }} 
+                              style={{ 
+                                width: '8px', 
+                                height: '8px', 
+                                borderRadius: '50%', 
+                                backgroundColor: currentProject === dotIdx ? 'var(--ifm-color-primary)' : 'var(--ifm-color-emphasis-400)', 
+                                cursor: 'pointer',
+                                transition: 'background-color 0.3s ease'
+                              }}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                      
+                      <div style={{ minHeight: '120px' }}>
+                        <p className={styles.openSourceText}>{project.desc}</p>
+                        <p className={styles.openSourceText} style={{ marginBottom: 0 }}>{project.detail}</p>
+                      </div>
+                    </div>
+                    
+                    <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1.5rem', opacity: isActive ? 1 : 0, transition: 'opacity 0.3s ease', transitionDelay: isActive ? '0.3s' : '0s' }}>
+                      <a href={project.github} target="_blank" rel="noreferrer" className={styles.link} style={{ color: 'var(--ifm-color-emphasis-100)' }} onClick={e => !isActive && e.preventDefault()}>
+                        GitHub ↗
+                      </a>
+                      <a href={project.doc} className={styles.link} style={{ color: 'var(--ifm-color-emphasis-100)' }} onClick={e => !isActive && e.preventDefault()}>
+                        技術筆記 ↗
+                      </a>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
