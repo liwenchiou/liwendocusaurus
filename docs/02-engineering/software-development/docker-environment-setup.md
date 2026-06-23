@@ -1,7 +1,7 @@
 ---
 id: docker-environment-setup
-title: Docker 開發環境部署與設定
-sidebar_label: Docker 環境建置
+title: "Docker 開發環境部署與設定"
+sidebar_label: "Docker 環境建置"
 ---
 
 # Docker 開發環境部署

@@ -1,8 +1,9 @@
 ---
 id: sdlc-overview
-title: 軟體開發生命週期 (SDLC) 概述
+title: "軟體開發生命週期 (SDLC) 概述"
 sidebar_position: 1
 description: "軟體開發流程與生命週期 (SDLC) 概述。詳細介紹軟體開發的六大核心階段（需求分析、系統設計、程式開發、測試、部署與維運）以及卓越流程的三大隱形關鍵。"
+sidebar_label: "軟體開發生命週期 (SDLC) 概述"
 ---
 
 # 軟體開發生命週期 (SDLC) 概述

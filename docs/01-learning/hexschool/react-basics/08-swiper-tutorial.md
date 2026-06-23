@@ -4,6 +4,7 @@ title: "Swiper 簡單應用：打造流暢的輪播效果"
 date: 2026-04-21T06:36:44.094863+00:00
 authors: [liwen]
 tags: [React]
+sidebar_label: "Swiper 簡單應用：打造流暢的輪播效果"
 ---
 
 # Swiper 簡單應用

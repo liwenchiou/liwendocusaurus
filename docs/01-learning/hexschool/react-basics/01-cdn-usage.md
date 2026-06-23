@@ -4,6 +4,7 @@ title: "直接在 HTML 中使用 React (CDN 版)"
 date: 2026-04-21T06:36:45.243399+00:00
 authors: [liwen]
 tags: [React]
+sidebar_label: "直接在 HTML 中使用 React (CDN 版)"
 ---
 
 # 直接在 HTML 中使用 React

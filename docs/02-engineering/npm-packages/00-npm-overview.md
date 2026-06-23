@@ -1,10 +1,11 @@
 ---
 id: npm-overview
 sidebar_position: 1
-title: NPM 套件總覽
+title: "NPM 套件總覽"
+sidebar_label: "NPM 套件總覽"
 ---
 
-# 📦 NPM 套件探索總覽
+# NPM 套件探索總覽
 
 這裡記錄了我學習與研究過的各種實用 NPM 套件。我會將套件的用法、踩坑紀錄以及實際應用情境整理成技術筆記，方便日後在不同的專案中快速查閱與重用。
 

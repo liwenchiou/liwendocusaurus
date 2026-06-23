@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
-title: uuid (唯一識別碼)
+title: "uuid (唯一識別碼)"
+sidebar_label: "uuid (唯一識別碼)"
 ---
 
 # `uuid` - 產生通用唯一識別碼

@@ -1,10 +1,11 @@
 ---
 id: sql-databases
-title: 關聯式資料庫 (SQL) 基礎操作與查詢
-sidebar_label: 🗄️ SQL 資料庫基礎
+title: "關聯式資料庫 (SQL) 基礎操作與查詢"
+sidebar_label: "9-1 SQL 資料庫基礎"
+sidebar_position: 17
 ---
 
-# 🗄️ 關聯式資料庫 (SQL) 基礎操作與查詢
+# 關聯式資料庫 (SQL) 基礎操作與查詢
 
 本篇筆記涵蓋了關聯式資料庫的基本觀念、資料表關聯設計（主鍵與外來鍵）、空值處理，以及最常使用的 SQL 聚合函數與 UUID 設計。
 

@@ -1,6 +1,7 @@
 ---
 title: "專案簡介與開發動機"
 sidebar_position: 1
+sidebar_label: "專案簡介與開發動機"
 ---
 
 # ghaction-lis (GitHub Action Listener)

@@ -1,7 +1,7 @@
 ---
 id: quest-1
-title: 🚀 Node.js 主線任務一：檔案讀寫、陣列操作與環境變數
-sidebar_label: 第一週：主線任務實作
+title: "Node.js 主線任務一：檔案讀寫、陣列操作與環境變數"
+sidebar_label: "第一週：主線任務實作"
 sidebar_position: 1
 ---
 

@@ -4,6 +4,7 @@ title: "useEffect：與外部世界互動的橋樑"
 date: 2026-04-21T06:36:45.872462+00:00
 authors: [liwen]
 tags: [React]
+sidebar_label: "useEffect：與外部世界互動的橋樑"
 ---
 
 ## 什麼是 useEffect？

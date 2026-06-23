@@ -3,7 +3,7 @@ slug: /liwen-sop/sop-documents/tech-spec
 description: "系統開發規格書範本 (SD)，專供工程師實作與部署使用之技術指南"
 ---
 
-# 💻 系統開發規格書 (Tech Spec / SD)
+# 系統開發規格書 (Tech Spec / SD)
 
 > **🎯 文件屬性：純技術開發手冊 (SD)**
 > 由**「技術主管與工程師」**產出。這份文件是工程團隊的「唯一真相來源 (Single Source of Truth)」，負責將 SA 文件的商業需求，正式落地為具體的程式碼架構、資料庫結構與 API 路由。

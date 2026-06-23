@@ -1,9 +1,10 @@
 ---
 id: formidable
-title: formidable
+title: "formidable"
+sidebar_label: "formidable"
 ---
 
-# 📦 formidable 
+# formidable
 
 `formidable` 是一個專門用來解析 Node.js 中處理 `multipart/form-data`（例如上傳檔案）的套件。它能夠非常有效率地將前端傳來的檔案與表單欄位拆解開來，方便後端儲存與處理。
 

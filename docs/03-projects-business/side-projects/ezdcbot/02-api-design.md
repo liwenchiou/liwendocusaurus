@@ -1,7 +1,8 @@
 ---
 id: api-design
-title: 2. API 設計與 Threads 處理
+title: "2. API 設計與 Threads 處理"
 sidebar_position: 2
+sidebar_label: "2. API 設計與 Threads 處理"
 ---
 
 我們刻意避免設計出 `sendMessage`, `createThread`, `sendThreadMessage` 這種冗長且繁雜的介面。相反地，我們將所有的行為抽象成兩個核心動作：`push`（推播）與 `pull`（拉取）。

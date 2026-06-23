@@ -1,6 +1,7 @@
 ---
 id: promise-advanced
-title: 7-4 Promise.all 與 Fetch API
+title: "Promise.all 與 Fetch API"
+sidebar_label: "7-4 Promise.all 與 Fetch API"
 sidebar_position: 14
 ---
 

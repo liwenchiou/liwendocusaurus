@@ -4,6 +4,7 @@ title: "Redux Toolkit (RTK) 狀態管理實戰"
 date: 2026-04-21T06:36:46.633577+00:00
 authors: [liwen]
 tags: [React]
+sidebar_label: "Redux Toolkit (RTK) 狀態管理實戰"
 ---
 
 ## 核心概念

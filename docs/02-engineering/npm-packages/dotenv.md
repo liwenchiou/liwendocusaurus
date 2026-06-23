@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
-title: dotenv (環境變數)
+title: "dotenv (環境變數)"
+sidebar_label: "dotenv (環境變數)"
 ---
 
 # `dotenv` - 環境變數管理套件

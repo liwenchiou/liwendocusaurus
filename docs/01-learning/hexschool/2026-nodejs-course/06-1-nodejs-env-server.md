@@ -1,5 +1,6 @@
 ---
-title: 實作待辦清單 API (1)：環境建置與原生 HTTP 伺服器
+title: "實作待辦清單 API (1)：環境建置與原生 HTTP 伺服器"
+sidebar_label: "6-1 實作待辦清單 API (1)"
 sidebar_position: 6.1
 ---
 

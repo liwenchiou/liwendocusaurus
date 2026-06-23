@@ -1,5 +1,6 @@
 ---
-title: 環境建置與基礎操作
+title: "環境建置與基礎操作"
+sidebar_label: "3 環境建置與基礎操作"
 sidebar_position: 3
 ---
 

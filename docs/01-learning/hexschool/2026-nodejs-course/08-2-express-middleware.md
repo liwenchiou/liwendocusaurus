@@ -1,10 +1,11 @@
 ---
 id: express-middleware
-title: Express Generator 與 Middleware 中介軟體
-sidebar_label: ⚙️ Express & Middleware
+title: "Express Generator 與 Middleware 中介軟體"
+sidebar_label: "8-2 Express & Middleware"
+sidebar_position: 16
 ---
 
-# ⚙️ Express Generator 與 Middleware 中介軟體
+# Express Generator 與 Middleware 中介軟體
 
 本篇筆記涵蓋了如何使用 Express Generator 快速建置專案，以及 Express 框架中最重要的核心：Middleware (中介軟體) 的運作機制。
 

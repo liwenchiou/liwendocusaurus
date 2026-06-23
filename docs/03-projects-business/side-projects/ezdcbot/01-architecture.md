@@ -1,7 +1,8 @@
 ---
 id: architecture
-title: 1. 核心架構與 Zero Dependency
+title: "1. 核心架構與 Zero Dependency"
 sidebar_position: 1
+sidebar_label: "1. 核心架構與 Zero Dependency"
 ---
 
 在開發 `ezdcbot` 時，我們面臨的第一個決策是：要如何設計這個套件的基礎架構？我們希望它輕量、安全，且能適應 Serverless 環境。

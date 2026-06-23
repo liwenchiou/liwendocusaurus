@@ -1,5 +1,6 @@
 ---
-title: 實作待辦清單 API (2)：設計統一的 Response Handler
+title: "實作待辦清單 API (2)：設計統一的 Response Handler"
+sidebar_label: "6-2 實作待辦清單 API (2)"
 sidebar_position: 6.2
 ---
 

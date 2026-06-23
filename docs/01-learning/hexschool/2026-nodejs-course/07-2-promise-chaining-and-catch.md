@@ -1,6 +1,7 @@
 ---
 id: promise-chaining-and-catch
-title: 7-2 職責分離與 Promise 鏈式寫法
+title: "職責分離與 Promise 鏈式寫法"
+sidebar_label: "7-2 職責分離與 Promise 鏈式寫法"
 sidebar_position: 12
 ---
 

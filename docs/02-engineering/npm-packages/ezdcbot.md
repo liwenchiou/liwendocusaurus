@@ -1,6 +1,7 @@
 ---
 sidebar_position: 5
-title: ezdcbot (Discord 推播)
+title: "ezdcbot (Discord 推播)"
+sidebar_label: "ezdcbot (Discord 推播)"
 ---
 
 # `ezdcbot` - 零依賴 Discord 推播套件

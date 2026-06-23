@@ -4,6 +4,7 @@ title: "useState：管理組件的「記憶」"
 date: 2026-04-21T06:36:45.587003+00:00
 authors: [liwen]
 tags: [React]
+sidebar_label: "useState：管理組件的「記憶」"
 ---
 
 # useState ：管理組件的「記憶」

@@ -4,6 +4,7 @@ title: "useRef：掌握 React 的「儲物櫃」與 DOM 操控"
 date: 2026-04-21T06:36:46.124197+00:00
 authors: [liwen]
 tags: [React]
+sidebar_label: "useRef：掌握 React 的「儲物櫃」與 DOM 操控"
 ---
 
 ## 什麼是 useRef？

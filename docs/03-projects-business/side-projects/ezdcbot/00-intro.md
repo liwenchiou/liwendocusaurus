@@ -1,7 +1,8 @@
 ---
 id: intro
-title: ezdcbot：輕量 Discord 推播套件
+title: "ezdcbot：輕量 Discord 推播套件"
 sidebar_position: 0
+sidebar_label: "ezdcbot：輕量 Discord 推播套件"
 ---
 
 # ezdcbot 介紹與開發動機

@@ -1,5 +1,6 @@
 ---
-title: Node.js 核心模組與系統基礎
+title: "Node.js 核心模組與系統基礎"
+sidebar_label: "4 Node.js 核心模組與系統基礎"
 sidebar_position: 4
 ---
 

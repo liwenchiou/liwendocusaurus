@@ -1,5 +1,6 @@
 ---
-title: Node.js 與 V8 引擎架構解析
+title: "Node.js 與 V8 引擎架構解析"
+sidebar_label: "2 Node.js 與 V8 引擎架構解析"
 sidebar_position: 2
 ---
 

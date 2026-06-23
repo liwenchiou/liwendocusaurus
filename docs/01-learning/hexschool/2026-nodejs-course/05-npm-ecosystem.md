@@ -1,5 +1,6 @@
 ---
-title: NPM 套件管理與生態系
+title: "NPM 套件管理與生態系"
+sidebar_label: "5 NPM 套件管理與生態系"
 sidebar_position: 5
 ---
 

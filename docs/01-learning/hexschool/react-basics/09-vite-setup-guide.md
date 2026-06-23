@@ -4,6 +4,7 @@ title: "使用 Vite 建立 React 專案"
 date: 2026-04-21T06:36:44.990481+00:00
 authors: [liwen]
 tags: [React]
+sidebar_label: "使用 Vite 建立 React 專案"
 ---
 
 # 使用 Vite 建立 React 專案

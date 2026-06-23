@@ -1,6 +1,7 @@
 ---
 id: express-basics
-title: 8-1 Express 框架基礎與路由設計
+title: "Express 框架基礎與路由設計"
+sidebar_label: "8-1 Express 框架基礎與路由設計"
 sidebar_position: 15
 ---
 

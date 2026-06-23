@@ -1,6 +1,7 @@
 ---
 id: async-await-refactoring
-title: 7-3 使用 Async/Await 再升級
+title: "使用 Async/Await 再升級"
+sidebar_label: "7-3 使用 Async/Await 再升級"
 sidebar_position: 13
 ---
 

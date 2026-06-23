@@ -1,6 +1,7 @@
 ---
 id: async-promise-basics
-title: 7-1 非同步與 Promise 基礎
+title: "非同步與 Promise 基礎"
+sidebar_label: "7-1 非同步與 Promise 基礎"
 sidebar_position: 11
 ---
 

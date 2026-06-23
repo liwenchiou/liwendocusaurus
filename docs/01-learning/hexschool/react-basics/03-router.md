@@ -4,6 +4,7 @@ title: "React Router 核心指南"
 date: 2026-04-21T06:36:46.891526+00:00
 authors: [liwen]
 tags: [React]
+sidebar_label: "React Router 核心指南"
 ---
 
 ## 核心組件介紹

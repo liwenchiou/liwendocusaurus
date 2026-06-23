@@ -3,7 +3,7 @@ slug: /liwen-sop/sop-documents/system-analysis
 description: "系統分析規格書範本 (SA)，將商業需求梳理為系統邏輯"
 ---
 
-# 🏗️ 系統分析規格書 (System Analysis Document)
+# 系統分析規格書 (System Analysis Document)
 
 > **🎯 文件屬性：純系統分析文件 (SA)**
 > 專案簽約後，由**「系統分析師 (SA)」**根據 PRD 獨立產出。負責將業務需求梳理為系統面的「資料實體」、「服務邏輯」與「角色權限」。

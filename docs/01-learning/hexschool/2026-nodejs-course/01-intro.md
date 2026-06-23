@@ -1,9 +1,10 @@
 ---
-title: 課程前言與學習目標
+title: "課程前言與學習目標"
+sidebar_label: "1 課程前言與學習目標"
 sidebar_position: 1
 ---
 
-# 🚀 2026 【後端】Node.js 直播班
+# 2026 【後端】Node.js 直播班
 
 歡迎來到 **2026 【後端】Node.js 直播班** 的學習筆記！
 

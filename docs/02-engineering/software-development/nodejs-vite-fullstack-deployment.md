@@ -1,10 +1,10 @@
 ---
 id: nodejs-vite-fullstack-deployment
-title: Node.js 與 Vite 整合部署策略
-sidebar_label: 📦 Node.js 全端部署
+title: "Node.js 與 Vite 整合部署策略"
+sidebar_label: "Node.js 全端部署"
 ---
 
-# 📦 Node.js 與 Vite 整合部署策略
+# Node.js 與 Vite 整合部署策略
 
 ## 1. 架構核心概念：資源調度中心
 

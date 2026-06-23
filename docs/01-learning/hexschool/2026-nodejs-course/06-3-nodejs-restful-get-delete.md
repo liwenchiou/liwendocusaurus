@@ -1,5 +1,6 @@
 ---
-title: 實作待辦清單 API (3)：路由判斷、GET 與 DELETE
+title: "實作待辦清單 API (3)：路由判斷、GET 與 DELETE"
+sidebar_label: "6-3 實作待辦清單 API (3)"
 sidebar_position: 6.3
 ---
 
