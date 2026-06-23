@@ -11,14 +11,14 @@ export default function About() {
       desc: <>為了解決 Serverless 環境下 Discord Bot 部署的痛點，我從零打造了這個 <strong>完全零依賴 (Zero Dependency)</strong> 的輕量級推播套件。</>,
       detail: <>捨棄笨重的 WebSocket 建立連線，改採原生 <code>fetch</code> 實作，專注於高效能的 HTTP 請求與 Thread 管理，完美適配無伺服器架構。</>,
       github: 'https://github.com/liwenchiou/ezdcbot',
-      doc: '/docs/side-projects/ezdcbot/intro'
+      doc: '/docs/projects-business/side-projects/ezdcbot/intro'
     },
     {
       title: 'ghaction-lis',
       desc: <>為了無縫追蹤 CI/CD 部署進度，我開發了這款 <strong>終端機專用的部署監聽器</strong>，能即時解析 GitHub Actions 狀態。</>,
       detail: <>支援 PAT 認證與 CLI 自動串接，開發者能在終端機內直觀掌握部署成功或失敗原因，大幅降低在 IDE 與瀏覽器間頻繁切換的開發成本。</>,
       github: 'https://github.com/liwenchiou/ghaction-lis',
-      doc: '/docs/side-projects/ghaction-lis/intro'
+      doc: '/docs/projects-business/side-projects/ghaction-lis/intro'
     }
   ];
 
