@@ -30,6 +30,7 @@ sidebar_label: "專案簡介與開發動機"
 1. **精準鎖定 (SHA Matching)**：程式會先在本地端執行 `git rev-parse HEAD` 取得最新 Commit Hash，並以此跟 GitHub API 回傳的 `head_sha` 做嚴格比對，確保絕對不會抓到上一筆的「幽靈紀錄」。
 2. **優雅等待 (Adaptive Polling)**：如果遇到 GitHub 尚未建立新任務的空窗期，它懂得自動等待並重試，直到真正的任務進入 `queued` 或 `in_progress` 狀態。
 3. **極致的開發體驗 (DevEx)**：在終端機內建動態 Loading 動畫 (`ora`) 與顏色高亮 (`chalk`)。若部署不幸失敗，它甚至會主動把 GitHub 上的 Error Log 抓下來印在終端機上，連瀏覽器都不用開！
+4. **兩階段接力部署監聽 (Chained Workflow)**：針對像 GitHub Pages 這種「編譯成功後才觸發發佈」的兩階段情境，內建 `--pages` 或 `--chain` 參數，能無縫自動接力等待下游任務完成，徹底解決「第一階段顯示成功，但網站卻還沒更新」的等待焦慮。
 
 ## 工具定位與架構
 
