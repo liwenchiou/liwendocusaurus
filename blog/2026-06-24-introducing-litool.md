@@ -1,8 +1,9 @@
 ---
-title: "打造專屬的瑞士刀：LiTool 工具箱上線！解決農民曆計算與圖片壓縮痛點"
 slug: introducing-litool
-authors: liwen
-tags: ['Next.js', 'Side Project', 'Frontend', 'Tools']
+title: "打造專屬的瑞士刀：LiTool 工具箱上線！解決農民曆計算與圖片壓縮痛點"
+authors: [liwen]
+tags: [Next.js, Side Project, Frontend, Tools]
+date: 2026-06-24
 description: "為了解決找不到包含農民曆的日期計算機的痛點，我用 Next.js 打造了屬於自己的 LiTool 工具箱！支援農曆計算與純前端的批次圖片壓縮。"
 ---
 
