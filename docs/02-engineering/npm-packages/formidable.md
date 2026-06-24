@@ -26,9 +26,9 @@ const app = express();
 // 在路由處理中
 app.post('/upload', (req, res, next) => {
   const form = formidable({ 
-    multiples: true, 
-    uploadDir: './uploads', 
-    keepExtensions: true 
+    multiples: true, // 允許上傳多個檔案
+    uploadDir: './uploads', // 指定檔案上傳後暫存的資料夾路徑
+    keepExtensions: true // 保留檔案的原始副檔名 (例如 .png, .jpg)
   });
 
   form.parse(req, (err, fields, files) => {
