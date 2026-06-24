@@ -4,10 +4,68 @@
         <title>Liwen's Digital Garden Blog</title>
         <link>https://garden.liwen.studio/blog</link>
         <description>Liwen's Digital Garden Blog</description>
-        <lastBuildDate>Wed, 17 Jun 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 24 Jun 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-Hant</language>
+        <item>
+            <title><![CDATA[打造專屬的瑞士刀：LiTool 工具箱上線！解決農民曆計算與圖片壓縮痛點]]></title>
+            <link>https://garden.liwen.studio/blog/introducing-litool</link>
+            <guid>https://garden.liwen.studio/blog/introducing-litool</guid>
+            <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[為了解決找不到包含農民曆的日期計算機的痛點，我用 Next.js 打造了屬於自己的 LiTool 工具箱！支援農曆計算與純前端的批次圖片壓縮。]]></description>
+            <content:encoded><![CDATA[<p>在日常的開發與生活中，我們總會遇到需要一些小工具來輔助的時候。網路上雖然有很多免費的線上工具，但它們往往充斥著滿滿的廣告，或是剛好「缺了那麼一點點」我們需要的功能。</p>
+<p>為了不再將就，我決定自己動手，打造一個乾淨、快速，且完全符合自己需求的專屬工具箱 —— <a href="https://litool.liwen.studio/" target="_blank" rel="noopener noreferrer" class="">LiTool (https://litool.liwen.studio)</a>。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="為什麼要自己做工具箱">為什麼要自己做工具箱？<a href="https://garden.liwen.studio/blog/introducing-litool#%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E8%87%AA%E5%B7%B1%E5%81%9A%E5%B7%A5%E5%85%B7%E7%AE%B1" class="hash-link" aria-label="為什麼要自己做工具箱？的直接連結" title="為什麼要自己做工具箱？的直接連結" translate="no">​</a></h2>
+<p>這個專案的起點其實非常簡單：<strong>我需要算日子，但我找不到好用的農曆計算機</strong>。</p>
+<p>我常常會使用日期計算的功能（像是推算某個專案的倒數天數、或是計算過去某天的間隔），但市面上的計算機通常只支援標準的西曆。當我需要把算出來的日期對應到「農民曆」或是「民國」年份時，我必須再開另一個網站手動轉換，用起來總覺得差點意思。</p>
+<p>身為工程師，解決痛點的最好方法就是「自己寫一個」。於是，我以日期計算機為出發點，並將這個專案定位成一個<strong>可持續擴充的基礎平台</strong>，未來只要有任何覺得好用、實用的功能，我都能隨時加進這把「瑞士刀」裡。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="現有的六大實用功能">現有的六大實用功能<a href="https://garden.liwen.studio/blog/introducing-litool#%E7%8F%BE%E6%9C%89%E7%9A%84%E5%85%AD%E5%A4%A7%E5%AF%A6%E7%94%A8%E5%8A%9F%E8%83%BD" class="hash-link" aria-label="現有的六大實用功能的直接連結" title="現有的六大實用功能的直接連結" translate="no">​</a></h2>
+<p>除了為解決個人痛點所開發的核心工具外，目前 LiTool 已經上線了 6 款非常實用的開發與生活輔助工具：</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-萬能日期計算機">1. 萬能日期計算機<a href="https://garden.liwen.studio/blog/introducing-litool#1-%E8%90%AC%E8%83%BD%E6%97%A5%E6%9C%9F%E8%A8%88%E7%AE%97%E6%A9%9F" class="hash-link" aria-label="1. 萬能日期計算機的直接連結" title="1. 萬能日期計算機的直接連結" translate="no">​</a></h3>
+<p>這不只是一個普通的日期計算機，它特別針對了台灣使用者的習慣進行了深度優化：</p>
+<ul>
+<li class=""><strong>精準的間隔計算</strong>：可以計算總天數，也能自動幫您算出扣除週末的「工作日」。</li>
+<li class=""><strong>在地化的日期推算</strong>：當您推算未來或過去的某一天時，系統會「一鍵同步顯示」西曆、民國、與農曆！</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-純前端圖片壓縮工具">2. 純前端圖片壓縮工具<a href="https://garden.liwen.studio/blog/introducing-litool#2-%E7%B4%94%E5%89%8D%E7%AB%AF%E5%9C%96%E7%89%87%E5%A3%93%E7%B8%AE%E5%B7%A5%E5%85%B7" class="hash-link" aria-label="2. 純前端圖片壓縮工具的直接連結" title="2. 純前端圖片壓縮工具的直接連結" translate="no">​</a></h3>
+<p>這是我後來加入的心頭好，完美解決了發文前圖片太大的困擾：</p>
+<ul>
+<li class=""><strong>隱私絕對安全</strong>：採用「純前端」瀏覽器運算技術，您的照片完全不會上傳到任何伺服器。</li>
+<li class=""><strong>支援批次與社群最佳化</strong>：內建 IG、FB、LINE 預設模式，並支援多圖一鍵打包 ZIP 下載。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-json-格式化工具-json-formatter">3. JSON 格式化工具 (JSON Formatter)<a href="https://garden.liwen.studio/blog/introducing-litool#3-json-%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7-json-formatter" class="hash-link" aria-label="3. JSON 格式化工具 (JSON Formatter)的直接連結" title="3. JSON 格式化工具 (JSON Formatter)的直接連結" translate="no">​</a></h3>
+<p>處理 API 回傳資料的最佳幫手，支援語法高亮、一鍵排版與壓縮，讓雜亂的資料瞬間變得井然有序。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-正規表達式測試器-regex-tester">4. 正規表達式測試器 (Regex Tester)<a href="https://garden.liwen.studio/blog/introducing-litool#4-%E6%AD%A3%E8%A6%8F%E8%A1%A8%E9%81%94%E5%BC%8F%E6%B8%AC%E8%A9%A6%E5%99%A8-regex-tester" class="hash-link" aria-label="4. 正規表達式測試器 (Regex Tester)的直接連結" title="4. 正規表達式測試器 (Regex Tester)的直接連結" translate="no">​</a></h3>
+<p>開發者必備的神器，可以在網頁上即時測試您的 Regex 語法，並高亮顯示匹配結果，寫扣不再瞎猜。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-base64-編解碼工具">5. Base64 編解碼工具<a href="https://garden.liwen.studio/blog/introducing-litool#5-base64-%E7%B7%A8%E8%A7%A3%E7%A2%BC%E5%B7%A5%E5%85%B7" class="hash-link" aria-label="5. Base64 編解碼工具的直接連結" title="5. Base64 編解碼工具的直接連結" translate="no">​</a></h3>
+<p>快速處理字串的 Base64 編碼與解碼，介面乾淨簡單，無須擔心資料外洩。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-hash-雜湊產生器-hash-generator">6. Hash 雜湊產生器 (Hash Generator)<a href="https://garden.liwen.studio/blog/introducing-litool#6-hash-%E9%9B%9C%E6%B9%8A%E7%94%A2%E7%94%9F%E5%99%A8-hash-generator" class="hash-link" aria-label="6. Hash 雜湊產生器 (Hash Generator)的直接連結" title="6. Hash 雜湊產生器 (Hash Generator)的直接連結" translate="no">​</a></h3>
+<p>支援 MD5、SHA-1、SHA-256 等多種常見的雜湊演算法，無論是驗證資料完整性或是加密測試都非常方便。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="開發者視角技術選型與亮點">開發者視角：技術選型與亮點<a href="https://garden.liwen.studio/blog/introducing-litool#%E9%96%8B%E7%99%BC%E8%80%85%E8%A6%96%E8%A7%92%E6%8A%80%E8%A1%93%E9%81%B8%E5%9E%8B%E8%88%87%E4%BA%AE%E9%BB%9E" class="hash-link" aria-label="開發者視角：技術選型與亮點的直接連結" title="開發者視角：技術選型與亮點的直接連結" translate="no">​</a></h2>
+<p>如果你也是開發者，或許會對 LiTool 背後的技術架構感興趣。這個專案不僅是個實用工具，也是我實踐前端新技術的實驗場：</p>
+<ul>
+<li class=""><strong>核心框架與 UI</strong>：使用 <code>Next.js</code> (App Router) 建構，搭配 <code>Tailwind CSS</code> 處理樣式。為了讓操作體驗更加滑順，我導入了 <code>GSAP</code> (<code>@gsap/react</code>) 來處理元件進場與切換的精緻動畫。</li>
+<li class=""><strong>日期魔法</strong>：在日期計算上，核心的加減邏輯依賴強大的 <code>date-fns</code>；而解決我最大痛點的「農曆轉換」，則是使用了 <code>lunar-javascript</code> 這個套件，完美計算出天干地支與農民曆日期。</li>
+<li class=""><strong>效能與隱私兼具的圖片壓縮</strong>：<!-- -->
+<ul>
+<li class="">採用 <code>browser-image-compression</code> 套件，並開啟 <code>useWebWorker: true</code>。這意味著即使一次丟入數十張高解析度圖片，壓縮過程都在背景的 Web Worker 執行，完全不會卡死主執行緒 (Main Thread)，保持 UI 的流暢度。</li>
+<li class="">搭配 <code>jszip</code> 與 <code>file-saver</code> 實作了一鍵批次打包下載的功能。不僅達成了「零伺服器後端成本」，也帶給使用者最安心的隱私保障。</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="未來展望與結語">未來展望與結語<a href="https://garden.liwen.studio/blog/introducing-litool#%E6%9C%AA%E4%BE%86%E5%B1%95%E6%9C%9B%E8%88%87%E7%B5%90%E8%AA%9E" class="hash-link" aria-label="未來展望與結語的直接連結" title="未來展望與結語的直接連結" translate="no">​</a></h2>
+<p>LiTool 目前雖然只有幾項工具，但它的地基已經打好了。未來，我會繼續把日常工作、生活中遇到的各種「微小但頻繁的痛點」，化作一個個實用的小工具放上來。</p>
+<p>如果你剛好也需要算個農曆日子，或是手邊有圖片需要快速無痛壓縮，歡迎來試用看看：</p>
+<p>👉 <strong><a href="https://litool.liwen.studio/" target="_blank" rel="noopener noreferrer" class="">LiTool 工具箱：https://litool.liwen.studio</a></strong></p>
+<p>如果您對這個專案有任何建議，或是<strong>有什麼一直想用、卻找不到順手的好工具</strong>，非常歡迎傳訊息給我一起討論，也許下一個上線的功能就是您許願的工具喔！</p>]]></content:encoded>
+            <category>Next.js</category>
+            <category>Side Project</category>
+            <category>Frontend</category>
+            <category>Tools</category>
+        </item>
         <item>
             <title><![CDATA[AI 時代下的軟體工程師：初階工程師的破局之道]]></title>
             <link>https://garden.liwen.studio/blog/ai-era-junior-engineer-survival-guide</link>
