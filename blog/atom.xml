@@ -74,7 +74,7 @@
         <id>https://garden.liwen.studio/blog/ai-era-junior-engineer-survival-guide</id>
         <link href="https://garden.liwen.studio/blog/ai-era-junior-engineer-survival-guide"/>
         <updated>2026-06-17T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[現在是 AI 橫行的時代，我認為這對軟體工程師的職涯發展產生了深遠的影響。]]></summary>
+        <summary type="html"><![CDATA[探討 AI 工具對軟體開發就業市場的衝擊，並分享初階工程師應如何培養結合領域知識與自動化能力的破局思維。]]></summary>
         <content type="html"><![CDATA[<p>現在是 AI 橫行的時代，我認為這對軟體工程師的職涯發展產生了深遠的影響。</p>
 <p>過去，只要具備專業的程式開發能力——不管是前端、後端或是其他軟體工程技能，要找到一份不錯的工作並非難事。然而，隨著 AI 發展日益迅速，市場上「純粹寫扣」的初階工程師職缺反而變少了。</p>
 <!-- -->
@@ -109,7 +109,7 @@
         <id>https://garden.liwen.studio/blog/introducing-ghaction-lis</id>
         <link href="https://garden.liwen.studio/blog/introducing-ghaction-lis"/>
         <updated>2026-06-16T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[做前端開發或靜態網站管理（例如這個 Docusaurus 數位花園）時，我們常常會把 git push 和自動部署串在一起。但這衍生出一個惱人的日常痛點：每次 push 完，你總是要打開瀏覽器、點開 Actions 標籤、然後傻傻地按 F5 重新整理，直到進度條跑完為止。]]></summary>
+        <summary type="html"><![CDATA[告別手動重新整理網頁！我開源了 ghaction-lis，一款專門在終端機精準監聽 GitHub Actions 部署狀態的超輕量 CLI 工具。]]></summary>
         <content type="html"><![CDATA[<p>做前端開發或靜態網站管理（例如這個 Docusaurus 數位花園）時，我們常常會把 <code>git push</code> 和自動部署串在一起。但這衍生出一個惱人的日常痛點：<strong>每次 push 完，你總是要打開瀏覽器、點開 Actions 標籤、然後傻傻地按 F5 重新整理，直到進度條跑完為止。</strong></p>
 <p>這不僅中斷開發心流，還非常破壞開發者體驗 (DevEx)。</p>
 <p>為了解決這個問題，我開發並開源了一個超輕量級的 CLI 工具：<strong><a href="https://github.com/liwenchiou/ghaction-lis" target="_blank" rel="noopener noreferrer" class="">ghaction-lis</a></strong>！</p>
@@ -279,7 +279,7 @@
         <id>https://garden.liwen.studio/blog/tech-optimization-vs-wishlist</id>
         <link href="https://garden.liwen.studio/blog/tech-optimization-vs-wishlist"/>
         <updated>2026-05-13T01:43:00.000Z</updated>
-        <summary type="html"><![CDATA[身為工程師，我們最怕的不是複雜的演算法，而是那種「邏輯斷層」的溝通。最近在思考職場定位時，有感而發想聊聊一個現象：為什麼有些優化專案，最後會變成技術人員的災難？]]></summary>
+        <summary type="html"><![CDATA[探討職場中「技術優化」為何常淪為缺乏業務邏輯的許願池，並分享工程師如何建立協作防線，拒絕無效通靈開發。]]></summary>
         <content type="html"><![CDATA[<p>身為工程師，我們最怕的不是複雜的演算法，而是那種「邏輯斷層」的溝通。最近在思考職場定位時，有感而發想聊聊一個現象：為什麼有些優化專案，最後會變成技術人員的災難？</p>
 <p>當「技術優化」的口號響起，如果缺乏清晰的業務定義，工程師往往會從「解決問題的人」變成「幫人通靈的人」。這不僅是效率的浪費，更是對專業價值的消耗。</p>
 <!-- -->
