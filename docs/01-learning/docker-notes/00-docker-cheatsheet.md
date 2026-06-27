@@ -14,8 +14,11 @@ sidebar_position: 0
 | 指令 (Command) | 用途與說明 |
 | :--- | :--- |
 | `docker version` | 查看 Docker 引擎版本與系統詳細規格 |
-| `docker image ls` | 顯示目前本地端已下載的所有映像檔 (Image) 清單 |
-| `docker image pull <IMAGE>` | 從 Docker Hub 下載指定的映像檔 |
+| `docker image build -t <名稱> .` | 根據當前目錄的 Dockerfile 打包建立新的 Image |
+| `docker image ls` | 顯示目前本地端已下載或打包的所有映像檔清單 |
+| `docker login` | 登入 Docker Hub 帳號 (推播 Image 前必備) |
+| `docker image push <帳號/名稱>` | 將本機打包好的 Image 推送到 Docker Hub |
+| `docker image pull <帳號/名稱>` | 從 Docker Hub 下載指定的映像檔 |
 | `docker image rm <IMAGE ID>` | 刪除指定的映像檔 (須確認無容器正在使用該映像檔) |
 
 ## 2. Container 生命週期狀態與對應指令
@@ -45,3 +48,24 @@ sidebar_position: 0
 | `docker container exec -it <ID> sh` | **實務最常用！**新開一個終端機進入 Container 內部下指令 |
 | `docker container attach <ID>` | **監看** Container 的即時輸出 (⚠️ 按 Ctrl+C 會關閉服務) |
 | `docker container inspect <ID>` | 查詢該容器的完整規格、內部設定、環境變數或掛載路徑 |
+
+## 4. Docker 網路 (Network) 指令
+
+當需要讓多個容器 (例如 Node.js 專案與 MongoDB) 可以直接用「名字」互相連線時，必須使用自訂網路。
+
+| 指令 (Command) | 用途與說明 |
+| :--- | :--- |
+| `docker network ls` | 查看目前 Docker 內所有的網路清單 |
+| `docker network create <名稱>` | 建立一個全新的自訂網路 (Bridge Network) |
+| `... run --network <名稱>` | 在啟動容器時，透過此參數將容器加入指定的網路中 |
+| `... run --name <名字>` | 幫啟動的容器自訂名稱，同網路下的其他容器可直接用此名稱互相連線 |
+
+## 5. 跨平台多架構打包 (Buildx) 指令
+
+解決 Mac (ARM 架構) 打包出來的 Image，在 Windows / Linux 伺服器 (AMD64) 上無法運行報錯的進階工具。
+
+| 指令 (Command) | 用途與說明 |
+| :--- | :--- |
+| `docker buildx ls` | 查看目前的打包建構器 (Builder) 清單 |
+| `docker buildx create --name <名稱> --use`| 建立並切換到一個支援多架構打包的「專屬建構器」 |
+| `docker buildx build --platform <平台> -t <名稱> . --push` | 執行多架構打包 (例如 `linux/arm64,linux/amd64`)，並強制規定必須加上 `--push` 直接推送到 Docker Hub |
