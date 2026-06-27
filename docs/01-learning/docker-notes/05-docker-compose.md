@@ -85,20 +85,3 @@ volumes:
 # 一鍵自動打包、建網路、建 Volume 並在背景啟動所有容器！
 docker compose up -d
 ```
-
-## 3. 💡 實務分享：如何交接專案給同事？
-
-在實務上，同事的角色會決定你的交接方式。有了 Docker Compose 後，無論哪種情境都變得異常簡單：
-
-**情境 A：交接給「共同開發」的同事 (大家都要寫 Code)**
-1. 你將包含 `Dockerfile`、`docker-compose.yml` 與源碼的整個專案 `git push` 到 GitHub。
-2. 開發同事把專案 `git clone` 抓回他自己的電腦。
-3. 同事自己建立一份 `.env` 檔填入必要的變數。
-4. 確保 `.yml` 檔裡面使用的是 **`build: .`**，這樣 Docker 才會根據最新的原始碼現場打包。
-5. 同事只要輸入 `docker compose up -d --build`，就能直接在自己電腦上重建一模一樣的開發環境！
-
-**情境 B：交接給「負責維運部署」的同事 (純粹上線用)**
-1. 你先透過 GitHub Actions 把打包好的最終版 Image 推送到 Docker Hub。
-2. 你把 `docker-compose.yml` 檔裡面的 `build: .` 刪掉，替換成 **`image: <你的帳號>/<專案名稱>`**。
-3. 把這個修改過的 `.yml` 檔案跟 `.env` 檔案傳給維運同事（不需要給他整個原始碼）。
-4. 同事在他的雲端主機上，只要輸入 `docker compose up -d`，雲端伺服器就會自動去拉取 Image 並啟動，所有環境瞬間 100% 完美還原並上線！
