@@ -60,7 +60,19 @@ sidebar_position: 0
 | `... run --network <名稱>` | 在啟動容器時，透過此參數將容器加入指定的網路中 |
 | `... run --name <名字>` | 幫啟動的容器自訂名稱，同網路下的其他容器可直接用此名稱互相連線 |
 
-## 5. 跨平台多架構打包 (Buildx) 指令
+## 5. Docker 儲存空間 (Volume) 指令
+
+當需要確保容器刪除後，資料庫或上傳的檔案依然能被保留時（資料持久化），必須透過 Volume 來管理儲存空間。
+
+| 指令 (Command) | 用途與說明 |
+| :--- | :--- |
+| `docker volume ls` | 查看目前所有的 Volume 空間清單 |
+| `docker volume create <名稱>` | 建立一個全新的 Volume 儲存空間 |
+| `docker volume rm <名稱>` | 刪除指定的 Volume 空間 (須確認目前沒有任何容器正在掛載使用它) |
+| `docker volume prune -f` | **大掃除指令！** 一鍵刪除所有「沒有被任何容器掛載」的閒置 Volume |
+| `... run -v <Volume名稱>:<容器內部路徑>` | 在啟動容器時，將該 Volume 空間掛載到指定的容器內部路徑 |
+
+## 6. 跨平台多架構打包 (Buildx) 指令
 
 解決 Mac (ARM 架構) 打包出來的 Image，在 Windows / Linux 伺服器 (AMD64) 上無法運行報錯的進階工具。
 
@@ -69,3 +81,15 @@ sidebar_position: 0
 | `docker buildx ls` | 查看目前的打包建構器 (Builder) 清單 |
 | `docker buildx create --name <名稱> --use`| 建立並切換到一個支援多架構打包的「專屬建構器」 |
 | `docker buildx build --platform <平台> -t <名稱> . --push` | 執行多架構打包 (例如 `linux/arm64,linux/amd64`)，並強制規定必須加上 `--push` 直接推送到 Docker Hub |
+
+## 7. Docker Compose 指令
+
+當專案需要同時啟動多個容器 (例如 Node.js + MongoDB) 時，透過撰寫 `docker-compose.yml` 來實現一鍵部署與管理的進階工具。
+
+| 指令 (Command) | 用途與說明 |
+| :--- | :--- |
+| `docker compose up -d` | **一鍵啟動！** 根據當前目錄的 `.yml` 檔，自動建構並在背景運行所有服務 |
+| `docker compose ps` | 查看目前這個 Compose 專案下，所有專屬容器的運行狀態 |
+| `docker compose logs -f` | **除錯神招！** 即時監看這個 Compose 專案下，所有容器的 Log 輸出總匯 |
+| `docker compose down` | **一鍵關閉！** 停止並刪除這個專案下的所有容器與網路 (不會刪除 Volume) |
+| `docker compose down -v` | ⚠️ **一鍵毀滅！** 連同掛載的 Volume 永久資料也一併徹底刪除 |
