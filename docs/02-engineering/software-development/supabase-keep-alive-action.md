@@ -59,9 +59,21 @@ jobs:
 我們必須打 REST API 根目錄 `/rest/v1/`。當 PostgREST 收到對根目錄的請求時，它必須去資料庫中撈取目前 Role（即 `anon`）所擁有的資料表綱要（OpenAPI Schema），這會觸發真實的資料庫查詢，從而重置休眠計時器。
 
 **避開 "Secret API key required" 錯誤：**
-以前直接 curl `/rest/v1/` 會回傳 `{"message":"Secret API key required"}`，這是因為漏傳了 `apikey` Header。只要在 Curl 請求中同時帶上 `apikey` 與 `Authorization` Header（皆填入 `anon key`），便能順利通過網關並取得 `200 OK`。
+以前直接 curl `/rest/v1/` 會回傳 `{"message":"Secret API key required"}`，這是因為漏傳了 `apikey` Header。只要在 Curl 請求中同時帶上 `apikey` 與 `Authorization` Header（皆填入 `anon key`），便能順利通過網關並取得響應。
 
-為了避免大型的 OpenAPI JSON 內容塞爆 GitHub Action 的 log 畫面，我們加上了 `-s -o /dev/null -w "Status: %{http_code}\n"` 參數，讓它只印出 HTTP 狀態碼（例如 `200`），保持 log 畫面乾淨。
+為了避免大型的 OpenAPI JSON 內容塞爆 GitHub Action 的 log 畫面，我們加上了 `-s -o /dev/null -w "Status: %{http_code}\n"` 參數，讓它只印出 HTTP 狀態碼，保持 log 畫面乾淨。
+
+> [!NOTE]
+> **關於日誌中出現 `401` 或 `406` 狀態碼的說明**
+> 
+> 在執行此腳本時，您在 GitHub Actions 的日誌中可能會看到 `Status: 401`。
+> 
+> *   **為什麼會這樣？**：這代表您的 `anon` 角色憑證是正確的，並且已經順利通過了 API 網關 (Kong) 的 JWT 驗證。但由於安全性考量，Supabase 預設不允許 `anon` 角色直接拉取資料庫整體的 OpenAPI 規格定義檔（Schema），因此 PostgREST 在連線資料庫並確認權限後，拒絕了該請求並回傳 401。
+> *   **這樣有防休眠效果嗎？**：**有！而且非常成功**。因為 PostgREST「連入資料庫並驗證 `anon` 是否有讀取 Schema 權限」的這個行為本身，**就已經是一次真實的資料庫查詢活動**。這會直接記錄在 Supabase 後台的資料庫日誌中，從而成功重置專案的休眠計時器。
+> *   **如何讓它顯示綠色的 `200`？**：如果您希望日誌看起來是乾淨的 `200`，只需將 URL 改成指向您資料庫中**實際存在且允許公開讀取（或已設定 RLS）的資料表名稱**。例如：
+>     ```bash
+>     /rest/v1/您的資料表名稱?limit=1
+>     ```
 
 ---
 
