@@ -40,27 +40,28 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Supabase Auth Health API
+      - name: Ping Supabase REST API
         run: |
-          curl -X GET "${{ secrets.SUPABASE_URL_1 }}/auth/v1/health" \
+          curl -s -o /dev/null -w "Project 1 Status: %{http_code}\n" -X GET "${{ secrets.SUPABASE_URL_1 }}/rest/v1/" \
           -H "apikey: ${{ secrets.SUPABASE_ANON_KEY_1 }}" \
           -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY_1 }}"
 ```
 
 ---
 
-## 💡 為什麼要打 `/auth/v1/health`？
+## 💡 為什麼要打 `/rest/v1/` 而不是 `/auth/v1/health`？
 
-最初我在測試時，是嘗試打 API 根目錄 `/rest/v1/`，但卻收到了 `{"message":"Secret API key required"}` 的錯誤訊息。
+最初的想法是打 `/auth/v1/health`（驗證服務 GoTrue 的健康檢查節點）。但後來發現 **Supabase 判定「專案是否活躍」的核心是是否有「資料庫交互活動」（Database Interactions）**。
 
-這是因為 Supabase 為了資安考量，現在如果要透過根目錄取得 OpenAPI 規格（包含所有 Table 的結構），必須使用權限最高的 `Service_Role` (Secret Key)。
+`/auth/v1/health` 僅能確認 Auth 服務容器是否還在運作，並不會向 PostgreSQL 資料庫發出實際的查詢請求，因此在 Supabase 的遙測（Telemetry）系統中**不會被計為有效資料庫活動**，依然會收到暫停專案的信件。
 
-**最佳解法：打專屬的 Health Check 節點**
-我們把路徑改成 `/auth/v1/health`。這是 Supabase 專門用來檢查驗證服務 (GoTrue) 是否正常的公開節點，使用 anon key 就能呼叫。成功時會獲得乾淨的 HTTP 200 回傳值：
-```json
-{"version":"v2.190.0","name":"GoTrue","description":"GoTrue is a user registration and authentication API"}
-```
-這樣不僅成功喚醒了機器重置了 7 天計時器，也不會在 Log 中留下一堆 Error 訊息！
+**最佳解法：打 API 根目錄 `/rest/v1/`**
+我們必須打 REST API 根目錄 `/rest/v1/`。當 PostgREST 收到對根目錄的請求時，它必須去資料庫中撈取目前 Role（即 `anon`）所擁有的資料表綱要（OpenAPI Schema），這會觸發真實的資料庫查詢，從而重置休眠計時器。
+
+**避開 "Secret API key required" 錯誤：**
+以前直接 curl `/rest/v1/` 會回傳 `{"message":"Secret API key required"}`，這是因為漏傳了 `apikey` Header。只要在 Curl 請求中同時帶上 `apikey` 與 `Authorization` Header（皆填入 `anon key`），便能順利通過網關並取得 `200 OK`。
+
+為了避免大型的 OpenAPI JSON 內容塞爆 GitHub Action 的 log 畫面，我們加上了 `-s -o /dev/null -w "Status: %{http_code}\n"` 參數，讓它只印出 HTTP 狀態碼（例如 `200`），保持 log 畫面乾淨。
 
 ---
 
@@ -72,7 +73,7 @@ jobs:
       # 喚醒第二個專案
       - name: Ping Supabase Project 2
         run: |
-          curl -X GET "${{ secrets.SUPABASE_URL_2 }}/auth/v1/health" \
+          curl -s -o /dev/null -w "Project 2 Status: %{http_code}\n" -X GET "${{ secrets.SUPABASE_URL_2 }}/rest/v1/" \
           -H "apikey: ${{ secrets.SUPABASE_ANON_KEY_2 }}" \
           -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY_2 }}"
 ```
