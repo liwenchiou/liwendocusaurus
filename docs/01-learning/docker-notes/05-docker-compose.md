@@ -85,3 +85,31 @@ volumes:
 # 一鍵自動打包、建網路、建 Volume 並在背景啟動所有容器！
 docker compose up -d
 ```
+
+## 3. 進階：分離本地開發環境 (docker-compose.override.yml)
+
+實務上，我們會把「本地開發專屬」的設定獨立拆分出來。你可以建立一個名為 `docker-compose.override.yml` 的檔案：
+
+```yaml
+# ==========================================
+# [本地開發專屬設定]
+# 這個檔案只會留在你的本機電腦，不會上傳到 GitHub (.gitignore)
+# 當你在本地執行 docker compose up -d 時，Docker 會自動拿這裡的設定去「覆蓋」原本的設定！
+# ==========================================
+services:
+  myapp:
+    # 覆蓋指令：改用 nodemon
+    command: npm run dev
+    volumes:
+      # 覆蓋掛載：把本地資料夾掛載進去
+      - ./:/usr/local/app
+      - /usr/local/app/node_modules
+```
+
+> 💡 **進階原理解析：為什麼它能完美分離環境？**
+> 
+> 1. **為什麼啟動時會自動合併？**
+> 這是 Docker Compose 內建的預設行為。當你執行 `docker compose up` 時，Docker 會自動在當下目錄尋找 `docker-compose.yml`（基礎設定）與 `docker-compose.override.yml`（覆蓋設定）。如果兩者都存在，Docker 會將 override 裡面的設定「疊加」覆寫到基礎設定上（例如把指令改成 `npm run dev` 並掛上熱重載的 Volumes）。
+> 
+> 2. **為什麼部署到雲端上時，能保持原本乾淨的設定？**
+> 關鍵在於 **`.gitignore`**！實務上，我們會把 `docker-compose.override.yml` 加入 `.gitignore` 檔案中，讓它**只存活在你的本機電腦裡**。當雲端主機從 GitHub 拉取專案時，根本沒有 override 檔案，所以執行 `docker compose up -d` 時，Docker 只會乖乖讀取基礎的 `docker-compose.yml`，從而維持正式上線該有的穩定環境！
