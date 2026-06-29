@@ -9,16 +9,16 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      # 喚醒第一個專案 (打 REST API 根目錄以觸發資料庫活動)
+      # 喚醒第一個專案 (打 blessings 資料表以觸發資料庫活動)
       - name: Ping Supabase Project 1
         run: |
-          curl -s -o /dev/null -w "Project 1 Status: %{http_code}\n" -X GET "${{ secrets.SUPABASE_URL_1 }}/rest/v1/" \
+          curl -s -o /dev/null -w "Project 1 Status: %{http_code}\n" -X GET "${{ secrets.SUPABASE_URL_1 }}/rest/v1/blessings?limit=1" \
           -H "apikey: ${{ secrets.SUPABASE_ANON_KEY_1 }}" \
           -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY_1 }}"
           
-      # 喚醒第二個專案 (打 REST API 根目錄以觸發資料庫活動)
+      # 喚醒第二個專案 (打 check_ins 資料表以觸發資料庫活動)
       - name: Ping Supabase Project 2
         run: |
-          curl -s -o /dev/null -w "Project 2 Status: %{http_code}\n" -X GET "${{ secrets.SUPABASE_URL_2 }}/rest/v1/" \
+          curl -s -o /dev/null -w "Project 2 Status: %{http_code}\n" -X GET "${{ secrets.SUPABASE_URL_2 }}/rest/v1/check_ins?limit=1" \
           -H "apikey: ${{ secrets.SUPABASE_ANON_KEY_2 }}" \
           -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY_2 }}"
