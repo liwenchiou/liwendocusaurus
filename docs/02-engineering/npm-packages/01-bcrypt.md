@@ -1,7 +1,7 @@
 ---
 id: bcrypt
 title: "🔐 bcrypt 密碼雜湊與驗證"
-sidebar_label: "\u200Bbcrypt 密碼雜湊"
+sidebar_label: "\u200B01 bcrypt 密碼雜湊"
 sidebar_position: 1
 ---
 

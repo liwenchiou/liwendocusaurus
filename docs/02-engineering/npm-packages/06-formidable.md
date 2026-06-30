@@ -1,7 +1,8 @@
 ---
 id: formidable
 title: "formidable"
-sidebar_label: "formidable"
+sidebar_label: "\u200B06 formidable"
+sidebar_position: 6
 ---
 
 # formidable

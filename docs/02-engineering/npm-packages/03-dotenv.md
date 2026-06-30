@@ -1,7 +1,8 @@
 ---
-sidebar_position: 2
+id: dotenv
+sidebar_position: 3
 title: "dotenv (環境變數)"
-sidebar_label: "dotenv (環境變數)"
+sidebar_label: "\u200B03 dotenv (環境變數)"
 ---
 
 # `dotenv` - 環境變數管理套件
