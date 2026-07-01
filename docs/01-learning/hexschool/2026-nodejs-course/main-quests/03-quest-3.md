@@ -67,9 +67,9 @@ function validateBody(body) {
    - 輸入：`req.params.id`（字串，需使用 `Number()` 轉換）
    - 輸出：`200` + `{ id, name, level }`，或 `404` + `{ error: '會員不存在' }`（找不到時）
 
-**💡 關鍵點**：
+**💡 關鍵點與常犯錯誤**：
 - `GET /`：利用前面寫好的 `filterByQuery` 處理篩選邏輯。
-- `GET /:id`：從 `req.params` 取得網址參數，注意取得的 `id` 是字串，必須透過 `Number()` 轉為數字才能與內部資料庫比對。
+- **型別陷阱 (`GET /:id`)**：從 `req.params` 取得的網址參數永遠是「字串」。如果你忘記加上 `Number(id)` 進行轉型，在用 `find` 嚴格比對 (`===`) 時會因為型別不同（數字 vs 字串）而永遠找不到資料，導致所有查詢都變成 404 找不到會員！
 
 <details>
 <summary>💻 點擊展開程式碼解答</summary>
@@ -101,10 +101,10 @@ router.get("/:id", (req, res) => {
 - 輸入：`body = { name: string, level: 'VIP' | 'normal' }`
 - 輸出：`201` + 新會員物件（id 自動配），或 `400` + `{ error: '缺 name 或 level' }`（驗證失敗）
 
-**💡 關鍵點**：
+**💡 關鍵點與常犯錯誤**：
 - 必須先呼叫 `validateBody(req.body)` 驗證資料是否齊全，若失敗回傳 `400`。
 - 使用展開運算子 `{ id: nextId, ...req.body }` 優雅地組合新會員物件。
-- 成功建立後，回傳 `201 Created` 狀態碼。
+- **忘記推進下一號**：將新會員加入陣列 (`members.push`) 後，千萬不要忘記執行 `nextId++`！否則下一位註冊的會員會拿到重複的 ID，造成資料錯亂。
 
 <details>
 <summary>💻 點擊展開程式碼解答</summary>
@@ -139,10 +139,10 @@ router.post("/", (req, res) => {
    - 輸入：`req.params.id`
    - 輸出：`204`（無 body），或 `404` + `{ error: '會員不存在' }`
 
-**💡 關鍵點**：
+**💡 關鍵點與常犯錯誤**：
 - 兩者都需要用 `findIndex` 找索引，找不到 (`-1`) 則回傳 `404`。
-- **PUT**：更新時，舊資料在前、`req.body` 展開在後 `...req.body`，這樣新傳來的屬性才會正確覆蓋舊屬性。
-- **DELETE**：使用 `splice(index, 1)` 移除資料。並記得回應 `204 No Content`，並搭配 `.end()` 結束請求。
+- **PUT 覆蓋順序**：使用展開運算子進行合併時，順序非常重要！必須是「先展開舊資料 `...members[index]`，再展開新資料 `...req.body`」。如果寫反了，舊資料會把前端剛傳來的新資料蓋掉，導致更新完全無效！
+- **DELETE 狀態碼地雷**：刪除成功時回傳的狀態碼是 `204 No Content`，代表「請求成功但沒有任何內容要回傳」。因此絕對不能寫 `res.status(204).json(...)`，否則會發生錯誤！正確做法是直接使用 `res.status(204).end()` 結束此請求。
 
 <details>
 <summary>💻 點擊展開程式碼解答</summary>
@@ -186,9 +186,9 @@ router.delete("/:id", (req, res) => {
 - 輸入：`multipart/form-data`，field 名稱 `image`
 - 輸出：`200` + `{ filename: file.originalFilename, sizeKB, savedPath: file.filepath }`，或 `400` + `{ error: 'No file uploaded' }`（沒帶 image）
 
-**💡 關鍵點**：
+**💡 關鍵點與常犯錯誤**：
 - `formidable({ ... })` 實體化時，記得設定 `uploadDir`、`keepExtensions: true` (保留副檔名) 以及容量限制 `maxFileSize`。
-- **Formidable v3 版本差異**：解析出來的 `files.image` 預設會是「陣列」。必須使用 `Array.isArray` 判斷並取 `[0]` 來獲得實際的檔案物件。
+- **陣列陷阱 (Formidable v3)**：解析出來的 `files.image` 預設會是「陣列」。必須使用 `Array.isArray` 判斷並取 `[0]` 來獲得實際的單一檔案物件。如果忘記取 `[0]`，後續讀取 `file.originalFilename` 等屬性都會變成 `undefined`。
 - 解析出檔案後，提取 `originalFilename`、計算轉為 KB 的 `size` 以及實際儲存的 `filepath` 作為回應。
 
 <details>
@@ -240,10 +240,10 @@ router.post("/", (req, res) => {
 - 將分離好的路由模組掛載進主程式
 - 掛載必備的跨域與 JSON 解析 Middleware
 
-**💡 關鍵點**：
-- 必須先掛載 `cors()` 以允許前端跨域請求。
-- 必須掛載 `express.json()`，否則在 `POST` 或 `PUT` 請求時，`req.body` 會解析不到（變成 `undefined`）。
-- 使用 `app.use('/前綴', router)` 將分離好的路由檔案掛載到指定的 API 路徑下。
+**💡 關鍵點與常犯錯誤**：
+- **跨域設定**：必須先掛載 `cors()` 允許前端跨域請求，且務必放在所有路由的**最前面**。
+- **Body 解析遺漏**：必須掛載 `express.json()`！如果忘記寫這行，所有 `POST` 與 `PUT` 傳來的 JSON 資料 Express 都會看不懂，導致 `req.body` 直接變成 `undefined`，進而引發後續一連串的 Crash 崩潰。
+- **路由掛載**：使用 `app.use('/前綴', router)` 將分離好的路由檔案掛載到指定的 API 路徑下。
 
 <details>
 <summary>💻 點擊展開程式碼解答</summary>

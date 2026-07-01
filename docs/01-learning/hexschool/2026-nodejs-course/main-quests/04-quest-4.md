@@ -18,9 +18,9 @@ sidebar_position: 4
 - 使用 `jwt.verify` 驗證 Token，失敗則回應 **401**。
 - 驗證通過則將解析出的 payload 掛載到 `req.user` 並呼叫 `next()`。
 
-**💡 關鍵點**：
-- 前端傳來的 Authorization 格式通常為 `Bearer <token>`，需要用字串分割 (`split(' ')[1]`) 提取真實的 Token。
-- 驗證 Token 的過程可能拋出例外（例如過期或簽章無效），必須使用 `try...catch` 包覆。
+**💡 關鍵點與常犯錯誤**：
+- **提取 Token 的細節**：前端傳來的 Authorization 格式通常為 `Bearer <token>`。檢查時 `startsWith('Bearer ')` **務必注意要有空格**，並且需要用字串分割 (`split(' ')[1]`) 提取出第二個部分的真實 Token。
+- **致命崩潰 (Crash) 預警**：驗證 Token (`jwt.verify`) 的過程如果遇到過期或假造的 Token 會直接拋出例外錯誤 (Throw Error)。如果沒有使用 `try...catch` 包覆，整個 Node.js 伺服器會直接當機掛掉！
 
 <details>
 <summary>💻 點擊展開程式碼解答</summary>
@@ -69,9 +69,10 @@ module.exports = verifyToken;
 - 檢查 `email` 是否已存在。
 - 使用 `bcrypt` 進行密碼加密後，存入 `users` 陣列。
 
-**💡 關鍵點**：
-- 使用 `Array.some()` 可以有效率地檢查信箱是否已重複註冊。
-- 密碼加密的 `bcrypt.hash()` 屬於非同步操作，記得要在路由函式前加上 `async` 並使用 `await`。
+**💡 關鍵點與常犯錯誤**：
+- **尋找重複信箱**：使用 `Array.some()` 可以有效率地檢查信箱是否已重複註冊。
+- **非同步的陷阱**：密碼加密的 `bcrypt.hash()` 屬於非同步操作，記得要在路由函式前加上 `async` 並使用 `await`，否則你會存入一個 Promise 物件而不是加密字串。
+- **Headers sent 錯誤**：在做 `if` 條件判斷並回傳錯誤訊息時，務必記得在 `res.status(400).json(...)` 前面加上 **`return`**。否則程式會繼續往下執行，導致出現 `Cannot set headers after they are sent to the client` 的經典報錯。
 
 <details>
 <summary>💻 點擊展開程式碼解答</summary>
@@ -117,9 +118,10 @@ router.post("/register", async (req, res) => {
 - 檢查帳號是否存在，以及密碼是否正確，錯誤皆回傳 **401** 且訊息一致。
 - 驗證成功後，使用 `jwt.sign` 簽發 Token。
 
-**💡 關鍵點**：
-- 防範**帳號探測 (Account Enumeration)**：無論是找不到帳號或密碼錯誤，都應統一回傳「帳號或密碼錯誤」，不讓惡意攻擊者猜出哪些信箱已註冊。
-- Payload 裡**絕對不能放密碼**，只能放置 `id` 或 `email` 等非機密識別資訊。
+**💡 關鍵點與常犯錯誤**：
+- **防範帳號探測 (Account Enumeration)**：無論是找不到帳號或密碼錯誤，都應統一回傳「帳號或密碼錯誤」，不讓惡意攻擊者猜出哪些信箱已註冊。
+- **陣列越界與 Undefined 崩潰**：如果 `users.findIndex` 找不到信箱，會回傳 `-1`。若沒有先判斷 `index === -1` 就直接存取 `users[index].password` 來比對，會引發 `Cannot read properties of undefined` 導致伺服器掛掉。
+- **資安大忌**：簽發 Token 的 Payload 裡**絕對不能放密碼**，只能放置 `id` 或 `email` 等非機密識別資訊。
 
 <details>
 <summary>💻 點擊展開程式碼解答</summary>
@@ -187,12 +189,13 @@ router.get("/me", verifyToken, (req, res) => {
 - 掛載 `cors`、`express.json` 以及路由。
 - 實作 404 守門員與捕捉所有例外的錯誤處理守門員。
 
-**💡 關鍵點**：
-- **順序非常重要**：
+**💡 關鍵點與常犯錯誤**：
+- **順序非常重要**：404 守門員與錯誤處理守門員必須放在所有路由的**最底下**！
   1. 通用設定 (`cors`, `express.json`)
   2. 應用程式路由 (`/auth`, `/docs`)
   3. **404 找不到路由** (Catch-all)
-  4. **全域錯誤處理** ( Error Handler，必須有四個參數 `err, req, res, next`)
+  4. **全域錯誤處理** 
+- **魔鬼藏在參數裡**：全域錯誤處理 Middleware **必須有完整四個參數** `(err, req, res, next)`。即使你沒用到 `next` 也**絕對不能省略**！只要少寫一個參數變成三個，Express 就會把它當作一般 Middleware，導致遇到 JSON 格式錯誤 (`SyntaxError`) 時完全無法捕捉！
 
 <details>
 <summary>💻 點擊展開程式碼解答</summary>
