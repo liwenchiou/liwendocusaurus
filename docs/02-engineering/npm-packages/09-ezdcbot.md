@@ -1,8 +1,8 @@
 ---
 id: ezdcbot
-sidebar_position: 8
+sidebar_position: 9
 title: "ezdcbot (Discord 推播)"
-sidebar_label: "\u200B08 ezdcbot (Discord 推播)"
+sidebar_label: "​09 ezdcbot (Discord 推播)"
 ---
 
 # `ezdcbot` - 零依賴 Discord 推播套件

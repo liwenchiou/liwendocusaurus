@@ -1,8 +1,8 @@
 ---
 id: ghaction-lis
 title: "ghaction-lis"
-sidebar_label: "\u200B09 ghaction-lis (Action 監聽)"
-sidebar_position: 9
+sidebar_label: "​10 ghaction-lis (Action 監聽)"
+sidebar_position: 10
 description: "一個輕量級的 Node.js CLI 工具，專為開發者設計，用於在終端機 (Terminal) 中即時監聽 GitHub Actions 的部署狀態。"
 ---
 
