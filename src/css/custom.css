@@ -15,7 +15,7 @@
   --ifm-background-color: #121212; /* Slightly lighter for comfort */
   --ifm-font-color-base: #e1e1e1;   /* Much brighter silver for readability */
   --ifm-heading-color: #ffffff;
-  --ifm-navbar-background-color: rgba(18, 18, 18, 0.8);
+  --ifm-navbar-background-color: #121212;
   --ifm-border-color: #2a2a2a;
   --ifm-navbar-height: 70px;
 }
@@ -139,25 +139,9 @@ h3 {
 
 /* Navbar */
 .navbar {
-  /* backdrop-filter: blur(12px);  -- 移至 ::before 避免影響子元素包含塊 */
-  /* -webkit-backdrop-filter: blur(12px); */
   border-bottom: 1px solid var(--ifm-border-color);
   box-shadow: none;
-  z-index: var(--ifm-z-index-fixed); /* Ensure it is above hero */
-  background-color: transparent !important; /* 父層設為透明 */
-}
-
-.navbar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--ifm-navbar-background-color);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  z-index: -1; /* 置於內容後方 */
+  background-color: var(--ifm-navbar-background-color) !important;
 }
 
 .navbar__inner {
@@ -736,5 +720,23 @@ html body #__docusaurus main[class*="docMainContainer"] > .container {
    ============================================================ */
 html body #__docusaurus div[class*="generatedIndexPage"] .pagination-nav,
 html body #__docusaurus div[class*="generatedIndexPage"] ~ .pagination-nav {
-  display: none !important;
+}
+
+/* ============================================================
+   微調側邊欄收合按鈕 (Collapse Button) 位置與置中
+   ============================================================ */
+html body aside.theme-doc-sidebar-container button.button--secondary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 16px !important;
+  border-radius: 6px !important; 
+  width: calc(100% - 32px) !important; 
+  margin-left: 16px !important;
+  padding: 0 !important; /* 拔除 Infima 預設的按鈕 padding */
+  height: 40px !important; /* 給定絕對高度讓 Flexbox 完美置中 */
+}
+
+html body aside.theme-doc-sidebar-container button.button--secondary svg {
+  margin: 0 !important; /* 拔除官方預設的 margin-top，讓垂直真正置中 */
 }
