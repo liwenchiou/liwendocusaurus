@@ -1,7 +1,7 @@
 ---
 id: 00-docker-cheatsheet
 title: Docker 常用指令與生命週期速查表
-sidebar_label: "\u200B0 指令速查表"
+sidebar_label: "指令速查表"
 sidebar_position: 0
 ---
 

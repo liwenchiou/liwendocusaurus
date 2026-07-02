@@ -1,7 +1,7 @@
 ---
 id: quest-3
 title: "Node.js 主線任務三：Express.js 基礎"
-sidebar_label: "第三週：主線任務實作"
+sidebar_label: "\u200B第三週"
 sidebar_position: 3
 ---
 

@@ -5,5 +5,6 @@
     "type": "generated-index",
     "slug": "/learning/hexschool/react-2026",
     "description": "2026 React 實戰課程學習筆記總覽"
-  }
+  },
+  "className": "sidebar-category-hide-children"
 }

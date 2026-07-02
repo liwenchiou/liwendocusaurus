@@ -1,7 +1,7 @@
 ---
 id: quest-2
 title: "Node.js 主線任務二：原生 HTTP 與檔案上傳 (Formidable)"
-sidebar_label: "第二週：主線任務實作"
+sidebar_label: "\u200B第二週"
 sidebar_position: 2
 ---
 

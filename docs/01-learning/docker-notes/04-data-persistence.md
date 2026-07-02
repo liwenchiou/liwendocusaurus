@@ -1,7 +1,7 @@
 ---
 id: 04-data-persistence
 title: 資料持久化 (Volumes & Bind Mounts)
-sidebar_label: "\u200B4 資料持久化"
+sidebar_label: "資料持久化"
 sidebar_position: 4
 ---
 

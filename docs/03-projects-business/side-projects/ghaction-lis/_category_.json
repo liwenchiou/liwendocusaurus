@@ -5,5 +5,6 @@
     "type": "generated-index",
     "slug": "/projects-business/side-projects/ghaction-lis",
     "description": "關於開源套件 ghaction-lis 的開發筆記、架構設計與使用說明。"
-  }
+  },
+  "className": "sidebar-category-hide-children"
 }

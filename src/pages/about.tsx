@@ -11,6 +11,7 @@ export default function About() {
       desc: <>為了解決 Serverless 環境下 Discord Bot 部署的痛點，我從零打造了這個 <strong>完全零依賴 (Zero Dependency)</strong> 的輕量級推播套件。</>,
       detail: <>捨棄笨重的 WebSocket 建立連線，改採原生 <code>fetch</code> 實作，專注於高效能的 HTTP 請求與 Thread 管理，完美適配無伺服器架構。</>,
       github: 'https://github.com/liwenchiou/ezdcbot',
+      website: undefined,
       doc: '/docs/projects-business/side-projects/ezdcbot/intro'
     },
     {
@@ -18,7 +19,24 @@ export default function About() {
       desc: <>為了無縫追蹤 CI/CD 部署進度，我開發了這款 <strong>終端機專用的部署監聽器</strong>，能即時解析 GitHub Actions 狀態。</>,
       detail: <>支援 PAT 認證與 CLI 自動串接，開發者能在終端機內直觀掌握部署成功或失敗原因，大幅降低在 IDE 與瀏覽器間頻繁切換的開發成本。</>,
       github: 'https://github.com/liwenchiou/ghaction-lis',
+      website: undefined,
       doc: '/docs/projects-business/side-projects/ghaction-lis/intro'
+    },
+    {
+      title: 'LIAI (Global AI Brain)',
+      desc: <>為了解決 AI 跨專案失憶與隧道視覺的問題，我設計了這套<strong>「全域與本地雙層大腦」</strong>架構。</>,
+      detail: <>透過軟連結掛載與 Prompt 攔截術，讓 AI 在多平台間無縫切換，並自動掛載防呆規範，結合 Mount Protection 達到最高安全層級。</>,
+      github: 'https://github.com/liwenchiou/liai',
+      website: undefined,
+      doc: '/blog/ai-agent-tunnel-vision-architecture'
+    },
+    {
+      title: 'LiTool 工具箱',
+      desc: <>為了解決找不到好用農民曆與圖片壓縮工具的痛點，我用 Next.js 打造了屬於自己的<strong>專屬瑞士刀</strong>！</>,
+      detail: <>採用純前端 Web Worker 處理大批圖片壓縮，保護隱私且無伺服器成本。內建農曆轉換、工作日計算與多種實用的開發輔助工具。</>,
+      github: undefined,
+      website: 'https://litool.liwen.studio',
+      doc: '/blog/introducing-litool'
     }
   ];
 
@@ -34,13 +52,14 @@ export default function About() {
     "mainEntity": {
       "@type": "Person",
       "name": "Liwen Chiou",
-      "jobTitle": "Digital Architect / CTO",
+      "jobTitle": "Digital Architect / Independent Developer",
       "url": "https://garden.liwen.studio/about",
       "sameAs": [
         "https://github.com/liwenchiou",
-        "https://www.liwen.studio"
+        "https://www.liwen.studio",
+        "https://litool.liwen.studio"
       ],
-      "knowsAbout": ["React", "Next.js", "Node.js", "System Architecture", "Software Engineering"]
+      "knowsAbout": ["React", "Next.js", "Node.js", "System Architecture", "Software Engineering", "Agentic AI", "Prompt Engineering", "Serverless", "UI/UX Design"]
     }
   };
 
@@ -57,7 +76,7 @@ export default function About() {
         <header className={styles.header}>
           <h1 className={styles.title}>I'm Liwen.<br/>A Digital Architect.</h1>
           <p className={styles.subtitle}>
-            將複雜的商業需求轉化為堅固、優雅的現代網頁架構。我專注於系統設計、效能優化與工程心理學的完美平衡。
+            將複雜的商業需求轉化為堅固、優雅的現代網頁架構。我專注於系統設計、AI 協作工程，以及工程心理學的完美平衡。
           </p>
         </header>
 
@@ -67,10 +86,10 @@ export default function About() {
           <div className={`${styles.card} ${styles.philosophy}`}>
             <h2 className={styles.cardTitle}>開發哲學 (Philosophy)</h2>
             <p>
-              身為一名「數位建築師」，我認為程式碼不僅是驅動機器執行的指令，更是乘載商業邏輯與團隊協作的基礎設施。
+              我是一名「數位建築師」，深信技術只是手段，建立具備高度擴充性的系統才是目的。
             </p>
             <p style={{ marginBottom: 0 }}>
-              從 React SPA 邁向 Next.js 全端架構，我的設計理念始終是：<strong>「高內聚、低耦合」</strong>。我不盲目追求最新技術，而是根據場景選擇最穩健的工具，並透過 12 週目標管理系統，確保每個迭代都能精準交付價值。
+              從 React SPA 邁向 Next.js 全端架構，我的設計理念始終是：<strong>「高內聚、低耦合」</strong>。近期我更將專注力投入於 <strong>Agentic AI 的人機協作架構</strong>。透過打造專屬的「全域大腦 (Global Brain)」，我將工程心理學轉化為 AI 的防呆護欄 (Guardrails)，讓 AI 成為穩定輸出的隊友，確保團隊能在極速迭代中，依然安全、精準地交付商業價值。
             </p>
           </div>
 
@@ -94,7 +113,9 @@ export default function About() {
               <span className={styles.tag}>Tailwind CSS</span>
               <span className={styles.tag}>PostgreSQL</span>
               <span className={styles.tag}>REST API</span>
+              <span className={styles.tag}>Serverless</span>
               <span className={styles.tag}>Agentic AI</span>
+              <span className={styles.tag}>Prompt Engineering</span>
             </div>
           </div>
 
@@ -159,9 +180,16 @@ export default function About() {
                     </div>
                     
                     <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1.5rem', opacity: isActive ? 1 : 0, transition: 'opacity 0.3s ease', transitionDelay: isActive ? '0.3s' : '0s' }}>
-                      <a href={project.github} target="_blank" rel="noreferrer" className={styles.link} style={{ color: 'var(--ifm-color-emphasis-100)' }} onClick={e => !isActive && e.preventDefault()}>
-                        GitHub ↗
-                      </a>
+                      {project.github && (
+                        <a href={project.github} target="_blank" rel="noreferrer" className={styles.link} style={{ color: 'var(--ifm-color-emphasis-100)' }} onClick={e => !isActive && e.preventDefault()}>
+                          GitHub ↗
+                        </a>
+                      )}
+                      {project.website && (
+                        <a href={project.website} target="_blank" rel="noreferrer" className={styles.link} style={{ color: 'var(--ifm-color-emphasis-100)' }} onClick={e => !isActive && e.preventDefault()}>
+                          Website ↗
+                        </a>
+                      )}
                       <a href={project.doc} className={styles.link} style={{ color: 'var(--ifm-color-emphasis-100)' }} onClick={e => !isActive && e.preventDefault()}>
                         技術筆記 ↗
                       </a>
@@ -178,8 +206,8 @@ export default function About() {
             <ul className={styles.list}>
               <li className={styles.listItem}>
                 <div>
-                  <div className={styles.listTitle}>Liwen Studio 創辦人 / 技術長</div>
-                  <div className={styles.listDesc}>提供一站式技術顧問、系統規劃與軟體開發服務</div>
+                  <div className={styles.listTitle}>Liwen Studio 獨立開發者</div>
+                  <div className={styles.listDesc}>專注於全端開發、系統架構設計與開源工具打造</div>
                 </div>
                 <div className={styles.listDate}>2026 - Present</div>
               </li>
@@ -203,7 +231,7 @@ export default function About() {
         </main>
 
         {/* Minimal Footer */}
-        <footer style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid var(--ifm-color-emphasis-200)', display: 'flex', gap: '3rem', flexWrap: 'wrap' }}>
+        {/* <footer style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid var(--ifm-color-emphasis-200)', display: 'flex', gap: '3rem', flexWrap: 'wrap' }}>
           <div>
             <h3 style={{ fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-500)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.5rem' }}>
               Business & Consulting
@@ -220,7 +248,7 @@ export default function About() {
               GitHub ↗
             </a>
           </div>
-        </footer>
+        </footer> */}
 
       </div>
     </Layout>

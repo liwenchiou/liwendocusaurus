@@ -1,7 +1,7 @@
 ---
 id: 05-docker-compose
 title: 終極殺器：Docker Compose
-sidebar_label: "\u200B5 Docker Compose"
+sidebar_label: "Docker Compose"
 sidebar_position: 5
 ---
 

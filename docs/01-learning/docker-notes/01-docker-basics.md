@@ -1,7 +1,7 @@
 ---
 id: 01-docker-basics
 title: Docker 基礎教學筆記
-sidebar_label: "\u200B1 Docker 基礎"
+sidebar_label: "Docker 基礎"
 sidebar_position: 1
 ---
 

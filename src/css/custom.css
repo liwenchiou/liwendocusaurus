@@ -17,6 +17,7 @@
   --ifm-heading-color: #ffffff;
   --ifm-navbar-background-color: rgba(18, 18, 18, 0.8);
   --ifm-border-color: #2a2a2a;
+  --ifm-navbar-height: 70px;
 }
 
 [data-theme='dark'] {
@@ -142,7 +143,6 @@ h3 {
   /* -webkit-backdrop-filter: blur(12px); */
   border-bottom: 1px solid var(--ifm-border-color);
   box-shadow: none;
-  height: 70px; /* Increased height for larger text */
   z-index: var(--ifm-z-index-fixed); /* Ensure it is above hero */
   background-color: transparent !important; /* 父層設為透明 */
 }
@@ -266,7 +266,7 @@ pre code {
 .footer {
   background-color: #121212;
   border-top: 1px solid var(--ifm-border-color);
-  padding: 80px 0;
+  padding: 30px 0;
 }
 
 .footer__title {
@@ -499,25 +499,49 @@ main .container .row > .col--3 {
 /* 解除 Docusaurus 預設的 Container 最大寬度限制 (針對文件頁面) */
 html[class*="plugin-docs"] main .container,
 body[class*="plugin-docs"] main .container,
-main[class*="docMainContainer"] > .container {
+html body .container {
   max-width: 100% !important;
-  padding-left: 5% !important;
-  padding-right: 5% !important;
 }
 
-/* 讓主要內容區塊自動延伸填滿原本右側大綱的空間 */
-main .container .row > .col:not(.col--3),
-[class*='docItemContainer'],
-.theme-doc-markdown,
-article {
+/* 終極強制覆蓋 Generated Index Page 的 75% 限制 */
+html body #__docusaurus .container div[class*="generatedIndexPage"],
+html body #__docusaurus main .container div[class*="generatedIndexPage"],
+html body .container > div[class*="generatedIndexPage"],
+div[class*="generatedIndexPage"] {
   max-width: 100% !important;
+  min-width: 100% !important;
+  width: 100% !important;
   flex: 1 !important;
+  display: block !important;
+}
+
+/* 確保內部文章區塊也是 100% */
+html body #__docusaurus .container div[class*="generatedIndexPage"] > article {
+  max-width: 100% !important;
   width: 100% !important;
 }
 
-.theme-doc-toc-mobile,
-.theme-doc-toc-desktop {
+/* 讓一般文章內容區塊也能自動延伸填滿 100% (補回剛剛被洗掉的文章寬度設定) */
+html body .container > .row > div:first-child,
+html body #__docusaurus main .container > .row > .col:not(.col--3),
+html body #__docusaurus [class*='docItemCol'],
+html body #__docusaurus [class*='docItemContainer'],
+html body #__docusaurus .theme-doc-markdown,
+html body #__docusaurus main[class*="docMainContainer"] > .container > div {
+  max-width: 100% !important;
+  min-width: 100% !important;
+  width: 100% !important;
+  flex: 1 !important;
+}
+
+/* 全面徹底隱藏右側 TOC 大綱與其所在的 col--3 容器 */
+html body #__docusaurus .container > .row > .col--3,
+html body #__docusaurus .theme-doc-toc-mobile,
+html body #__docusaurus .theme-doc-toc-desktop,
+html body #__docusaurus [class*='tableOfContents'] {
   display: none !important;
+  width: 0 !important;
+  flex: 0 !important;
 }
 
 /* ============================================================
@@ -538,3 +562,179 @@ header h1 {
   }
 }
 
+/* ============================================================
+   Sidebar Hover & Active Sync (同步側邊欄文字與箭頭的背景變色)
+   ============================================================ */
+
+/* 強制剝奪文字與箭頭獨立的背景色，將背景全數設為透明 */
+.menu__list-item-collapsible .menu__link,
+.menu__list-item-collapsible .menu__link:hover,
+.menu__list-item-collapsible .menu__link:active,
+.menu__list-item-collapsible .menu__link:focus,
+.menu__list-item-collapsible .menu__caret,
+.menu__list-item-collapsible .menu__caret:hover,
+.menu__list-item-collapsible .menu__caret:active,
+.menu__list-item-collapsible .menu__caret:focus {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* 統一交由外層的 Wrapper (.menu__list-item-collapsible) 來控制背景 */
+/* 1. Hover 狀態：滑鼠滑過任何區域，整條背景亮起 */
+.menu__list-item-collapsible:hover {
+  background-color: var(--ifm-menu-color-background-hover) !important;
+  border-radius: var(--ifm-menu-link-border-radius);
+}
+
+/* 2. Click / Active / Focus 狀態：點擊文字或箭頭時，整條背景亮起 */
+.menu__list-item-collapsible:has(.menu__link--active),
+.menu__list-item-collapsible:active,
+.menu__list-item-collapsible:has(:focus-visible) {
+  background-color: var(--ifm-menu-color-background-active) !important;
+  border-radius: var(--ifm-menu-link-border-radius);
+}
+
+/* 確保選中狀態（或被展開時），箭頭圖示 (Caret) 跟文字都會變成紫色的主色調 */
+.menu__list-item-collapsible:has(.menu__link--active) .menu__caret::before,
+.menu__list-item:not(.menu__list-item--collapsed) > .menu__list-item-collapsible .menu__caret::before {
+  background: var(--ifm-menu-color-active) !important;
+  -webkit-mask: var(--ifm-menu-link-sublist-icon) 50% / 2rem 2rem no-repeat;
+  mask: var(--ifm-menu-link-sublist-icon) 50% / 2rem 2rem no-repeat;
+  filter: none !important;
+}
+
+/* 展開選單時，強制讓文字也變成紫色 */
+.menu__list-item:not(.menu__list-item--collapsed) > .menu__list-item-collapsible .menu__link {
+  color: var(--ifm-menu-color-active) !important;
+}
+
+/* ============================================================
+   Breadcrumbs (麵包屑)
+   ============================================================ */
+.theme-doc-breadcrumbs {
+  margin-bottom: 2rem !important; /* 拉開麵包屑與大標題的間距 */
+}
+
+/* ============================================================
+   Sidebar Compact Mode (子選單視覺壓縮)
+   ============================================================ */
+/* 針對 Level 2 以下的子目錄與文章，縮小上下間距與字體大小，減少垂直空間佔用 */
+.theme-doc-sidebar-menu .menu__list .menu__list {
+  --ifm-menu-link-padding-vertical: 0.35rem;
+}
+
+.theme-doc-sidebar-menu .menu__list .menu__list .menu__link {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.theme-doc-sidebar-menu .menu__list .menu__list .menu__caret {
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+
+/* ============================================================
+   Category Hide Children (目錄降噪法：隱藏側欄子文章)
+   ============================================================ */
+/* 隱藏子選單列表，強迫讀者點擊進入 Index 頁面觀看卡片 */
+.sidebar-category-hide-children > .menu__list {
+  display: none !important;
+}
+
+/* 隱藏展開/收合的箭頭，讓它看起來就像是一個單純的連結按鈕 */
+.sidebar-category-hide-children > .menu__list-item-collapsible .menu__caret {
+  display: none !important;
+}
+
+/* ============================================================
+   Generated Index Cards Customization (卡片總覽客製化)
+   ============================================================ */
+/* 讓卡片總覽強制變成 1 排 4 欄 (大螢幕) */
+@media (min-width: 997px) {
+  section.row > article.col--6 {
+    flex: 0 0 33% !important;
+    max-width: 33% !important;
+    padding-left: 12px !important;  /* 加大卡片之間的 X 軸間距 */
+    padding-right: 12px !important; /* 加大卡片之間的 X 軸間距 */
+  }
+}
+
+/* 平板尺寸 1 排 2 欄 */
+@media (min-width: 576px) and (max-width: 996px) {
+  section.row > article.col--6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
+
+/* 解除卡片文字只能單行的限制，允許換行以適應 4 欄的窄寬度 */
+section.row > article.col--6 [class*='text--truncate'] {
+  white-space: normal !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden !important;
+}
+
+/* ============================================================
+   卡片光暈 Hover 效果 (Purple Glow) & 內部間距 (Padding)
+   ============================================================ */
+/* 極致暴力解法：無差別攻擊所有 Docusaurus 的卡片 */
+html body #__docusaurus a.card,
+html body #__docusaurus .card {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  
+  /* 終極強制縮小留白 */
+  padding: 16px !important; 
+}
+
+/* 同樣暴力清除卡片內標題與段落的外距 */
+html body #__docusaurus a.card h2,
+html body #__docusaurus a.card p,
+html body #__docusaurus .card h2,
+html body #__docusaurus .card p {
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+}
+
+html[data-theme='dark'] section.row > article.col--6 .card {
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+section.row > article.col--6 .card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 24px rgba(147, 51, 234, 0.2), 0 0 15px rgba(168, 85, 247, 0.3) !important;
+  border-color: rgba(168, 85, 247, 0.6) !important;
+}
+
+html[data-theme='dark'] section.row > article.col--6 .card:hover {
+  box-shadow: 0 8px 24px rgba(168, 85, 247, 0.3), 0 0 20px rgba(192, 132, 252, 0.4) !important;
+  border-color: rgba(192, 132, 252, 0.8) !important;
+}
+/* 調整 Markdown 文章內容區塊的專屬 Padding */
+html body #__docusaurus .docItemCol_VOVn article .theme-doc-markdown {
+  padding-left: 24px !important;   /* 調整文章左邊的留白 */
+  padding-right: 0px !important;  /* 調整文章右邊的留白 */
+  padding-top: 20px !important;   /* 調整文章上方的留白 */
+}
+
+/* 如果您覺得連包含文章的外層容器也太寬/太窄，可以一起調這裡 */
+html body #__docusaurus .docItemContainer_Djhp {
+  padding: 0 !important; 
+}
+/* 拔除最外層 main 容器的預設左右留白 */
+html body #__docusaurus main[class*="docMainContainer"] > .container {
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
+
+/* ============================================================
+   隱藏卡片總覽頁 (Generated Index Page) 的上一頁/下一頁
+   ============================================================ */
+html body #__docusaurus div[class*="generatedIndexPage"] .pagination-nav,
+html body #__docusaurus div[class*="generatedIndexPage"] ~ .pagination-nav {
+  display: none !important;
+}

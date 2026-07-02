@@ -1,7 +1,7 @@
 ---
 id: 07-practical-scenarios
 title: 實務情境模擬 (The Big Picture)
-sidebar_label: "\u200B7 實務情境模擬"
+sidebar_label: "實務情境模擬"
 sidebar_position: 7
 ---
 

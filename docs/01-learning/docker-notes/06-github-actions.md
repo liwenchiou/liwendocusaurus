@@ -1,7 +1,7 @@
 ---
 id: 06-github-actions
 title: 自動化部署 GitHub Actions
-sidebar_label: "\u200B6 GitHub Actions"
+sidebar_label: "GitHub Actions"
 sidebar_position: 6
 ---
 

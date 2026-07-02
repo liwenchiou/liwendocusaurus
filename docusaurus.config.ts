@@ -76,10 +76,11 @@ const config: Config = {
     docs: {
       sidebar: {
         hideable: true,
+        autoCollapseCategories: true,
       },
     },
     navbar: {
-      title: "LW Docusaurus",
+      title: "Liwen's Garden",
       logo: {
         alt: "LW Docusaurus Logo",
         src: "img/og-image.png",
@@ -94,6 +95,11 @@ const config: Config = {
         { to: "/blog", label: "生活分享", position: "left" },
         { to: "/about", label: "關於我", position: "left" },
         {
+          href: "https://litool.liwen.studio",
+          label: "LiTool 工具箱",
+          position: "right",
+        },
+        {
           href: "https://www.liwen.studio",
           label: "Liwen Studio 官網",
           position: "right",
@@ -101,7 +107,7 @@ const config: Config = {
       ],
     },
     metadata: [
-      { name: 'keywords', content: '網頁開發, 全端工程師, 工程心理學, AI 協作, 12 週目標管理, Liwen Studio, 數位花園' },
+      { name: 'keywords', content: '網頁開發, 全端工程師, 工程心理學, AI Agent, Agentic AI, Prompt Engineering, React, Next.js, Node.js, Serverless, 12 週目標管理, Liwen Studio, 數位花園' },
       { name: 'author', content: 'Liwen Chiou' },
       { property: 'og:type', content: 'website' },
       { name: 'twitter:card', content: 'summary_large_image' },
@@ -110,39 +116,20 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "技術筆記",
-          items: [
-            {
-              label: "Next.js 30 天學習筆記",
-              to: "/docs/learning/next-js-notes/day-01",
-            },
-            {
-              label: "六角學院",
-              to: "/docs/learning/hexschool/react-course/course-notes-js-fundamentals",
-            },
-          ],
+          label: "數位建築師履歷",
+          to: "/about",
         },
         {
-          title: "生活分享",
-          items: [
-            {
-              label: "所有文章",
-              to: "/blog",
-            },
-          ],
+          label: "LiTool 工具箱",
+          href: "https://litool.liwen.studio",
         },
         {
-          title: "關於我",
-          items: [
-            {
-              label: "Liwen Studio 官網",
-              href: "https://www.liwen.studio",
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/liwenchiou",
-            },
-          ],
+          label: "Liwen Studio 官網",
+          href: "https://www.liwen.studio",
+        },
+        {
+          label: "GitHub",
+          href: "https://github.com/liwenchiou",
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Liwen Studio. Built with Docusaurus.`,

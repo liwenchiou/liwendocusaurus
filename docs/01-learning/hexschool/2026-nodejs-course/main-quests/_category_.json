@@ -1,9 +1,10 @@
 {
   "label": "🗃️ 主線任務實作",
-  "position": 1,
+  "position": 0,
   "link": {
     "type": "generated-index",
     "slug": "/learning/hexschool/2026-nodejs-main-quests",
     "description": "2026 Node.js 課程每週主線任務解答與實作筆記"
-  }
+  },
+  "className": "sidebar-category-hide-children"
 }

@@ -1,7 +1,7 @@
 ---
 id: 03-cloud-and-network
 title: 雲端部署與網路實戰 (Cloud & Network)
-sidebar_label: "\u200B3 雲端與網路實戰"
+sidebar_label: "雲端與網路實戰"
 sidebar_position: 3
 ---
 

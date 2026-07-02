@@ -1,6 +1,7 @@
 {
   "label": "🧩 個人專案與小工具",
   "position": 5,
+  "className": "sidebar-category-hide-children",
   "link": {
     "type": "generated-index",
     "slug": "/projects-business/side-projects",

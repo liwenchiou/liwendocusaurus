@@ -1,7 +1,7 @@
 ---
 id: 02-docker-build-image
 title: 建立自訂 Image 與 Dockerfile 實戰
-sidebar_label: "\u200B2 建立 Image (Dockerfile)"
+sidebar_label: "建立 Image (Dockerfile)"
 sidebar_position: 2
 ---
 

@@ -1,6 +1,7 @@
 {
   "label": "⚡ Next.js 學習筆記",
   "position": 2,
+  "className": "sidebar-category-hide-children",
   "link": {
     "type": "generated-index",
     "slug": "/learning/nextjs-notes",
