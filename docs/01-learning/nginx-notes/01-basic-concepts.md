@@ -7,6 +7,8 @@ sidebar_position: 1
 
 # Nginx 基礎概念與環境建置
 
+本章節介紹 Nginx 的基本原理與誕生背景（為了解決 C10K 連線瓶頸），並對照傳統 Apache 的 Process-based 架構，解析其非同步事件驅動（Event-driven）的優勢。同時提供 Linux 與 Docker 環境下的安裝步驟與核心控制指令（如 `nginx -t` 與 `reload`）的實務拆解與除錯演練。
+
 > **學習目標**：從零開始掌握 NGINX 的核心概念，最終能夠獨立完成靜態網站部署、Node.js/Next.js 反向代理、HTTPS 憑證設定以及基礎架構優化。
 
 ## 什麼是 NGINX？
