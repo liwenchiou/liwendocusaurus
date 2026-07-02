@@ -481,9 +481,10 @@ main .container .row > .col--3 {
 }
 
 /* 解除 Docusaurus 預設的 Container 最大寬度限制 (針對文件頁面) */
+/* 解除 Docusaurus 預設的 Container 最大寬度限制 (針對文件頁面) */
 html[class*="plugin-docs"] main .container,
 body[class*="plugin-docs"] main .container,
-html body .container {
+html[class*="plugin-docs"] body .container {
   max-width: 100% !important;
 }
 
@@ -505,9 +506,9 @@ html body #__docusaurus .container div[class*="generatedIndexPage"] > article {
   width: 100% !important;
 }
 
-/* 讓一般文章內容區塊也能自動延伸填滿 100% (補回剛剛被洗掉的文章寬度設定) */
-html body .container > .row > div:first-child,
-html body #__docusaurus main .container > .row > .col:not(.col--3),
+/* 讓一般文章內容區塊也能自動延伸填滿 100% (限 Docs 頁面，避免污染首頁) */
+html[class*="plugin-docs"] body .container > .row > div:first-child,
+html[class*="plugin-docs"] body #__docusaurus main .container > .row > .col:not(.col--3),
 html body #__docusaurus [class*='docItemCol'],
 html body #__docusaurus [class*='docItemContainer'],
 html body #__docusaurus .theme-doc-markdown,
