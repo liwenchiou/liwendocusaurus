@@ -4,10 +4,44 @@
         <title>Liwen's Digital Garden Blog</title>
         <link>https://garden.liwen.studio/blog</link>
         <description>Liwen's Digital Garden Blog</description>
-        <lastBuildDate>Wed, 24 Jun 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 02 Jul 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-Hant</language>
+        <item>
+            <title><![CDATA[告別 AI 失憶症！我如何打造「全域與本地雙層大腦」防護架構]]></title>
+            <link>https://garden.liwen.studio/blog/ai-agent-tunnel-vision-architecture</link>
+            <guid>https://garden.liwen.studio/blog/ai-agent-tunnel-vision-architecture</guid>
+            <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[AI 總是不聽話、亂下指令？分享我如何利用軟連結掛載與 Prompt 攔截術，解決 AI 的隧道視覺 (Tunnel Vision) 問題，打造最高安全層級的跨模型協作大腦。]]></description>
+            <content:encoded><![CDATA[<p>最近在使用 AI Agent 輔助開發時，發生了一件讓我冷汗直流的小慘案。</p>
+<p>我請 AI 幫忙整理專案的 Markdown 文件，改了一大堆檔名。整理完後，我很順口地對它說：「給我部署指令。」
+沒想到，它就像個聽到關鍵字的機器人，毫不猶豫地吐出了標準的 <code>git push</code> 指令。我一貼上終端機，過了不到一分鐘，GitHub Actions 就亮起了大紅燈——<strong>因為一堆舊連結沒更新，觸發了 Docusaurus 的 Broken Links 死結檢查，部署直接中斷。</strong></p>
+<p>當下我滿腦子問號：「等等，我明明就在專案的 <code>.agent</code> 檔案裡規定過，<strong>部署前絕對要先跑 <code>npm run build</code> 測試</strong>啊！你為什麼沒有照做？」</p>
+<p>深入挖掘後，我發現了 AI Agent 在系統協作上一個非常致命的弱點：<strong>隧道視覺 (Tunnel Vision)</strong>。</p>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="什麼是-ai-的隧道視覺">什麼是 AI 的隧道視覺？<a href="https://garden.liwen.studio/blog/ai-agent-tunnel-vision-architecture#%E4%BB%80%E9%BA%BC%E6%98%AF-ai-%E7%9A%84%E9%9A%A7%E9%81%93%E8%A6%96%E8%A6%BA" class="hash-link" aria-label="什麼是 AI 的隧道視覺？的直接連結" title="什麼是 AI 的隧道視覺？的直接連結" translate="no">​</a></h2>
+<p>為了讓我在 Cursor、Claude Dev 甚至 Gemini 之間無縫切換，我打造了一個名為 <a href="https://github.com/liwenchiou/liai" target="_blank" rel="noopener noreferrer" class="">LIAI (Global AI Brain)</a> 的全域大腦，並透過「軟連結 (Symlink)」的方式掛載到各個專案中（例如 <code>ln -s /path/to/liai .agents</code>）。</p>
+<p>這套系統非常強大，它包含了一堆預設的開發 Skills。但問題來了：當我對 AI 說出「部署」這個關鍵字時，它底層強大的 <code>deploy</code> 技能瞬間被觸發。</p>
+<p>這股強大的技能慣性，讓 AI 產生了「隧道視覺」。它急著執行任務，直接套用了全域的預設指令，<strong>完全忽略了我特別寫在本地專案裡的 <code>.agent</code> 覆寫規則</strong>。對它來說，專案裡的 <code>.agent</code> 檔只是一個靜靜躺在硬碟裡的文字檔，如果沒有特別主動去讀取，它根本不會記得裡面寫了什麼。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="解決方案prompt-黑魔法與強制攔截">解決方案：Prompt 黑魔法與強制攔截<a href="https://garden.liwen.studio/blog/ai-agent-tunnel-vision-architecture#%E8%A7%A3%E6%B1%BA%E6%96%B9%E6%A1%88prompt-%E9%BB%91%E9%AD%94%E6%B3%95%E8%88%87%E5%BC%B7%E5%88%B6%E6%94%94%E6%88%AA" class="hash-link" aria-label="解決方案：Prompt 黑魔法與強制攔截的直接連結" title="解決方案：Prompt 黑魔法與強制攔截的直接連結" translate="no">​</a></h2>
+<p>為了解決這個問題，我不能只依賴 AI 的「記憶力」，也不能放棄極度方便的軟連結跨模型架構。我必須從 <strong>提示工程 (Prompt Engineering)</strong> 下手。</p>
+<p>為了解決這件事，我在 LIAI 全域大腦的最頂端（<code>AGENTS.md</code>），加入了一段極度強勢的「攔截咒語」：</p>
+<div class="language-markdown codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-markdown codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#F8F8F2"><span class="token blockquote punctuation" style="color:rgb(248, 248, 242)">&gt;</span><span class="token plain"> 🔴 </span><span class="token bold punctuation" style="color:rgb(248, 248, 242)">**</span><span class="token bold content">【CRITICAL: 強制攔截與本地讀取機制】</span><span class="token bold punctuation" style="color:rgb(248, 248, 242)">**</span><span class="token plain"></span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token blockquote punctuation" style="color:rgb(248, 248, 242)">&gt;</span><span class="token plain"> 本份文件為跨專案的「全域大腦」。</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token blockquote punctuation" style="color:rgb(248, 248, 242)">&gt;</span><span class="token plain"> 每次新對話或執行任何任務的『第一步』，絕對不准因為特定關鍵字而直接進入自動導航！</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token blockquote punctuation" style="color:rgb(248, 248, 242)">&gt;</span><span class="token plain"> 你被強制要求必須先使用檔案讀取工具，去尋找並讀取專案的本地規則檔案（如 </span><span class="token code-snippet code keyword" style="color:rgb(189, 147, 249);font-style:italic">`.agent`</span><span class="token plain">）。</span><br></div><div class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token blockquote punctuation" style="color:rgb(248, 248, 242)">&gt;</span><span class="token plain"> 在你沒有實際執行讀取動作前，嚴禁進行任何後續動作！</span><br></div></code></pre></div></div>
+<p>這招堪稱魔法。對於 LLM 來說，加上 <code>CRITICAL</code> 或是 <code>強制要求必須先使用工具...</code> 這類帶有程序性阻斷的字眼，效果出奇的好。它能有效地打斷 AI 的反射動作，逼迫它在執行任何技能前，乖乖拿起工具先進行環境掃描，將本地的 <code>.agent</code> 讀入大腦，達成「全域規範打底，本地規則覆寫」的完美雙層大腦架構。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="魔鬼藏在細節裡mount-protection">魔鬼藏在細節裡：Mount Protection<a href="https://garden.liwen.studio/blog/ai-agent-tunnel-vision-architecture#%E9%AD%94%E9%AC%BC%E8%97%8F%E5%9C%A8%E7%B4%B0%E7%AF%80%E8%A3%A1mount-protection" class="hash-link" aria-label="魔鬼藏在細節裡：Mount Protection的直接連結" title="魔鬼藏在細節裡：Mount Protection的直接連結" translate="no">​</a></h2>
+<p>在享受軟連結掛載帶來的「跨模型不失憶」便利時，還衍生出了一個資安與協作的隱患。</p>
+<p>因為軟連結（如 <code>.agents</code>）包含了您本機的絕對路徑（例如 <code>/Users/liwen/...</code>），<strong>如果我不小心把它 <code>git commit</code> 上去，團隊的其他開發者拉下來後，就會發生嚴重的 Broken Symlink 錯誤</strong>，導致他們的開發環境崩潰。</p>
+<p>為此，我在 LIAI 中加入了 <strong>Mount Protection (掛載防護機制)</strong>。
+強制要求 AI 在執行任何版控前，必須主動檢查 <code>.gitignore</code> 與 <code>.dockerignore</code>。若發現全域大腦的捷徑尚未被忽略，必須主動發出警告並將其寫入忽略清單中，徹底阻絕 LIAI 大腦意外污染原始碼與 Docker Image 的可能性。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="結語">結語<a href="https://garden.liwen.studio/blog/ai-agent-tunnel-vision-architecture#%E7%B5%90%E8%AA%9E" class="hash-link" aria-label="結語的直接連結" title="結語的直接連結" translate="no">​</a></h2>
+<p>這次的翻車經驗，讓我深刻體會到，在與 AI 協作的時代，<strong>「寫扣的難度在降低，但架構設計與 AI 治理的難度在升高」</strong>。</p>
+<p>AI 就像是一個能力超強但有時會恍神的資深工程師。透過 LIAI 這套結合了<strong>軟連結掛載</strong>、<strong>強制攔截 Prompt</strong> 與 <strong>Mount Protection</strong> 的架構，我們成功為 AI 建立了一套無法逾越的防呆護欄。唯有這樣，我們才能真正享受到 AI 在各大平台間無縫切換帶來的巨大生產力，而不是整天跟在它屁股後面收拾爛攤子。</p>]]></content:encoded>
+            <category>AI</category>
+            <category>Prompt Engineering</category>
+            <category>Agent</category>
+            <category>Architecture</category>
+        </item>
         <item>
             <title><![CDATA[打造專屬的瑞士刀：LiTool 工具箱上線！解決農民曆計算與圖片壓縮痛點]]></title>
             <link>https://garden.liwen.studio/blog/introducing-litool</link>
