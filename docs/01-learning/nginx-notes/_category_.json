@@ -1,8 +1,10 @@
 {
   "label": "🌐 Nginx 伺服器",
   "position": 4,
+  "className": "sidebar-category-hide-children",
   "link": {
     "type": "generated-index",
+    "slug": "/learning/nginx-notes",
     "description": "NGINX 系統化學習筆記，包含基礎建置、設定檔解析、反向代理與負載均衡實戰。"
   }
 }
