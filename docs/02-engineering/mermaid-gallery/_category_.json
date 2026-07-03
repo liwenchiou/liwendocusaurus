@@ -1,0 +1,10 @@
+{
+  "label": "📊 Mermaid 畫圖模板庫",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "即時複製、修改即用的 Mermaid 各類實用架構與流程圖模板庫。",
+    "slug": "/engineering/mermaid-gallery"
+  },
+  "className": "sidebar-category-hide-children"
+}
