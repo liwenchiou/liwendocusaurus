@@ -9,6 +9,11 @@ const config: Config = {
   tagline: "技術深耕、工程文化與 AI 協作的實踐紀錄",
   favicon: "img/og-image.png",
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ["@docusaurus/theme-mermaid"],
+
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
