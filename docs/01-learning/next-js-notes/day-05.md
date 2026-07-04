@@ -3,6 +3,7 @@ title: "Day 05 - 導覽藝術：Link 組件與路由跳轉"
 sidebar_label: "Day 05 - 導覽藝術"
 sidebar_position: 5
 description: "Next.js 30 天學習筆記系列 - 第 05 天：Day 05 - 導覽藝術：Link 組件與路由跳轉。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, 導覽藝術, Link, 組件與路由跳轉, learning, next-js-notes]
 ---
 
 # Day 05 - 導覽藝術：Link 組件與路由跳轉

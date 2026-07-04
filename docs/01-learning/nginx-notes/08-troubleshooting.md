@@ -1,5 +1,8 @@
 ---
 sidebar_position: 8
+
+description: "Nginx 疑難排解與維運 網站上線後的日常運作中，掌握排障與維運技能是確保系統高可用性的最後一環。當使用者回報「網頁打不開」、「上傳頭像失敗」或「系統發生錯誤」時，能夠迅速定位問題的根源至關重要。本章將教您如何解讀 access.log 與 error.log 這兩大核心日誌探照燈，並針對生產環境..."
+keywords: [Nginx, 疑難排解與維運, learning, nginx-notes]
 ---
 
 # Nginx 疑難排解與維運
@@ -65,4 +68,3 @@ Nginx 預設會將日誌儲存在 `/var/log/nginx/` 目錄中。這兩個檔案�
     ```
 
 ---
-

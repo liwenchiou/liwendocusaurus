@@ -1,5 +1,8 @@
 ---
 sidebar_position: 8
+
+description: "Quadrant Chart 優先級決策象限圖 象限圖 quadrantChart 用於產品決策、功能優先順序排列（如影響力 vs 難易度）或是競品分析。 📊 範例效果 mermaid quadrantChart title 開發優先級決策矩陣 影響力 vs 難易度 xaxis 低難易度 > 高難..."
+keywords: [Quadrant, Chart, 優先級決策象限圖, engineering, mermaid-gallery]
 ---
 
 # Quadrant Chart 優先級決策象限圖

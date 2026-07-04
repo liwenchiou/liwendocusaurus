@@ -3,6 +3,9 @@ id: async-await-refactoring
 title: "使用 Async/Await 再升級"
 sidebar_label: "7-3 使用 Async/Await 再升級"
 sidebar_position: 13
+
+description: "為什麼要用 Async/Await？ 雖然 Promise Chain 解決了 Callback Hell 的問題，但當步驟變多時，不斷地使用 .then 仍會讓程式碼看起來像是鏈條一樣冗長。 ES8 引入了 async 和 await，讓我們能以「寫同步程式」的思維與風格，來撰寫「非同步程式」，大..."
+keywords: [使用, Async, Await, 再升級, learning, hexschool, nodejs-course]
 ---
 
 ## 為什麼要用 Async/Await？

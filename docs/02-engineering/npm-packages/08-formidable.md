@@ -3,6 +3,9 @@ id: formidable
 title: "formidable"
 sidebar_label: "​08 formidable"
 sidebar_position: 8
+
+description: "formidable formidable 是一個專門用來解析 Node.js 中處理 multipart/formdata（例如上傳檔案）的套件。它能夠非常有效率地將前端傳來的檔案與表單欄位拆解開來，方便後端儲存與處理。 安裝 bash npm install formidable 基本概念與使用..."
+keywords: [formidable, engineering, npm-packages]
 ---
 
 # formidable

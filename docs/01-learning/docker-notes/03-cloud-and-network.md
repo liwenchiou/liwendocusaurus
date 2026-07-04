@@ -3,6 +3,9 @@ id: 03-cloud-and-network
 title: 雲端部署與網路實戰 (Cloud & Network)
 sidebar_label: "雲端與網路實戰"
 sidebar_position: 3
+
+description: "雲端部署與網路實戰 Cloud & Network 在我們學會了如何把應用程式打包成 Docker Image 後，這篇筆記將探討實務上「伺服器該租在哪裡」、「雲端架構的選擇」，以及最核心的「多個 Docker 容器之間該如何透過 Network 互相通訊」。 1. 雲端三大核心服務 不論是哪一家雲..."
+keywords: [雲端部署與網路實戰, Cloud, Network, learning, docker-notes]
 ---
 
 # 雲端部署與網路實戰 (Cloud & Network)

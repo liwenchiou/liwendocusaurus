@@ -3,6 +3,7 @@ title: "Day 03 - Layout 與 Template：構建可複用的 UI 架構"
 sidebar_label: "Day 03 - Layout 與 Template"
 sidebar_position: 3
 description: "Next.js 30 天學習筆記系列 - 第 03 天：Day 03 - Layout 與 Template：構建可複用的 UI 架構。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, Layout, Template, 構建可複用的, UI, 架構, learning, next-js-notes]
 ---
 
 # Day 03 - Layout 與 Template：構建可複用的 UI 架構

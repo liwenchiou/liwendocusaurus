@@ -110,6 +110,12 @@
   grid-column: span 12;
 }
 
+.businessCTA {
+  grid-column: span 12;
+  border: 1px dashed var(--ifm-color-primary);
+  background: linear-gradient(135deg, var(--ifm-background-surface-color) 0%, rgba(79, 70, 229, 0.05) 100%);
+}
+
 /* Tags */
 .tagContainer {
   display: flex;

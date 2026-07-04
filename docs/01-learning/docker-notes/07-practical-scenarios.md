@@ -3,6 +3,9 @@ id: 07-practical-scenarios
 title: 實務情境模擬 (The Big Picture)
 sidebar_label: "實務情境模擬"
 sidebar_position: 7
+
+description: "實務情境模擬 The Big Picture 學完了前面所有的 Docker 基礎、網路、儲存空間、Compose 與 GitHub Actions 之後，我們現在要把所有碎片拼湊起來。 這篇筆記我們不談理論，直接帶你跑一次真實業界的標準 DevOps 生命週期！我們將模擬一個專案從「架構師建置」➡..."
+keywords: [實務情境模擬, The, Big, Picture, learning, docker-notes]
 ---
 
 # 實務情境模擬 (The Big Picture)

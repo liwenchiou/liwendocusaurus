@@ -3,6 +3,9 @@ id: knowledge-items
 title: "全域知識庫與記憶管理 (Knowledge Items)"
 sidebar_label: "02. KI 知識庫"
 sidebar_position: 2
+
+description: "全域知識庫與記憶管理 Knowledge Items 適用場景：希望 AI 將規矩變成「潛意識」（如：程式碼縮排固定 4 格、部署前必須編譯）。免打 / 指令，用語音或文字自然語言驅動。 【實戰結構】Knowledge Item 底層格式 知識庫存放在 ~/.gemini/antigravity/k..."
+keywords: [全域知識庫與記憶管理, Knowledge, Items, engineering, ainotes]
 ---
 
 # 全域知識庫與記憶管理 (Knowledge Items)

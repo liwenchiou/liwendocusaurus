@@ -3,6 +3,7 @@ title: "Day 02 - 路由架構：檔案即路徑的設計哲學"
 sidebar_label: "Day 02 - 路由架構"
 sidebar_position: 2
 description: "Next.js 30 天學習筆記系列 - 第 02 天：Day 02 - 路由架構：檔案即路徑的設計哲學。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, 路由架構, 檔案即路徑的設計哲學, learning, next-js-notes]
 ---
 
 # Day 02 - 路由架構：檔案即路徑的設計哲學

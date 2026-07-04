@@ -1,5 +1,8 @@
 ---
 sidebar_position: 9
+
+description: "Timeline 專案里程碑時間軸 時間軸 timeline 用於記錄線性時間下的專案大事記、版本更新歷史（Release Note）或開發里程碑。 📊 範例效果 mermaid timeline title 系統重構專案里程碑 2026年 6月 : 專案立項與需求分析 : 完成技術選型 2026..."
+keywords: [Timeline, 專案里程碑時間軸, engineering, mermaid-gallery]
 ---
 
 # Timeline 專案里程碑時間軸

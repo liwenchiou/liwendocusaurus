@@ -1,5 +1,8 @@
 ---
 sidebar_position: 5
+
+description: "Entity Relationship Diagram 資料庫關聯圖 ERD 實體關係圖 erDiagram 用於設計關係型資料庫的欄位結構，並宣告資料表之間的一對多、多對多關係。 📊 範例效果 mermaid erDiagram users ||o{ orders : \"建立\" orders |..."
+keywords: [Entity, Relationship, Diagram, 資料庫關聯圖, ERD, engineering, mermaid-gallery]
 ---
 
 # Entity Relationship Diagram 資料庫關聯圖 (ERD)

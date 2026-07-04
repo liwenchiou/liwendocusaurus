@@ -3,6 +3,7 @@ title: "Day 21 - Prisma：讓資料庫操作像寫 JavaScript 一樣直覺"
 sidebar_label: "Day 21 - Prisma"
 sidebar_position: 21
 description: "Next.js 30 天學習筆記系列 - 第 21 天：Day 21 - Prisma：讓資料庫操作像寫 JavaScript 一樣直覺。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, Prisma, 讓資料庫操作像寫, JavaScript, 一樣直覺, learning, next-js-notes]
 ---
 
 # Next.js 30 天全端實戰：Day 21 - Prisma：讓資料庫操作像寫 JavaScript 一樣直覺

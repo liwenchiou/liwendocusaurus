@@ -1,7 +1,9 @@
 ---
 slug: /liwen-sop/sop-documents/interview
 description: "需求訪談紀錄單：用於紀錄客戶原始痛點與願望"
+keywords: [01., 需求訪談紀錄單, Interview, Record, projects-business, liwen-sop, sop-documents]
 ---
+
 # 01. 需求訪談紀錄單 (Interview Record)
 
 > **🎯 使用時機：** PM 帶去與客戶開會，當下填寫。

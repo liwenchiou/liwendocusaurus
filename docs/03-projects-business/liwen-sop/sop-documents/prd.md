@@ -1,7 +1,9 @@
 ---
 slug: /liwen-sop/sop-documents/prd
 description: "正式需求規格書：用於給客戶最終確認與簽名"
+keywords: [03., 正式需求規格書, Final, PRD, projects-business, liwen-sop, sop-documents]
 ---
+
 # 03. 正式需求規格書 (Final PRD)
 
 > **🎯 使用時機：** 內部評估完成後，整理出這份乾淨的「合約級」文件給客戶簽收。

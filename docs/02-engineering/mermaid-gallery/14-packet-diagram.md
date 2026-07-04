@@ -1,5 +1,8 @@
 ---
 sidebar_position: 14
+
+description: "Packet Diagram 網路封包結構圖 網路封包圖 packet 用於視覺化呈現二進位通訊協議（如 TCP/IP 封包）在各 Bit Offset 上的欄位佔用長度與功能結構。 📊 範例效果 mermaid packetbeta 015: \"Source Port 16 bits\" 1631..."
+keywords: [Packet, Diagram, 網路封包結構圖, engineering, mermaid-gallery]
 ---
 
 # Packet Diagram 網路封包結構圖

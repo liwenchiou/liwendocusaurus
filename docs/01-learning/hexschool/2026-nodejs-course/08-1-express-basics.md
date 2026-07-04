@@ -3,6 +3,9 @@ id: express-basics
 title: "Express 框架基礎與路由設計"
 sidebar_label: "8-1 Express 框架基礎與路由設計"
 sidebar_position: 15
+
+description: "Express 框架介紹 Express 是一個靈活且簡潔的 Node.js Web 應用開發框架，是目前後端開發最主流的選擇之一。 核心價值： Node.js Web 應用框架：提供了一套輕量級的開發基礎，讓開發者能快速建立 Web 伺服器與 API。 資料庫整合：能輕鬆與 MySQL、Mongo..."
+keywords: [Express, 框架基礎與路由設計, learning, hexschool, nodejs-course]
 ---
 
 ## Express 框架介紹

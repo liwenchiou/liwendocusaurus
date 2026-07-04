@@ -3,6 +3,9 @@ id: architecture
 title: "1. 核心架構與 Zero Dependency"
 sidebar_position: 1
 sidebar_label: "1. 核心架構與 Zero Dependency"
+
+description: "在開發 ezdcbot 時，我們面臨的第一個決策是：要如何設計這個套件的基礎架構？我們希望它輕量、安全，且能適應 Serverless 環境。 Factory Pattern 工廠模式 我們沒有採用常見的單例模式 Singleton 或直接 export 一個物件，而是設計了 createBot 這..."
+keywords: [1., 核心架構與, Zero, Dependency, projects-business, side-projects, ezdcbot]
 ---
 
 在開發 `ezdcbot` 時，我們面臨的第一個決策是：要如何設計這個套件的基礎架構？我們希望它輕量、安全，且能適應 Serverless 環境。

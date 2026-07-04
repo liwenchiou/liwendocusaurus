@@ -3,6 +3,9 @@ id: 04-data-persistence
 title: 資料持久化 (Volumes & Bind Mounts)
 sidebar_label: "資料持久化"
 sidebar_position: 4
+
+description: "資料持久化 Data Persistence 👉 核心觀念：Docker 容器的特性是「用完即丟 Stateless」。當你刪除容器並重新啟動一個新的時，原本在容器內產生的資料（例如使用者上傳的圖片、資料庫的數據）都會瞬間蒸發！ 為了解決這個問題，特別是對於資料庫 DB 或圖片檔案伺服器，我們必須..."
+keywords: [資料持久化, Volumes, Bind, Mounts, learning, docker-notes]
 ---
 
 # 資料持久化 (Data Persistence)

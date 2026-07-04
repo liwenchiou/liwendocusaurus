@@ -1,5 +1,8 @@
 ---
 sidebar_position: 10
+
+description: "Gantt Chart 專案進度甘特圖 甘特圖 gantt 用於排定多個工作模組、多人並行開發時的專案時程表，展示任務的起迄時間與相依關係。 📊 範例效果 mermaid gantt title 購物車系統開發時程排程 dateFormat YYYYMMDD section 前端開發 刻畫面與 U..."
+keywords: [Gantt, Chart, 專案進度甘特圖, engineering, mermaid-gallery]
 ---
 
 # Gantt Chart 專案進度甘特圖

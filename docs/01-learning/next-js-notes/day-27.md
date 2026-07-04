@@ -3,6 +3,7 @@ title: "Day 27 - 互動極致：使用 useOptimistic 達成零延遲 UI"
 sidebar_label: "Day 27 - 互動極致"
 sidebar_position: 27
 description: "Next.js 30 天學習筆記系列 - 第 27 天：Day 27 - 互動極致：使用 useOptimistic 達成零延遲 UI。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, 互動極致, 使用, useOptimistic, 達成零延遲, UI, learning, next-js-notes]
 ---
 
 # Next.js 30 天全端實戰：Day 27 - 互動極致：使用 useOptimistic 達成零延遲 UI

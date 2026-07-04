@@ -5,6 +5,9 @@ date: 2026-04-21T06:36:46.38556+00:00
 authors: [liwen]
 tags: [React]
 sidebar_label: "React Hook Form：頂尖表單處理實戰"
+
+description: "為什麼需要 React Hook Form？ 在傳統 React 中處理表單（使用 useState），每當您在輸入框打一個字，整個組件就會重新渲染（Rerender）一次。當表單有 20、30 個欄位時，電腦會開始變慢，程式碼也會變得異常臃腫。 React Hook Form 的核心優勢： 效能頂..."
+keywords: [React, Hook, Form, 頂尖表單處理實戰, learning, hexschool, react-basics]
 ---
 
 ## 為什麼需要 React Hook Form？

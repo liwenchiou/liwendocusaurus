@@ -3,6 +3,9 @@ id: quest-4
 title: "Node.js 主線任務四：健身房 Admin 登入系統（JWT + bcrypt）"
 sidebar_label: "\u200B第四週"
 sidebar_position: 4
+
+description: "> 🛑 防暴雷警示：以下筆記包含主線任務的解答與實作細節，強烈建議先親手寫過一次，卡關再來對照參考喔！ 本次任務將整合前面所學的知識，替健身房後台加上完整的登入系統。實作範圍包含會員註冊、登入驗證、取得個人資料，並使用 bcrypt 進行密碼雜湊，以及透過 jsonwebtoken JWT 結合中..."
+keywords: [Node.js, 主線任務四, 健身房, Admin, 登入系統, JWT, bcrypt, learning, hexschool, nodejs-course, main-quests]
 ---
 
 > 🛑 **防暴雷警示**：以下筆記包含主線任務的解答與實作細節，強烈建議先親手寫過一次，卡關再來對照參考喔！

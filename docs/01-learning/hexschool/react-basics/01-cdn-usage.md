@@ -5,6 +5,9 @@ date: 2026-04-21T06:36:45.243399+00:00
 authors: [liwen]
 tags: [React]
 sidebar_label: "直接在 HTML 中使用 React (CDN 版)"
+
+description: "直接在 HTML 中使用 React 1. 在 中引入 CDN html 2. 中加入 root html 3. 在 前增加 區塊 html // React 邏輯寫在這裡 4. 在 script 中快樂的寫 React html const { useState } = React; functi..."
+keywords: [直接在, HTML, 中使用, React, CDN, learning, hexschool, react-basics]
 ---
 
 # 直接在 HTML 中使用 React

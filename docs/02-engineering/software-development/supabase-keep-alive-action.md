@@ -2,6 +2,9 @@
 id: supabase-keep-alive-action
 title: "使用 GitHub Actions 防止 Supabase 免費方案休眠"
 sidebar_label: "Supabase 防休眠腳本"
+
+description: "使用 GitHub Actions 防止 Supabase 免費方案休眠 如果你正在使用 Supabase 的免費方案 Free Tier 作為你的 Side Project 資料庫，你一定會遇到這個痛點：只要專案超過 7 天沒有任何活動，Supabase 就會自動將專案暫停 Pause。 要喚醒專..."
+keywords: [使用, GitHub, Actions, 防止, Supabase, 免費方案休眠, engineering, software-development]
 ---
 
 # 使用 GitHub Actions 防止 Supabase 免費方案休眠

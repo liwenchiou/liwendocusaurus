@@ -3,6 +3,9 @@ id: embed-and-error-handling
 title: "3. Embed 解析與錯誤攔截"
 sidebar_position: 3
 sidebar_label: "3. Embed 解析與錯誤攔截"
+
+description: "在完成核心的 push 與 pull 架構後，我們還需要處理一些能大幅提升開發體驗 DX 的細節，例如：如何優雅地傳送 Rich Embed，以及當發生錯誤時該如何給予清晰的反饋。 自動 Embed 解析 Discord 的 Embed 訊息有特定的 JSON 結構（必須放在 embeds 陣列中）..."
+keywords: [3., Embed, 解析與錯誤攔截, projects-business, side-projects, ezdcbot]
 ---
 
 在完成核心的 `push` 與 `pull` 架構後，我們還需要處理一些能大幅提升開發體驗 (DX) 的細節，例如：如何優雅地傳送 Rich Embed，以及當發生錯誤時該如何給予清晰的反饋。

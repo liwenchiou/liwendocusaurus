@@ -2,6 +2,9 @@
 title: "實作待辦清單 API (3)：路由判斷、GET 與 DELETE"
 sidebar_label: "6-3 實作待辦清單 API (3)"
 sidebar_position: 6.3
+
+description: "實作待辦清單 API 3：路由判斷、GET 與 DELETE 前置作業都完成了，我們終於要來撰寫核心的 API 邏輯！這篇將涵蓋如何判斷「請求方法與網址」，並實作讀取 GET 與刪除 DELETE 的功能。 > 💡 完整程式碼下載 > 為了方便對照與學習，本系列教學的最終完整程式碼已經開源在 Gi..."
+keywords: [實作待辦清單, API, 路由判斷, GET, DELETE, learning, hexschool, nodejs-course]
 ---
 
 # 實作待辦清單 API (3)：路由判斷、GET 與 DELETE

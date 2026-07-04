@@ -3,6 +3,7 @@ title: "Day 19 - 身份驗證：使用 Auth.js 快速實作登入系統"
 sidebar_label: "Day 19 - 身份驗證"
 sidebar_position: 19
 description: "Next.js 30 天學習筆記系列 - 第 19 天：Day 19 - 身份驗證：使用 Auth.js 快速實作登入系統。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, 身份驗證, 使用, Auth.js, 快速實作登入系統, learning, next-js-notes]
 ---
 
 # Next.js 30 天全端實戰：Day 19 - 身份驗證：使用 Auth.js 快速實作登入系統

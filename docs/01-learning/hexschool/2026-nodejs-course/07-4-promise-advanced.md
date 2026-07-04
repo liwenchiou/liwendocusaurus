@@ -3,6 +3,9 @@ id: promise-advanced
 title: "Promise.all 與 Fetch API"
 sidebar_label: "7-4 Promise.all 與 Fetch API"
 sidebar_position: 14
+
+description: "Promise.all 語法教學 Promise.all 接收一個 Promise 陣列作為參數，當陣列中所有的 Promise 都變為 fulfilled（成功）狀態時，它才會回傳一個包含所有結果的陣列。如果其中一個失敗，就會進入 catch。 javascript // 模擬批改分數的非同步函式..."
+keywords: [Promise.all, Fetch, API, learning, hexschool, nodejs-course]
 ---
 
 ## Promise.all 語法教學

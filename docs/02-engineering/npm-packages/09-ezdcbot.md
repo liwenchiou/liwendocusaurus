@@ -3,6 +3,9 @@ id: ezdcbot
 sidebar_position: 9
 title: "ezdcbot (Discord 推播)"
 sidebar_label: "​09 ezdcbot (Discord 推播)"
+
+description: "ezdcbot 零依賴 Discord 推播套件 💡 套件介紹 這是我親自開發並發布至 npm 生態圈的開源套件！ 為了在 Serverless 無伺服器 架構中實現極致的輕量化，ezdcbot 捨棄了官方 Discord.js 龐大的 WebSocket 依賴，改用純原生 fetch 實作 RE..."
+keywords: [ezdcbot, Discord, 推播, engineering, npm-packages]
 ---
 
 # `ezdcbot` - 零依賴 Discord 推播套件

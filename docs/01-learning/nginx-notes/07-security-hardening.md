@@ -1,5 +1,8 @@
 ---
 sidebar_position: 7
+
+description: "Nginx 安全防禦實戰 當您的伺服器正式暴露在外網環境時，安全防護就成為第一要務。網路上充滿了惡意掃描器與腳本，隨時在尋找系統漏洞。本章將教您如何在生產環境中設置 HTTPS 安全隧道、進行 301 強制跳轉，並配置 HSTS 以防止中間人劫持。同時，我們也會配置「漏桶演算法」進行 API 限流防..."
+keywords: [Nginx, 安全防禦實戰, learning, nginx-notes]
 ---
 
 # Nginx 安全防禦實戰

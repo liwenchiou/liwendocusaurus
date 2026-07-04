@@ -3,6 +3,9 @@ id: 02-docker-build-image
 title: 建立自訂 Image 與 Dockerfile 實戰
 sidebar_label: "建立 Image (Dockerfile)"
 sidebar_position: 2
+
+description: "建立自訂 Image 與 Dockerfile 實戰 這篇筆記將透過打包一個 Node.js Express 專案，來學習如何撰寫 Dockerfile 以及如何正確處理環境變數。 1. 準備 Node.js 測試專案 步驟一：建立 Express 專案 使用 expressgenerator 快速..."
+keywords: [建立自訂, Image, Dockerfile, 實戰, learning, docker-notes]
 ---
 
 # 建立自訂 Image 與 Dockerfile 實戰

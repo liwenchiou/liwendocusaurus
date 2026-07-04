@@ -5,6 +5,9 @@ date: 2026-04-21T06:36:46.891526+00:00
 authors: [liwen]
 tags: [React]
 sidebar_label: "React Router 核心指南"
+
+description: "核心組件介紹 HashRouter：路由的容器。 Routes：路由的「總機」，用來包裹所有的路徑設定。 Route：定義單一對應關係，例如：/orders 對應到 OrderList 組件。 Link：取代傳統的 標籤，點擊時不會重新整理網頁。 useParams：用來抓取網址上的參數（例如：/o..."
+keywords: [React, Router, 核心指南, learning, hexschool, react-basics]
 ---
 
 ## 核心組件介紹

@@ -1,5 +1,8 @@
 ---
 sidebar_position: 1
+
+description: "Flowchart 流程與系統架構圖 流程圖 flowchart 用於展示步驟、判斷分支與系統組件之間的連通拓撲。這是最通用且實用的圖表。 📊 範例效果 mermaid flowchart TD Client\"瀏覽器 / App Client\" subgraph PublicNet 外網環境 Ng..."
+keywords: [Flowchart, 流程與系統架構圖, engineering, mermaid-gallery]
 ---
 
 # Flowchart 流程與系統架構圖

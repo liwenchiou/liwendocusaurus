@@ -3,6 +3,7 @@ title: "Day 29 - 上線最後一哩路：Vercel 部署與環境變數管理"
 sidebar_label: "Day 29 - 上線最後一哩路"
 sidebar_position: 29
 description: "Next.js 30 天學習筆記系列 - 第 29 天：Day 29 - 上線最後一哩路：Vercel 部署與環境變數管理。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, 上線最後一哩路, Vercel, 部署與環境變數管理, learning, next-js-notes]
 ---
 
 # Next.js 30 天全端實戰：Day 29 - 上線最後一哩路：Vercel 部署與環境變數管理

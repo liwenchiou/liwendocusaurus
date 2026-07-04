@@ -1,5 +1,8 @@
 ---
 sidebar_position: 4
+
+description: "Nginx 反向代理 Reverse Proxy 實戰 反向代理是現代網頁架構與微服務部署的基石，主要用於保護後端伺服器安全、實現 SSL 憑證統一管理（SSL Termination），以及進行高效的網址路徑/子網域請求分流。本章將帶您深入探討正向與反向代理的本質區別，並透過實務上的 proxyp..."
+keywords: [Nginx, 反向代理, Reverse, Proxy, 實戰, learning, nginx-notes]
 ---
 
 # Nginx 反向代理 (Reverse Proxy) 實戰

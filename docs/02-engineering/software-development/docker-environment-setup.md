@@ -2,6 +2,9 @@
 id: docker-environment-setup
 title: "Docker 開發環境部署與設定"
 sidebar_label: "Docker 環境建置"
+
+description: "Docker 開發環境部署 安裝 docker 1. dockerhttps://www.docker.com/getstarted/官網下載 2. 確認docker環境 docker version 3. 執行測試 docker run helloworld 部署 ubuntu 專案 1. 先建立..."
+keywords: [Docker, 開發環境部署與設定, engineering, software-development]
 ---
 
 # Docker 開發環境部署

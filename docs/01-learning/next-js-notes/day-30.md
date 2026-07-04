@@ -3,6 +3,7 @@ title: "Day 30 - 終章：回顧、反思與全端工程師的下一步"
 sidebar_label: "Day 30 - 終章"
 sidebar_position: 30
 description: "Next.js 30 天學習筆記系列 - 第 30 天：Day 30 - 終章：回顧、反思與全端工程師的下一步。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, 終章, 回顧, 反思與全端工程師的下一步, learning, next-js-notes]
 ---
 
 # Next.js 30 天全端實戰：Day 30 - 終章：回顧、反思與全端工程師的下一步

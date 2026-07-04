@@ -1,5 +1,8 @@
 ---
 sidebar_position: 4
+
+description: "State Diagram 狀態圖 狀態圖 stateDiagramv2 用於展示系統或實體在不同事件觸發下的「狀態轉移」，例如訂單交易狀態、會員註冊審核狀態等。 📊 範例效果 mermaid stateDiagramv2 > Unpaid : 建立訂單 開始 Unpaid > Paid : 買家..."
+keywords: [State, Diagram, 狀態圖, engineering, mermaid-gallery]
 ---
 
 # State Diagram 狀態圖

@@ -2,6 +2,9 @@
 title: "環境建置與基礎操作"
 sidebar_label: "3 環境建置與基礎操作"
 sidebar_position: 3
+
+description: "環境建置與基礎操作 本章節將引導你完成 Node.js 開發環境的建置，以及學習開發時必備的終端機基礎指令。 命令提示字元 / 終端機操作 不管你是使用 macOS 還是 Windows 系統，進行 Node.js 開發都離不開終端機。 常用基礎指令： cd ：進入目標資料夾路徑。 cd ..：回到..."
+keywords: [環境建置與基礎操作, learning, hexschool, nodejs-course]
 ---
 
 # 環境建置與基礎操作

@@ -1,6 +1,7 @@
 ---
 slug: /liwen-sop/sop-documents/tech-spec
 description: "系統開發規格書範本 (SD)，專供工程師實作與部署使用之技術指南"
+keywords: [系統開發規格書, Tech, Spec, SD, projects-business, liwen-sop, sop-documents]
 ---
 
 # 系統開發規格書 (Tech Spec / SD)

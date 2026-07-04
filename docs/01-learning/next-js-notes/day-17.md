@@ -3,6 +3,7 @@ title: "Day 17 - 攔截路由：打造流暢的燈箱與彈窗體驗"
 sidebar_label: "Day 17 - 攔截路由"
 sidebar_position: 17
 description: "Next.js 30 天學習筆記系列 - 第 17 天：Day 17 - 攔截路由：打造流暢的燈箱與彈窗體驗。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, 攔截路由, 打造流暢的燈箱與彈窗體驗, learning, next-js-notes]
 ---
 
 # Next.js 30 天全端實戰：Day 17 - 攔截路由：打造流暢的燈箱與彈窗體驗

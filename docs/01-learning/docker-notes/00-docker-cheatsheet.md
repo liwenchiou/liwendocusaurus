@@ -3,6 +3,9 @@ id: 00-docker-cheatsheet
 title: Docker 常用指令與生命週期速查表
 sidebar_label: "指令速查表"
 sidebar_position: 0
+
+description: "Docker 常用指令與生命週期速查表 這份速查表整理了 Docker 在實務中最常用的指令，並且依照「基礎操作」與「容器生命週期狀態」進行分類，方便開發時快速查找。 1. 基礎與 Image 指令速查 | 指令 Command | 用途與說明 | | : | : | | docker versio..."
+keywords: [Docker, 常用指令與生命週期速查表, learning, docker-notes]
 ---
 
 # Docker 常用指令與生命週期速查表

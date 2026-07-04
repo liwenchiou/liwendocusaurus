@@ -47,6 +47,11 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
         },
+        sitemap: {
+          lastmod: "date",
+          changefreq: "weekly",
+          priority: 0.5,
+        },
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -135,6 +140,10 @@ const config: Config = {
         {
           label: "GitHub",
           href: "https://github.com/liwenchiou",
+        },
+        {
+          label: "RSS 訂閱",
+          href: "pathname:///blog/rss.xml",
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Liwen Studio. Built with Docusaurus.`,

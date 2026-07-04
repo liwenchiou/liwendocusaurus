@@ -3,6 +3,9 @@ id: express-middleware
 title: "Express Generator 與 Middleware 中介軟體"
 sidebar_label: "8-2 Express & Middleware"
 sidebar_position: 16
+
+description: "Express Generator 與 Middleware 中介軟體 本篇筆記涵蓋了如何使用 Express Generator 快速建置專案，以及 Express 框架中最重要的核心：Middleware 中介軟體 的運作機制。 1. Express Generator 快速建置專案 1.1 全..."
+keywords: [Express, Generator, Middleware, 中介軟體, learning, hexschool, nodejs-course]
 ---
 
 # Express Generator 與 Middleware 中介軟體

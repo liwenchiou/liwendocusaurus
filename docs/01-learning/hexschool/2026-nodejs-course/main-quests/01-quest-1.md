@@ -3,6 +3,9 @@ id: quest-1
 title: "Node.js 主線任務一：檔案讀寫、陣列操作與環境變數"
 sidebar_label: "\u200B第一週"
 sidebar_position: 1
+
+description: "> 🛑 防暴雷警示：以下筆記包含主線任務的解答與實作細節，強烈建議先親手寫過一次，卡關再來對照參考喔！ 本次任務涵蓋了 Node.js 開發中最常見的基礎資料處理操作，包含使用原生的 fs/promises 模組讀取本地 JSON 檔案、操作環境變數 process.env，以及熟練運用 Java..."
+keywords: [Node.js, 主線任務一, 檔案讀寫, 陣列操作與環境變數, learning, hexschool, nodejs-course, main-quests]
 ---
 
 > 🛑 **防暴雷警示**：以下筆記包含主線任務的解答與實作細節，強烈建議先親手寫過一次，卡關再來對照參考喔！

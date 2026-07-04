@@ -5,6 +5,9 @@ date: 2026-04-21T06:36:46.124197+00:00
 authors: [liwen]
 tags: [React]
 sidebar_label: "useRef：掌握 React 的「儲物櫃」與 DOM 操控"
+
+description: "什麼是 useRef？ useRef 回傳一個帶有 current 屬性的物件。它有兩個最主要的用途： 1. 存取 DOM 元素：直接抓取網頁上的 HTML 標籤（例如讓輸入框聚焦）。 2. 儲存「不需要渲染」的資料：存放在裡面的資料改變時，不會觸發組件重新渲染。 核心觀念： 如果您希望改了某個值，..."
+keywords: [useRef, 掌握, React, 儲物櫃, DOM, 操控, learning, hexschool, react-basics]
 ---
 
 ## 什麼是 useRef？

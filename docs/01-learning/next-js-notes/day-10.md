@@ -3,6 +3,7 @@ title: "Day 10 - Server Actions：告別 API Routes 的全端實戰"
 sidebar_label: "Day 10 - Server Actions"
 sidebar_position: 10
 description: "Next.js 30 天學習筆記系列 - 第 10 天：Day 10 - Server Actions：告別 API Routes 的全端實戰。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, Server, Actions, 告別, API, Routes, 的全端實戰, learning, next-js-notes]
 ---
 
 # Day 10 - Server Actions：告別 API Routes 的全端實戰

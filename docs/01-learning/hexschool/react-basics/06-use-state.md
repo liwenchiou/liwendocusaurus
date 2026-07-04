@@ -5,6 +5,9 @@ date: 2026-04-21T06:36:45.587003+00:00
 authors: [liwen]
 tags: [React]
 sidebar_label: "useState：管理組件的「記憶」"
+
+description: "useState ：管理組件的「記憶」 什麼是 useState？ useState 讓組件能記住資訊（如：輸入框文字、API 回傳的資料）。 在 React 中，組件的畫面是由「資料」驅動的。當資料改變時，畫面必須跟著更新。 useState 是 React 最基礎的 Hook，它的作用是為函數組..."
+keywords: [useState, 管理組件的, 記憶, React, learning, hexschool, react-basics]
 ---
 
 # useState ：管理組件的「記憶」

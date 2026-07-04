@@ -2,6 +2,9 @@
 title: "Node.js 與 V8 引擎架構解析"
 sidebar_label: "2 Node.js 與 V8 引擎架構解析"
 sidebar_position: 2
+
+description: "Node.js 與 V8 引擎架構解析 本章節介紹 Node.js 的核心基礎，包含其背後的 V8 引擎原理以及 Node.js 本身的系統架構。 V8 引擎介紹 V8 引擎就像是 Node.js 的「大腦」，沒有 V8 的高效能，就不會有現在的 Node.js。 1. 源自 Google 的強悍技..."
+keywords: [Node.js, V8, 引擎架構解析, learning, hexschool, nodejs-course]
 ---
 
 # Node.js 與 V8 引擎架構解析

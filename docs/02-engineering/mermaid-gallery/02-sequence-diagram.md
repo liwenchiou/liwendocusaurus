@@ -1,5 +1,8 @@
 ---
 sidebar_position: 2
+
+description: "Sequence Diagram API 交互時序圖 時序圖 sequenceDiagram 專門展示多個對象或系統之間，隨著「時間順序」發生的訊息往來與 API 呼叫流程。 📊 範例效果 mermaid sequenceDiagram autonumber actor User as 使用者瀏覽..."
+keywords: [Sequence, Diagram, API, 交互時序圖, engineering, mermaid-gallery]
 ---
 
 # Sequence Diagram API 交互時序圖

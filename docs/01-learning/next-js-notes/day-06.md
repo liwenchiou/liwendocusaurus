@@ -3,6 +3,7 @@ title: "Day 06 - 資料獲取：在 Server 端擁抱 async/await"
 sidebar_label: "Day 06 - 資料獲取"
 sidebar_position: 6
 description: "Next.js 30 天學習筆記系列 - 第 06 天：Day 06 - 資料獲取：在 Server 端擁抱 async/await。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, 資料獲取, Server, 端擁抱, async, await, learning, next-js-notes]
 ---
 
 # Day 06 - 資料獲取：在 Server 端擁抱 async/await

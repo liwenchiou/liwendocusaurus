@@ -3,6 +3,9 @@ id: dotenv
 sidebar_position: 3
 title: "dotenv (環境變數)"
 sidebar_label: "\u200B03 dotenv (環境變數)"
+
+description: "dotenv 環境變數管理套件 💡 為什麼需要這個套件？ 在 Node.js 開發中，我們經常會有一些機密資訊（如資料庫連線字串、API 金鑰等）或是環境依賴的設定（如 PORT 號、上傳路徑 UPLOADDIR）。我們絕對不能將這些資訊寫死在程式碼 Hardcode 裡面，否則推送到 GitHu..."
+keywords: [dotenv, 環境變數, engineering, npm-packages]
 ---
 
 # `dotenv` - 環境變數管理套件

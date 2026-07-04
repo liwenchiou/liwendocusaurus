@@ -3,6 +3,7 @@ title: "Day 14 - 動態路由：打造具備擴充性的 URL 架構"
 sidebar_label: "Day 14 - 動態路由"
 sidebar_position: 14
 description: "Next.js 30 天學習筆記系列 - 第 14 天：Day 14 - 動態路由：打造具備擴充性的 URL 架構。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, 動態路由, 打造具備擴充性的, URL, 架構, learning, next-js-notes]
 ---
 
 # Next.js 30 天全端實戰：Day 14 - 動態路由：打造具備擴充性的 URL 架構

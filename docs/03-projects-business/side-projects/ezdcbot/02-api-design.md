@@ -3,6 +3,9 @@ id: api-design
 title: "2. API 設計與 Threads 處理"
 sidebar_position: 2
 sidebar_label: "2. API 設計與 Threads 處理"
+
+description: "我們刻意避免設計出 sendMessage, createThread, sendThreadMessage 這種冗長且繁雜的介面。相反地，我們將所有的行為抽象成兩個核心動作：push（推播）與 pull（拉取）。 處理 Discord 討論串的 Aha Moment 在實作討論串 Threads ..."
+keywords: [2., API, 設計與, Threads, 處理, projects-business, side-projects, ezdcbot]
 ---
 
 我們刻意避免設計出 `sendMessage`, `createThread`, `sendThreadMessage` 這種冗長且繁雜的介面。相反地，我們將所有的行為抽象成兩個核心動作：`push`（推播）與 `pull`（拉取）。

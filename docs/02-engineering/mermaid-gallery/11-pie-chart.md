@@ -1,5 +1,8 @@
 ---
 sidebar_position: 11
+
+description: "Pie Chart 資料比例圓餅圖 圓餅圖 pie 用於直觀展示各類資料佔總體的比例分佈關係。 📊 範例效果 mermaid pie title 線上商城訂單支付方式佔比 \"信用卡 / Apple Pay\" : 42.5 \"LINE Pay\" : 30.0 \"街口支付\" : 18.5 \"超商條碼繳..."
+keywords: [Pie, Chart, 資料比例圓餅圖, engineering, mermaid-gallery]
 ---
 
 # Pie Chart 資料比例圓餅圖

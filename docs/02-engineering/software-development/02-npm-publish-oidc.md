@@ -3,6 +3,9 @@ id: npm-publish-oidc
 title: "使用 GitHub Actions OIDC 自動發佈 NPM 套件"
 sidebar_label: "\u200B使用 OIDC 發佈 NPM 套件"
 sidebar_position: 2
+
+description: "使用 GitHub Actions OIDC 自動發佈 NPM 套件 在過去，若想要透過 GitHub Actions 在發佈新版本時自動上傳套件到 NPM Registry，我們必須在 NPM 產生一個長效型的 Access Token，並將其存放在 GitHub 的 Repository Sec..."
+keywords: [使用, GitHub, Actions, OIDC, 自動發佈, NPM, 套件, engineering, software-development]
 ---
 
 # 使用 GitHub Actions OIDC 自動發佈 NPM 套件

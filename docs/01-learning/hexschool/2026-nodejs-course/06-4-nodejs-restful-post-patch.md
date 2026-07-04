@@ -2,6 +2,9 @@
 title: "實作待辦清單 API (4)：處理 Request Body 與 POST/PATCH"
 sidebar_label: "6-4 實作待辦清單 API (4)"
 sidebar_position: 6.4
+
+description: "實作待辦清單 API 4：處理 Request Body 與 POST/PATCH 終於來到最後一步了！在建立 POST 或修改 PATCH 資料時，前端會將資料包裝成 JSON 格式放在 HTTP 請求的 body 裡面送給我們。 但在原生 Node.js 中，接收 body 跟你想像的有點不一樣..."
+keywords: [實作待辦清單, API, 處理, Request, Body, POST, PATCH, learning, hexschool, nodejs-course]
 ---
 
 # 實作待辦清單 API (4)：處理 Request Body 與 POST/PATCH

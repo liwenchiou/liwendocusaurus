@@ -3,6 +3,7 @@ title: "Day 07 - 快取與更新：超直覺的貨架管理學"
 sidebar_label: "Day 07 - 快取與更新"
 sidebar_position: 7
 description: "Next.js 30 天學習筆記系列 - 第 07 天：Day 07 - 快取與更新：超直覺的貨架管理學。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, 快取與更新, 超直覺的貨架管理學, learning, next-js-notes]
 ---
 
 # Day 07 - 快取與更新：超直覺的貨架管理學

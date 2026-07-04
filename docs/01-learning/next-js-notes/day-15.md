@@ -3,6 +3,7 @@ title: "Day 15 - Middleware：掌握請求的全局控制權"
 sidebar_label: "Day 15 - Middleware"
 sidebar_position: 15
 description: "Next.js 30 天學習筆記系列 - 第 15 天：Day 15 - Middleware：掌握請求的全局控制權。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, Middleware, 掌握請求的全局控制權, learning, next-js-notes]
 ---
 
 # Next.js 30 天全端實戰：Day 15 - Middleware：掌握請求的全局控制權

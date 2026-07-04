@@ -1,5 +1,8 @@
 ---
 sidebar_position: 3
+
+description: "Class Diagram 類別圖 類別圖 classDiagram 用於物件導向設計（OOP）中，展示類別（Class）或介面（Interface）的屬性、方法以及繼承與關聯關係。 📊 範例效果 mermaid classDiagram class Animal { > string name ..."
+keywords: [Class, Diagram, 類別圖, engineering, mermaid-gallery]
 ---
 
 # Class Diagram 類別圖

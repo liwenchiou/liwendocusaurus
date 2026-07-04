@@ -3,6 +3,9 @@ id: basic-concepts
 title: Nginx 基礎概念與環境建置
 sidebar_label: "\u200B1 基礎概念與環境建置"
 sidebar_position: 1
+
+description: "Nginx 基礎概念與環境建置 本章節介紹 Nginx 的基本原理與誕生背景（為了解決 C10K 連線瓶頸），並對照傳統 Apache 的 Processbased 架構，解析其非同步事件驅動（Eventdriven）的優勢。同時提供 Linux 與 Docker 環境下的安裝步驟與核心控制指令（如..."
+keywords: [Nginx, 基礎概念與環境建置, learning, nginx-notes]
 ---
 
 # Nginx 基礎概念與環境建置

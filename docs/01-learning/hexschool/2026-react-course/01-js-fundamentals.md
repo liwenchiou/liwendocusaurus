@@ -5,6 +5,9 @@ sidebar_label: "JS 核心思維"
 date: 2026-04-21T06:36:44.733565+00:00
 authors: [liwen]
 tags: [六角學院]
+
+description: "課程筆記 第一堂：重新打造 JavaScript 思維 本堂課的核心在於拆解 JavaScript 的基礎語法，並理解這些語法在 React 開發中扮演的關鍵角色。 💡 JS 必備知識：解構與陣列方法 1. 解構賦值 Destructuring 解構能讓我們從陣列或物件中快速提取資訊，這在 Rea..."
+keywords: [課程筆記, 第一堂, 重新打造, JavaScript, 思維, 六角學院, learning, hexschool, react-course]
 ---
 
 # [課程筆記] 第一堂：重新打造 JavaScript 思維

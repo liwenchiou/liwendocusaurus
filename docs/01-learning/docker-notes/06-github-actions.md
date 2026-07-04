@@ -3,6 +3,9 @@ id: 06-github-actions
 title: 自動化部署 GitHub Actions
 sidebar_label: "GitHub Actions"
 sidebar_position: 6
+
+description: "自動化部署 GitHub Actions 👉 核心痛點：之前我們教過使用 docker buildx 在本機進行「跨平台多架構打包」，但如果每次改 code 都要在本機慢慢跑打包程序、然後手動推送到 Docker Hub，實在太浪費時間了，而且電腦跑打包時還會很卡！ 最聰明的做法是：把這些苦差事丟..."
+keywords: [自動化部署, GitHub, Actions, learning, docker-notes]
 ---
 
 # 自動化部署 GitHub Actions

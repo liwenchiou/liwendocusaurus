@@ -2,6 +2,9 @@
 title: "實作待辦清單 API (2)：設計統一的 Response Handler"
 sidebar_label: "6-2 實作待辦清單 API (2)"
 sidebar_position: 6.2
+
+description: "實作待辦清單 API 2：設計統一的 Response Handler 在上一篇我們成功建立了伺服器，但你可能會發現一個問題： 未來我們會有很多個路由（例如 GET 拿資料、POST 新增資料、錯誤找不到資料等）。如果每個地方都要寫一次 res.writeHead... 然後用 JSON.strin..."
+keywords: [實作待辦清單, API, 設計統一的, Response, Handler, learning, hexschool, nodejs-course]
 ---
 
 # 實作待辦清單 API (2)：設計統一的 Response Handler

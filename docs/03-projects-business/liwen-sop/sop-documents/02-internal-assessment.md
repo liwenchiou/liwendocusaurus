@@ -1,7 +1,9 @@
 ---
 slug: /liwen-sop/sop-documents/internal-assessment
 description: "內部需求評估單：用於工程師評估技術可行性與成本"
+keywords: [02., 內部需求評估單, Internal, Assessment, projects-business, liwen-sop, sop-documents]
 ---
+
 # 02. 內部需求評估單 (Internal Assessment)
 
 > **🎯 使用時機：** PM 帶回訪談單後，與內部工程師/設計師開會討論時填寫。

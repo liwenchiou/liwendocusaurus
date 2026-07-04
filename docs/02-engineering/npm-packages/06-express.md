@@ -3,6 +3,9 @@ id: express
 title: "express"
 sidebar_label: "​06 express"
 sidebar_position: 6
+
+description: "express express 是 Node.js 最經典、最主流的 Web 應用框架。它大幅簡化了原生 http 模組繁瑣的設定，提供了極簡且靈活的路由系統與中介軟體 Middleware 架構。 安裝 bash npm install express 基本使用範例（優雅的語意化路由） 相較於原生..."
+keywords: [express, engineering, npm-packages]
 ---
 
 # express

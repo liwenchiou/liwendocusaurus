@@ -1,6 +1,7 @@
 ---
 slug: /liwen-sop/sop-documents/system-analysis
 description: "系統分析規格書範本 (SA)，將商業需求梳理為系統邏輯"
+keywords: [系統分析規格書, System, Analysis, Document, projects-business, liwen-sop, sop-documents]
 ---
 
 # 系統分析規格書 (System Analysis Document)

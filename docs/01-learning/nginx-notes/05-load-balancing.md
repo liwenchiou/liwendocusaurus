@@ -1,5 +1,8 @@
 ---
 sidebar_position: 5
+
+description: "Nginx 負載均衡 Load Balancing 實戰 負載均衡是解決單點故障（SPOF）與高併發流量的核心技術。當網站流量成長到單台伺服器無法承受時，我們需要透過 Nginx 的 upstream 模組將請求分流至多個後端容器實例。本章將帶您了解單點故障的系統風險，學習輪詢、權重、IP Hash..."
+keywords: [Nginx, 負載均衡, Load, Balancing, 實戰, learning, nginx-notes]
 ---
 
 # Nginx 負載均衡 (Load Balancing) 實戰
@@ -170,4 +173,3 @@ location / {
     proxy_next_upstream error timeout invalid_header http_502 http_503 http_504;
 }
 ```
-

@@ -3,6 +3,9 @@ id: deployment-sop
 title: "Antigravity Deployment SOP (AI 部署守則)"
 sidebar_label: "04. 部署防呆守則"
 sidebar_position: 4
+
+description: "Antigravity Deployment SOP AI 部署守則 這份文件定義了 Antigravity AI 助手 在協助進行 Docusaurus 或任何前端專案開發與部署時，必須嚴格遵守的標準作業流程 Standard Operating Procedure。它也是確保我們協作順暢、不踩雷..."
+keywords: [Antigravity, Deployment, SOP, AI, 部署守則, engineering, ainotes]
 ---
 
 # Antigravity Deployment SOP (AI 部署守則)

@@ -3,6 +3,9 @@ id: 01-docker-basics
 title: Docker 基礎教學筆記
 sidebar_label: "Docker 基礎"
 sidebar_position: 1
+
+description: "Docker 基礎教學筆記 1. VM 和 Docker 的差別 VM 虛擬機 1. 資源預先分配 死佔資源：如果是 VM 的話，電腦有 32G，開了兩個 VM 各分配 8GB，就會直接花掉 16GB。不管裡面有沒有跑東西，資源就是被死死佔用。 2. 擴充不便：要擴充資源 如 CPU、RAM 通常需..."
+keywords: [Docker, 基礎教學筆記, learning, docker-notes]
 ---
 
 # Docker 基礎教學筆記

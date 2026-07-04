@@ -3,6 +3,9 @@ id: intro
 title: "ezdcbot：輕量 Discord 推播套件"
 sidebar_position: 0
 sidebar_label: "ezdcbot：輕量 Discord 推播套件"
+
+description: "ezdcbot 介紹與開發動機 身為一名後端工程師，我們經常需要實作一些自動化的小工具，例如： 接收 Stripe 伺服器傳來的付費 Webhook，並把通知傳到團隊的 Discord 群組。 寫一個爬蟲排程，每天早上把最新的天氣預報發到頻道裡。 在過去，大部分人的直覺反應是直接安裝強大的 disc..."
+keywords: [ezdcbot, 輕量, Discord, 推播套件, projects-business, side-projects]
 ---
 
 # ezdcbot 介紹與開發動機

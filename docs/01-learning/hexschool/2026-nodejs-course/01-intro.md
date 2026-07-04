@@ -2,6 +2,9 @@
 title: "課程前言與學習目標"
 sidebar_label: "1 課程前言與學習目標"
 sidebar_position: 1
+
+description: "2026 【後端】Node.js 直播班 歡迎來到 2026 【後端】Node.js 直播班 的學習筆記！ 這份系列筆記記錄了我在這堂課中的所有學習歷程，從最基礎的 Node.js 環境建置、非同步處理，一路到打造完整的 RESTful API 與資料庫整合。 🎯 學習目標 1. 掌握 Node...."
+keywords: [課程前言與學習目標, learning, hexschool, nodejs-course]
 ---
 
 # 2026 【後端】Node.js 直播班

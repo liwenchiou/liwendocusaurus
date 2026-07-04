@@ -3,6 +3,7 @@ title: "Day 25 - 互動優化：實作高效能的即時搜尋與防抖機制"
 sidebar_label: "Day 25 - 互動優化"
 sidebar_position: 25
 description: "Next.js 30 天學習筆記系列 - 第 25 天：Day 25 - 互動優化：實作高效能的即時搜尋與防抖機制。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, 互動優化, 實作高效能的即時搜尋與防抖機制, learning, next-js-notes]
 ---
 
 # Next.js 30 天全端實戰：Day 25 - 互動優化：實作高效能的即時搜尋與防抖機制

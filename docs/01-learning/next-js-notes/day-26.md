@@ -3,6 +3,7 @@ title: "Day 26 - 檔案處理：整合 Cloudinary 實現高效圖片上傳"
 sidebar_label: "Day 26 - 檔案處理"
 sidebar_position: 26
 description: "Next.js 30 天學習筆記系列 - 第 26 天：Day 26 - 檔案處理：整合 Cloudinary 實現高效圖片上傳。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, 檔案處理, 整合, Cloudinary, 實現高效圖片上傳, learning, next-js-notes]
 ---
 
 # Next.js 30 天全端實戰：Day 26 - 檔案處理：整合 Cloudinary 實現高效圖片上傳

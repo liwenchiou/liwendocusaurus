@@ -3,6 +3,7 @@ title: "Day 08 - Loading UI 與 Streaming：別讓使用者對著白框發呆"
 sidebar_label: "Day 08 - Loading UI"
 sidebar_position: 8
 description: "Next.js 30 天學習筆記系列 - 第 08 天：Day 08 - Loading UI 與 Streaming：別讓使用者對著白框發呆。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, Loading, UI, Streaming, 別讓使用者對著白框發呆, learning, next-js-notes]
 ---
 
 # Day 08 - Loading UI 與 Streaming：別讓使用者對著白框發呆

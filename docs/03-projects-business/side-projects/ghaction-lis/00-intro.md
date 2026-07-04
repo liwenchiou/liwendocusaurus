@@ -2,6 +2,9 @@
 title: "專案簡介與開發動機"
 sidebar_position: 1
 sidebar_label: "專案簡介與開發動機"
+
+description: "ghactionlis GitHub Action Listener 一個專為提升開發體驗 DevEx 而生的輕量級 Node.js CLI 工具。 開發動機 Motivation 在前端開發或是任何依賴 CI/CD 的專案中（例如 Docusaurus 靜態網站、Next.js 專案部署），我們通..."
+keywords: [專案簡介與開發動機, projects-business, side-projects, ghaction-lis]
 ---
 
 # ghaction-lis (GitHub Action Listener)

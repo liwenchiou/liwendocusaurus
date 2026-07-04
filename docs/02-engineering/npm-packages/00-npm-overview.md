@@ -3,6 +3,9 @@ id: npm-overview
 sidebar_position: 0
 title: "NPM 套件總覽"
 sidebar_label: "\u200B00 NPM 套件總覽"
+
+description: "NPM 套件探索總覽 這裡記錄了我學習與研究過的各種實用 NPM 套件。我會將套件的用法、踩坑紀錄以及實際應用情境整理成技術筆記，方便日後在不同的專案中快速查閱與重用。 學習套件清單 | 套件名稱 | 說明與用途 | 查看筆記 | | : | : | : | | bcrypt | 密碼雜湊與驗證 |..."
+keywords: [NPM, 套件總覽, engineering, npm-packages]
 ---
 
 # NPM 套件探索總覽

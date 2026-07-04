@@ -1,5 +1,8 @@
 ---
 sidebar_position: 13
+
+description: "User Journey 使用者旅程圖 使用者旅程圖 journey 用於 UX 體驗分析，記錄使用者完成特定任務（如買東西、註冊）的步驟、參與系統角色與情緒起伏指數。 📊 範例效果 mermaid journey title 購買商品的用戶心路歷程 section 探索階段 瀏覽商品列表: 5:..."
+keywords: [User, Journey, 使用者旅程圖, engineering, mermaid-gallery]
 ---
 
 # User Journey 使用者旅程圖

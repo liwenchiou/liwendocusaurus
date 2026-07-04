@@ -12,7 +12,11 @@ export default function About() {
       detail: <>捨棄笨重的 WebSocket 建立連線，改採原生 <code>fetch</code> 實作，專注於高效能的 HTTP 請求與 Thread 管理，完美適配無伺服器架構。</>,
       github: 'https://github.com/liwenchiou/ezdcbot',
       website: undefined,
-      doc: '/docs/projects-business/side-projects/ezdcbot/intro'
+      doc: '/docs/projects-business/side-projects/ezdcbot/intro',
+      badges: [
+        'https://img.shields.io/github/stars/liwenchiou/ezdcbot?style=flat-square&logo=github&color=4F46E5',
+        'https://img.shields.io/npm/dm/ezdcbot?style=flat-square&logo=npm&color=EF4444'
+      ]
     },
     {
       title: 'ghaction-lis',
@@ -20,7 +24,11 @@ export default function About() {
       detail: <>支援 PAT 認證與 CLI 自動串接，開發者能在終端機內直觀掌握部署成功或失敗原因，大幅降低在 IDE 與瀏覽器間頻繁切換的開發成本。</>,
       github: 'https://github.com/liwenchiou/ghaction-lis',
       website: undefined,
-      doc: '/docs/projects-business/side-projects/ghaction-lis/intro'
+      doc: '/docs/projects-business/side-projects/ghaction-lis/intro',
+      badges: [
+        'https://img.shields.io/github/stars/liwenchiou/ghaction-lis?style=flat-square&logo=github&color=4F46E5',
+        'https://img.shields.io/npm/dm/ghaction-lis?style=flat-square&logo=npm&color=EF4444'
+      ]
     },
     {
       title: 'LIAI (Global AI Brain)',
@@ -28,7 +36,10 @@ export default function About() {
       detail: <>透過軟連結掛載與 Prompt 攔截術，讓 AI 在多平台間無縫切換，並自動掛載防呆規範，結合 Mount Protection 達到最高安全層級。</>,
       github: 'https://github.com/liwenchiou/liai',
       website: undefined,
-      doc: '/blog/ai-agent-tunnel-vision-architecture'
+      doc: '/blog/ai-agent-tunnel-vision-architecture',
+      badges: [
+        'https://img.shields.io/github/stars/liwenchiou/liai?style=flat-square&logo=github&color=4F46E5'
+      ]
     },
     {
       title: 'LiTool 工具箱',
@@ -36,7 +47,10 @@ export default function About() {
       detail: <>採用純前端 Web Worker 處理大批圖片壓縮，保護隱私且無伺服器成本。內建農曆轉換、工作日計算與多種實用的開發輔助工具。</>,
       github: undefined,
       website: 'https://litool.liwen.studio',
-      doc: '/blog/introducing-litool'
+      doc: '/blog/introducing-litool',
+      badges: [
+        'https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=nextdotjs&color=000000'
+      ]
     }
   ];
 
@@ -121,7 +135,7 @@ export default function About() {
 
           {/* Open Source Block (Deck Carousel) */}
           <div className={`${styles.card} ${styles.openSource}`} style={{ position: 'relative', padding: 0, backgroundColor: 'transparent', border: 'none' }}>
-            <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: '300px' }}>
+            <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: '340px' }}>
               {projects.map((project, idx) => {
                 const isActive = currentProject === idx;
                 
@@ -151,7 +165,7 @@ export default function About() {
                     onClick={() => !isActive && setCurrentProject(idx)}
                   >
                     <div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
                         <h2 className={styles.cardTitle} style={{ marginBottom: 0 }}>開源架構: {project.title}</h2>
                         
                         {/* Pagination Dots */}
@@ -172,6 +186,15 @@ export default function About() {
                           ))}
                         </div>
                       </div>
+
+                      {/* Dynamic Badges */}
+                      {project.badges && (
+                        <div style={{ display: 'flex', gap: '8px', marginBottom: '1rem', flexWrap: 'wrap', opacity: isActive ? 1 : 0.3 }}>
+                          {project.badges.map((badgeUrl, bIdx) => (
+                            <img key={bIdx} src={badgeUrl} alt="badge" style={{ height: '20px', borderRadius: '4px' }} />
+                          ))}
+                        </div>
+                      )}
                       
                       <div style={{ minHeight: '120px' }}>
                         <p className={styles.openSourceText}>{project.desc}</p>
@@ -226,6 +249,17 @@ export default function About() {
                 <div className={styles.listDate}>2025</div>
               </li>
             </ul>
+          </div>
+
+          {/* Business Consulting Block */}
+          <div className={`${styles.card} ${styles.businessCTA}`}>
+            <h2 className={styles.cardTitle}>🏢 商業合作 & 架構諮詢 (Business & Consulting)</h2>
+            <p style={{ lineHeight: '1.6', marginBottom: '1rem' }}>
+              正在尋找穩健的現代網頁架構、TypeScript 全端解決方案，或希望在您的團隊中導入高效率的 AI 人機協作流程？
+            </p>
+            <p style={{ lineHeight: '1.6', marginBottom: 0 }}>
+              我提供技術架構設計、效能調優諮詢，以及 AI Agent 開發流程防護護欄等專業顧問服務。歡迎前往 <a href="https://www.liwen.studio" target="_blank" rel="noreferrer" className={styles.link}>Liwen Studio 官網 ↗</a> 與我聊聊您的商業構想，或直接聯繫我的信箱進行諮詢。
+            </p>
           </div>
 
         </main>

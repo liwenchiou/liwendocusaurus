@@ -1,5 +1,8 @@
 ---
 sidebar_position: 7
+
+description: "Mindmap 思思導圖/心智圖 心智圖 mindmap 用於發散思考、整理大綱或分析知識樹狀結構。 📊 範例效果 mermaid mindmap rootNginx 學習地圖 核心基礎 C10K 瓶頸 事件驅動架構 五大 Context 實務部署 靜態網頁託管 SPA 路由/tryfiles N..."
+keywords: [Mindmap, 思思導圖, 心智圖, engineering, mermaid-gallery]
 ---
 
 # Mindmap 思思導圖/心智圖

@@ -5,6 +5,9 @@ date: 2026-04-21T06:36:44.990481+00:00
 authors: [liwen]
 tags: [React]
 sidebar_label: "使用 Vite 建立 React 專案"
+
+description: "使用 Vite 建立 React 專案 1. 打開終端機（Terminal），輸入以下指令： bash 使用 npm 建立專案 npm create vite@latest 2. 輸入專案名稱 圖片https://hackmd.io/uploads/r1NbgHdDbl.png 3. 選擇框架 Re..."
+keywords: [使用, Vite, 建立, React, 專案, learning, hexschool, react-basics]
 ---
 
 # 使用 Vite 建立 React 專案

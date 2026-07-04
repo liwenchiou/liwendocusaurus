@@ -3,6 +3,9 @@ id: 05-docker-compose
 title: 終極殺器：Docker Compose
 sidebar_label: "Docker Compose"
 sidebar_position: 5
+
+description: "終極殺器：Docker Compose 👉 核心痛點：回想一下，為了把這個 Node.js 專案跑起來，我們手動敲了多少指令？ 建 Network、建 Volume、docker run MongoDB 並且加上一大串參數、最後再 docker run Node.js 並帶上落落長的環境變數跟網路..."
+keywords: [終極殺器, Docker, Compose, learning, docker-notes]
 ---
 
 # 終極殺器：Docker Compose

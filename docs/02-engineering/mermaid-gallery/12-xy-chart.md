@@ -1,5 +1,8 @@
 ---
 sidebar_position: 12
+
+description: "XY Chart 數據柱狀與折線圖 XY 圖表 xychartbeta 能直接以數據點在 Markdown 檔案內渲染出帶有 X 軸、Y 軸的長條圖與折線圖。 📊 範例效果 mermaid xychartbeta title \"2026 年上半年度網站流量統計 K\" xaxis \"一月\", \"二月..."
+keywords: [XY, Chart, 數據柱狀與折線圖, engineering, mermaid-gallery]
 ---
 
 # XY Chart 數據柱狀與折線圖

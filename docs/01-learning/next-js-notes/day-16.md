@@ -3,6 +3,7 @@ title: "Day 16 - 平行路由：解構複雜儀表板的利器"
 sidebar_label: "Day 16 - 平行路由"
 sidebar_position: 16
 description: "Next.js 30 天學習筆記系列 - 第 16 天：Day 16 - 平行路由：解構複雜儀表板的利器。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, 平行路由, 解構複雜儀表板的利器, learning, next-js-notes]
 ---
 
 # Next.js 30 天全端實戰：Day 16 - 平行路由：解構複雜儀表板的利器

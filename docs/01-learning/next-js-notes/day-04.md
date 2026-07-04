@@ -3,6 +3,7 @@ title: "Day 04 - 混合渲染機制：Server vs Client Components"
 sidebar_label: "Day 04 - 混合渲染機制"
 sidebar_position: 4
 description: "Next.js 30 天學習筆記系列 - 第 04 天：Day 04 - 混合渲染機制：Server vs Client Components。深入探討 Next.js 開發實戰技巧。"
+keywords: [Day, 混合渲染機制, Server, vs, Client, Components, learning, next-js-notes]
 ---
 
 # Day 04 - 混合渲染機制：Server vs Client Components
