@@ -88,6 +88,14 @@ module.exports = verifyToken;
 <summary>💻 點擊展開程式碼解答</summary>
 
 ```javascript
+// 密碼雜湊函式
+async function hashPassword(password) {
+  // 1. 產生 Salt（鹽巴），cost factor 設為 10
+  const salt = await bcrypt.genSalt(10);
+  // 2. 將明文密碼與生成的 salt 結合並進行雜湊運算
+  return await bcrypt.hash(password, salt);
+}
+
 router.post("/register", async (req, res) => {
   const { email, password } = req.body;
 
@@ -104,7 +112,7 @@ router.post("/register", async (req, res) => {
     return res.status(400).json({ status: "false", message: "email 已存在" });
   }
 
-  // 3. 密碼加密
+  // 3. 密碼加密：透過自訂的 hashPassword 將密碼加密
   const hashedPassword = await hashPassword(password);
 
   // 4. 建立使用者資料並存入
