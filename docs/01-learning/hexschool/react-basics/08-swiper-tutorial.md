@@ -10,6 +10,27 @@ description: "Swiper 簡單應用 引用 html 基本 HTML 架構 html CSS css .s
 keywords: [Swiper, 簡單應用, 打造流暢的輪播效果, React, learning, hexschool, react-basics]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Swiper 簡單應用：打造流暢的輪播效果",
+        "datePublished": "2026-04-21T06:36:44.094863+00:00",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Swiper 簡單應用 引用 html 基本 HTML 架構 html CSS css .swiperslide { height: auto; } img { display: block; width: 100%; height: 100%; objectfit: cover; } JavaSc..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # Swiper 簡單應用
 
 ## 引用

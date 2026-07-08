@@ -7,6 +7,27 @@ description: "實作待辦清單 API 1：環境建置與原生 HTTP 伺服器 �
 keywords: [實作待辦清單, API, 環境建置與原生, HTTP, 伺服器, learning, hexschool, nodejs-course]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "實作待辦清單 API (1)：環境建置與原生 HTTP 伺服器",
+        "datePublished": "2026-07-08T13:51:33.457Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "實作待辦清單 API 1：環境建置與原生 HTTP 伺服器 在這系列教學中，我們將不依賴任何框架（如 Express），純粹使用 Node.js 內建的 http 模組來實作一個「待辦清單 Todo List」的 RESTful API。這能幫助初學者打好最扎實的 Node.js 後端基礎！ > �..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # 實作待辦清單 API (1)：環境建置與原生 HTTP 伺服器
 
 在這系列教學中，我們將不依賴任何框架（如 Express），純粹使用 Node.js 內建的 `http` 模組來實作一個「待辦清單 (Todo List)」的 RESTful API。這能幫助初學者打好最扎實的 Node.js 後端基礎！

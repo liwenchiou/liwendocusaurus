@@ -7,6 +7,27 @@ description: "ghactionlis GitHub Action Listener 一個專為提升開發體驗 
 keywords: [專案簡介與開發動機, projects-business, side-projects, ghaction-lis]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "專案簡介與開發動機",
+        "datePublished": "2026-07-08T13:51:33.517Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "ghactionlis GitHub Action Listener 一個專為提升開發體驗 DevEx 而生的輕量級 Node.js CLI 工具。 開發動機 Motivation 在前端開發或是任何依賴 CI/CD 的專案中（例如 Docusaurus 靜態網站、Next.js 專案部署），我們通..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # ghaction-lis (GitHub Action Listener)
 
 **一個專為提升開發體驗 (DevEx) 而生的輕量級 Node.js CLI 工具。**

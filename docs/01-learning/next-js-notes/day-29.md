@@ -6,6 +6,27 @@ description: "Next.js 30 天學習筆記系列 - 第 29 天：Day 29 - 上線最
 keywords: [Day, 上線最後一哩路, Vercel, 部署與環境變數管理, learning, next-js-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Day 29 - 上線最後一哩路：Vercel 部署與環境變數管理",
+        "datePublished": "2026-07-08T13:51:33.488Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Next.js 30 天學習筆記系列 - 第 29 天：Day 29 - 上線最後一哩路：Vercel 部署與環境變數管理。深入探討 Next.js 開發實戰技巧。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # Next.js 30 天全端實戰：Day 29 - 上線最後一哩路：Vercel 部署與環境變數管理
 
 ## 一、 前言

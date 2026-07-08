@@ -7,6 +7,27 @@ description: "一個輕量級的 Node.js CLI 工具，專為開發者設計，�
 keywords: [ghaction, lis, engineering, npm-packages]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "ghaction-lis",
+        "datePublished": "2026-07-08T13:51:33.511Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "一個輕量級的 Node.js CLI 工具，專為開發者設計，用於在終端機 (Terminal) 中即時監聽 GitHub Actions 的部署狀態。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # ghaction-lis (GitHub Action Listener)
 
 > 💡 **這是我親自開發的開源 CLI 工具！**

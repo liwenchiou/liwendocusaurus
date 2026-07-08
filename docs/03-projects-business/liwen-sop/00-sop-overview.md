@@ -8,6 +8,27 @@ description: "Liwen Studio 的專屬軟體開發流程，強調需求對焦、�
 keywords: [Liwen, Studio, 專屬開發流程, projects-business, liwen-sop]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Liwen Studio 專屬開發流程",
+        "datePublished": "2026-07-08T13:51:33.514Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Liwen Studio 的專屬軟體開發流程，強調需求對焦、權責分離與敏捷迭代的 12 步實務指南。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # Liwen Studio 專屬開發流程
 
 這套流程跳脫了傳統教科書的僵化框架，是我在實務接案與專案開發中淬鍊出的 **12 步核心流程**。

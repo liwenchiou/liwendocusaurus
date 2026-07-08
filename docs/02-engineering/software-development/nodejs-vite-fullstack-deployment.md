@@ -7,6 +7,27 @@ description: "Node.js 與 Vite 整合部署策略 1. 架構核心概念：資源
 keywords: [Node.js, Vite, 整合部署策略, engineering, software-development]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Node.js 與 Vite 整合部署策略",
+        "datePublished": "2026-07-08T13:51:33.513Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Node.js 與 Vite 整合部署策略 1. 架構核心概念：資源調度中心 不再為每個前端專案開設獨立伺服器，改以 MainServer 為核心入口，透過路徑分流（Routing）統一派送靜態資源與處理後端 API。 🖥️ MainServer Express：擔任資源派送者 Static Se..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # Node.js 與 Vite 整合部署策略
 
 ## 1. 架構核心概念：資源調度中心

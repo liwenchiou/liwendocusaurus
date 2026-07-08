@@ -7,6 +7,27 @@ description: "Node.js 核心模組與系統基礎 當進入 Node.js 環境後，
 keywords: [Node.js, 核心模組與系統基礎, learning, hexschool, nodejs-course]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Node.js 核心模組與系統基礎",
+        "datePublished": "2026-07-08T13:51:33.455Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Node.js 核心模組與系統基礎 當進入 Node.js 環境後，原本瀏覽器裡的 window 等物件將不復存在。本章節介紹 Node.js 特有的全域變數、模組系統與核心功能。 Global 全域物件 在 Node.js 中，最頂層的全域物件稱為 global，類似於瀏覽器環境下的 window..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # Node.js 核心模組與系統基礎
 
 當進入 Node.js 環境後，原本瀏覽器裡的 `window` 等物件將不復存在。本章節介紹 Node.js 特有的全域變數、模組系統與核心功能。

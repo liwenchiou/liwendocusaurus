@@ -5,6 +5,27 @@ description: "Nginx 負載均衡 Load Balancing 實戰 負載均衡是解決單�
 keywords: [Nginx, 負載均衡, Load, Balancing, 實戰, learning, nginx-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Untitled",
+        "datePublished": "2026-07-08T13:51:33.495Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Nginx 負載均衡 Load Balancing 實戰 負載均衡是解決單點故障（SPOF）與高併發流量的核心技術。當網站流量成長到單台伺服器無法承受時，我們需要透過 Nginx 的 upstream 模組將請求分流至多個後端容器實例。本章將帶您了解單點故障的系統風險，學習輪詢、權重、IP Hash..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # Nginx 負載均衡 (Load Balancing) 實戰
 
 負載均衡是解決單點故障（SPOF）與高併發流量的核心技術。當網站流量成長到單台伺服器無法承受時，我們需要透過 Nginx 的 `upstream` 模組將請求分流至多個後端容器實例。本章將帶您了解單點故障的系統風險，學習輪詢、權重、IP Hash 與最少連線數這四種主流分配策略，並探討如何針對排程任務與一般用戶進行微服務物理隔離，以及 Nginx 內建的故障自愈與重試機制。

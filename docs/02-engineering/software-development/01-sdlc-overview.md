@@ -8,6 +8,27 @@ description: "軟體開發流程與生命週期 (SDLC) 概述。詳細介紹軟�
 keywords: [軟體開發生命週期, SDLC, 概述, engineering, software-development]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "軟體開發生命週期 (SDLC) 概述",
+        "datePublished": "2026-07-08T13:51:33.512Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "軟體開發流程與生命週期 (SDLC) 概述。詳細介紹軟體開發的六大核心階段（需求分析、系統設計、程式開發、測試、部署與維運）以及卓越流程的三大隱形關鍵。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # 軟體開發生命週期 (SDLC) 概述
 
 一個好的軟體開發流程（通常指軟體開發生命週期，SDLC）就像是蓋一棟房子，如果沒有好好的規劃與分工，很容易在後期發現地基不穩或動線不對，導致花費數倍的時間與成本來重構（Refactoring）。

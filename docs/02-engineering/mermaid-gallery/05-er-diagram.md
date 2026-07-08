@@ -5,6 +5,27 @@ description: "Entity Relationship Diagram 資料庫關聯圖 ERD 實體關係圖
 keywords: [Entity, Relationship, Diagram, 資料庫關聯圖, ERD, engineering, mermaid-gallery]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Untitled",
+        "datePublished": "2026-07-08T13:51:33.503Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Entity Relationship Diagram 資料庫關聯圖 ERD 實體關係圖 erDiagram 用於設計關係型資料庫的欄位結構，並宣告資料表之間的一對多、多對多關係。 📊 範例效果 mermaid erDiagram users ||o{ orders : \\"建立\\" orders |..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # Entity Relationship Diagram 資料庫關聯圖 (ERD)
 
 實體關係圖 (`erDiagram`) 用於設計關係型資料庫的欄位結構，並宣告資料表之間的一對多、多對多關係。

@@ -9,6 +9,27 @@ description: "深入探討工程師在面對職場評價時的心理機制（如
 keywords: [工程師評價心理學, 從內在計分卡奪回成長主導權, 心理學, 職涯發展, 工程文化]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "工程師評價心理學：從內在計分卡奪回成長主導權",
+        "datePublished": "2026-04-21T06:46:35.933454+00:00",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "深入探討工程師在面對職場評價時的心理機制（如生存本能、鏡像自我），並提供建立內在計分卡、自我與代碼解耦的實戰心法。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # 工程師評價心理學：深度學習筆記
 
 互動網站: [https://gemini.google.com/share/6a9569c51762](https://gemini.google.com/share/6a9569c51762)

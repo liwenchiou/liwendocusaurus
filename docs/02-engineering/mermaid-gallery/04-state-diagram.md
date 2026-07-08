@@ -5,6 +5,27 @@ description: "State Diagram 狀態圖 狀態圖 stateDiagramv2 用於展示系�
 keywords: [State, Diagram, 狀態圖, engineering, mermaid-gallery]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Untitled",
+        "datePublished": "2026-07-08T13:51:33.503Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "State Diagram 狀態圖 狀態圖 stateDiagramv2 用於展示系統或實體在不同事件觸發下的「狀態轉移」，例如訂單交易狀態、會員註冊審核狀態等。 📊 範例效果 mermaid stateDiagramv2 > Unpaid : 建立訂單 開始 Unpaid > Paid : 買家..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # State Diagram 狀態圖
 
 狀態圖 (`stateDiagram-v2`) 用於展示系統或實體在不同事件觸發下的「狀態轉移」，例如訂單交易狀態、會員註冊審核狀態等。

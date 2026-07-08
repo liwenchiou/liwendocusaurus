@@ -8,6 +8,27 @@ description: "建立自訂 Image 與 Dockerfile 實戰 這篇筆記將透過打�
 keywords: [建立自訂, Image, Dockerfile, 實戰, learning, docker-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "建立自訂 Image 與 Dockerfile 實戰",
+        "datePublished": "2026-07-08T13:51:33.446Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "建立自訂 Image 與 Dockerfile 實戰 這篇筆記將透過打包一個 Node.js Express 專案，來學習如何撰寫 Dockerfile 以及如何正確處理環境變數。 1. 準備 Node.js 測試專案 步驟一：建立 Express 專案 使用 expressgenerator 快速..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # 建立自訂 Image 與 Dockerfile 實戰
 
 這篇筆記將透過打包一個 Node.js Express 專案，來學習如何撰寫 `Dockerfile` 以及如何正確處理環境變數。

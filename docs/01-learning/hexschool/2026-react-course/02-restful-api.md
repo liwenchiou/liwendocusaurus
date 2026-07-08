@@ -10,6 +10,27 @@ description: "課程筆記 第二堂：RESTful API 串接實務 本堂課聚焦�
 keywords: [課程筆記, 第二堂, RESTful, API, 串接實務, 六角學院, learning, hexschool, react-course]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "[課程筆記] 第二堂：RESTful API 串接實務",
+        "datePublished": "2026-04-21T06:36:44.445964+00:00",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "課程筆記 第二堂：RESTful API 串接實務 本堂課聚焦於如何透過非同步技術 Async/Await 與 Axios 套件，與後端 API 進行標準化的 RESTful 通訊。 ⏳ 非同步處理：Async / Await JavaScript 預設是同步執行的（一次只做一件事）。為了處理網路請..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # [課程筆記] 第二堂：RESTful API 串接實務
 
 本堂課聚焦於如何透過非同步技術 (Async/Await) 與 Axios 套件，與後端 API 進行標準化的 RESTful 通訊。

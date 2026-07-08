@@ -9,6 +9,27 @@ description: "記錄將 Next.js 應用從 Vercel 遷移至 Cloudflare Pages 的�
 keywords: [雲端邊緣的折翼, Next.js, 部署到, Cloudflare, Pages, 小時奮鬥實錄, cloudflare, NextJs, 雲端部署]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "雲端邊緣的折翼：Next.js 部署到 Cloudflare Pages 的 48 小時奮鬥實錄",
+        "datePublished": "2026-04-23T00:56:25.022951+00:00",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "記錄將 Next.js 應用從 Vercel 遷移至 Cloudflare Pages 的挑戰，深入分析 Edge Runtime 的 3MB 腳本限制、SDK 體積優化與 Node.js API 相容性問題。"
+      }
+    `}
+  </script>
+</Head>
+
+
 在 Web 開發的世界裡，我們通常會從 Vercel 開始。它很美、很快、很有質感，就像是一個精心裝潢的豪華公寓。但隨著專案成長，我們開始在想：有沒有那種既能擁有極致性能，成本又更平易近人的「自由之地」？
 
 於是，我們把目光投向了 Cloudflare。這兩天，我們就像是一群試圖帶著行李從 Vercel 搬家到 Cloudflare 邊緣計算之城的旅人。雖然最終我們因為行李太重而暫時撤退，但這場「失敗」留下的經驗教訓，或許比成功搬家更值得記錄。

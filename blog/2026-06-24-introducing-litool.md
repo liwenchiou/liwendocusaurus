@@ -8,6 +8,27 @@ description: "為了解決找不到包含農民曆的日期計算機的痛點，
 keywords: [打造專屬的瑞士刀, LiTool, 工具箱上線！解決農民曆計算與圖片壓縮痛點, Next.js, Side Project, Frontend, Tools]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "打造專屬的瑞士刀：LiTool 工具箱上線！解決農民曆計算與圖片壓縮痛點",
+        "datePublished": "2026-06-24",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "為了解決找不到包含農民曆的日期計算機的痛點，我用 Next.js 打造了屬於自己的 LiTool 工具箱！支援農曆計算與純前端的批次圖片壓縮。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # 打造專屬的瑞士刀：LiTool 工具箱上線
 
 在日常的開發與生活中，我們總會遇到需要一些小工具來輔助的時候。網路上雖然有很多免費的線上工具，但它們往往充斥著滿滿的廣告，或是剛好「缺了那麼一點點」我們需要的功能。

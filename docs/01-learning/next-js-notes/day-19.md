@@ -6,6 +6,27 @@ description: "Next.js 30 天學習筆記系列 - 第 19 天：Day 19 - 身份驗
 keywords: [Day, 身份驗證, 使用, Auth.js, 快速實作登入系統, learning, next-js-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Day 19 - 身份驗證：使用 Auth.js 快速實作登入系統",
+        "datePublished": "2026-07-08T13:51:33.482Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Next.js 30 天學習筆記系列 - 第 19 天：Day 19 - 身份驗證：使用 Auth.js 快速實作登入系統。深入探討 Next.js 開發實戰技巧。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # Next.js 30 天全端實戰：Day 19 - 身份驗證：使用 Auth.js 快速實作登入系統
 
 ## 一、 前言

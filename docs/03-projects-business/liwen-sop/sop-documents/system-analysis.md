@@ -4,6 +4,27 @@ description: "系統分析規格書範本 (SA)，將商業需求梳理為系統�
 keywords: [系統分析規格書, System, Analysis, Document, projects-business, liwen-sop, sop-documents]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Untitled",
+        "datePublished": "2026-07-08T13:51:33.515Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "系統分析規格書範本 (SA)，將商業需求梳理為系統邏輯"
+      }
+    `}
+  </script>
+</Head>
+
+
 # 系統分析規格書 (System Analysis Document)
 
 > **🎯 文件屬性：純系統分析文件 (SA)**

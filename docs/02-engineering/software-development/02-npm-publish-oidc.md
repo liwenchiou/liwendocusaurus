@@ -8,6 +8,27 @@ description: "使用 GitHub Actions OIDC 自動發佈 NPM 套件 在過去，若
 keywords: [使用, GitHub, Actions, OIDC, 自動發佈, NPM, 套件, engineering, software-development]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "使用 GitHub Actions OIDC 自動發佈 NPM 套件",
+        "datePublished": "2026-07-08T13:51:33.512Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "使用 GitHub Actions OIDC 自動發佈 NPM 套件 在過去，若想要透過 GitHub Actions 在發佈新版本時自動上傳套件到 NPM Registry，我們必須在 NPM 產生一個長效型的 Access Token，並將其存放在 GitHub 的 Repository Sec..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # 使用 GitHub Actions OIDC 自動發佈 NPM 套件
 
 在過去，若想要透過 GitHub Actions 在發佈新版本時自動上傳套件到 NPM Registry，我們必須在 NPM 產生一個長效型的 Access Token，並將其存放在 GitHub 的 Repository Secrets 中（例如 `NPM_TOKEN`）。

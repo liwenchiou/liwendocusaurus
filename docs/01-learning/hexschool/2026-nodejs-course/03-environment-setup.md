@@ -7,6 +7,27 @@ description: "環境建置與基礎操作 本章節將引導你完成 Node.js �
 keywords: [環境建置與基礎操作, learning, hexschool, nodejs-course]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "環境建置與基礎操作",
+        "datePublished": "2026-07-08T13:51:33.455Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "環境建置與基礎操作 本章節將引導你完成 Node.js 開發環境的建置，以及學習開發時必備的終端機基礎指令。 命令提示字元 / 終端機操作 不管你是使用 macOS 還是 Windows 系統，進行 Node.js 開發都離不開終端機。 常用基礎指令： cd ：進入目標資料夾路徑。 cd ..：回到..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # 環境建置與基礎操作
 
 本章節將引導你完成 Node.js 開發環境的建置，以及學習開發時必備的終端機基礎指令。

@@ -8,6 +8,27 @@ description: "重構流程與職責分離原則 在撰寫複雜的邏輯時，�
 keywords: [職責分離與, Promise, 鏈式寫法, learning, hexschool, nodejs-course]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "職責分離與 Promise 鏈式寫法",
+        "datePublished": "2026-07-08T13:51:33.462Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "重構流程與職責分離原則 在撰寫複雜的邏輯時，我們應該遵守職責分離原則。這意味著每個函式或 Promise 應該只負責一件事情，然後透過鏈式寫法（Promise Chain）將多個步驟串接起來。 撰寫批改作業邏輯與 Catch 流程 讓我們先實作一個簡單的批改作業 Promise，並加入 catch ..."
+      }
+    `}
+  </script>
+</Head>
+
+
 ## 重構流程與職責分離原則
 
 在撰寫複雜的邏輯時，我們應該遵守**職責分離原則**。這意味著每個函式或 Promise 應該只負責一件事情，然後透過鏈式寫法（Promise Chain）將多個步驟串接起來。

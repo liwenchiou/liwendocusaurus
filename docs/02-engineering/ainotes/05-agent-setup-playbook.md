@@ -8,6 +8,27 @@ description: "實戰演練：跨專案 AI 防呆起手式 Playbook 當我們學�
 keywords: [實戰演練, 跨專案, AI, 防呆起手式, engineering, ainotes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "實戰演練：跨專案 AI 防呆起手式",
+        "datePublished": "2026-07-08T13:51:33.500Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "實戰演練：跨專案 AI 防呆起手式 Playbook 當我們學會了 Workflow, Skill 以及 Knowledge Items KI 的「動態指針模式」後，接下來就是最實用的部分：當我今天開啟了一個全新的專案（例如切換到 liwenStudio），我該怎麼做才能用最快速度把 AI 防呆機制..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # 實戰演練：跨專案 AI 防呆起手式 (Playbook)
 
 當我們學會了 Workflow, Skill 以及 Knowledge Items (KI) 的「動態指針模式」後，接下來就是最實用的部分：**當我今天開啟了一個全新的專案（例如切換到 `liwenStudio`），我該怎麼做才能用最快速度把 AI 防呆機制建立起來？**

@@ -8,6 +8,27 @@ description: "Nginx 靜態網站部署實戰 本章節將帶您進入 Nginx 的�
 keywords: [Nginx, 靜態網站部署實戰, learning, nginx-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Nginx 靜態網站部署實戰",
+        "datePublished": "2026-07-08T13:51:33.494Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Nginx 靜態網站部署實戰 本章節將帶您進入 Nginx 的第一個核心實戰應用：靜態網站部署。我們將深入探討如何設定網頁根目錄與首頁檔案，分析 root 與 alias 的拼接規則與新手常踩的 Root 陷阱。此外，亦針對 React, Vue 或 Docusaurus 等前端單頁應用程式（SPA..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # Nginx 靜態網站部署實戰
 
 本章節將帶您進入 Nginx 的第一個核心實戰應用：靜態網站部署。我們將深入探討如何設定網頁根目錄與首頁檔案，分析 `root` 與 `alias` 的拼接規則與新手常踩的 Root 陷阱。此外，亦針對 React, Vue 或 Docusaurus 等前端單頁應用程式（SPA）在部署時最常遇到的「重新整理 404 錯誤」，提供詳盡的 `try_files` 原理解析與 Next.js 的部署抉擇。

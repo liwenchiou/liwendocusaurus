@@ -8,6 +8,27 @@ description: "Docker 基礎教學筆記 1. VM 和 Docker 的差別 VM 虛擬機 
 keywords: [Docker, 基礎教學筆記, learning, docker-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Docker 基礎教學筆記",
+        "datePublished": "2026-07-08T13:51:33.445Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Docker 基礎教學筆記 1. VM 和 Docker 的差別 VM 虛擬機 1. 資源預先分配 死佔資源：如果是 VM 的話，電腦有 32G，開了兩個 VM 各分配 8GB，就會直接花掉 16GB。不管裡面有沒有跑東西，資源就是被死死佔用。 2. 擴充不便：要擴充資源 如 CPU、RAM 通常需..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # Docker 基礎教學筆記
 
 ## 1. VM 和 Docker 的差別

@@ -25,3 +25,6 @@ yarn-error.log*
 /.doc
 .agent
 .agents
+
+# Temporary scripts and scratch files
+/scratch/

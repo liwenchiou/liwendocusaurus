@@ -6,6 +6,27 @@ description: "Next.js 30 天學習筆記系列 - 第 15 天：Day 15 - Middlewar
 keywords: [Day, Middleware, 掌握請求的全局控制權, learning, next-js-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Day 15 - Middleware：掌握請求的全局控制權",
+        "datePublished": "2026-07-08T13:51:33.480Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Next.js 30 天學習筆記系列 - 第 15 天：Day 15 - Middleware：掌握請求的全局控制權。深入探討 Next.js 開發實戰技巧。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # Next.js 30 天全端實戰：Day 15 - Middleware：掌握請求的全局控制權
 
 ## 一、 前言

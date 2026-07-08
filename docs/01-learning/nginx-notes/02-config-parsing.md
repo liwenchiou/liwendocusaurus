@@ -8,6 +8,27 @@ description: "Nginx 核心設定檔解析 Nginx 的強大之處在於其高效�
 keywords: [Nginx, 核心設定檔解析, learning, nginx-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Nginx 核心設定檔解析",
+        "datePublished": "2026-07-08T13:51:33.492Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Nginx 核心設定檔解析 Nginx 的強大之處在於其高效率的設定檔結構。本章節將深入剖析 nginx.conf 的巢狀區塊結構（五大 Context），並透過餐飲集團的擬人化比喻，幫助您輕鬆理解全域、事件、HTTP、Server 以及 Location 各區塊的職責與繼承覆寫規則。 nginx...."
+      }
+    `}
+  </script>
+</Head>
+
+
 # Nginx 核心設定檔解析
 
 Nginx 的強大之處在於其高效率的設定檔結構。本章節將深入剖析 `nginx.conf` 的巢狀區塊結構（五大 Context），並透過餐飲集團的擬人化比喻，幫助您輕鬆理解全域、事件、HTTP、Server 以及 Location 各區塊的職責與繼承覆寫規則。

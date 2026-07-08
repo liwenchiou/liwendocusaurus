@@ -9,6 +9,27 @@ description: "記錄新手爸爸在公司、月子中心與家庭間奔波的『
 keywords: [小夕出月中記, 新手爸爸的三棲戰士日常與育兒觀念碰撞, 育兒, 生活紀錄, 心理成長]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "小夕出月中記：新手爸爸的三棲戰士日常與育兒觀念碰撞",
+        "datePublished": "2026-05-03T11:37:41.837287+00:00",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "記錄新手爸爸在公司、月子中心與家庭間奔波的『三棲戰士』生活，並探討長輩傳統育兒觀點與現代護理觀念間的摩擦與反思。"
+      }
+    `}
+  </script>
+</Head>
+
+
 小夕終於出月中了！回顧這一個月，日子過得既疲憊又充實，還充滿了各種「驚喜」。
 
 ## 三棲戰士的日常

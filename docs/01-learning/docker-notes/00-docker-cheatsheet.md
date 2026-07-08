@@ -8,6 +8,27 @@ description: "Docker 常用指令與生命週期速查表 這份速查表整理�
 keywords: [Docker, 常用指令與生命週期速查表, learning, docker-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Docker 常用指令與生命週期速查表",
+        "datePublished": "2026-07-08T13:51:33.444Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Docker 常用指令與生命週期速查表 這份速查表整理了 Docker 在實務中最常用的指令，並且依照「基礎操作」與「容器生命週期狀態」進行分類，方便開發時快速查找。 1. 基礎與 Image 指令速查 | 指令 Command | 用途與說明 | | : | : | | docker versio..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # Docker 常用指令與生命週期速查表
 
 這份速查表整理了 Docker 在實務中最常用的指令，並且依照「基礎操作」與「容器生命週期狀態」進行分類，方便開發時快速查找。

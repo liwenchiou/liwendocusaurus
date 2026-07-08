@@ -5,6 +5,27 @@ description: "Gantt Chart 專案進度甘特圖 甘特圖 gantt 用於排定多�
 keywords: [Gantt, Chart, 專案進度甘特圖, engineering, mermaid-gallery]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Untitled",
+        "datePublished": "2026-07-08T13:51:33.505Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Gantt Chart 專案進度甘特圖 甘特圖 gantt 用於排定多個工作模組、多人並行開發時的專案時程表，展示任務的起迄時間與相依關係。 📊 範例效果 mermaid gantt title 購物車系統開發時程排程 dateFormat YYYYMMDD section 前端開發 刻畫面與 U..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # Gantt Chart 專案進度甘特圖
 
 甘特圖 (`gantt`) 用於排定多個工作模組、多人並行開發時的專案時程表，展示任務的起迄時間與相依關係。

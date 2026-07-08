@@ -8,6 +8,27 @@ description: "為什麼要學 Promise、Async、Await？ 在 JavaScript 中處�
 keywords: [非同步與, Promise, 基礎, learning, hexschool, nodejs-course]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "非同步與 Promise 基礎",
+        "datePublished": "2026-07-08T13:51:33.461Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "為什麼要學 Promise、Async、Await？ 在 JavaScript 中處理非同步事件時，如果不妥善管理，很容易會導致程式碼難以維護（例如著名的「回呼地獄 Callback Hell」）。學習這三種語法的目的在於： 1. 提升可讀性：隨著程式越寫越多，良好的非同步寫法能讓程式碼保持簡潔。 ..."
+      }
+    `}
+  </script>
+</Head>
+
+
 ## 為什麼要學 Promise、Async、Await？
 
 在 JavaScript 中處理非同步事件時，如果不妥善管理，很容易會導致程式碼難以維護（例如著名的「回呼地獄 Callback Hell」）。學習這三種語法的目的在於：

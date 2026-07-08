@@ -8,6 +8,27 @@ description: "自動化部署 GitHub Actions 👉 核心痛點：之前我們教
 keywords: [自動化部署, GitHub, Actions, learning, docker-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "自動化部署 GitHub Actions",
+        "datePublished": "2026-07-08T13:51:33.451Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "自動化部署 GitHub Actions 👉 核心痛點：之前我們教過使用 docker buildx 在本機進行「跨平台多架構打包」，但如果每次改 code 都要在本機慢慢跑打包程序、然後手動推送到 Docker Hub，實在太浪費時間了，而且電腦跑打包時還會很卡！ 最聰明的做法是：把這些苦差事丟..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # 自動化部署 GitHub Actions
 
 👉 **核心痛點**：之前我們教過使用 `docker buildx` 在本機進行「跨平台多架構打包」，但如果每次改 code 都要在本機慢慢跑打包程序、然後手動推送到 Docker Hub，實在太浪費時間了，而且電腦跑打包時還會很卡！

@@ -8,6 +8,27 @@ description: "終極殺器：Docker Compose 👉 核心痛點：回想一下，�
 keywords: [終極殺器, Docker, Compose, learning, docker-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "終極殺器：Docker Compose",
+        "datePublished": "2026-07-08T13:51:33.450Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "終極殺器：Docker Compose 👉 核心痛點：回想一下，為了把這個 Node.js 專案跑起來，我們手動敲了多少指令？ 建 Network、建 Volume、docker run MongoDB 並且加上一大串參數、最後再 docker run Node.js 並帶上落落長的環境變數跟網路..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # 終極殺器：Docker Compose
 
 👉 **核心痛點**：回想一下，為了把這個 Node.js 專案跑起來，我們手動敲了多少指令？

@@ -8,6 +8,26 @@ description: "AI 輔助開發中，除了模型聰明程度外，我們如何「
 keywords: [AI, 開發節奏, 敏捷式 AI 結對開發, Agile Agentic Coding, 規格驅動, SDD, AI 工作流]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "尋找最適合你的 AI 開發節奏：淺談「敏捷式 AI 結對開發」",
+        "datePublished": "2026-07-08T21:00:00+08:00",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "AI 輔助開發中，除了模型聰明程度外，我們如何「使用」它才是決定開發體驗的關鍵。本文分享為何比起寫詳盡規格書的 SDD 模式，我更偏好「敏捷式 AI 結對開發」。"
+      }
+    `}
+  </script>
+</Head>
+
 最近網路上有許多關於哪家 AI 比較聰明的討論，大家常把焦點放在 AI 的「通靈能力」、也就是猜測隱性需求的能力上，但經過這陣子的實戰摸索，我發現**除了模型本身的聰明程度之外，我們如何去「使用」它，反而才是決定開發體驗的關鍵**。
 
 {/* truncate */}

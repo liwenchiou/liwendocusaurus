@@ -5,6 +5,27 @@ description: "Flowchart 流程與系統架構圖 流程圖 flowchart 用於展�
 keywords: [Flowchart, 流程與系統架構圖, engineering, mermaid-gallery]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Untitled",
+        "datePublished": "2026-07-08T13:51:33.501Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Flowchart 流程與系統架構圖 流程圖 flowchart 用於展示步驟、判斷分支與系統組件之間的連通拓撲。這是最通用且實用的圖表。 📊 範例效果 mermaid flowchart TD Client\\"瀏覽器 / App Client\\" subgraph PublicNet 外網環境 Ng..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # Flowchart 流程與系統架構圖
 
 流程圖 (`flowchart`) 用於展示步驟、判斷分支與系統組件之間的連通拓撲。這是最通用且實用的圖表。

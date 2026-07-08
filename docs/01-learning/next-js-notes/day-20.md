@@ -6,6 +6,27 @@ description: "Next.js 30 天學習筆記系列 - 第 20 天：Day 20 - 進階身
 keywords: [Day, 進階身份驗證, 自定義, UI, 與角色權限管理, learning, next-js-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Day 20 - 進階身份驗證：自定義 UI 與角色權限管理",
+        "datePublished": "2026-07-08T13:51:33.482Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Next.js 30 天學習筆記系列 - 第 20 天：Day 20 - 進階身份驗證：自定義 UI 與角色權限管理。深入探討 Next.js 開發實戰技巧。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # Next.js 30 天全端實戰：Day 20 - 進階身份驗證：自定義 UI 與角色權限管理
 
 ## 一、 前言

@@ -5,6 +5,27 @@ description: "Packet Diagram 網路封包結構圖 網路封包圖 packet 用於
 keywords: [Packet, Diagram, 網路封包結構圖, engineering, mermaid-gallery]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Untitled",
+        "datePublished": "2026-07-08T13:51:33.507Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Packet Diagram 網路封包結構圖 網路封包圖 packet 用於視覺化呈現二進位通訊協議（如 TCP/IP 封包）在各 Bit Offset 上的欄位佔用長度與功能結構。 📊 範例效果 mermaid packetbeta 015: \\"Source Port 16 bits\\" 1631..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # Packet Diagram 網路封包結構圖
 
 網路封包圖 (`packet`) 用於視覺化呈現二進位通訊協議（如 TCP/IP 封包）在各 Bit Offset 上的欄位佔用長度與功能結構。

@@ -10,6 +10,27 @@ description: "課程筆記 第一堂：重新打造 JavaScript 思維 本堂課�
 keywords: [課程筆記, 第一堂, 重新打造, JavaScript, 思維, 六角學院, learning, hexschool, react-course]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "[課程筆記] 第一堂：重新打造 JavaScript 思維",
+        "datePublished": "2026-04-21T06:36:44.733565+00:00",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "課程筆記 第一堂：重新打造 JavaScript 思維 本堂課的核心在於拆解 JavaScript 的基礎語法，並理解這些語法在 React 開發中扮演的關鍵角色。 💡 JS 必備知識：解構與陣列方法 1. 解構賦值 Destructuring 解構能讓我們從陣列或物件中快速提取資訊，這在 Rea..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # [課程筆記] 第一堂：重新打造 JavaScript 思維
 
 本堂課的核心在於拆解 JavaScript 的基礎語法，並理解這些語法在 React 開發中扮演的關鍵角色。

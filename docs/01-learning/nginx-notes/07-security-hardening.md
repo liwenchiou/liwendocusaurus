@@ -5,6 +5,27 @@ description: "Nginx 安全防禦實戰 當您的伺服器正式暴露在外網�
 keywords: [Nginx, 安全防禦實戰, learning, nginx-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Untitled",
+        "datePublished": "2026-07-08T13:51:33.496Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Nginx 安全防禦實戰 當您的伺服器正式暴露在外網環境時，安全防護就成為第一要務。網路上充滿了惡意掃描器與腳本，隨時在尋找系統漏洞。本章將教您如何在生產環境中設置 HTTPS 安全隧道、進行 301 強制跳轉，並配置 HSTS 以防止中間人劫持。同時，我們也會配置「漏桶演算法」進行 API 限流防..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # Nginx 安全防禦實戰
 
 當您的伺服器正式暴露在外網環境時，安全防護就成為第一要務。網路上充滿了惡意掃描器與腳本，隨時在尋找系統漏洞。本章將教您如何在生產環境中設置 HTTPS 安全隧道、進行 301 強制跳轉，並配置 HSTS 以防止中間人劫持。同時，我們也會配置「漏桶演算法」進行 API 限流防禦（防止暴力破解與刷 API），並加入三大安全防護門神標頭（Security Headers），阻擋常見的 XSS、點擊劫持與 MIME 類型探測攻擊。

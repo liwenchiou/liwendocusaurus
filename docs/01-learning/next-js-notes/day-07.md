@@ -6,6 +6,27 @@ description: "Next.js 30 天學習筆記系列 - 第 07 天：Day 07 - 快取與
 keywords: [Day, 快取與更新, 超直覺的貨架管理學, learning, next-js-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Day 07 - 快取與更新：超直覺的貨架管理學",
+        "datePublished": "2026-07-08T13:51:33.477Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Next.js 30 天學習筆記系列 - 第 07 天：Day 07 - 快取與更新：超直覺的貨架管理學。深入探討 Next.js 開發實戰技巧。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # Day 07 - 快取與更新：超直覺的貨架管理學
 
 Next.js 預設會對資料進行極致的快取 (Caching)，這能讓您的網站快如閃電，但有時也會導致「資料不更新」的困擾。

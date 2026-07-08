@@ -5,6 +5,27 @@ description: "Nginx 效能優化實戰 當網站的架構基本定型後，如�
 keywords: [Nginx, 效能優化實戰, learning, nginx-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Untitled",
+        "datePublished": "2026-07-08T13:51:33.495Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Nginx 效能優化實戰 當網站的架構基本定型後，如何讓網頁載入得更快、如何減少伺服器頻寬的消耗，是上線前至關重要的課題。本章將帶您深入探討 Nginx 的兩大效能優化法寶：Gzip 即時壓縮（讓文字檔案大瘦身）與瀏覽器快取設定（透過 Expires 與 CacheControl 強快取，實現網頁「..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # Nginx 效能優化實戰
 
 當網站的架構基本定型後，如何讓網頁載入得更快、如何減少伺服器頻寬的消耗，是上線前至關重要的課題。本章將帶您深入探討 Nginx 的兩大效能優化法寶：Gzip 即時壓縮（讓文字檔案大瘦身）與瀏覽器快取設定（透過 Expires 與 Cache-Control 強快取，實現網頁「零秒載入」）。同時，我們也將剖析前後端快取連動機制（Cache Busting），確保您的網頁在極速讀取之餘，也能在更新時即時推播給使用者。

@@ -8,6 +8,27 @@ description: "進階架構：全域與本地雙層大腦設定 當你在多個�
 keywords: [進階架構, 全域與本地雙層大腦設定, engineering, ainotes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "進階架構：全域與本地雙層大腦設定",
+        "datePublished": "2026-07-08T13:51:33.500Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "進階架構：全域與本地雙層大腦設定 當你在多個專案中使用 AI Agent 輔助開發時，必定會面臨一個難題：「我希望所有專案都共用一套基礎規範（例如：繁體中文、不主動執行終端機），但每個專案又需要有自己專屬的優先規則（例如：A 專案部署前要跑 build，B 專案需要跑 test）。」 如果只依賴單一..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # 進階架構：全域與本地雙層大腦設定
 
 當你在多個專案中使用 AI Agent 輔助開發時，必定會面臨一個難題：「我希望所有專案都共用一套基礎規範（例如：繁體中文、不主動執行終端機），但每個專案又需要有自己專屬的優先規則（例如：A 專案部署前要跑 `build`，B 專案需要跑 `test`）。」

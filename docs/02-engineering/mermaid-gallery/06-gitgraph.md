@@ -5,6 +5,27 @@ description: "GitGraph 版本控制分支管理圖 Git 分支圖 gitGraph 用於
 keywords: [GitGraph, 版本控制分支管理圖, engineering, mermaid-gallery]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Untitled",
+        "datePublished": "2026-07-08T13:51:33.504Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "GitGraph 版本控制分支管理圖 Git 分支圖 gitGraph 用於技術文檔中，展示團隊的分支開發流程（如 Git Flow 或 Trunkbased Development）。 📊 範例效果 mermaid gitGraph commit id: \\"初始化專案\\" commit id: \\"..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # GitGraph 版本控制分支管理圖
 
 Git 分支圖 (`gitGraph`) 用於技術文檔中，展示團隊的分支開發流程（如 Git Flow 或 Trunk-based Development）。

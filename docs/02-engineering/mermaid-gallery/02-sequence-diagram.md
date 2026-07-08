@@ -5,6 +5,27 @@ description: "Sequence Diagram API 交互時序圖 時序圖 sequenceDiagram 專
 keywords: [Sequence, Diagram, API, 交互時序圖, engineering, mermaid-gallery]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Untitled",
+        "datePublished": "2026-07-08T13:51:33.501Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Sequence Diagram API 交互時序圖 時序圖 sequenceDiagram 專門展示多個對象或系統之間，隨著「時間順序」發生的訊息往來與 API 呼叫流程。 📊 範例效果 mermaid sequenceDiagram autonumber actor User as 使用者瀏覽..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # Sequence Diagram API 交互時序圖
 
 時序圖 (`sequenceDiagram`) 專門展示多個對象或系統之間，隨著「時間順序」發生的訊息往來與 API 呼叫流程。

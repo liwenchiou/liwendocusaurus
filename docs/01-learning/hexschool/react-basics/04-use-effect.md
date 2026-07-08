@@ -10,6 +10,27 @@ description: "什麼是 useEffect？ 當組件「渲染後」需要執行動作�
 keywords: [useEffect, 與外部世界互動的橋樑, React, learning, hexschool, react-basics]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "useEffect：與外部世界互動的橋樑",
+        "datePublished": "2026-04-21T06:36:45.872462+00:00",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "什麼是 useEffect？ 當組件「渲染後」需要執行動作（如：抓取資料、訂閱事件、修改 DOM），就要用 useEffect。 useEffect 讓您在組件「渲染後」執行某些操作。這些操作通常不直接參與畫面繪製，而是與外部世界互動。 核心觀念： React 的渲染過程應該是純粹的（輸入什麼資料就..."
+      }
+    `}
+  </script>
+</Head>
+
+
 ## 什麼是 useEffect？
 當組件「渲染後」需要執行動作（如：抓取資料、訂閱事件、修改 DOM），就要用 `useEffect`。
 `useEffect` 讓您在組件「渲染後」執行某些操作。這些操作通常不直接參與畫面繪製，而是與外部世界互動。

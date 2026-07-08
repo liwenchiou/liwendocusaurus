@@ -6,6 +6,27 @@ description: "Next.js 30 天學習筆記系列 - 第 04 天：Day 04 - 混合渲
 keywords: [Day, 混合渲染機制, Server, vs, Client, Components, learning, next-js-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Day 04 - 混合渲染機制：Server vs Client Components",
+        "datePublished": "2026-07-08T13:51:33.476Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Next.js 30 天學習筆記系列 - 第 04 天：Day 04 - 混合渲染機制：Server vs Client Components。深入探討 Next.js 開發實戰技巧。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # Day 04 - 混合渲染機制：Server vs Client Components
 
 在傳統的 React (SPA) 中，所有的元件都是在瀏覽器端渲染的。但 Next.js 引入了 **「伺服器組件 (Server Components)」** 的概念，將元件劃分為伺服器端與用戶端兩大陣營。

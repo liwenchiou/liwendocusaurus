@@ -4,6 +4,27 @@ description: "系統開發規格書範本 (SD)，專供工程師實作與部署�
 keywords: [系統開發規格書, Tech, Spec, SD, projects-business, liwen-sop, sop-documents]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Untitled",
+        "datePublished": "2026-07-08T13:51:33.515Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "系統開發規格書範本 (SD)，專供工程師實作與部署使用之技術指南"
+      }
+    `}
+  </script>
+</Head>
+
+
 # 系統開發規格書 (Tech Spec / SD)
 
 > **🎯 文件屬性：純技術開發手冊 (SD)**

@@ -6,6 +6,27 @@ description: "Next.js 30 天學習筆記系列 - 第 26 天：Day 26 - 檔案處
 keywords: [Day, 檔案處理, 整合, Cloudinary, 實現高效圖片上傳, learning, next-js-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Day 26 - 檔案處理：整合 Cloudinary 實現高效圖片上傳",
+        "datePublished": "2026-07-08T13:51:33.487Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Next.js 30 天學習筆記系列 - 第 26 天：Day 26 - 檔案處理：整合 Cloudinary 實現高效圖片上傳。深入探討 Next.js 開發實戰技巧。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # Next.js 30 天全端實戰：Day 26 - 檔案處理：整合 Cloudinary 實現高效圖片上傳
 
 ## 一、 前言

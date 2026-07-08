@@ -5,6 +5,27 @@ description: "Liwen 的技術筆記首頁。這裡記錄了我在 Next.js、前�
 keywords: [技術筆記, 我的持續學習路徑]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Untitled",
+        "datePublished": "2026-07-08T13:51:33.518Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Liwen 的技術筆記首頁。這裡記錄了我在 Next.js、前端架構、React 以及 AI 協作開發領域的學習筆記與實作心得。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # 技術筆記：我的持續學習路徑
 
 歡迎來到我的技術筆記區！這裡是我在軟體工程領域不斷探索、碰撞與沉澱的地方。

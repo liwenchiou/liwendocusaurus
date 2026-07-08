@@ -10,6 +10,27 @@ description: "直接在 HTML 中使用 React 1. 在 中引入 CDN html 2. 中加
 keywords: [直接在, HTML, 中使用, React, CDN, learning, hexschool, react-basics]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "直接在 HTML 中使用 React (CDN 版)",
+        "datePublished": "2026-04-21T06:36:45.243399+00:00",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "直接在 HTML 中使用 React 1. 在 中引入 CDN html 2. 中加入 root html 3. 在 前增加 區塊 html // React 邏輯寫在這裡 4. 在 script 中快樂的寫 React html const { useState } = React; functi..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # 直接在 HTML 中使用 React
 1. 在 `<head>` 中引入 CDN
 ```html

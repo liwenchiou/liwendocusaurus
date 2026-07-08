@@ -8,6 +8,27 @@ description: "NPM 套件探索總覽 這裡記錄了我學習與研究過的各�
 keywords: [NPM, 套件總覽, engineering, npm-packages]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "NPM 套件總覽",
+        "datePublished": "2026-07-08T13:51:33.508Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "NPM 套件探索總覽 這裡記錄了我學習與研究過的各種實用 NPM 套件。我會將套件的用法、踩坑紀錄以及實際應用情境整理成技術筆記，方便日後在不同的專案中快速查閱與重用。 學習套件清單 | 套件名稱 | 說明與用途 | 查看筆記 | | : | : | : | | bcrypt | 密碼雜湊與驗證 |..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # NPM 套件探索總覽
 
 這裡記錄了我學習與研究過的各種實用 NPM 套件。我會將套件的用法、踩坑紀錄以及實際應用情境整理成技術筆記，方便日後在不同的專案中快速查閱與重用。

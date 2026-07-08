@@ -8,6 +8,27 @@ description: "主動指令與技能模組 Workflow & Skill 在 Antigravity 系�
 keywords: [主動指令與技能模組, Workflow, Skill, engineering, ainotes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "主動指令與技能模組 (Workflow & Skill)",
+        "datePublished": "2026-07-08T13:51:33.498Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "主動指令與技能模組 Workflow & Skill 在 Antigravity 系統中，有兩種讓 AI 執行任務的方式，它們在架構與用途上有根本的差異：Workflow 快捷指令 與 Skill 底層模組。 基礎觀念：Workflow 與 Skill 有什麼不同？ 🔘 Workflow 工作流程..."
+      }
+    `}
+  </script>
+</Head>
+
+
 # 主動指令與技能模組 (Workflow & Skill)
 
 在 Antigravity 系統中，有兩種讓 AI 執行任務的方式，它們在架構與用途上有根本的差異：Workflow (快捷指令) 與 Skill (底層模組)。

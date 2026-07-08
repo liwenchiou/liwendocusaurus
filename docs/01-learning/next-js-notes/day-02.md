@@ -6,6 +6,27 @@ description: "Next.js 30 天學習筆記系列 - 第 02 天：Day 02 - 路由架
 keywords: [Day, 路由架構, 檔案即路徑的設計哲學, learning, next-js-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Day 02 - 路由架構：檔案即路徑的設計哲學",
+        "datePublished": "2026-07-08T13:51:33.475Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Next.js 30 天學習筆記系列 - 第 02 天：Day 02 - 路由架構：檔案即路徑的設計哲學。深入探討 Next.js 開發實戰技巧。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # Day 02 - 路由架構：檔案即路徑的設計哲學
 
 在傳統的 React 開發中，我們習慣使用 React Router 來定義路由表。但在 Next.js 的世界裡，路由不需要「寫」，而是透過「檔案擺放位置」來自動生成。

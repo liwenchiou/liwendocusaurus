@@ -9,6 +9,27 @@ description: "告別手動重新整理網頁！我開源了 ghaction-lis，一�
 keywords: [告別, F5！我開源了專門監聽, GitHub, Actions, CLI, 工具, ghaction, lis, Open Source, GitHub Actions, DevEx, Node.js]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "告別 F5！我開源了專門監聽 GitHub Actions 的 CLI 工具：ghaction-lis",
+        "datePublished": "2026-06-16",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "告別手動重新整理網頁！我開源了 ghaction-lis，一款專門在終端機精準監聽 GitHub Actions 部署狀態的超輕量 CLI 工具。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # 告別 F5！我開源了專門監聽 GitHub Actions 的 CLI 工具：ghaction-lis
 
 做前端開發或靜態網站管理（例如這個 Docusaurus 數位花園）時，我們常常會把 `git push` 和自動部署串在一起。但這衍生出一個惱人的日常痛點：**每次 push 完，你總是要打開瀏覽器、點開 Actions 標籤、然後傻傻地按 F5 重新整理，直到進度條跑完為止。**

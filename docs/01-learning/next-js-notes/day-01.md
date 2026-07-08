@@ -6,6 +6,27 @@ description: "Next.js 30 天學習筆記系列開篇：探討從 React SPA 邁�
 keywords: [Day, React, 邁向全端架構的思維轉型, learning, next-js-notes]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Day 01 - 從 React 邁向全端架構的思維轉型",
+        "datePublished": "2026-07-08T13:51:33.474Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "Next.js 30 天學習筆記系列開篇：探討從 React SPA 邁向 Next.js 全端架構的思維轉型，並引導完成開發環境的初始化與目錄結構解析。"
+      }
+    `}
+  </script>
+</Head>
+
+
 # Day 01 - 從 React 邁向全端架構的思維轉型
 
 歡迎來到這個專欄！如果你已經熟悉 JavaScript 甚至 React，你可能會問：「為什麼我們還需要 Next.js？」

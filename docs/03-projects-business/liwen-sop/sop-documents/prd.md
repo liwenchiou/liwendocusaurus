@@ -4,6 +4,27 @@ description: "正式需求規格書：用於給客戶最終確認與簽名"
 keywords: [03., 正式需求規格書, Final, PRD, projects-business, liwen-sop, sop-documents]
 ---
 
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Untitled",
+        "datePublished": "2026-07-08T13:51:33.515Z",
+        "author": [{
+            "@type": "Person",
+            "name": "liwen"
+        }],
+        "description": "正式需求規格書：用於給客戶最終確認與簽名"
+      }
+    `}
+  </script>
+</Head>
+
+
 # 03. 正式需求規格書 (Final PRD)
 
 > **🎯 使用時機：** 內部評估完成後，整理出這份乾淨的「合約級」文件給客戶簽收。
