@@ -1,0 +1,128 @@
+<!doctype html><html lang=zh-Hant dir=ltr class="blog-wrapper blog-post-page plugin-blog plugin-id-default" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.1"><title data-rh=true>🎯 從被問倒到打怪升級：圖解高頻寫入與高可用架構演進史 | Liwen's Digital Garden</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true property=og:image content=https://garden.liwen.studio/img/og-image.png /><meta data-rh=true name=twitter:image content=https://garden.liwen.studio/img/og-image.png /><meta data-rh=true property=og:url content=https://garden.liwen.studio/blog/high-concurrency-architecture /><meta data-rh=true property=og:locale content=zh_Hant /><meta data-rh=true name=docusaurus_locale content=zh-Hant /><meta data-rh=true name=docusaurus_tag content=default /><meta data-rh=true name=docsearch:language content=zh-Hant /><meta data-rh=true name=docsearch:docusaurus_tag content=default /><meta data-rh=true name=keywords content="網頁開發, 全端工程師, 工程心理學, AI Agent, Agentic AI, Prompt Engineering, React, Next.js, Node.js, Serverless, 12 週目標管理, Liwen Studio, 數位花園"/><meta data-rh=true name=author content="Liwen Chiou"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:title content="🎯 從被問倒到打怪升級：圖解高頻寫入與高可用架構演進史 | Liwen's Digital Garden"/><meta data-rh=true name=description content="面試遇到 1000 台設備同時回傳狀態怎麼辦？這篇筆記紀錄了我是如何被面試官問倒，然後一路從最原始的一條龍架構，打怪升級到具備 Nginx、Kafka、Redis 與 K8s CQRS 的高可用監控系統架構！"/><meta data-rh=true property=og:description content="面試遇到 1000 台設備同時回傳狀態怎麼辦？這篇筆記紀錄了我是如何被面試官問倒，然後一路從最原始的一條龍架構，打怪升級到具備 Nginx、Kafka、Redis 與 K8s CQRS 的高可用監控系統架構！"/><meta data-rh=true property=og:type content=article /><meta data-rh=true property=article:published_time content=2026-07-14T00:00:00.000Z /><meta data-rh=true property=article:author content=https://github.com/liwenchiou /><meta data-rh=true property=article:tag content=architecture,backend,k8s,microservices /><link data-rh=true rel=icon href=/img/og-image.png /><link data-rh=true rel=canonical href=https://garden.liwen.studio/blog/high-concurrency-architecture /><link data-rh=true rel=alternate href=https://garden.liwen.studio/blog/high-concurrency-architecture hreflang=zh-Hant /><link data-rh=true rel=alternate href=https://garden.liwen.studio/blog/high-concurrency-architecture hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@id":"https://garden.liwen.studio/blog/high-concurrency-architecture","@type":"BlogPosting","author":{"@type":"Person","description":"Digital Architect / Full Stack Developer","image":"https://github.com/liwenchiou.png","name":"Liwen","url":"https://github.com/liwenchiou"},"datePublished":"2026-07-14T00:00:00.000Z","description":"面試遇到 1000 台設備同時回傳狀態怎麼辦？這篇筆記紀錄了我是如何被面試官問倒，然後一路從最原始的一條龍架構，打怪升級到具備 Nginx、Kafka、Redis 與 K8s CQRS 的高可用監控系統架構！","headline":"🎯 從被問倒到打怪升級：圖解高頻寫入與高可用架構演進史","isPartOf":{"@id":"https://garden.liwen.studio/blog","@type":"Blog","name":"Blog"},"keywords":[],"mainEntityOfPage":"https://garden.liwen.studio/blog/high-concurrency-architecture","name":"🎯 從被問倒到打怪升級：圖解高頻寫入與高可用架構演進史","url":"https://garden.liwen.studio/blog/high-concurrency-architecture"}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="Liwen's Digital Garden RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="Liwen's Digital Garden Atom Feed"><link rel=preconnect href=https://www.google-analytics.com><link rel=preconnect href=https://www.googletagmanager.com><script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6K8KV1028"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-Q6K8KV1028",{anonymize_ip:!0})</script><link rel=stylesheet href=/assets/css/styles.ab68aa98.css /><script src=/assets/js/runtime~main.eb02fa84.js defer></script><script src=/assets/js/main.91ccc22f.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t;document.documentElement.setAttribute("data-theme",t||"dark"),document.documentElement.setAttribute("data-theme-choice",t||"dark")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/img/og-image.png /><link rel=preload as=image href=https://github.com/liwenchiou.png /><div role=region aria-label=跳至主要内容><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>跳至主要内容</a></div><nav aria-label=主導航 class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=切換導覽列 aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/><div class=navbar__logo><img src=/img/og-image.png alt="LW Docusaurus Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/img/og-image.png alt="LW Docusaurus Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Liwen's Garden</b></a><a class="navbar__item navbar__link" href=/docs>技術筆記</a><a aria-current=page class="navbar__item navbar__link navbar__link--active" href=/blog>生活分享</a><a class="navbar__item navbar__link" href=/about>關於我</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://litool.liwen.studio target=_blank rel="noopener noreferrer" class="navbar__item navbar__link">LiTool 工具箱<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><a href=https://www.liwen.studio target=_blank rel="noopener noreferrer" class="navbar__item navbar__link">Liwen Studio 官網<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><div class=navbarSearchContainer_Bca1></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="container margin-vert--lg"><div class=row><main class="col col--9 col--offset-1"><article class=""><header><h1 class=title_f1Hy>🎯 從被問倒到打怪升級：圖解高頻寫入與高可用架構演進史</h1><div class="container_mt6G margin-vert--md"><time datetime=2026-07-14T00:00:00.000Z>2026年7月14日</time> · <!-- -->閱讀時間約 12 分鐘</div><div class="margin-top--md margin-bottom--sm row"><div class="col col--12 authorCol_Hf19"><div class="avatar margin-bottom--sm"><a href=https://github.com/liwenchiou target=_blank rel="noopener noreferrer" class=avatar__photo-link><img class="avatar__photo authorImage_XqGP" src=https://github.com/liwenchiou.png alt=Liwen /></a><div class="avatar__intro authorDetails_lV9A"><div class=avatar__name><a href=https://github.com/liwenchiou target=_blank rel="noopener noreferrer"><span class=authorName_yefp translate=no>Liwen</span></a></div><small class=authorTitle_nd0D title="Digital Architect / Full Stack Developer">Digital Architect / Full Stack Developer</small><div class=authorSocials_rSDt></div></div></div></div></div></header><div id=__blog-post-container class=markdown><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=前言一場面試帶來的架構震撼教育>前言：一場面試帶來的架構震撼教育<a href=#前言一場面試帶來的架構震撼教育 class=hash-link aria-label=前言：一場面試帶來的架構震撼教育的直接連結 title=前言：一場面試帶來的架構震撼教育的直接連結 translate=no>​</a></h2>
+<p>今天去面試時，面試官拋出了一個問題：「如果是設備監控系統，當同時有 1000 台以上的設備回傳狀態時，你會怎麼寫入資料庫？」</p>
+<p>當時的我根本沒遇過高頻跟高併發的情境，當下只是滿頭問號看著他，心想：「阿不就把資料寫進資料庫嗎？寫個 <code>INSERT INTO</code> 語法不就好了，這有什麼好問的？」</p>
+<p>想當然爾，面試結束後我還是一臉懵，直到回來的路上跟學姊討論才發現原來資料量大到一個程度時會產生「高頻海量數據寫入」的致命效能瓶頸，這瞬間激起了我的好奇心於是在回程的車上我直接開了 Gemini 一路追問到底，這才終於推開了後端架構的另一扇大門也深刻體會到自己原本的想法有多麼井底之蛙，這篇筆記就是這趟探索之旅的總結。</p>
+<!-- -->
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=-設備監控系統海量數據的架構演進史>🎯 設備監控系統：海量數據的架構演進史<a href=#-設備監控系統海量數據的架構演進史 class=hash-link aria-label="🎯 設備監控系統：海量數據的架構演進史的直接連結" title="🎯 設備監控系統：海量數據的架構演進史的直接連結" translate=no>​</a></h2>
+<p>當系統面臨上千台設備每秒連續回傳狀態時，傳統那種「API 收到資料就直接 Insert 進資料庫」的寫法會因為瞬間湧入的大量併發連線先壓垮 API Server，且後續瘋狂的高頻寫入也會讓資料庫的磁碟 I/O 直接癱瘓，所以我們必須在架構上進行分層擊破。</p>
+<p>在面對<strong>高併發連線</strong>時，我們會在最前方加上 Nginx 當作反向代理把海量連線平均分發給後端多台 API Server，接著為了解決<strong>高頻寫入</strong>，API Server 收到資料後不再直接操作資料庫而是極速丟進 Kafka 訊息隊列，再由後方的 Consumer 慢慢把資料拉出來做 Batch Insert 藉由這種「削峰填谷」來保護資料庫。</p>
+<p>除此之外為了應付管理員在 Dashboard 上的<strong>高頻讀取</strong>需求，我們引入 Redis 當作記憶體快取，Consumer 在寫入資料庫存檔的同時順手把最新狀態覆蓋到 Redis 裡，往後所有的即時查詢都只會命中極速的 Redis 從而徹底解放資料庫的讀取壓力並落實資料分級。</p>
+<p>到了架構成熟期為了解決伺服器的單點故障並實現<strong>高可用性 (HA)</strong>，我們會幫 Nginx 綁定 Keepalived 虛擬 IP 並幫 Redis 配置 Sentinel 哨兵模式以確保任何一台當機時都能在幾秒內無縫切換到備援機，最後若將系統搬上 Kubernetes 我們更會導入 CQRS 讀寫分離的微服務概念把 API 徹底拆分成負責接流量的 Write API 與負責供查詢的 Read API，讓兩條動線完全解耦且能獨立自動擴縮容，這才算是一個真正具備彈性與高容錯的現代化監控架構。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=1-核心名詞定義先搞懂這三個術語>1. 核心名詞定義（先搞懂這三個術語）<a href=#1-核心名詞定義先搞懂這三個術語 class=hash-link aria-label="1. 核心名詞定義（先搞懂這三個術語）的直接連結" title="1. 核心名詞定義（先搞懂這三個術語）的直接連結" translate=no>​</a></h2>
+<p>為了解決系統崩潰的問題，我們得先搞懂這三個常被混淆、卻又息息相關的名詞：</p>
+<ul>
+<li class="">
+<p><strong>高併發 (High Concurrency)</strong>：</p>
+<ul>
+<li class=""><strong>白話說</strong>：系統在「同一個瞬間」能同時接待多少個請求，考驗的是系統的寬度。</li>
+<li class=""><strong>痛點</strong>：1000 台設備「同時」打 API 對 Server 來說就是瞬間爆出 1000 個連線，如果伺服器的執行緒或記憶體不夠，來不及處理的連線就會被塞在門口排隊甚至直接被踢掉（Timeout 或 Connection Refused）。</li>
+</ul>
+</li>
+<li class="">
+<p><strong>高頻 (High Frequency)</strong>：</p>
+<ul>
+<li class=""><strong>白話說</strong>：特定動作發生的「頻率極高」且「連續不斷」，考驗的是系統的持久耐力與吞吐量（每秒能讀寫幾次）。</li>
+<li class=""><strong>痛點</strong>：這 1000 台設備不是傳一次就沒事了而是「每秒」都在狂傳，這會對資料庫產生極高頻率的連續寫入壓力，像 MySQL 這種傳統資料庫面對這種狀況很容易因為硬碟 I/O 跟不上或是資料表被 Lock 死而直接把整個系統拖垮。</li>
+</ul>
+</li>
+<li class="">
+<p><strong>高可用性 (High Availability, HA)</strong>：</p>
+<ul>
+<li class=""><strong>白話說</strong>：系統的「容錯與備援能力」，就算硬體壞了或軟體當機系統也能在極短時間內自動恢復，達到「服務幾乎不中斷」的境界。</li>
+<li class=""><strong>痛點</strong>：假設所有設備都只連同一台 API Server 只要這台機器一壞（這叫單點故障 SPOF），1000 台設備就會瞬間全部斷線且資料也會跟著遺失，高可用性就是為了防範這種毀滅性災難。</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=2-如果用最原始的一條龍架構會怎樣>2. 如果用最原始的一條龍架構會怎樣？<a href=#2-如果用最原始的一條龍架構會怎樣 class=hash-link aria-label="2. 如果用最原始的一條龍架構會怎樣？的直接連結" title="2. 如果用最原始的一條龍架構會怎樣？的直接連結" translate=no>​</a></h2>
+<p><strong>情境設定</strong>：
+我們以「設備監控系統」為例，假設有 1000 台設備每秒回傳一次狀態而且每次回傳裡面有 1000 個數據點。</p>
+<p><strong>原始資料流程</strong>：
+一開始最直覺的寫法通常是一條龍的，包含「寫入」與「讀取」兩條動線：</p>
+<ol>
+<li class=""><strong>寫入動線</strong>：<code>感測器回傳狀態</code> ➡️ <code>API Server 接收</code> ➡️ <code>寫入資料庫</code></li>
+<li class=""><strong>讀取動線</strong>：<code>管理員打開 Dashboard 網頁</code> ➡️ <code>API Server 接收請求</code> ➡️ <code>去資料庫撈最新狀態</code> ➡️ <code>回傳畫面</code></li>
+</ol>
+<!-- -->
+<hr/>
+<blockquote>
+<p>⚠️ <strong>會發生什麼慘劇？</strong>
+這個架構在設備跟使用者都不多的時候沒什麼感覺，但如果在「1000 台設備每秒同時回傳」的規模下瞬間的高併發絕對會壓垮那台可憐的 API Server，且它瘋狂 Insert 的動作也會引發高頻寫入問題直接塞爆資料庫的硬碟 I/O，這時候如果還疊加了「多位管理員同時打開 Dashboard 瘋狂 F5 刷新畫面」的高頻讀取需求，本來就在苦撐的資料庫就會徹底死當。</p>
+</blockquote>
+<p>所以我們必須把架構拆開來，一關一關解決：</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=3-實際架構演進與解法>3. 實際架構演進與解法<a href=#3-實際架構演進與解法 class=hash-link aria-label="3. 實際架構演進與解法的直接連結" title="3. 實際架構演進與解法的直接連結" translate=no>​</a></h2>
+<p>當這 1000 台設備透過 API Server 將數據寫入系統時，每一層都會面臨不同的壓力我們得這樣解：</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=第一關解決-api-server-的高併發被塞爆>第一關：解決 API Server 的「高併發」被塞爆<a href=#第一關解決-api-server-的高併發被塞爆 class=hash-link aria-label="第一關：解決 API Server 的「高併發」被塞爆的直接連結" title="第一關：解決 API Server 的「高併發」被塞爆的直接連結" translate=no>​</a></h3>
+<ul>
+<li class=""><strong>解法：加上 Nginx 做負載平衡 (Load Balancing)</strong>
+<ul>
+<li class="">我們在最前面用 Nginx 當作反向代理入口，把大量併發請求「平均分發」給後端多台 API Server 處理這樣就不怕單一伺服器被壓垮了。</li>
+</ul>
+</li>
+<li class=""><strong>👉 白話舉例</strong>：想像設備是 1000 個同時衝進餐廳的客人而單台 API 就是唯一的服務生，他絕對會崩潰，所以 Nginx 就像門口的帶位主管他不端菜只負責看哪桌服務生比較閒就把客人帶過去，大家分攤著接待就不會有人累垮。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=第二關解決資料庫的高頻寫入卡死>第二關：解決資料庫的「高頻寫入」卡死<a href=#第二關解決資料庫的高頻寫入卡死 class=hash-link aria-label=第二關：解決資料庫的「高頻寫入」卡死的直接連結 title=第二關：解決資料庫的「高頻寫入」卡死的直接連結 translate=no>​</a></h3>
+<ul>
+<li class=""><strong>解法：用 Kafka 訊息隊列 (Message Queue) 來削峰填谷</strong>
+<ul>
+<li class="">API Server 收到數據後不要直接存資料庫而是快速丟進 Kafka（它寫入效能超強不怕大流量），接著由後端的 Consumer 程式依照資料庫吃得消的速度慢慢把資料拉出來存進 DB（或是湊多筆一起做 Batch Insert）藉此保護資料庫。</li>
+</ul>
+</li>
+<li class=""><strong>👉 白話舉例</strong>：API 就像瘋狂點手搖飲的客人而資料庫是動作很慢的搖飲料店員，如果客人一直對著店員喊店員絕對會當機，所以 Kafka 就像櫃檯的點餐機跟訂單籃讓客人點完單把單子丟進去就可以去旁邊滑手機了，店員只要照著自己的節奏慢慢把單子拿出來做就好，這就是所謂的「削峰填谷」。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=第三關解決-nginx-的單點故障問題-落實-ha>第三關：解決 Nginx 的「單點故障」問題 (落實 HA)<a href=#第三關解決-nginx-的單點故障問題-落實-ha class=hash-link aria-label="第三關：解決 Nginx 的「單點故障」問題 (落實 HA)的直接連結" title="第三關：解決 Nginx 的「單點故障」問題 (落實 HA)的直接連結" translate=no>​</a></h3>
+<ul>
+<li class=""><strong>解法：Keepalived + 雙 Nginx 備援</strong>
+<ul>
+<li class="">如果入口的 Nginx 壞了所有人一樣全斷，所以我們要架兩台 Nginx（一台 Master、一台 Backup）並透過 Keepalived 共用一個「虛擬 IP（VIP）」，設備只要連這個 VIP 就好讓主 Nginx 發生故障時 Keepalived 可以在幾秒內把 VIP 轉移到備援機上實現服務幾乎無縫接軌。</li>
+</ul>
+</li>
+<li class=""><strong>👉 白話舉例</strong>：VIP 就像 0800 客服專線讓客戶只認這支號碼，而 A 員工(主機)跟 B 員工(備援)負責接聽且 Keepalived 就是主管，平常主管把專線接給 A 但如果 A 突然暈倒主管會瞬間把線路拔過去插給 B，這樣對客戶來說電話完全不會斷。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=第四關解決-dashboard-即時監控的高頻讀取>第四關：解決 Dashboard 即時監控的「高頻讀取」<a href=#第四關解決-dashboard-即時監控的高頻讀取 class=hash-link aria-label="第四關：解決 Dashboard 即時監控的「高頻讀取」的直接連結" title="第四關：解決 Dashboard 即時監控的「高頻讀取」的直接連結" translate=no>​</a></h3>
+<ul>
+<li class=""><strong>解法：Redis 記憶體快取 (Cache)</strong>
+<ul>
+<li class="">如果 100 個管理員同時打開網頁看最新狀態且每次都去查 DB 絕對會拖垮系統，所以 Consumer 在寫入 DB 備份時會同步更新一份最新狀態到 Redis 中，這樣管理員的請求一律只去查 Redis，因為它是長在記憶體裡的所以讀取速度是硬碟的千百倍。</li>
+</ul>
+</li>
+<li class=""><strong>進階機制 (TTL / LRU)</strong>：記憶體很貴不能無限塞所以我們會設定 TTL 讓資料定時過期自動清空，如果空間滿了 Redis 也會啟動 LRU 機制把「最久沒人看的冷門資料」踢掉以保留最常查的熱門狀態。</li>
+<li class=""><strong>👉 白話舉例</strong>：管理員就像一直打來問今天有沒有賣珍奶的客人而資料庫是必須跑到倉庫翻庫存表的店長，一直問他會累死，所以 Redis 就像掛在店門口的小黑板讓店長查完一次就把答案寫上去，之後 1000 個客人來只要看一眼黑板就好而完全不用再去煩店長。</li>
+</ul>
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=-進階高可用架構全貌>💡 進階高可用架構全貌<a href=#-進階高可用架構全貌 class=hash-link aria-label="💡 進階高可用架構全貌的直接連結" title="💡 進階高可用架構全貌的直接連結" translate=no>​</a></h3>
+<p>把上面四個解法串聯起來，就會得到一個非常強健、能扛大流量的現代化架構：</p>
+<!-- -->
+<hr/>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=-延伸探討如果改用-kubernetes-k8s-實作>🚀 延伸探討：如果改用 Kubernetes (K8s) 實作<a href=#-延伸探討如果改用-kubernetes-k8s-實作 class=hash-link aria-label="🚀 延伸探討：如果改用 Kubernetes (K8s) 實作的直接連結" title="🚀 延伸探討：如果改用 Kubernetes (K8s) 實作的直接連結" translate=no>​</a></h3>
+<p>如果我們把這個架構搬到現代化的 Kubernetes (K8s) 雲端容器平台，原本的每一台「實體伺服器」都會變成 K8s 裡的「資源物件」，K8s 最強大的地方在於 HPA (自動擴縮容) 功能，它能根據當下的 CPU/記憶體使用率或是訊息隊列的積壓狀況自動去增減機器的數量。</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=k8s-各層級配置建議>K8s 各層級配置建議：<a href=#k8s-各層級配置建議 class=hash-link aria-label="K8s 各層級配置建議：的直接連結" title="K8s 各層級配置建議：的直接連結" translate=no>​</a></h4>
+<ol>
+<li class=""><strong>入口層 (Ingress)</strong>
+<ul>
+<li class=""><strong>Nginx Ingress Controller</strong>：直接取代傳統的實體 Nginx + Keepalived，通常固定配置 2~3 個 Pods 且由雲端供應商的 Load Balancer 負責把外部流量打進來，天生具備高可用性。</li>
+</ul>
+</li>
+<li class=""><strong>無狀態應用層 (微服務讀寫分離 / CQRS)</strong>
+<ul>
+<li class=""><strong>Write API (寫入專用)</strong>：負責接設備的高頻數據回傳，設定 HPA 後平常維持 3 個 Pods，流量暴增時就可以擴展到 20 個 Pods 去扛。</li>
+<li class=""><strong>Read API (讀取專用)</strong>：給 Dashboard 查詢狀態用，因為讀取頻率較低而且有 Redis 擋住所以維持 2~3 個 Pods 就夠了，就算 Write API 寫到當機 Read API 一樣活得好好的，這就是故障隔離的好處。</li>
+<li class=""><strong>Consumer Worker</strong>：搭配 KEDA (基於事件的自動擴縮) 後平常維持 2 個 Pods，一旦偵測到 Kafka 積壓的訊息太多來不及消化就自動長出 10 個 Pods 來幫忙消耗。</li>
+</ul>
+</li>
+<li class=""><strong>有狀態儲存層 (Stateful)</strong>
+<ul>
+<li class=""><strong>Kafka</strong>：用 <code>StatefulSet</code> 部署並配置 3 個 Brokers (Pods) 來達成叢集高可用與資料備援。</li>
+<li class=""><strong>Redis</strong>：一樣用 <code>StatefulSet</code> 並配置 1 台 Master + 2 台 Replicas 的架構（通常交給 Redis Sentinel 或 Operator 管理）。</li>
+<li class=""><strong>關聯式資料庫 (DB)</strong>：通常也是 1 台 Primary (寫入主機) + 2 台 Replicas (讀取備援) 來做到讀寫分離。</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id=k8s-實體配置對應圖導入-cqrs-讀寫分離>K8s 實體配置對應圖（導入 CQRS 讀寫分離）：<a href=#k8s-實體配置對應圖導入-cqrs-讀寫分離 class=hash-link aria-label="K8s 實體配置對應圖（導入 CQRS 讀寫分離）：的直接連結" title="K8s 實體配置對應圖（導入 CQRS 讀寫分離）：的直接連結" translate=no>​</a></h4>
+</div><footer class=docusaurus-mt-lg><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class=col><b>標籤：</b><ul class="tags_jXut padding--none margin-left--sm"><li class=tag_QGVx><a rel=tag class="tag_zVej tagRegular_sFm0" href=/blog/tags/architecture>architecture</a><li class=tag_QGVx><a rel=tag class="tag_zVej tagRegular_sFm0" href=/blog/tags/backend>backend</a><li class=tag_QGVx><a rel=tag class="tag_zVej tagRegular_sFm0" href=/blog/tags/k-8-s>k8s</a><li class=tag_QGVx><a rel=tag class="tag_zVej tagRegular_sFm0" href=/blog/tags/microservices>microservices</a></ul></div></div></footer></article><div style="margin-top:4rem;padding:2rem;background:rgba(255, 255, 255, 0.03);border:1px solid rgba(255, 255, 255, 0.1);border-radius:20px;backdrop-filter:blur(10px);text-align:center;box-shadow:0 8px 32px rgba(0, 0, 0, 0.2)"><h3 style=margin-bottom:1rem;font-size:1.5rem>感謝你的閱讀！✨</h3><p style=opacity:0.8;margin-bottom:2rem;line-height:1.6>我的數位花園紀錄了我在工程師之路上的學習點滴與生活分享。如果你覺得內容有幫助，歡迎與我交流或分享給更多人。<div style=display:flex;justify-content:center;gap:1rem;flex-wrap:wrap><a class="button button--primary button--lg" style=border-radius:10px href=/blog>🚀 回到生活分享</a><a href=https://github.com/liwenchiou target=_blank rel="noopener noreferrer" class="button button--secondary button--lg" style=border-radius:10px>🐙 追蹤我的 GitHub</a></div></div><div style="margin-top:4rem;padding-bottom:max(env(safe-area-inset-bottom), 4rem)"><hr style=opacity:0.1;margin-bottom:2rem /><h3 style=margin-bottom:1.5rem;display:flex;align-items:center;gap:0.5rem><span>💬</span> 歡迎留言討論</h3></div><nav class="pagination-nav docusaurus-mt-lg" aria-label=部落格文章分頁導覽><a class="pagination-nav__link pagination-nav__link--next" href=/blog/agile-agentic-coding><div class=pagination-nav__sublabel>較舊一篇</div><div class=pagination-nav__label>尋找最適合你的 AI 開發節奏：淺談「敏捷式 AI 結對開發」</div></a></nav></main><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#前言一場面試帶來的架構震撼教育 class="table-of-contents__link toc-highlight">前言：一場面試帶來的架構震撼教育</a><li><a href=#-設備監控系統海量數據的架構演進史 class="table-of-contents__link toc-highlight">🎯 設備監控系統：海量數據的架構演進史</a><li><a href=#1-核心名詞定義先搞懂這三個術語 class="table-of-contents__link toc-highlight">1. 核心名詞定義（先搞懂這三個術語）</a><li><a href=#2-如果用最原始的一條龍架構會怎樣 class="table-of-contents__link toc-highlight">2. 如果用最原始的一條龍架構會怎樣？</a><li><a href=#3-實際架構演進與解法 class="table-of-contents__link toc-highlight">3. 實際架構演進與解法</a><ul><li><a href=#第一關解決-api-server-的高併發被塞爆 class="table-of-contents__link toc-highlight">第一關：解決 API Server 的「高併發」被塞爆</a><li><a href=#第二關解決資料庫的高頻寫入卡死 class="table-of-contents__link toc-highlight">第二關：解決資料庫的「高頻寫入」卡死</a><li><a href=#第三關解決-nginx-的單點故障問題-落實-ha class="table-of-contents__link toc-highlight">第三關：解決 Nginx 的「單點故障」問題 (落實 HA)</a><li><a href=#第四關解決-dashboard-即時監控的高頻讀取 class="table-of-contents__link toc-highlight">第四關：解決 Dashboard 即時監控的「高頻讀取」</a><li><a href=#-進階高可用架構全貌 class="table-of-contents__link toc-highlight">💡 進階高可用架構全貌</a><li><a href=#-延伸探討如果改用-kubernetes-k8s-實作 class="table-of-contents__link toc-highlight">🚀 延伸探討：如果改用 Kubernetes (K8s) 實作</a></ul></ul></div></div></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__links text--center"><div class=footer__links><a class=footer__link-item href=/about>數位建築師履歷</a><span class=footer__link-separator>·</span><a href=https://litool.liwen.studio target=_blank rel="noopener noreferrer" class=footer__link-item>LiTool 工具箱<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><span class=footer__link-separator>·</span><a href=https://www.liwen.studio target=_blank rel="noopener noreferrer" class=footer__link-item>Liwen Studio 官網<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><span class=footer__link-separator>·</span><a href=https://github.com/liwenchiou target=_blank rel="noopener noreferrer" class=footer__link-item>GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><span class=footer__link-separator>·</span><a href=/blog/rss.xml target=_blank rel="noopener noreferrer" class=footer__link-item>RSS 訂閱<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 Liwen Studio. Built with Docusaurus.</div></div></div></footer></div></body>
