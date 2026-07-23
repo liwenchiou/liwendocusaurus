@@ -1,0 +1,9 @@
+{
+  "label": "🐧 Linux 學習筆記",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "slug": "/learning/linux-notes"
+  },
+  "className": "sidebar-category-hide-children"
+}
