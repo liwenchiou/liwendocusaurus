@@ -59,4 +59,22 @@ afs  dev  home   lib64       media  opt   root  sbin  sys  usr
 bin  etc  lib    lost+found  mnt    proc  run   srv   tmp  var
 ```
 
-恭喜你已經成功將 Rocky Linux 環境建置成功，可以繼續往下練習了！
+### 🏢 實境演練：確認作業系統版本
+
+**情境背景**：
+你剛剛啟動了容器，但老闆說：「你確定這是我們要的 Rocky Linux 9 嗎？」為了確認，你需要檢查系統底層的版本資訊檔。
+
+**你的操作流程**：
+```bash
+# 查看系統發行版資訊檔 (os-release)
+$ cat /etc/os-release
+
+# 輸出結果：
+NAME="Rocky Linux"
+VERSION="9.3 (Blue Onyx)"
+ID="rocky"
+ID_LIKE="rhel centos fedora"
+# ...看到這些字眼，確認是 Rocky Linux 9 無誤！
+```
+
+恭喜你已經成功將 Rocky Linux 環境建置成功，可以安心繼續往下練習了！

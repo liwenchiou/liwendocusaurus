@@ -354,3 +354,36 @@ drwxr-xr-x   1 root root 4096 Jul 23 06:16 ..
     /var/log/secure.log
     # ...列出所有符合條件的檔案絕對路徑
     ```
+
+### 🏢 實境演練：日誌檔的過濾與備份
+
+**情境背景**：
+老闆緊急要求你：「去 `/var/log` 裡面把主要的系統日誌 (`messages`) 找出來，複製到你家目錄下的 `backup` 資料夾。但我只要看裡面發生過 **Error** 的行數就好，最後把沒過濾過的原始檔案刪掉清出空間。」
+
+**你的操作 SOP (Standard Operating Procedure)**：
+
+```bash
+# 1. 先回到安全的家目錄 (~) 並建立 backup 資料夾
+$ cd ~
+$ mkdir backup
+
+# 2. 為了保險，切換到日誌所在目錄再開始操作
+$ cd /var/log
+
+# 3. 複製檔案：把 messages 這個日誌檔複製到家目錄下的 backup 中
+$ cp messages ~/backup/
+
+# 4. 進行字串過濾：我們只要裡面包含 "error" 的記錄 (忽略大小寫)
+# （💡 註：這裡用到了未來會詳細教的「重導向 >」把過濾結果存成新檔案）
+$ grep -i "error" ~/backup/messages > ~/backup/messages_error_only.txt
+
+# 5. 確認過濾成功後，把剛剛複製過去的巨大原始日誌檔刪除，只留下精華版
+$ rm -f ~/backup/messages
+
+# 6. 最後，我們進去檢查一下戰果！
+$ cd ~/backup
+$ ls -lah
+# 輸出結果：
+# -rw-r--r-- 1 root root  12K Jul 23 15:00 messages_error_only.txt
+# 任務圓滿完成！
+```
