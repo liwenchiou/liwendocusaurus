@@ -601,6 +601,28 @@ header h1 {
 }
 
 /* ============================================================
+   Sidebar Group Title (側邊欄第一層群組視覺標題)
+   ============================================================ */
+.sidebar-group-title {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ifm-color-primary);
+  opacity: 0.95;
+  margin-top: 0.8rem;
+  margin-bottom: 0.2rem;
+  padding: 0.25rem 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  pointer-events: none;
+  user-select: none;
+}
+
+[data-theme='dark'] .sidebar-group-title {
+  border-bottom-color: var(--ifm-color-emphasis-200);
+}
+
+/* ============================================================
    Sidebar Compact Mode (子選單視覺壓縮)
    ============================================================ */
 /* 針對 Level 2 以下的子目錄與文章，縮小上下間距與字體大小，減少垂直空間佔用 */
