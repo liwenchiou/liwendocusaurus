@@ -1,7 +1,7 @@
 ---
 sidebar_position: 0
 slug: /
-description: "Liwen 的技術筆記首頁。這裡記錄了我在 Next.js、前端架構、React 以及 AI 協作開發領域的學習筆記與實作心得。"
+description: "Liwen 的技術筆記首頁。這裡記錄了我在 Linux、Docker、Next.js、React、Nginx 以及 AI 協作開發等領域的學習筆記與實戰經驗。"
 keywords: [技術筆記, 我的持續學習路徑]
 ---
 
@@ -19,7 +19,7 @@ import Head from '@docusaurus/Head';
             "@type": "Person",
             "name": "liwen"
         }],
-        "description": "Liwen 的技術筆記首頁。這裡記錄了我在 Next.js、前端架構、React 以及 AI 協作開發領域的學習筆記與實作心得。"
+        "description": "Liwen 的技術筆記首頁。這裡記錄了我在 Linux、Docker、Next.js、React、Nginx 以及 AI 協作開發等領域的學習筆記與實戰經驗。"
       }
     `}
   </script>
@@ -41,17 +41,21 @@ import Head from '@docusaurus/Head';
 - [🚀 2026 【後端】Node.js 直播班](./01-learning/hexschool/2026-nodejs-course/01-intro.md)
 - [⚛️ 2026 React 實戰課程](./01-learning/hexschool/2026-react-course/01-js-fundamentals.md)
 - [📘 React 基礎](./01-learning/hexschool/react-basics/01-cdn-usage.md)
-- [⚡️ Next.js 30 天學習筆記](./01-learning/next-js-notes/day-01.md)
+- [⚡ Next.js 學習筆記](./01-learning/next-js-notes/day-01.md)
+- [🐳 Docker 學習筆記](./01-learning/docker-notes/01-docker-basics.md)
+- [🌐 Nginx 伺服器](./01-learning/nginx-notes/01-basic-concepts.md)
+- [🐧 Linux 學習筆記](./01-learning/linux-notes/01-environment.md)
 
 ### 🛠️ 工程與開發實踐 (Engineering & Tools)
 身為工程師，除了寫出能動的程式碼，更要追求架構的優雅與開發效率。
 - [💻 軟體開發筆記](./02-engineering/software-development/01-sdlc-overview.md) (包含 Clean Code 與架構設計)
 - [📦 NPM 套件探索](./02-engineering/npm-packages/00-npm-overview.md) (我的專屬工具箱)
-- [🤖 AI Agent 協作筆記系列](./02-engineering/ainotes/01-workflow-and-skill.md) (探討 Agentic AI 協作模式)
+- [🤖 AI Agent 使用筆記](./02-engineering/ainotes/01-workflow-and-skill.md) (探討 Agentic AI 協作模式)
+- [📊 Mermaid 畫圖模板庫](./02-engineering/mermaid-gallery/01-flowchart.md) (架構與流程圖模板庫)
 
 ### 🚀 專案與事業 (Projects & Business)
 技術最終必須落地創造價值。這裡收錄了我的開源作品以及經營技術事業的思考。
-- [💼 Liwen Studio 接案兵法](./03-projects-business/liwen-sop/00-sop-overview.md)
+- [📋 Liwen Studio 接案兵法](./03-projects-business/liwen-sop/00-sop-overview.md)
 - [🧩 個人專案：ezdcbot 輕量推播套件](./03-projects-business/side-projects/ezdcbot/00-intro.md)
 - [🧩 個人專案：ghaction-lis 部署監聽工具](./03-projects-business/side-projects/ghaction-lis/00-intro.md)
 
