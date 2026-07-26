@@ -1,7 +1,7 @@
 ---
 id: 04-account-management
-title: 🐧 帳號與群組管理
-sidebar_label: "​帳號與群組管理"
+title: 👥 帳號與群組管理
+sidebar_label: "帳號與群組管理"
 sidebar_position: 4
 description: "Linux 系統管理核心：解析 passwd/shadow/group 檔案結構、login.defs 與 skel 模板設定，並透過實戰情境演練帳號的建立、權限擴充與離職流程。"
 keywords: [Linux, useradd, passwd, chage, usermod, gpasswd, sudo, visudo, skel]
@@ -380,3 +380,83 @@ Alice 過了試用期，主管要求你發給她 `docker` 操作權限，以及�
      # 如果要毀屍滅跡，加上 -r 會連同家目錄一起徹底刪除，請小心使用！
      $ sudo userdel -r alice
      ```
+
+---
+
+### 5. 現代 MIS 實務：權限與群組架構設計 (RBAC + UPG)
+
+在現代雲端主機與 DevOps 時代，Linux 伺服器的定位已從舊時代的「多人共同辦公桌」轉變為「應用服務與軟體執行的隔離平台」。身為企業 MIS 與系統維運工程師，應遵循 **「以職能群組作為角色邊界 (RBAC) + 使用者私有群組 (UPG)」** 的黃金架構來規劃主機權限。
+
+#### 現代 Linux 群組的真實業界定位 (UPG vs 服務隔離)
+
+| 群組分類 | 代表案例 | 業界真實定位與實務原則 |
+| :--- | :--- | :--- |
+| **真人帳號的主要群組<br />(Primary Group - UPG)** | `amy : amy`<br />`alex : alex` | **身分基本盤與防護隔離**：<br />現代主機上不會把部門（如 `IT`）設為個人的主要群組。保留同名的私有群組 (`amy:amy`) 主要是為了保護其私有家目錄、 `.bash_history` 以及 **`.ssh` 登入金鑰目錄的安全**（防止因為目錄權限開放給同事，遭 sshd 判定危險而拒絕登入）。**實務上我們從不更改別人的主要群組**。 |
+| **系統服務的主要群組<br />(Service Accounts)** | `nginx : nginx`<br />`mysql : mysql`<br />`docker : docker` | **應用服務沙盒隔離 (Sandbox & Isolation)**：<br />現代「專屬一對一群組」發揮大威力之處！為 Nginx、MySQL 建立獨佔身分，萬一 Web 服務遭駭客攻破，也能被限制在 `nginx` 的群組牢籠裡，無法跨越邊界去讀寫旁邊 `mysql:mysql` 的資料庫。 |
+| **次要群組<br />(Supplementary Groups)** | `sysadmin`<br />`mis_ops`<br />`developers` | **真正的權限控管與職能通行證 (RBAC)**：<br />透過將工程師個人帳號掛載不同「次要群組 (-aG)」，賦予他能執行哪些系統命令、以及參與哪些專案目錄的開發協作。 |
+
+#### 企業 MIS 權限管理核心黃金法則
+
+1. **95% 用「角色 (`%群組`)」，5% 用「單人」**：
+   在 `/etc/sudoers` 裡，切勿把 50 個工程師的名字一筆筆寫進去（容易造成管理混亂與離職漏刪漏洞）。應一律以 **`%群組名稱` (角色)** 宣告權限，人員異動時僅需使用 `usermod -aG` 或 `gpasswd -d` 增減次要群組即可。
+2. **嚴禁外單位直接加入 `docker` 群組 (等同 Root 提權隱患)**：
+   在 Linux 中，把成員加入 `docker` 群組實質上就等於送他 Root 權限。任何 docker 群組成員都可以執行 `docker run -v /:/host -it ubuntu bash`，把主機根目錄 `/` 完整掛進容器中進行任意竄改。
+
+#### 經典 MIS 4 層職能群組與 visudo 白名單示範
+
+在企業實務中，我們會為 MIS / Ops 團隊設定至少 3~4 層的職能白名單：
+
+| 群組名稱 | 賦予對象 | 權限定位與實務原則 |
+| :--- | :--- | :--- |
+| **`mis_admin`**<br />(或 `wheel`) | MIS 主管、資深 SRE 架構師 | **整台系統最高權限**：具備 `ALL=(ALL:ALL) ALL` 權限；強制必須驗證個人密碼 (`NOPASSWD` 嚴禁開放)。 |
+| **`mis_ops`** | 全體 MIS 團隊<br />(含新進工程師 `amy`) | **日常維運白名單**：**無完整 root 權限**！僅開放低風險常規指令（服務重啟 `systemctl`、查看系統狀態 `journalctl`/`df`/`du`/`ps` 等）。 |
+| **`developers`** | 應用程式 / 後端開發同仁 | **無系統 sudo 權限**：透過專案資料夾的 `SGID (2775)` 共同協作讀寫，可查看應用層日誌但不可更改系統設定。 |
+
+```bash title="/etc/sudoers.d/enterprise-rbac" showLineNumbers
+# 1. 系統最高管理者角色：必輸入密碼
+%mis_admin  ALL=(ALL:ALL) ALL
+
+# 2. MIS 日常維運與新人角色：白名單機制 (絕對路徑防護)
+%mis_ops    ALL=(ALL) /usr/bin/systemctl restart *, \
+                      /usr/bin/systemctl status *, \
+                      /usr/bin/journalctl *, \
+                      /usr/bin/df *, \
+                      /usr/bin/du *
+
+# 3. 嚴格限縮外單位人員 (如 ext_ken) 只有單一特定 Docker 專案的重啟權
+ext_ken     ALL=(ALL) NOPASSWD: /usr/bin/docker compose -f /opt/myapp/docker-compose.yml up -d, \
+                                /usr/bin/docker restart my-app, \
+                                /usr/bin/docker logs --tail=100 my-app
+```
+
+:::tip[💡 新人到職與升遷的一鍵無痛 SOP]
+- **新人到職 (如 `amy`)**：
+  ```bash
+  $ sudo useradd -m -s /bin/bash amy         # 自帶 amy:amy 主要群組保護 SSH 隱私
+  $ sudo usermod -aG mis_ops amy             # 掛上日常維運次要群組
+  ```
+- **通過考核晉升為資深管理員**：
+  ```bash
+  $ sudo usermod -aG mis_admin amy           # 直接多掛最高特權群組，不用改 sudoers！
+  ```
+- **離職卸除權限**：
+  ```bash
+  $ sudo gpasswd -d amy mis_admin            # 1 秒移除最高特權
+  $ sudo passwd -l amy                       # 立即鎖定登入
+  ```
+:::
+
+#### 特殊情境：如何安全授權「外單位 Docker 部署任務」？
+
+當外單位同仁需要部署 Docker 服務，又不能給予 `docker` 群組權限時，MIS 最紮實的解決方案是 **「封裝專屬安全部署腳本 + visudo 單條指令授權」**：
+
+1. **MIS 撰寫唯讀的部署腳本 (`/usr/local/bin/deploy-myapp.sh`)**：
+   ```bash title="/usr/local/bin/deploy-myapp.sh"
+   #!/bin/bash
+   cd /opt/myapp && git pull origin main && docker compose up -d --remove-orphans
+   ```
+2. **用 `visudo` 只開放該隻 Shell Script 的執行權**：
+   ```bash title="/etc/sudoers.d/external-deployers"
+   ext_ken  ALL=(ALL) NOPASSWD: /usr/local/bin/deploy-myapp.sh
+   ```
+只要對方嘗試下其他 Docker 指令或想掛載主機根目錄，系統將無條件攔截拒絕，真正達成**「只給予目標任務權限」**的極致安全！

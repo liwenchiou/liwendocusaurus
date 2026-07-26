@@ -1,7 +1,7 @@
 ---
 id: 06-redirection
-title: 🐧 訊息管理與重導
-sidebar_label: "\u200B🔀 訊息管理與重導"
+title: 🔀 訊息管理與重導
+sidebar_label: "訊息管理與重導"
 sidebar_position: 6
 description: "Linux 終端機必備神技：深入理解 STDIN/STDOUT/STDERR，並熟練使用重導向 (>、>>、2>)、管線 (|) 與 tee 進行資料分流。"
 keywords: [Linux, redirection, pipe, STDOUT, STDERR, tee]
@@ -11,7 +11,7 @@ keywords: [Linux, redirection, pipe, STDOUT, STDERR, tee]
 
 Linux 終端機就像是一個水管系統，資料會在不同的水管中流動。學會「訊息管理與重導」，就等於學會了如何切換與拼接這些水管，讓資料流向你想去的地方（例如存成檔案，或是交給下一個程式處理）。
 
-### 1. 什麼是資料流重導向 (I/O Redirection)？
+## 1. 什麼是資料流重導向 (I/O Redirection)？
 
 在 Linux 中，幾乎所有執行的程式都圍繞著三個標準的「資料流 (Data Stream)」運作。系統會分別配給它們三個代號（File Descriptor）：
 
@@ -19,7 +19,7 @@ Linux 終端機就像是一個水管系統，資料會在不同的水管中流�
 - **STDOUT (Standard Output) - 代號 `1`**：標準輸出。程式執行成功的結果，預設會印在「螢幕」上。
 - **STDERR (Standard Error) - 代號 `2`**：標準錯誤。程式執行失敗或報錯的訊息，預設也是印在「螢幕」上。
 
-### 2. 輸出重導向：`>` 與 `>>`
+## 2. 輸出重導向：`>` 與 `>>`
 
 當我們不想讓結果印在螢幕上，而是想把它「存起來」時，就會用到重導向符號。
 
@@ -36,7 +36,7 @@ $ echo "hello" > test.txt
 $ echo "world" >> test.txt
 ```
 
-### 3. 進階錯誤處理：`2>` 與 `2>&1`
+## 3. 進階錯誤處理：`2>` 與 `2>&1`
 
 預設情況下，`>` 只會捕捉代號 `1` (STDOUT) 的成功訊息。如果你去搜尋一個沒有權限的資料夾，錯誤訊息 (STDERR) 還是會無情地漏到螢幕上！
 
@@ -59,7 +59,7 @@ $ ls /root > all_log.txt 2>&1
 # (解讀：先把 STDOUT 導向到 txt，再把 STDERR(2) 導向到與 STDOUT(1) 相同的地方)
 ```
 
-### 4. 管線命令：`|` (Pipe)
+## 4. 管線命令：`|` (Pipe)
 
 如果 `>` 是把水管接進水桶（存成檔案），那管線 `|` 就是把水管接上**另一台濾水器**。
 它可以把「左邊指令的輸出 (STDOUT)」直接當作「右邊指令的輸入 (STDIN)」。
@@ -74,7 +74,7 @@ $ ps aux | grep "nginx"
 $ cat /var/log/syslog | less
 ```
 
-### 5. 雙向分流：`tee` (T 型水管接頭)
+## 5. 雙向分流：`tee` (T 型水管接頭)
 
 如果你單純使用 `>` (重導向)，就像是把水管封死並接進了水桶。資料流進檔案後，你的螢幕上就什麼都看不到了，你只能事後再用 `cat` 打開檔案確認。
 
@@ -108,7 +108,7 @@ $ ip addr | tee ip_info.txt
 $ echo "123" | sudo tee /root/test.txt > /dev/null
 ```
 
-### 🏢 實境演練：巨型日誌清查與健檢
+## 🏢 實境演練：巨型日誌清查與健檢
 
 **情境背景**：
 老闆要求你寫一段指令，搜尋系統中所有超過 500MB 的龐大檔案。
@@ -129,3 +129,8 @@ $ find / -type f -size +500M 2> /dev/null | tee big_files_report.txt
 # 2. | 把成功的搜尋結果 (STDOUT) 往後傳。
 # 3. tee 同時將結果印在螢幕上，並且存入 txt 檔案中。
 ```
+
+:::tip[進階延伸閱讀：Log 探勘與正規過濾]
+當你熟悉了重導向與管線命令後，想進一步學習如何使用 `find -exec`、`grep -v` 與 `awk` 在數十萬筆 Log 中撈取 DDoS 攻擊 IP 排行榜，請參閱：
+👉 [15-file-search-regex.md (🔍 尋找檔案與字串過濾：Log 探勘神技)](file:///Users/qiuliwen/Documents/工程師/project/liwendocusaurus/docs/01-learning/linux-notes/15-file-search-regex.md)
+:::

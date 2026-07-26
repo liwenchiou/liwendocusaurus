@@ -1,7 +1,7 @@
 ---
 id: ai-core-paths
 title: "AI 核心路徑速查表 (Cheat Sheet)"
-sidebar_label: "03. 路徑速查表"
+sidebar_label: "路徑速查表"
 sidebar_position: 3
 
 description: "AI 核心路徑速查表 Cheat Sheet 在開始調整全域技能或除錯時，必須先了解 AI Agent 相關的隱藏目錄分佈： | 類型 | Windows 路徑 C:\\Users\\User | Mac / Linux 路徑 /Users/User | 用途說明 | | : | : | : | : |..."

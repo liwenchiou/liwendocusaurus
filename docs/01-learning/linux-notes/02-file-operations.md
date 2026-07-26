@@ -1,7 +1,7 @@
 ---
 id: 02-file-operations
-title: 🐧 目錄與檔案操作
-sidebar_label: "​目錄與檔案操作"
+title: 📂 目錄與檔案操作
+sidebar_label: "目錄與檔案操作"
 sidebar_position: 2
 description: "Linux 系統基本操作指南（上篇），涵蓋最核心的目錄切換與檔案增刪改查指令，帶你無縫接軌指令列生活。"
 keywords: [Linux, command, cd, ls, rm, mkdir, grep]
@@ -11,7 +11,7 @@ keywords: [Linux, command, cd, ls, rm, mkdir, grep]
 
 雖然 Linux 有提供圖形化介面 (GUI)，但系統管理員通常更習慣在終端機 (Terminal) 中透過指令來操作，不僅執行效率更高，看起來也比較高級（誤）。本章節將帶你認識 Linux 最核心的指令操作基礎。
 
-### 指令輸入結構
+## 指令輸入結構
 
 一個標準的 Linux 指令，通常由三個部分組成：
 `指令名稱 (Command) [選項/參數 (Options)] [操作目標 (Arguments)]`
@@ -93,7 +93,7 @@ drwxr-xr-x   1 root root 4096 Jul 23 06:16 ..
 - **獨立的雙減號 `--` (後面沒字)**：代表「**參數結束**」。這非常實用！如果你有一個檔案名稱剛好叫做 `-foo`，你可以用 `rm -- -foo` 來刪除它，這樣 `--` 後面的所有字串都會被強制視為「普通目標物件」，避免系統把 `-foo` 誤認為是指令的參數。
   :::
 
-### 目錄操作指令
+## 目錄操作指令
 
 在 Linux 中，我們經常需要在不同的資料夾（目錄）之間穿梭。以下是管理目錄最常用的指令：
 
@@ -165,7 +165,7 @@ drwxr-xr-x   1 root root 4096 Jul 23 06:16 ..
    ```bash
    rmdir my_folder
    ```
-### 檔案操作指令
+## 檔案操作指令
 
 :::info[💡 核心觀念：在 Linux 的世界裡，一切皆檔案 (Everything is a file)]
 雖然我們為了方便新手學習，將「目錄」與「檔案」拆分成兩個章節，但在 Linux 的底層設計中，**「目錄 (Directory)」本身也只是一種特殊格式的「檔案」而已**。
@@ -355,7 +355,7 @@ drwxr-xr-x   1 root root 4096 Jul 23 06:16 ..
     # ...列出所有符合條件的檔案絕對路徑
     ```
 
-### 🏢 實境演練：日誌檔的過濾與備份
+## 🏢 實境演練：日誌檔的過濾與備份
 
 **情境背景**：
 老闆緊急要求你：「去 `/var/log` 裡面把主要的系統日誌 (`messages`) 找出來，複製到你家目錄下的 `backup` 資料夾。但我只要看裡面發生過 **Error** 的行數就好，最後把沒過濾過的原始檔案刪掉清出空間。」
@@ -387,3 +387,8 @@ $ ls -lah
 # -rw-r--r-- 1 root root  12K Jul 23 15:00 messages_error_only.txt
 # 任務圓滿完成！
 ```
+
+:::tip[進階延伸閱讀：生產環境 Log 探勘與正規過濾]
+當你熟悉了日常的 `cat`、`less` 與基礎 `grep` 後，在伺服器面臨 DDoS 攻擊或千萬筆 Log 異常時，請參閱進階排錯篇章：
+👉 [15-file-search-regex.md (🔍 尋找檔案與字串過濾：Log 探勘神技)](file:///Users/qiuliwen/Documents/工程師/project/liwendocusaurus/docs/01-learning/linux-notes/15-file-search-regex.md)
+:::

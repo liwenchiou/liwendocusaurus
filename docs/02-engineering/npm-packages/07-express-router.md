@@ -1,7 +1,7 @@
 ---
 id: express-router
 title: "Express Router 拆分與模組化"
-sidebar_label: "​07 Express Router"
+sidebar_label: "Express Router"
 sidebar_position: 7
 
 description: "Express Router 拆分與模組化 對於 「Router 拆分及模組化」，最核心的觀念可以總結為：「拒絕義大利麵條程式碼，用樂高積木的方式管理 API」。 這是從「寫腳本」邁向「軟體工程」的第一步，也是後端架構演進的第一個、最重要的分水嶺。 💡 為什麼要拆分？（解決痛點） 在剛學 Expr..."

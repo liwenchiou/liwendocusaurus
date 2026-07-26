@@ -1,7 +1,7 @@
 ---
 id: 05-permissions
-title: 🐧 目錄與檔案權限管理
-sidebar_label: "​目錄與檔案權限管理"
+title: 🔒 目錄與檔案權限管理
+sidebar_label: "目錄與檔案權限管理"
 sidebar_position: 5
 description: "Linux 系統最核心的靈魂設計：深入解析 UGO 與 rwx 權限矩陣、檔案與目錄的本質差異，並掌握 chmod、chown 等權限控管實戰指令。"
 keywords: [Linux, rwx, chmod, chown, chgrp, stat, umask, 權限管理]

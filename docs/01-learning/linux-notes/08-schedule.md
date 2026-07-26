@@ -1,7 +1,7 @@
 ---
 id: 08-schedule
-title: 🐧 時間與排程
-sidebar_label: "\u200B⏰ 時間與排程"
+title: ⏰ 時間與排程
+sidebar_label: "時間與排程"
 sidebar_position: 8
 description: "掌控 Linux 系統時間與任務排程：涵蓋 date 時間推算、timedatectl 現代化時間管理、以及 crontab 與 at 自動化腳本執行。"
 keywords: [Linux, date, timedatectl, chrony, crontab, at, schedule]

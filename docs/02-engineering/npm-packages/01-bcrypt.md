@@ -1,7 +1,7 @@
 ---
 id: bcrypt
 title: "🔐 bcrypt 密碼雜湊與驗證"
-sidebar_label: "\u200B01 bcrypt 密碼雜湊"
+sidebar_label: "bcrypt 密碼雜湊"
 sidebar_position: 1
 
 description: "bcrypt 密碼雜湊與驗證 在處理使用者註冊與登入時，將密碼明碼儲存在資料庫是非常危險的行為。因此，我們會使用 bcrypt 這樣強大的加密函式庫來將密碼進行「雜湊 Hash」。 💡 核心概念 單向加密：設計上無法從 hash 後的字串反推還原出原始密碼，就算資料庫外洩，駭客也無法輕易得知使用者..."

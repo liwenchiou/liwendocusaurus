@@ -1,7 +1,7 @@
 ---
 id: workflow-and-skill
 title: "主動指令與技能模組 (Workflow & Skill)"
-sidebar_label: "01. 指令與模組"
+sidebar_label: "指令與模組"
 sidebar_position: 1
 
 description: "主動指令與技能模組 Workflow & Skill 在 Antigravity 系統中，有兩種讓 AI 執行任務的方式，它們在架構與用途上有根本的差異：Workflow 快捷指令 與 Skill 底層模組。 基礎觀念：Workflow 與 Skill 有什麼不同？ 🔘 Workflow 工作流程..."

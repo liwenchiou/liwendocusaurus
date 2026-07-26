@@ -2,7 +2,7 @@
 id: webserver
 sidebar_position: 5
 title: "webserver (http)"
-sidebar_label: "​05 webserver (http)"
+sidebar_label: "webserver (http)"
 
 description: "http Node.js 原生 Web Server 💡 為什麼需要了解這個核心模組？ http 是 Node.js 內建的核心模組，不需要透過 npm 安裝。雖然在實務上我們大多會使用 Express 或 Koa 等更進階的路由框架來架設伺服器，但理解原生的 http 模組運作原理，是掌握 No..."
 keywords: [webserver, http, engineering, npm-packages]

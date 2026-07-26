@@ -1,7 +1,7 @@
 ---
 id: 03-advanced-basics
-title: 🐧 進階操作與環境檢視
-sidebar_label: "​進階操作與環境"
+title: 🛠️ 進階操作與環境檢視
+sidebar_label: "進階操作與環境檢視"
 sidebar_position: 3
 description: "Linux 系統基本操作指南（下篇），包含文字編輯器 vi/vim、打包工具 tar/zip，以及系統環境變數與指令查詢技巧。"
 keywords: [Linux, vi, vim, tar, zip, alias, env]
@@ -9,7 +9,7 @@ keywords: [Linux, vi, vim, tar, zip, alias, env]
 
 # 進階操作與環境檢視
 
-**【vi / vim 生存操作】**
+## vi / vim 生存操作
 1. **`vi` / `vim`：終端機裡的純文字編輯器**
     這是 Linux 世界裡最經典，但也最常讓新手崩潰（不知道怎麼存檔離開）的編輯器。`vim` 是 `vi` 的進階版（多了語法顏色提示），兩者操作邏輯完全一樣。
     在 Linux 維運中，修改設定檔幾乎百分之百都靠它，因此學會基本的「生存操作」是絕對必要的！
@@ -43,7 +43,7 @@ keywords: [Linux, vi, vim, tar, zip, alias, env]
        - 如果不小心改壞了、不想存檔，請輸入 `:q!` 然後按 Enter（強制不存檔離開）。
     :::
 
-### 檔案打包與壓縮
+## 檔案打包與壓縮
 
 **【跨平台與備份】**
 1. **`tar`：打包與解壓縮檔案**
@@ -95,7 +95,7 @@ keywords: [Linux, vi, vim, tar, zip, alias, env]
 - **`zip`**：優勢在於**跨平台兼容性極佳**。如果是要把報表、Log 檔下載到 Windows 電腦看，或是傳給一般非工程師的使用者，請用這個才不會被抱怨「檔案打不開」😂。
 :::
 
-### 管線命令 (Pipeline)
+## 管線命令 (Pipeline)
 
 在 Linux 中有一個極度強大且無所不在的符號：**管線 `|` (Pipeline)**。
 它的作用是「**把左邊指令的輸出結果，交給右邊的指令繼續處理**」。
@@ -110,7 +110,7 @@ keywords: [Linux, vi, vim, tar, zip, alias, env]
 ls -la /etc | grep "network"
 ```
 
-### 環境變數檢視
+## 環境變數檢視
 
 在 Linux 系統中，有許多設定是透過「變數」來記憶與存取的（例如目前的語系、家目錄路徑、終端機外觀等）。
 
@@ -217,7 +217,7 @@ ls -la /etc | grep "network"
 3. **大功告成**：此後不管你怎麼重開機或開新視窗，`ll` 這個別名都會永遠為你服務囉！
 :::
 
-### 尋求幫助與指令手冊
+## 尋求幫助與指令手冊
 
 :::info[💡 實務觀念：AI 時代為什麼還要學這個？]
 你可能會想：「現在是網路與 AI 時代，忘記語法直接上網查不就好了嗎？」
@@ -250,4 +250,10 @@ Linux 的指令與參數多如繁星，即使是資深工程師也不可能全�
    mkdir (1)    - make directories
    rmdir (1)    - remove empty directories
    ```
+
+:::tip[進階延伸閱讀：備份與環境變數實戰篇]
+在熟悉了基礎的 `tar`、`env` 與 `alias` 後，若在機房維運或 K8s 部署中遇到複雜情境，請參閱進階實戰章節：
+👉 [14-compression-backup.md (🗜️ 檔案壓縮與解壓縮：備份與還原)](file:///Users/qiuliwen/Documents/工程師/project/liwendocusaurus/docs/01-learning/linux-notes/14-compression-backup.md)
+👉 [16-env-shell-config.md (🖥️ 環境變數與 Shell 設定：開發環境排錯)](file:///Users/qiuliwen/Documents/工程師/project/liwendocusaurus/docs/01-learning/linux-notes/16-env-shell-config.md)
+:::
 

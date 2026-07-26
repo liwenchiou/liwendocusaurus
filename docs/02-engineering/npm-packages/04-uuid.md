@@ -2,7 +2,7 @@
 id: uuid
 sidebar_position: 4
 title: "uuid (唯一識別碼)"
-sidebar_label: "\u200B04 uuid (唯一識別碼)"
+sidebar_label: "uuid (唯一識別碼)"
 
 description: "uuid 產生通用唯一識別碼 💡 為什麼需要這個套件？ 在開發系統時，我們經常需要為資料庫的每筆紀錄、上傳的檔案或 Session 產生一個「絕對不重複」的 ID。uuid 套件可以幫我們根據時間戳或是隨機數產生符合 RFC 4122 標準的 UUID Universally Unique Ide..."
 keywords: [uuid, 唯一識別碼, engineering, npm-packages]

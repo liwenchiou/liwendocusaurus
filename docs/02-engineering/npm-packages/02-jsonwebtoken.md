@@ -1,7 +1,7 @@
 ---
 id: jsonwebtoken
 title: "🔑 JSON Web Token (JWT)"
-sidebar_label: "\u200B02 JSON Web Token"
+sidebar_label: "JSON Web Token"
 sidebar_position: 2
 
 description: "JSON Web Token JWT jsonwebtoken 是一個廣泛使用的 npm 套件，用來實作 JSON Web Token JWT。在網頁應用程式中，我們經常使用它來處理使用者登入的驗證（Authentication）以及授權（Authorization）機制。 💡 核心概念 簽發 S..."

@@ -1,14 +1,13 @@
 ---
 id: 01-environment
-title: 🐧 環境建置與觀念
-sidebar_label: "​環境建置與觀念"
+title: 🌱 環境建置與觀念
+sidebar_label: "環境建置與觀念"
 sidebar_position: 1
 description: "介紹什麼是 Linux，以及如何透過 Docker 快速建置 Rocky Linux 環境，為後續的學習打下基礎。"
 keywords: [Linux, Rocky Linux, Docker, 環境建置]
 ---
 
-
-# Linux 學習筆記
+# 環境建置與觀念
 
 本系列筆記整理自《Linux 系統管理達人養成實務攻略》，旨在建立紮實的 Linux 系統管理與維運基礎。無論是針對日常伺服器管理、自動化部署，或是準備 RHCSA (Red Hat Certified System Administrator) 認證，熟悉 Linux 底層運作邏輯與指令都是不可或缺的核心技能。內容涵蓋從基礎的環境建置、權限管控、系統資源監控，到進階的磁碟與網路管理，透過循序漸進的實務操作，帶你一步步掌握現代系統管理員 (Sysadmin) 的必備武器。
 

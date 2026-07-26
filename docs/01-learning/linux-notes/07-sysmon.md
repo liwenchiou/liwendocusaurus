@@ -1,7 +1,7 @@
 ---
 id: 07-sysmon
-title: 🐧 系統資源檢視
-sidebar_label: "\u200B📊 系統資源檢視"
+title: 📊 系統資源檢視
+sidebar_label: "系統資源檢視"
 sidebar_position: 7
 description: "伺服器效能監控實戰：學會使用 top、htop、ps、free、df 等工具，並透過 iostat 與 sar 精準找出拖垮系統的效能瓶頸。"
 keywords: [Linux, top, htop, ps, free, df, uptime, iostat, sar]

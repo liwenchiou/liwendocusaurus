@@ -1,6 +1,6 @@
 ---
 id: 00-linux-cheatsheet
-title: 🐧 Linux 指令速查表
+title: ⚡ Linux 指令速查表
 sidebar_label: "🔥 指令速查表"
 sidebar_position: 0
 description: "整理了 Linux 維運與系統管理最常用的核心指令速查表，隨查即用，快速解決實務需求。"

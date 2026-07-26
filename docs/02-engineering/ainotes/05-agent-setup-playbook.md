@@ -1,7 +1,7 @@
 ---
 id: agent-setup-playbook
 title: "實戰演練：跨專案 AI 防呆起手式"
-sidebar_label: "05. 新專案起手式"
+sidebar_label: "新專案起手式"
 sidebar_position: 5
 
 description: "實戰演練：跨專案 AI 防呆起手式 Playbook 當我們學會了 Workflow, Skill 以及 Knowledge Items KI 的「動態指針模式」後，接下來就是最實用的部分：當我今天開啟了一個全新的專案（例如切換到 liwenStudio），我該怎麼做才能用最快速度把 AI 防呆機制..."
