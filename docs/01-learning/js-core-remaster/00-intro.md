@@ -9,7 +9,7 @@ sidebar_position: 1
 
 # Day 00: 勇者冒險的起點！JS 核心重構鐵人賽宣戰
 
-> **本文同步分享於個人部落格：[Liwen Chiou | Digital Architect & Full-Stack Engineer](https://liwenchiou.github.io/liwenblog/#intro)**
+> **本文同步分享於2026鐵人賽：[JS 核心重構：勇者轉職傳說](https://ithelp.ithome.com.tw/users/20105113/ironman/9064)**
 
 ---
 
