@@ -302,6 +302,7 @@ const dataSource = new DataSource({
 | | **`length`** | `50`, `255` | 限制字串的最長字元數（常用於 `varchar`）。 |
 | | **`nullable`** | `false` (預設為 `true`) | 是否允許為 `NULL`（設為 `false` 即為 `NOT NULL` 必填）。 |
 | | **`default`** | `'user'`, `0`, `false` | 資料庫的預設值（當新增資料未傳值時自動帶入）。 |
+| | **`select`** | `false` (預設為 `true`) | 設定 `false` 預設查詢時**隱藏該欄位**（常用於 `password` 密碼等敏感資料）。 |
 | **鍵值與約束** | **`primary`** | `true` | 是否宣告為 **主鍵 (Primary Key)**。 |
 | | **`generated`** | `'increment'`, `'uuid'` | 自動生成策略：`'increment'` 代表自增整數 `1, 2, 3...`；`'uuid'` 代表 UUID 隨機碼。 |
 | | **`unique`** | `true` | 加上 **唯一值約束 (UNIQUE)**，不允許欄位出現重複值。 |
@@ -311,6 +312,47 @@ const dataSource = new DataSource({
 | | **`updateDate`** | `true` | 當資料被 **更新內容** 時，自動更新為目前時間 (`updatedAt`)。 |
 | | **`deleteDate`** | `true` | **軟刪除 (Soft Delete)** 標籤，記錄刪除時間，資料不會被真正硬刪除。 |
 | **枚舉 (Enum)** | **`enum`** | `['user', 'admin']` | 當 `type: 'enum'` 時，指定允許輸入的列舉合法值選單。 |
+
+#### 🔗 進階設定：`select: false` (隱藏欄位) 與 `relations` (資料表關聯)
+
+##### 1. `select: false` 保護敏感欄位 (如密碼 `password`)
+
+當我們定義 `User` Entity 時，可以使用 `select: false`，這樣在一般 `find()` 查詢時就不會意外將使用者密碼雜湊值查出來並回傳給前端：
+
+```javascript title="entities/User.js"
+password: {
+  type: 'varchar',
+  length: 100,
+  nullable: false,
+  select: false, // 🔒 預設查詢自動隱藏此欄位，防止密碼洩漏！
+}
+```
+
+##### 2. `relations` 設定資料表間的關聯 (Foreign Key)
+
+在 EntitySchema 中，可以使用 `relations` 設定資料表之間的外鍵與對應關係（如 `many-to-one`, `one-to-many` 等）：
+
+```javascript title="entities/CreditPurchase.js"
+const { EntitySchema } = require('typeorm')
+
+module.exports = new EntitySchema({
+  name: 'CreditPurchase',
+  tableName: 'CREDIT_PURCHASE',
+  columns: {
+    id: { primary: true, type: 'uuid', generated: 'uuid' },
+    user_id: { type: 'uuid', nullable: false },
+  },
+  // 🔗 定義關聯：多筆購買紀錄對應到一位使用者 (many-to-one)
+  relations: {
+    user: {
+      target: 'User',                       // 對應的目標 Entity
+      type: 'many-to-one',                  // 關聯類型 (many-to-one / one-to-many)
+      joinColumn: { name: 'user_id' },      // 指定外鍵欄位名稱 (Foreign Key)
+      inverseSide: 'creditPurchaseRecords',
+    },
+  },
+})
+```
 
 :::tip[💡 小預告：Entity 只是設計圖]
 再次提醒：在這裡寫好 `CreditPackage.js` 之後，資料庫**不會**自動建立這張表。下一步必須透過 **Migration** 產生並執行施工單，才會真正建立 `CREDIT_PACKAGE` 表！
@@ -417,7 +459,7 @@ npm run seed
 
 完成了三大角色的設定後，我們就可以在 Express API 路由或 Controller 中，透由 `dataSource.getRepository('Entity名稱')` 來進行資料庫的增刪改查：
 
-### 1. 新增資料 (Create)
+### 1. 新增與儲存資料 (Create / Save)
 
 使用 `create()` 建立實例，並用 `save()` 寫入資料庫：
 
@@ -431,6 +473,12 @@ const newPackage = packageRepo.create({
 })
 const savedResult = await packageRepo.save(newPackage)
 ```
+
+:::tip[💡 智慧機制：save() 的無縫 Insert / Update 判定]
+`save()` 物件時，TypeORM 會自動判斷：
+- **傳入物件「無 ID」** ➔ 執行 `INSERT INTO` (新增資料)。
+- **傳入物件「帶有已存在的 ID」** ➔ 自動轉為 `UPDATE` (更新資料)。
+:::
 
 ### 2. 查詢資料 (Read)
 
@@ -448,6 +496,33 @@ const packages = await packageRepo.find({
 
 // 依主鍵 ID 查單筆
 const singlePackage = await packageRepo.findOneBy({ id: 'uuid-string-here' })
+```
+
+#### 載入關聯資料 (Relations)
+
+當 Entity 有設定外鍵關係時，預設 `find()` 不會自動帶出關聯物件。必須傳入 `relations` 參數才會自動進行 `JOIN`：
+
+```javascript
+const purchaseRepo = dataSource.getRepository('CreditPurchase')
+
+// 查詢購買紀錄並一併帶出對應的 user 資料
+const purchases = await purchaseRepo.find({
+  relations: ['user'] // 👈 自動二表 JOIN 帶出 user 物件內容
+})
+```
+
+#### 強制取出被 `select: false` 隱藏的欄位 (如登入 API 比對密碼)
+
+若欄位設有 `select: false`（如 `User.password`），一般查詢拿不到密碼。登入 API 驗證密碼時，需透過 `addSelect` 顯式帶出：
+
+```javascript
+const userRepo = dataSource.getRepository('User')
+
+// 登入驗證時：強制將 select: false 的 password 欄位一併抓出
+const userWithPassword = await userRepo.createQueryBuilder('user')
+  .addSelect('user.password') // 👈 強制抓出隱藏的密碼欄位
+  .where('user.email = :email', { email })
+  .getOne()
 ```
 
 #### 進階查詢：`where`、`order`、`take` 與 `skip`
