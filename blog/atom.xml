@@ -153,8 +153,7 @@
         <link href="https://garden.liwen.studio/blog/agile-agentic-coding"/>
         <updated>2026-07-08T13:00:00.000Z</updated>
         <summary type="html"><![CDATA[AI 輔助開發中，除了模型聰明程度外，我們如何「使用」它才是決定開發體驗的關鍵。本文分享為何比起寫詳盡規格書的 SDD 模式，我更偏好「敏捷式 AI 結對開發」。]]></summary>
-        <content type="html"><![CDATA[
-<p>最近網路上有許多關於哪家 AI 比較聰明的討論，大家常把焦點放在 AI 的「通靈能力」、也就是猜測隱性需求的能力上，但經過這陣子的實戰摸索，我發現<strong>除了模型本身的聰明程度之外，我們如何去「使用」它，反而才是決定開發體驗的關鍵</strong>。</p>
+        <content type="html"><![CDATA[<p>最近網路上有許多關於哪家 AI 比較聰明的討論，大家常把焦點放在 AI 的「通靈能力」、也就是猜測隱性需求的能力上，但經過這陣子的實戰摸索，我發現<strong>除了模型本身的聰明程度之外，我們如何去「使用」它，反而才是決定開發體驗的關鍵</strong>。</p>
 <!-- -->
 <p>目前在 AI 輔助開發的領域中，大家的工作流大致可以分為兩種截然不同的派系。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="規格驅動-sdd-模式自動化工廠">規格驅動 (SDD) 模式：自動化工廠<a href="https://garden.liwen.studio/blog/agile-agentic-coding#%E8%A6%8F%E6%A0%BC%E9%A9%85%E5%8B%95-sdd-%E6%A8%A1%E5%BC%8F%E8%87%AA%E5%8B%95%E5%8C%96%E5%B7%A5%E5%BB%A0" class="hash-link" aria-label="規格驅動 (SDD) 模式：自動化工廠的直接連結" title="規格驅動 (SDD) 模式：自動化工廠的直接連結" translate="no">​</a></h2>
@@ -182,8 +181,7 @@
         <link href="https://garden.liwen.studio/blog/bad-interview-experiences"/>
         <updated>2026-07-08T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[紀錄最近求職過程中遇到的糟糕面試經歷，以及我是如何辨識並應對這些不尊重求職者的雷缺。]]></summary>
-        <content type="html"><![CDATA[
-<p>最近找工作連續遇到幾次讓我大開眼界的「奇葩面試」，實在不吐不快。</p>
+        <content type="html"><![CDATA[<p>最近找工作連續遇到幾次讓我大開眼界的「奇葩面試」，實在不吐不快。</p>
 <p>決定寫下來抒發一下順便當作紀錄，找工作大家多少都會急，但千萬不要因為想趕快拿到 Offer，就無視了這些公司在面試流程中狂刷的「紅旗」（Red Flags）。</p>
 <!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第一間直接放鳥那我就反手一個檢舉">第一間：直接放鳥？那我就反手一個檢舉<a href="https://garden.liwen.studio/blog/bad-interview-experiences#%E7%AC%AC%E4%B8%80%E9%96%93%E7%9B%B4%E6%8E%A5%E6%94%BE%E9%B3%A5%E9%82%A3%E6%88%91%E5%B0%B1%E5%8F%8D%E6%89%8B%E4%B8%80%E5%80%8B%E6%AA%A2%E8%88%89" class="hash-link" aria-label="第一間：直接放鳥？那我就反手一個檢舉的直接連結" title="第一間：直接放鳥？那我就反手一個檢舉的直接連結" translate="no">​</a></h2>
@@ -233,8 +231,7 @@
         <link href="https://garden.liwen.studio/blog/ai-agent-tunnel-vision-architecture"/>
         <updated>2026-07-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[AI 總是不聽話、亂下指令？分享我如何利用軟連結掛載與 Prompt 攔截術，解決 AI 的隧道視覺 (Tunnel Vision) 問題，打造最高安全層級的跨模型協作大腦。]]></summary>
-        <content type="html"><![CDATA[
-<p>最近在使用 AI Agent 輔助開發時，發生了一件讓我冷汗直流的小慘案。</p>
+        <content type="html"><![CDATA[<p>最近在使用 AI Agent 輔助開發時，發生了一件讓我冷汗直流的小慘案。</p>
 <p>我請 AI 幫忙整理專案的 Markdown 文件，改了一大堆檔名。整理完後，我很順口地對它說：「給我部署指令。」
 沒想到，它就像個聽到關鍵字的機器人，毫不猶豫地吐出了標準的 <code>git push</code> 指令。我一貼上終端機，過了不到一分鐘，GitHub Actions 就亮起了大紅燈——<strong>因為一堆舊連結沒更新，觸發了 Docusaurus 的 Broken Links 死結檢查，部署直接中斷。</strong></p>
 <p>當下我滿腦子問號：「等等，我明明就在專案的 <code>.agent</code> 檔案裡規定過，<strong>部署前絕對要先跑 <code>npm run build</code> 測試</strong>啊！你為什麼沒有照做？」</p>
@@ -272,8 +269,7 @@
         <link href="https://garden.liwen.studio/blog/introducing-litool"/>
         <updated>2026-06-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[為了解決找不到包含農民曆的日期計算機的痛點，我用 Next.js 打造了屬於自己的 LiTool 工具箱！支援農曆計算與純前端的批次圖片壓縮。]]></summary>
-        <content type="html"><![CDATA[
-<p>在日常的開發與生活中，我們總會遇到需要一些小工具來輔助的時候。網路上雖然有很多免費的線上工具，但它們往往充斥著滿滿的廣告，或是剛好「缺了那麼一點點」我們需要的功能。</p>
+        <content type="html"><![CDATA[<p>在日常的開發與生活中，我們總會遇到需要一些小工具來輔助的時候。網路上雖然有很多免費的線上工具，但它們往往充斥著滿滿的廣告，或是剛好「缺了那麼一點點」我們需要的功能。</p>
 <p>為了不再將就，我決定自己動手，打造一個乾淨、快速，且完全符合自己需求的專屬工具箱 —— <a href="https://litool.liwen.studio/" target="_blank" rel="noopener noreferrer" class="">LiTool (https://litool.liwen.studio)</a>。</p>
 <!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="為什麼要自己做工具箱">為什麼要自己做工具箱？<a href="https://garden.liwen.studio/blog/introducing-litool#%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E8%87%AA%E5%B7%B1%E5%81%9A%E5%B7%A5%E5%85%B7%E7%AE%B1" class="hash-link" aria-label="為什麼要自己做工具箱？的直接連結" title="為什麼要自己做工具箱？的直接連結" translate="no">​</a></h2>
@@ -335,8 +331,7 @@
         <link href="https://garden.liwen.studio/blog/ai-era-junior-engineer-survival-guide"/>
         <updated>2026-06-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[探討 AI 工具對軟體開發就業市場的衝擊，並分享初階工程師應如何培養結合領域知識與自動化能力的破局思維。]]></summary>
-        <content type="html"><![CDATA[
-<p>現在是 AI 橫行的時代，我認為這對軟體工程師的職涯發展產生了深遠的影響。</p>
+        <content type="html"><![CDATA[<p>現在是 AI 橫行的時代，我認為這對軟體工程師的職涯發展產生了深遠的影響。</p>
 <p>過去，只要具備專業的程式開發能力——不管是前端、後端或是其他軟體工程技能，要找到一份不錯的工作並非難事。然而，隨著 AI 發展日益迅速，市場上「純粹寫扣」的初階工程師職缺反而變少了。</p>
 <!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ai-帶來的成本與效率衝擊">AI 帶來的成本與效率衝擊<a href="https://garden.liwen.studio/blog/ai-era-junior-engineer-survival-guide#ai-%E5%B8%B6%E4%BE%86%E7%9A%84%E6%88%90%E6%9C%AC%E8%88%87%E6%95%88%E7%8E%87%E8%A1%9D%E6%93%8A" class="hash-link" aria-label="AI 帶來的成本與效率衝擊的直接連結" title="AI 帶來的成本與效率衝擊的直接連結" translate="no">​</a></h2>
@@ -371,8 +366,7 @@
         <link href="https://garden.liwen.studio/blog/introducing-ghaction-lis"/>
         <updated>2026-06-16T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[告別手動重新整理網頁！我開源了 ghaction-lis，一款專門在終端機精準監聽 GitHub Actions 部署狀態的超輕量 CLI 工具。]]></summary>
-        <content type="html"><![CDATA[
-<p>做前端開發或靜態網站管理（例如這個 Docusaurus 數位花園）時，我們常常會把 <code>git push</code> 和自動部署串在一起。但這衍生出一個惱人的日常痛點：<strong>每次 push 完，你總是要打開瀏覽器、點開 Actions 標籤、然後傻傻地按 F5 重新整理，直到進度條跑完為止。</strong></p>
+        <content type="html"><![CDATA[<p>做前端開發或靜態網站管理（例如這個 Docusaurus 數位花園）時，我們常常會把 <code>git push</code> 和自動部署串在一起。但這衍生出一個惱人的日常痛點：<strong>每次 push 完，你總是要打開瀏覽器、點開 Actions 標籤、然後傻傻地按 F5 重新整理，直到進度條跑完為止。</strong></p>
 <p>這不僅中斷開發心流，還非常破壞開發者體驗 (DevEx)。</p>
 <p>為了解決這個問題，我開發並開源了一個超輕量級的 CLI 工具：<strong><a href="https://github.com/liwenchiou/ghaction-lis" target="_blank" rel="noopener noreferrer" class="">ghaction-lis</a></strong>！</p>
 <!-- -->
@@ -423,8 +417,7 @@
         <link href="https://garden.liwen.studio/blog/ezdcbot"/>
         <updated>2026-06-14T04:00:00.000Z</updated>
         <summary type="html"><![CDATA[在 Serverless 架構下開發 Discord 通知功能時，discord.js 顯得過於笨重。本文分享我如何捨棄 WebSocket，利用原生 fetch 打造零依賴、極致輕量的專用推播套件 ezdcbot。]]></summary>
-        <content type="html"><![CDATA[
-<p>身為一名後端工程師，我們經常需要實作一些自動化的小工具，例如：</p>
+        <content type="html"><![CDATA[<p>身為一名後端工程師，我們經常需要實作一些自動化的小工具，例如：</p>
 <ul>
 <li class="">接收 Stripe 伺服器傳來的付費 Webhook，並把通知傳到團隊的 Discord 群組。</li>
 <li class="">寫一個爬蟲排程，每天早上把最新的天氣預報發到頻道裡。</li>
@@ -489,8 +482,7 @@
         <link href="https://garden.liwen.studio/blog/ai-development-uncanny-valley"/>
         <updated>2026-06-07T13:30:00.000Z</updated>
         <summary type="html"><![CDATA[當 AI 展現出超越人類的開發能力，工程師該如何自處？探討在 AI 時代下，軟體工程師如何從「執行者」轉型為「系統建築師」的價值反思。]]></summary>
-        <content type="html"><![CDATA[
-<p>在與 AI 協作的過程中，你是否曾產生過一種不適感？</p>
+        <content type="html"><![CDATA[<p>在與 AI 協作的過程中，你是否曾產生過一種不適感？</p>
 <p>這是一種微妙的「程式開發恐怖谷效應」。當 AI 在程式碼撰寫、邏輯推演上都展現出超越人類的能力時，我們不禁會產生懷疑：<strong>我們真的比 AI 厲害嗎？如果我硬要介入技術細節，反而成為了 AI 發揮能力的絆腳石？</strong></p>
 <p>這是我近期深刻的迷惘。</p>
 <!-- -->
@@ -544,8 +536,7 @@
         <link href="https://garden.liwen.studio/blog/tech-optimization-vs-wishlist"/>
         <updated>2026-05-13T01:43:00.000Z</updated>
         <summary type="html"><![CDATA[探討職場中「技術優化」為何常淪為缺乏業務邏輯的許願池，並分享工程師如何建立協作防線，拒絕無效通靈開發。]]></summary>
-        <content type="html"><![CDATA[
-<p>身為工程師，我們最怕的不是複雜的演算法，而是那種「邏輯斷層」的溝通。最近在思考職場定位時，有感而發想聊聊一個現象：為什麼有些優化專案，最後會變成技術人員的災難？</p>
+        <content type="html"><![CDATA[<p>身為工程師，我們最怕的不是複雜的演算法，而是那種「邏輯斷層」的溝通。最近在思考職場定位時，有感而發想聊聊一個現象：為什麼有些優化專案，最後會變成技術人員的災難？</p>
 <p>當「技術優化」的口號響起，如果缺乏清晰的業務定義，工程師往往會從「解決問題的人」變成「幫人通靈的人」。這不僅是效率的浪費，更是對專業價值的消耗。</p>
 <!-- -->
 <hr>
@@ -589,8 +580,7 @@
         <link href="https://garden.liwen.studio/blog/ai-coding-reflection"/>
         <updated>2026-05-06T00:06:32.090Z</updated>
         <summary type="html"><![CDATA[深度反思 AI 輔助寫程式對開發者邏輯能力的影響，探討如何從『結果導向』轉向『邏輯導向』的 AI 協作模式。]]></summary>
-        <content type="html"><![CDATA[
-<p>最近我有個習慣讓我有點不安——我發現我在用 AI 寫程式的時候，根本不會先想「這要怎麼做」，而是直接打開對話框，把需求貼進去，等結果出來。</p>
+        <content type="html"><![CDATA[<p>最近我有個習慣讓我有點不安——我發現我在用 AI 寫程式的時候，根本不會先想「這要怎麼做」，而是直接打開對話框，把需求貼進去，等結果出來。</p>
 <p>有一天我突然意識到：如果 AI 今天消失了，我還會寫程式嗎？</p>
 <!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一個讓我驚醒的小需求">一個讓我驚醒的小需求<a href="https://garden.liwen.studio/blog/ai-coding-reflection#%E4%B8%80%E5%80%8B%E8%AE%93%E6%88%91%E9%A9%9A%E9%86%92%E7%9A%84%E5%B0%8F%E9%9C%80%E6%B1%82" class="hash-link" aria-label="一個讓我驚醒的小需求的直接連結" title="一個讓我驚醒的小需求的直接連結" translate="no">​</a></h2>
@@ -654,8 +644,7 @@
         <link href="https://garden.liwen.studio/blog/weekend-dad-full-time-heart"/>
         <updated>2026-05-03T11:37:41.837Z</updated>
         <summary type="html"><![CDATA[記錄新手爸爸在公司、月子中心與家庭間奔波的『三棲戰士』生活，並探討長輩傳統育兒觀點與現代護理觀念間的摩擦與反思。]]></summary>
-        <content type="html"><![CDATA[
-<p>小夕終於出月中了！回顧這一個月，日子過得既疲憊又充實，還充滿了各種「驚喜」。</p>
+        <content type="html"><![CDATA[<p>小夕終於出月中了！回顧這一個月，日子過得既疲憊又充實，還充滿了各種「驚喜」。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="三棲戰士的日常">三棲戰士的日常<a href="https://garden.liwen.studio/blog/weekend-dad-full-time-heart#%E4%B8%89%E6%A3%B2%E6%88%B0%E5%A3%AB%E7%9A%84%E6%97%A5%E5%B8%B8" class="hash-link" aria-label="三棲戰士的日常的直接連結" title="三棲戰士的日常的直接連結" translate="no">​</a></h2>
 <p>這段時間，我成了名副其實的「三棲戰士」：<br>
 <!-- -->每天在公司、月中、家裡三個點之間來回奔波，除了要應付公司裡的煩心事，還要抓緊時間學習育兒技能。</p>
@@ -708,7 +697,6 @@
         <updated>2026-04-23T05:10:26.330Z</updated>
         <summary type="html"><![CDATA[探討 AI 輔助開發（Vibe Coding）帶來的安全風險，包含 API Key 洩漏、SQL 注入與部署安全等實戰保命指南。]]></summary>
         <content type="html"><![CDATA[
-<!-- -->
 <p>最近開發圈最迷人的詞莫過於 <strong>Vibe Coding</strong>——打幾句話，看著 AI 幫你把功能生出來，測試沒問題就光速部署。以前要花好幾天的專案，現在一個下午就能搞定。</p>
 <p>說真的，這種「腦力即產力」的感覺非常爽。但就在這種高速生產的流程中，我注意到了一個隱形危機：<strong>流程太順了，順到讓我們忘記了身為開發者最基本的「防禦本能」。</strong></p>
 <p><code>{</code>/* truncate */<code>}</code></p>
@@ -781,8 +769,7 @@
         <link href="https://garden.liwen.studio/blog/nextjs-deployment-cloudflare-pages-struggle"/>
         <updated>2026-04-23T00:56:25.022Z</updated>
         <summary type="html"><![CDATA[記錄將 Next.js 應用從 Vercel 遷移至 Cloudflare Pages 的挑戰，深入分析 Edge Runtime 的 3MB 腳本限制、SDK 體積優化與 Node.js API 相容性問題。]]></summary>
-        <content type="html"><![CDATA[
-<p>在 Web 開發的世界裡，我們通常會從 Vercel 開始。它很美、很快、很有質感，就像是一個精心裝潢的豪華公寓。但隨著專案成長，我們開始在想：有沒有那種既能擁有極致性能，成本又更平易近人的「自由之地」？</p>
+        <content type="html"><![CDATA[<p>在 Web 開發的世界裡，我們通常會從 Vercel 開始。它很美、很快、很有質感，就像是一個精心裝潢的豪華公寓。但隨著專案成長，我們開始在想：有沒有那種既能擁有極致性能，成本又更平易近人的「自由之地」？</p>
 <p>於是，我們把目光投向了 Cloudflare。這兩天，我們就像是一群試圖帶著行李從 Vercel 搬家到 Cloudflare 邊緣計算之城的旅人。雖然最終我們因為行李太重而暫時撤退，但這場「失敗」留下的經驗教訓，或許比成功搬家更值得記錄。</p>
 <!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="為什麼想告別-vercel擁抱-cloudflare">為什麼想告別 Vercel，擁抱 Cloudflare？<a href="https://garden.liwen.studio/blog/nextjs-deployment-cloudflare-pages-struggle#%E7%82%BA%E4%BB%80%E9%BA%BC%E6%83%B3%E5%91%8A%E5%88%A5-vercel%E6%93%81%E6%8A%B1-cloudflare" class="hash-link" aria-label="為什麼想告別 Vercel，擁抱 Cloudflare？的直接連結" title="為什麼想告別 Vercel，擁抱 Cloudflare？的直接連結" translate="no">​</a></h2>
@@ -858,7 +845,6 @@
         <updated>2026-04-21T06:46:36.190Z</updated>
         <summary type="html"><![CDATA[深入探討冒名頂替症候群的定義、五種類型以及實用的心態調整方式，幫助開發者克服內心不安，建立穩健的專業自信。]]></summary>
         <content type="html"><![CDATA[
-<!-- -->
 <p><a href="https://gemini.google.com/share/419d34c2d3f6" target="_blank" rel="noopener noreferrer" class="">互動網站</a></p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一-定義什麼是冒名頂替症候群">一、 定義：什麼是冒名頂替症候群？<a href="https://garden.liwen.studio/blog/imposter-syndrome#%E4%B8%80-%E5%AE%9A%E7%BE%A9%E4%BB%80%E9%BA%BC%E6%98%AF%E5%86%92%E5%90%8D%E9%A0%82%E6%9B%BF%E7%97%87%E5%80%99%E7%BE%A4" class="hash-link" aria-label="一、 定義：什麼是冒名頂替症候群？的直接連結" title="一、 定義：什麼是冒名頂替症候群？的直接連結" translate="no">​</a></h2>
 <p>冒名頂替症候群最早由心理學家 <strong>Pauline Clance</strong> 與 <strong>Suzanne Imes</strong> 於 1978 年提出。它並非一種精神疾病，而是一種<strong>心理現象</strong>。</p>
@@ -929,8 +915,7 @@
         <link href="https://garden.liwen.studio/blog/engineer-evaluation-psychology"/>
         <updated>2026-04-21T06:46:35.933Z</updated>
         <summary type="html"><![CDATA[深入探討工程師在面對職場評價時的心理機制（如生存本能、鏡像自我），並提供建立內在計分卡、自我與代碼解耦的實戰心法。]]></summary>
-        <content type="html"><![CDATA[
-<p>互動網站: <a href="https://gemini.google.com/share/6a9569c51762" target="_blank" rel="noopener noreferrer" class="">https://gemini.google.com/share/6a9569c51762</a></p>
+        <content type="html"><![CDATA[<p>互動網站: <a href="https://gemini.google.com/share/6a9569c51762" target="_blank" rel="noopener noreferrer" class="">https://gemini.google.com/share/6a9569c51762</a></p>
 <p>這份筆記整理了工程師在職場中面對「評價」時的心理機制、常見行為模式，以及如何建立健康的自我認同體系。</p>
 <!-- -->
 <hr>
@@ -1002,8 +987,7 @@
         <link href="https://garden.liwen.studio/blog/mis-daily-rant"/>
         <updated>2026-04-21T06:46:35.682Z</updated>
         <summary type="html"><![CDATA[從一場突如其來的亞馬遜賣場求救事件，反思 MIS 職位在職場中被當成『避風港』的依賴心理，並探討如何建立工作邊界與專業所有權 (Ownership)。]]></summary>
-        <content type="html"><![CDATA[
-<p>這原本應該是個美好的補眠日。因為前一天沒睡好，索性請了一天假，打算好好充電後，再來專心處理最近一直沒空執行的資訊需求。沒想到，美好的早晨在八點多就被無情打斷。</p>
+        <content type="html"><![CDATA[<p>這原本應該是個美好的補眠日。因為前一天沒睡好，索性請了一天假，打算好好充電後，再來專心處理最近一直沒空執行的資訊需求。沒想到，美好的早晨在八點多就被無情打斷。</p>
 <!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="在最後一刻才求救的亞馬遜賣場事件">在最後一刻才求救的「亞馬遜賣場」事件<a href="https://garden.liwen.studio/blog/mis-daily-rant#%E5%9C%A8%E6%9C%80%E5%BE%8C%E4%B8%80%E5%88%BB%E6%89%8D%E6%B1%82%E6%95%91%E7%9A%84%E4%BA%9E%E9%A6%AC%E9%81%9C%E8%B3%A3%E5%A0%B4%E4%BA%8B%E4%BB%B6" class="hash-link" aria-label="在最後一刻才求救的「亞馬遜賣場」事件的直接連結" title="在最後一刻才求救的「亞馬遜賣場」事件的直接連結" translate="no">​</a></h2>
 <p>一大早被吵醒，居然是因為行銷部門今天要開賣場，才發現當初申請的亞馬遜帳號還需要再申請 Seller 的相關認證。這讓我滿頭問號：幾個月前帳號申請完不就已經移交了嗎？為什麼現在還要我來幫忙申請？</p>
