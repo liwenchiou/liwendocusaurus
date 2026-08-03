@@ -6,26 +6,6 @@ description: "Next.js 30 天學習筆記系列 - 第 10 天：Day 10 - Server Ac
 keywords: [Day, Server, Actions, 告別, API, Routes, 的全端實戰, learning, next-js-notes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Day 10 - Server Actions：告別 API Routes 的全端實戰",
-        "datePublished": "2026-07-08T13:51:33.478Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Next.js 30 天學習筆記系列 - 第 10 天：Day 10 - Server Actions：告別 API Routes 的全端實戰。深入探討 Next.js 開發實戰技巧。"
-      }
-    `}
-  </script>
-</Head>
-
 
 # Day 10 - Server Actions：告別 API Routes 的全端實戰
 

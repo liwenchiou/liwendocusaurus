@@ -6,26 +6,6 @@ description: "Next.js 30 天學習筆記系列 - 第 17 天：Day 17 - 攔截路
 keywords: [Day, 攔截路由, 打造流暢的燈箱與彈窗體驗, learning, next-js-notes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Day 17 - 攔截路由：打造流暢的燈箱與彈窗體驗",
-        "datePublished": "2026-07-08T13:51:33.481Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Next.js 30 天學習筆記系列 - 第 17 天：Day 17 - 攔截路由：打造流暢的燈箱與彈窗體驗。深入探討 Next.js 開發實戰技巧。"
-      }
-    `}
-  </script>
-</Head>
-
 
 # Next.js 30 天全端實戰：Day 17 - 攔截路由：打造流暢的燈箱與彈窗體驗
 

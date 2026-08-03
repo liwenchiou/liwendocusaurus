@@ -4,26 +4,6 @@ description: "內部需求評估單：用於工程師評估技術可行性與成
 keywords: [02., 內部需求評估單, Internal, Assessment, projects-business, liwen-sop, sop-documents]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Untitled",
-        "datePublished": "2026-07-08T13:51:33.514Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "內部需求評估單：用於工程師評估技術可行性與成本"
-      }
-    `}
-  </script>
-</Head>
-
 
 # 02. 內部需求評估單 (Internal Assessment)
 

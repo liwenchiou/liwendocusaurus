@@ -4,26 +4,6 @@ description: "需求訪談紀錄單：用於紀錄客戶原始痛點與願望"
 keywords: [01., 需求訪談紀錄單, Interview, Record, projects-business, liwen-sop, sop-documents]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Untitled",
-        "datePublished": "2026-07-08T13:51:33.514Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "需求訪談紀錄單：用於紀錄客戶原始痛點與願望"
-      }
-    `}
-  </script>
-</Head>
-
 
 # 01. 需求訪談紀錄單 (Interview Record)
 

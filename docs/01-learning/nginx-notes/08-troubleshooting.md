@@ -5,26 +5,6 @@ description: "Nginx 疑難排解與維運 網站上線後的日常運作中，�
 keywords: [Nginx, 疑難排解與維運, learning, nginx-notes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Untitled",
-        "datePublished": "2026-07-08T13:51:33.497Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Nginx 疑難排解與維運 網站上線後的日常運作中，掌握排障與維運技能是確保系統高可用性的最後一環。當使用者回報「網頁打不開」、「上傳頭像失敗」或「系統發生錯誤」時，能夠迅速定位問題的根源至關重要。本章將教您如何解讀 access.log 與 error.log 這兩大核心日誌探照燈，並針對生產環境..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # Nginx 疑難排解與維運
 

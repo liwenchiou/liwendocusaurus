@@ -6,26 +6,6 @@ description: "Next.js 30 天學習筆記系列 - 第 22 天：Day 22 - 關聯式
 keywords: [Day, 關聯式資料庫實戰, 處理一對多與多對多關係, learning, next-js-notes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Day 22 - 關聯式資料庫實戰：處理一對多與多對多關係",
-        "datePublished": "2026-07-08T13:51:33.483Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Next.js 30 天學習筆記系列 - 第 22 天：Day 22 - 關聯式資料庫實戰：處理一對多與多對多關係。深入探討 Next.js 開發實戰技巧。"
-      }
-    `}
-  </script>
-</Head>
-
 
 # Next.js 30 天全端實戰：Day 22 - 關聯式資料庫實戰：處理一對多與多對多關係
 

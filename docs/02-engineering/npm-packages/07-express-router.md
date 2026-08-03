@@ -8,26 +8,6 @@ description: "Express Router 拆分與模組化 對於 「Router 拆分及模組
 keywords: [Express, Router, 拆分與模組化, engineering, npm-packages]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Express Router 拆分與模組化",
-        "datePublished": "2026-07-08T13:51:33.510Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Express Router 拆分與模組化 對於 「Router 拆分及模組化」，最核心的觀念可以總結為：「拒絕義大利麵條程式碼，用樂高積木的方式管理 API」。 這是從「寫腳本」邁向「軟體工程」的第一步，也是後端架構演進的第一個、最重要的分水嶺。 💡 為什麼要拆分？（解決痛點） 在剛學 Expr..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # Express Router 拆分與模組化
 

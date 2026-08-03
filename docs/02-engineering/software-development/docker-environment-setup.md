@@ -7,26 +7,6 @@ description: "Docker 開發環境部署 安裝 docker 1. dockerhttps://www.docke
 keywords: [Docker, 開發環境部署與設定, engineering, software-development]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Docker 開發環境部署與設定",
-        "datePublished": "2026-07-08T13:51:33.513Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Docker 開發環境部署 安裝 docker 1. dockerhttps://www.docker.com/getstarted/官網下載 2. 確認docker環境 docker version 3. 執行測試 docker run helloworld 部署 ubuntu 專案 1. 先建立..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # Docker 開發環境部署
 

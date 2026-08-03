@@ -6,26 +6,6 @@ description: "Next.js 30 天學習筆記系列 - 第 09 天：Day 09 - 錯誤處
 keywords: [Day, 錯誤處理, 優雅的降級與崩潰防護, learning, next-js-notes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Day 09 - 錯誤處理：優雅的降級與崩潰防護",
-        "datePublished": "2026-07-08T13:51:33.478Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Next.js 30 天學習筆記系列 - 第 09 天：Day 09 - 錯誤處理：優雅的降級與崩潰防護。深入探討 Next.js 開發實戰技巧。"
-      }
-    `}
-  </script>
-</Head>
-
 
 # Day 09 - 錯誤處理：優雅的降級與崩潰防護
 

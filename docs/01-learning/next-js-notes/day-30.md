@@ -6,26 +6,6 @@ description: "Next.js 30 天學習筆記系列 - 第 30 天：Day 30 - 終章：
 keywords: [Day, 終章, 回顧, 反思與全端工程師的下一步, learning, next-js-notes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Day 30 - 終章：回顧、反思與全端工程師的下一步",
-        "datePublished": "2026-07-08T13:51:33.490Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Next.js 30 天學習筆記系列 - 第 30 天：Day 30 - 終章：回顧、反思與全端工程師的下一步。深入探討 Next.js 開發實戰技巧。"
-      }
-    `}
-  </script>
-</Head>
-
 
 # Next.js 30 天全端實戰：Day 30 - 終章：回顧、反思與全端工程師的下一步
 

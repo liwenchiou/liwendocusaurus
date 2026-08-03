@@ -8,26 +8,6 @@ description: "Promise.all 語法教學 Promise.all 接收一個 Promise 陣列�
 keywords: [Promise.all, Fetch, API, learning, hexschool, nodejs-course]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Promise.all 與 Fetch API",
-        "datePublished": "2026-07-08T13:51:33.463Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Promise.all 語法教學 Promise.all 接收一個 Promise 陣列作為參數，當陣列中所有的 Promise 都變為 fulfilled（成功）狀態時，它才會回傳一個包含所有結果的陣列。如果其中一個失敗，就會進入 catch。 javascript // 模擬批改分數的非同步函式..."
-      }
-    `}
-  </script>
-</Head>
-
 
 ## Promise.all 語法教學
 

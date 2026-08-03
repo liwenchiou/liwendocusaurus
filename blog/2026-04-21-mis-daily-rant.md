@@ -9,26 +9,6 @@ description: "從一場突如其來的亞馬遜賣場求救事件，反思 MIS �
 keywords: [身為全公司的避風港, MIS, 的無奈日常與工作邊界感, 職場, 工程文化, 工作心法]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "身為全公司的避風港：MIS 的無奈日常與工作邊界感",
-        "datePublished": "2026-04-21T06:46:35.682937+00:00",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "從一場突如其來的亞馬遜賣場求救事件，反思 MIS 職位在職場中被當成『避風港』的依賴心理，並探討如何建立工作邊界與專業所有權 (Ownership)。"
-      }
-    `}
-  </script>
-</Head>
-
 
 # 身為全公司的避風港：MIS 的無奈日常與邊界感
 

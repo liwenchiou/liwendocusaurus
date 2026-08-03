@@ -6,26 +6,6 @@ description: "Next.js 30 天學習筆記系列 - 第 23 天：Day 23 - 資料更
 keywords: [Day, 資料更新與快取同步, revalidatePath, revalidateTag, learning, next-js-notes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Day 23 - 資料更新與快取同步：revalidatePath 與 revalidateTag",
-        "datePublished": "2026-07-08T13:51:33.484Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Next.js 30 天學習筆記系列 - 第 23 天：Day 23 - 資料更新與快取同步：revalidatePath 與 revalidateTag。深入探討 Next.js 開發實戰技巧。"
-      }
-    `}
-  </script>
-</Head>
-
 
 # Next.js 30 天全端實戰：Day 23 - 資料更新與快取同步：revalidatePath 與 revalidateTag
 

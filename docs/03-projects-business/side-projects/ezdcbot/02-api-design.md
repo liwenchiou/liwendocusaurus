@@ -8,26 +8,6 @@ description: "我們刻意避免設計出 sendMessage, createThread, sendThreadM
 keywords: [2., API, 設計與, Threads, 處理, projects-business, side-projects, ezdcbot]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "2. API 設計與 Threads 處理",
-        "datePublished": "2026-07-08T13:51:33.516Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "我們刻意避免設計出 sendMessage, createThread, sendThreadMessage 這種冗長且繁雜的介面。相反地，我們將所有的行為抽象成兩個核心動作：push（推播）與 pull（拉取）。 處理 Discord 討論串的 Aha Moment 在實作討論串 Threads ..."
-      }
-    `}
-  </script>
-</Head>
-
 
 我們刻意避免設計出 `sendMessage`, `createThread`, `sendThreadMessage` 這種冗長且繁雜的介面。相反地，我們將所有的行為抽象成兩個核心動作：`push`（推播）與 `pull`（拉取）。
 

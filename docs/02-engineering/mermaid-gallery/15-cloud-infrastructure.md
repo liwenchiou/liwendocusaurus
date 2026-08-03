@@ -5,26 +5,6 @@ description: "Cloud Infrastructure 雲端基礎架構部署圖 基礎設施架�
 keywords: [Cloud, Infrastructure, 雲端基礎架構部署圖, engineering, mermaid-gallery]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Untitled",
-        "datePublished": "2026-07-08T13:51:33.507Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Cloud Infrastructure 雲端基礎架構部署圖 基礎設施架構圖展示雲端服務（如 AWS Route 53, CloudFront, ALB, EC2, RDS）在不同虛擬私有網路安全子網段下的網路部署架構。 📊 範例效果 mermaid flowchart TD DNSRoute 5..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # Cloud Infrastructure 雲端基礎架構部署圖
 

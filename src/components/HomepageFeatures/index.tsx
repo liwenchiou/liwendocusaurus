@@ -43,7 +43,16 @@ function Feature({title, img, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <img src={img} className={styles.featureSvg} alt={title} style={{ borderRadius: '16px', marginBottom: '1.5rem' }} />
+        <img
+          src={img}
+          className={styles.featureSvg}
+          alt={title}
+          width={1024}
+          height={1024}
+          loading="lazy"
+          decoding="async"
+          style={{ borderRadius: '16px', marginBottom: '1.5rem' }}
+        />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

@@ -7,26 +7,6 @@ description: "2026 【後端】Node.js 直播班 歡迎來到 2026 【後端】N
 keywords: [課程前言與學習目標, learning, hexschool, nodejs-course]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "課程前言與學習目標",
-        "datePublished": "2026-07-08T13:51:33.453Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "2026 【後端】Node.js 直播班 歡迎來到 2026 【後端】Node.js 直播班 的學習筆記！ 這份系列筆記記錄了我在這堂課中的所有學習歷程，從最基礎的 Node.js 環境建置、非同步處理，一路到打造完整的 RESTful API 與資料庫整合。 🎯 學習目標 1. 掌握 Node...."
-      }
-    `}
-  </script>
-</Head>
-
 
 # 2026 【後端】Node.js 直播班
 

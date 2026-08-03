@@ -6,26 +6,6 @@ description: "Next.js 30 天學習筆記系列 - 第 24 天：Day 24 - 效能與
 keywords: [Day, 效能與體驗, 實作分頁查詢與無限滾動, learning, next-js-notes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Day 24 - 效能與體驗：實作分頁查詢與無限滾動",
-        "datePublished": "2026-07-08T13:51:33.485Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Next.js 30 天學習筆記系列 - 第 24 天：Day 24 - 效能與體驗：實作分頁查詢與無限滾動。深入探討 Next.js 開發實戰技巧。"
-      }
-    `}
-  </script>
-</Head>
-
 
 # Next.js 30 天全端實戰：Day 24 - 效能與體驗：實作分頁查詢與無限滾動
 

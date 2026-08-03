@@ -6,26 +6,6 @@ description: "Next.js 30 天學習筆記系列 - 第 28 天：Day 28 - 健壯性
 keywords: [Day, 健壯性, 使用, Error, Boundaries, global, error, 處理崩潰, learning, next-js-notes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Day 28 - 健壯性：使用 Error Boundaries 與 global-error 處理崩潰",
-        "datePublished": "2026-07-08T13:51:33.488Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Next.js 30 天學習筆記系列 - 第 28 天：Day 28 - 健壯性：使用 Error Boundaries 與 global-error 處理崩潰。深入探討 Next.js 開發實戰技巧。"
-      }
-    `}
-  </script>
-</Head>
-
 
 # Next.js 30 天全端實戰：Day 28 - 健壯性：使用 Error Boundaries 與 global-error 處理崩潰
 

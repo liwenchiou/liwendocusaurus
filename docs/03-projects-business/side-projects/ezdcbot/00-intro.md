@@ -8,26 +8,6 @@ description: "ezdcbot 介紹與開發動機 身為一名後端工程師，我們
 keywords: [ezdcbot, 輕量, Discord, 推播套件, projects-business, side-projects]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "ezdcbot：輕量 Discord 推播套件",
-        "datePublished": "2026-07-08T13:51:33.516Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "ezdcbot 介紹與開發動機 身為一名後端工程師，我們經常需要實作一些自動化的小工具，例如： 接收 Stripe 伺服器傳來的付費 Webhook，並把通知傳到團隊的 Discord 群組。 寫一個爬蟲排程，每天早上把最新的天氣預報發到頻道裡。 在過去，大部分人的直覺反應是直接安裝強大的 disc..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # ezdcbot 介紹與開發動機
 

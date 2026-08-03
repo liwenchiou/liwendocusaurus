@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import {trackEvent} from '@site/src/utils/analytics';
 
 interface GardenCTAProps {
   title?: string;
@@ -31,6 +32,12 @@ export default function GardenCTA({
           className="button button--primary button--lg"
           to={type === 'blog' ? '/blog' : '/docs'}
           style={{ borderRadius: '10px' }}
+          onClick={() => trackEvent({
+            event: 'cta_click',
+            element_category: 'garden_cta',
+            element_action: 'navigate',
+            element_label: type === 'blog' ? 'back_to_blog' : 'back_to_docs',
+          })}
         >
           {type === 'blog' ? '🚀 回到生活分享' : '📚 回到技術筆記'}
         </Link>
@@ -38,6 +45,12 @@ export default function GardenCTA({
           className="button button--secondary button--lg"
           to="https://github.com/liwenchiou"
           style={{ borderRadius: '10px' }}
+          onClick={() => trackEvent({
+            event: 'external_link_click',
+            element_category: 'garden_cta',
+            element_action: 'navigate',
+            element_label: 'github_profile',
+          })}
         >
           🐙 追蹤我的 GitHub
         </Link>

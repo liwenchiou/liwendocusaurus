@@ -8,26 +8,6 @@ description: "關聯式資料庫 SQL 基礎操作與查詢 本篇筆記涵蓋了
 keywords: [關聯式資料庫, SQL, 基礎操作與查詢, learning, hexschool, nodejs-course]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "關聯式資料庫 (SQL) 基礎操作與查詢",
-        "datePublished": "2026-07-08T13:51:33.465Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "關聯式資料庫 SQL 基礎操作與查詢 本篇筆記涵蓋了關聯式資料庫的基本觀念、資料表關聯設計（主鍵與外來鍵）、空值處理，以及最常使用的 SQL 聚合函數與 UUID 設計。 1. 關聯式資料庫 SQL 基礎 1. 定義：用來記錄網站的相關數據資訊。 2. 架構：資料庫的格式包含資料表 Table、欄位..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # 關聯式資料庫 (SQL) 基礎操作與查詢
 

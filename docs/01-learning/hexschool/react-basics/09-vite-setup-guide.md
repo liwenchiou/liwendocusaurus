@@ -10,26 +10,6 @@ description: "使用 Vite 建立 React 專案 1. 打開終端機（Terminal）�
 keywords: [使用, Vite, 建立, React, 專案, learning, hexschool, react-basics]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "使用 Vite 建立 React 專案",
-        "datePublished": "2026-04-21T06:36:44.990481+00:00",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "使用 Vite 建立 React 專案 1. 打開終端機（Terminal），輸入以下指令： bash 使用 npm 建立專案 npm create vite@latest 2. 輸入專案名稱 圖片https://hackmd.io/uploads/r1NbgHdDbl.png 3. 選擇框架 Re..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # 使用 Vite 建立 React 專案
 1. 打開終端機（Terminal），輸入以下指令：

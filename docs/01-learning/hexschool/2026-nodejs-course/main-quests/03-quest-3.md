@@ -8,26 +8,6 @@ description: "> 🛑 防暴雷警示：以下筆記包含主線任務的解答�
 keywords: [Node.js, 主線任務三, Express.js, 基礎, learning, hexschool, nodejs-course, main-quests]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Node.js 主線任務三：Express.js 基礎",
-        "datePublished": "2026-07-08T13:51:33.467Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "> 🛑 防暴雷警示：以下筆記包含主線任務的解答與實作細節，強烈建議先親手寫過一次，卡關再來對照參考喔！ 本次任務正式進入 Express.js 的世界！我們學習了如何使用 Express 框架建立伺服器、掛載中介軟體 Middleware，並將路由模組化拆分，實作了完整的 RESTful API ..."
-      }
-    `}
-  </script>
-</Head>
-
 
 > 🛑 **防暴雷警示**：以下筆記包含主線任務的解答與實作細節，強烈建議先親手寫過一次，卡關再來對照參考喔！
 

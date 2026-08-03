@@ -8,26 +8,6 @@ description: "> 🛑 防暴雷警示：以下筆記包含主線任務的解答�
 keywords: [Node.js, 主線任務二, 原生, HTTP, 與檔案上傳, Formidable, learning, hexschool, nodejs-course, main-quests]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Node.js 主線任務二：原生 HTTP 與檔案上傳 (Formidable)",
-        "datePublished": "2026-07-08T13:51:33.466Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "> 🛑 防暴雷警示：以下筆記包含主線任務的解答與實作細節，強烈建議先親手寫過一次，卡關再來對照參考喔！ 本次任務學習了如何使用 Node.js 原生的 node:http 模組建立伺服器，並結合第三方套件 formidable v3 來處理前端傳來的 multipart/formdata（檔案上傳..."
-      }
-    `}
-  </script>
-</Head>
-
 
 > 🛑 **防暴雷警示**：以下筆記包含主線任務的解答與實作細節，強烈建議先親手寫過一次，卡關再來對照參考喔！
 

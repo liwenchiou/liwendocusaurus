@@ -7,26 +7,6 @@ description: "Node.js 與 V8 引擎架構解析 本章節介紹 Node.js 的核�
 keywords: [Node.js, V8, 引擎架構解析, learning, hexschool, nodejs-course]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Node.js 與 V8 引擎架構解析",
-        "datePublished": "2026-07-08T13:51:33.454Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Node.js 與 V8 引擎架構解析 本章節介紹 Node.js 的核心基礎，包含其背後的 V8 引擎原理以及 Node.js 本身的系統架構。 V8 引擎介紹 V8 引擎就像是 Node.js 的「大腦」，沒有 V8 的高效能，就不會有現在的 Node.js。 1. 源自 Google 的強悍技..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # Node.js 與 V8 引擎架構解析
 

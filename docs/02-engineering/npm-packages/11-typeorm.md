@@ -8,27 +8,8 @@ description: "typeorm 專案結構與核心速查：包含專案目錄架構、D
 keywords: [typeorm, engineering, npm-packages]
 ---
 
-import Head from '@docusaurus/Head';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "typeorm",
-        "datePublished": "2026-08-01T19:03:00.000Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "typeorm 專案結構與核心速查：包含專案目錄架構、DataSource 連線設定結構、三大角色 (Entity, Migration, Seeder)、程式碼範例與常用的 Migration / Seed 執行指令。"
-      }
-    `}
-  </script>
-</Head>
 
 
 # typeorm

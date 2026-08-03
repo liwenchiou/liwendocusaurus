@@ -5,26 +5,6 @@ description: "Nginx 生產環境通用起手勢 Production Boilerplate 在實際
 keywords: [Nginx, 生產環境通用起手勢, Production, Boilerplate, learning, nginx-notes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Untitled",
-        "datePublished": "2026-07-08T13:51:33.497Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Nginx 生產環境通用起手勢 Production Boilerplate 在實際企業級部署中，優秀的架構師不會把所有的安全、壓縮、代理設定通通塞在同一個設定檔裡，這會導致設定檔冗長且難以維護。本章將為您介紹如何透過 include 指令，將 Nginx 的各項功能進行模組化拆分，打造一份結構清晰..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # Nginx 生產環境通用起手勢 (Production Boilerplate)
 

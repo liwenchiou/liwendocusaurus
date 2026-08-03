@@ -8,26 +8,6 @@ description: "全域知識庫與記憶管理 Knowledge Items 適用場景：希�
 keywords: [全域知識庫與記憶管理, Knowledge, Items, engineering, ainotes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "全域知識庫與記憶管理 (Knowledge Items)",
-        "datePublished": "2026-07-08T13:51:33.498Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "全域知識庫與記憶管理 Knowledge Items 適用場景：希望 AI 將規矩變成「潛意識」（如：程式碼縮排固定 4 格、部署前必須編譯）。免打 / 指令，用語音或文字自然語言驅動。 【實戰結構】Knowledge Item 底層格式 知識庫存放在 ~/.gemini/antigravity/k..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # 全域知識庫與記憶管理 (Knowledge Items)
 

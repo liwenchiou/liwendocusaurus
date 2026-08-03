@@ -6,26 +6,6 @@ description: "Next.js 30 天學習筆記系列 - 第 21 天：Day 21 - Prisma：
 keywords: [Day, Prisma, 讓資料庫操作像寫, JavaScript, 一樣直覺, learning, next-js-notes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Day 21 - Prisma：讓資料庫操作像寫 JavaScript 一樣直覺",
-        "datePublished": "2026-07-08T13:51:33.483Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Next.js 30 天學習筆記系列 - 第 21 天：Day 21 - Prisma：讓資料庫操作像寫 JavaScript 一樣直覺。深入探討 Next.js 開發實戰技巧。"
-      }
-    `}
-  </script>
-</Head>
-
 
 # Next.js 30 天全端實戰：Day 21 - Prisma：讓資料庫操作像寫 JavaScript 一樣直覺
 

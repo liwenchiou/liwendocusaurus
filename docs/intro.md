@@ -5,26 +5,6 @@ description: "Liwen 的技術筆記首頁。這裡記錄了我在 Linux、Docker
 keywords: [技術筆記, 我的持續學習路徑]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Untitled",
-        "datePublished": "2026-07-08T13:51:33.518Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Liwen 的技術筆記首頁。這裡記錄了我在 Linux、Docker、Next.js、React、Nginx 以及 AI 協作開發等領域的學習筆記與實戰經驗。"
-      }
-    `}
-  </script>
-</Head>
-
 
 # 技術筆記：我的持續學習路徑
 

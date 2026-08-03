@@ -121,6 +121,7 @@ const config: Config = {
       { name: 'keywords', content: '網頁開發, 全端工程師, 工程心理學, AI Agent, Agentic AI, Prompt Engineering, React, Next.js, Node.js, Serverless, 12 週目標管理, Liwen Studio, 數位花園' },
       { name: 'author', content: 'Liwen Chiou' },
       { property: 'og:type', content: 'website' },
+      { property: 'og:site_name', content: "Liwen's Digital Garden" },
       { name: 'twitter:card', content: 'summary_large_image' },
     ],
     footer: {

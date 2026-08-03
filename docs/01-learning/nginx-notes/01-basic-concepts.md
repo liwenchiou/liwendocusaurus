@@ -8,26 +8,6 @@ description: "Nginx 基礎概念與環境建置 本章節介紹 Nginx 的基本�
 keywords: [Nginx, 基礎概念與環境建置, learning, nginx-notes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Nginx 基礎概念與環境建置",
-        "datePublished": "2026-07-08T13:51:33.492Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Nginx 基礎概念與環境建置 本章節介紹 Nginx 的基本原理與誕生背景（為了解決 C10K 連線瓶頸），並對照傳統 Apache 的 Processbased 架構，解析其非同步事件驅動（Eventdriven）的優勢。同時提供 Linux 與 Docker 環境下的安裝步驟與核心控制指令（如..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # Nginx 基礎概念與環境建置
 

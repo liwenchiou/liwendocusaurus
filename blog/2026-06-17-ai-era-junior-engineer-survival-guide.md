@@ -8,26 +8,6 @@ description: "探討 AI 工具對軟體開發就業市場的衝擊，並分享�
 keywords: [AI, 時代下的軟體工程師, 初階工程師的破局之道, Career, Vibe Coding, Software Engineering]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "AI 時代下的軟體工程師：初階工程師的破局之道",
-        "datePublished": "2026-06-17",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "探討 AI 工具對軟體開發就業市場的衝擊，並分享初階工程師應如何培養結合領域知識與自動化能力的破局思維。"
-      }
-    `}
-  </script>
-</Head>
-
 
 現在是 AI 橫行的時代，我認為這對軟體工程師的職涯發展產生了深遠的影響。
 

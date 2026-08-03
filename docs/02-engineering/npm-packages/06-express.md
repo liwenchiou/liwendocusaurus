@@ -8,26 +8,6 @@ description: "express express 是 Node.js 最經典、最主流的 Web 應用框
 keywords: [express, engineering, npm-packages]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "express",
-        "datePublished": "2026-07-08T13:51:33.510Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "express express 是 Node.js 最經典、最主流的 Web 應用框架。它大幅簡化了原生 http 模組繁瑣的設定，提供了極簡且靈活的路由系統與中介軟體 Middleware 架構。 安裝 bash npm install express 基本使用範例（優雅的語意化路由） 相較於原生..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # express
 

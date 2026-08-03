@@ -8,26 +8,6 @@ description: "Antigravity Deployment SOP AI 部署守則 這份文件定義了 A
 keywords: [Antigravity, Deployment, SOP, AI, 部署守則, engineering, ainotes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Antigravity Deployment SOP (AI 部署守則)",
-        "datePublished": "2026-07-08T13:51:33.499Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Antigravity Deployment SOP AI 部署守則 這份文件定義了 Antigravity AI 助手 在協助進行 Docusaurus 或任何前端專案開發與部署時，必須嚴格遵守的標準作業流程 Standard Operating Procedure。它也是確保我們協作順暢、不踩雷..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # Antigravity Deployment SOP (AI 部署守則)
 

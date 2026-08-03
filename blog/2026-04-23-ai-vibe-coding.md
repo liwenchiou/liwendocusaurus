@@ -10,26 +10,6 @@ description: "探討 AI 輔助開發（Vibe Coding）帶來的安全風險，包
 keywords: [Vibe, Coding, 很爽, 但別讓, AI, 隱藏的, 安全地雷, 毀掉你的產品, security, ai]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "Vibe Coding 很爽，但別讓 AI 隱藏的「安全地雷」毀掉你的產品",
-        "datePublished": "2026-04-23T05:10:26.330989+00:00",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "探討 AI 輔助開發（Vibe Coding）帶來的安全風險，包含 API Key 洩漏、SQL 注入與部署安全等實戰保命指南。"
-      }
-    `}
-  </script>
-</Head>
-
 
 {/* truncate */}
 

@@ -6,26 +6,6 @@ tags: [career, interview, murmuring]
 description: 紀錄最近求職過程中遇到的糟糕面試經歷，以及我是如何辨識並應對這些不尊重求職者的雷缺。
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "面試踩雷記：那些讓我氣到反手檢舉的奇葩公司",
-        "datePublished": "2026-07-08T13:51:33.433Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "紀錄最近求職過程中遇到的糟糕面試經歷，以及我是如何辨識並應對這些不尊重求職者的雷缺。"
-      }
-    `}
-  </script>
-</Head>
-
 
 最近找工作連續遇到幾次讓我大開眼界的「奇葩面試」，實在不吐不快。
 

@@ -8,27 +8,8 @@ description: "本篇筆記為 TypeORM 入門與實戰指南。從 ORM 的基本�
 keywords: [TypeORM, ORM, Express, Entity, Migration, Seeder, DataSource, Node.js, PostgreSQL]
 ---
 
-import Head from '@docusaurus/Head';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "TypeORM 基礎概念、三大角色與實戰指南",
-        "datePublished": "2026-08-01T19:03:00.000Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "本篇筆記為 TypeORM 入門與實戰指南。從 ORM 的基本概念、為什麼要使用 TypeORM、專案架構圖，到三大核心角色（Entity 設計圖、Migration 施工單、Seeder 搬家具）的完整介紹與範例程式碼，幫助你快速掌握 Node.js / Express 開發中的資料庫管理。"
-      }
-    `}
-  </script>
-</Head>
 
 
 # TypeORM 基礎概念、三大角色與實戰指南
@@ -626,6 +607,5 @@ const rawResult = await dataSource.query(`
 | **執行變更結構** | `npm run migration:run` | 執行未執行的 Migration，變更 Table 結構 |
 | **還原上一版變更** | `npm run migration:revert` | 撤銷上一次執行的 Migration (`down`) |
 | **灌入測試資料** | `npm run seed` | 執行 Seeder 寫入預設初始化數據 |
-
 
 

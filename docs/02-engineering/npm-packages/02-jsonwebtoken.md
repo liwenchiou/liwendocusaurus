@@ -8,26 +8,6 @@ description: "JSON Web Token JWT jsonwebtoken 是一個廣泛使用的 npm 套�
 keywords: [🔑, JSON, Web, Token, JWT, engineering, npm-packages]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "🔑 JSON Web Token (JWT)",
-        "datePublished": "2026-07-08T13:51:33.508Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "JSON Web Token JWT jsonwebtoken 是一個廣泛使用的 npm 套件，用來實作 JSON Web Token JWT。在網頁應用程式中，我們經常使用它來處理使用者登入的驗證（Authentication）以及授權（Authorization）機制。 💡 核心概念 簽發 S..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # JSON Web Token (JWT)
 

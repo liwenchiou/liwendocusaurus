@@ -10,26 +10,6 @@ description: "核心概念 Store：存放所有狀態的地方（大倉庫）。
 keywords: [Redux, Toolkit, RTK, 狀態管理實戰, React, learning, hexschool, react-basics]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Redux Toolkit (RTK) 狀態管理實戰",
-        "datePublished": "2026-04-21T06:36:46.633577+00:00",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "核心概念 Store：存放所有狀態的地方（大倉庫）。 Slice：將狀態邏輯切片。包含狀態（Initial State）和改變狀態的方法（Reducers）。 Dispatch：發送動作（Action）的指令。 Selector：從倉庫裡挑出你要的那筆資料。 範例：ERP 庫存管理 codepen ..."
-      }
-    `}
-  </script>
-</Head>
-
 
 ## 核心概念
 Store：存放所有狀態的地方（大倉庫）。

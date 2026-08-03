@@ -8,26 +8,6 @@ description: "> 🛑 防暴雷警示：本篇筆記包含 2026 Node.js 直播班
 keywords: [Node.js, 主線任務七, SQL, Index, EXPLAIN, PostgreSQL, 效能優化, learning, hexschool, nodejs-course, main-quests]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Node.js 主線任務七：SQL 查詢與索引效能優化 (EXPLAIN, Index, Query Rewrite)",
-        "datePublished": "2026-08-01T19:05:00.000Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "> 🛑 防暴雷警示：本篇筆記包含 2026 Node.js 直播班第七週主線任務（LiveFit 爆紅效能急救室）的完整解答與實作細節。內容涵蓋資料庫索引設計 (B-Tree、部分索引 Partial Index)、EXPLAIN ANALYZE 執行計畫解析與避免索引失效的 SQL 查詢改寫技巧。"
-      }
-    `}
-  </script>
-</Head>
-
 
 > 🛑 **防暴雷警示**：以下筆記包含主線任務的解答與實作細節，強烈建議先親手透過 `EXPLAIN ANALYZE` 剖析 SQL 執行計畫，卡關再來對照參考喔！
 

@@ -9,26 +9,6 @@ description: "告別手動重新整理網頁！我開源了 ghaction-lis，一�
 keywords: [告別, F5！我開源了專門監聽, GitHub, Actions, CLI, 工具, ghaction, lis, Open Source, GitHub Actions, DevEx, Node.js]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "告別 F5！我開源了專門監聽 GitHub Actions 的 CLI 工具：ghaction-lis",
-        "datePublished": "2026-06-16",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "告別手動重新整理網頁！我開源了 ghaction-lis，一款專門在終端機精準監聽 GitHub Actions 部署狀態的超輕量 CLI 工具。"
-      }
-    `}
-  </script>
-</Head>
-
 
 # 告別 F5！我開源了專門監聽 GitHub Actions 的 CLI 工具：ghaction-lis
 

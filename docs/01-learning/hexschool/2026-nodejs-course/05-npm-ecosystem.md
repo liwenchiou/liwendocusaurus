@@ -7,26 +7,6 @@ description: "NPM 套件管理與生態系 NPM Node Package Manager 是 Node.js 
 keywords: [NPM, 套件管理與生態系, learning, hexschool, nodejs-course]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "NPM 套件管理與生態系",
-        "datePublished": "2026-07-08T13:51:33.456Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "NPM 套件管理與生態系 NPM Node Package Manager 是 Node.js 官方預設的套件管理系統，它擁有全球最大的開源生態系，為開發者提供了豐富的第三方函式庫。 NPM init：建立專案配置 package.json 在任何 Node.js 專案開始前，第一步就是建立 pac..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # NPM 套件管理與生態系
 

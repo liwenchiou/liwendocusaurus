@@ -10,26 +10,6 @@ description: "什麼是 useRef？ useRef 回傳一個帶有 current 屬性的物
 keywords: [useRef, 掌握, React, 儲物櫃, DOM, 操控, learning, hexschool, react-basics]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "useRef：掌握 React 的「儲物櫃」與 DOM 操控",
-        "datePublished": "2026-04-21T06:36:46.124197+00:00",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "什麼是 useRef？ useRef 回傳一個帶有 current 屬性的物件。它有兩個最主要的用途： 1. 存取 DOM 元素：直接抓取網頁上的 HTML 標籤（例如讓輸入框聚焦）。 2. 儲存「不需要渲染」的資料：存放在裡面的資料改變時，不會觸發組件重新渲染。 核心觀念： 如果您希望改了某個值，..."
-      }
-    `}
-  </script>
-</Head>
-
 
 ## 什麼是 useRef？
 `useRef` 回傳一個帶有 `current` 屬性的物件。它有兩個最主要的用途：

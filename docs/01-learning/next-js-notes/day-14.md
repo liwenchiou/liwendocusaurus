@@ -6,26 +6,6 @@ description: "Next.js 30 天學習筆記系列 - 第 14 天：Day 14 - 動態路
 keywords: [Day, 動態路由, 打造具備擴充性的, URL, 架構, learning, next-js-notes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Day 14 - 動態路由：打造具備擴充性的 URL 架構",
-        "datePublished": "2026-07-08T13:51:33.480Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Next.js 30 天學習筆記系列 - 第 14 天：Day 14 - 動態路由：打造具備擴充性的 URL 架構。深入探討 Next.js 開發實戰技巧。"
-      }
-    `}
-  </script>
-</Head>
-
 
 # Next.js 30 天全端實戰：Day 14 - 動態路由：打造具備擴充性的 URL 架構
 

@@ -6,26 +6,6 @@ description: "Next.js 30 天學習筆記系列 - 第 05 天：Day 05 - 導覽藝
 keywords: [Day, 導覽藝術, Link, 組件與路由跳轉, learning, next-js-notes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Day 05 - 導覽藝術：Link 組件與路由跳轉",
-        "datePublished": "2026-07-08T13:51:33.477Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Next.js 30 天學習筆記系列 - 第 05 天：Day 05 - 導覽藝術：Link 組件與路由跳轉。深入探討 Next.js 開發實戰技巧。"
-      }
-    `}
-  </script>
-</Head>
-
 
 # Day 05 - 導覽藝術：Link 組件與路由跳轉
 

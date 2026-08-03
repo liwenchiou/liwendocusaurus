@@ -7,26 +7,6 @@ description: "Next.js 30 天全端實戰：Day 13 SEO 優化：用 Metadata API 
 keywords: [Day, SEO, 優化, Metadata, API, 打造搜尋引擎友善的網頁, learning, next-js-notes]
 ---
 
-import Head from '@docusaurus/Head';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Day 13 - SEO 優化：用 Metadata API 打造搜尋引擎友善的網頁",
-        "datePublished": "2026-07-08T13:51:33.479Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "Next.js 30 天全端實戰：Day 13 SEO 優化：用 Metadata API 打造搜尋引擎友善的網頁 一、 前言 身為工程師，我們開發出的產品如果搜尋不到，就像是在深海裡開餐廳一樣可惜。傳統 React SPA 最大的痛點就是難以動態更改 資訊，導致 SEO 表現不佳。 Next.js..."
-      }
-    `}
-  </script>
-</Head>
-
 
 # Next.js 30 天全端實戰：Day 13 - SEO 優化：用 Metadata API 打造搜尋引擎友善的網頁
 

@@ -8,27 +8,8 @@ description: "> 🛑 防暴雷警示：本篇筆記包含 2026 Node.js 直播班
 keywords: [Node.js, 主線任務八, TypeORM, EntitySchema, Migration, Seeder, LiveFit, School, learning, hexschool, nodejs-course, main-quests]
 ---
 
-import Head from '@docusaurus/Head';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
-<Head>
-  <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Node.js 主線任務八：用 Migration 建資料表與 Seeding 實戰 (LiveFit & School)",
-        "datePublished": "2026-08-01T19:07:00.000Z",
-        "author": [{
-            "@type": "Person",
-            "name": "liwen"
-        }],
-        "description": "> 🛑 防暴雷警示：本篇筆記包含 2026 Node.js 直播班第八週主線任務（LiveFit 健身房與學校成績系統雙關聯）的完整解答與實作細節。內容涵蓋第一關 LiveFit 3 張資料表與第二關 School 4 張資料表的 EntitySchema 宣告、外來鍵關聯、DataSource 集中設定、Migration 建表與 Seeder 資料播種。"
-      }
-    `}
-  </script>
-</Head>
 
 
 > 🛑 **防暴雷警示**：以下筆記包含主線任務的完整解答與實作細節，強烈建議先親手透過 `EntitySchema` 劃定資料表藍圖並跑過一次 Migration，卡關再來對照參考喔！
