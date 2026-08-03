@@ -3,7 +3,30 @@ id: 00-intro
 title: "Day 00: 勇者冒險的起點！JS 核心重構鐵人賽宣戰"
 sidebar_label: "\u200BDay 00 賽前宣言"
 sidebar_position: 1
+description: "本系列文為 iThome 鐵人賽「JS 核心重構：勇者轉職傳說」的前導宣言。深入探討 JavaScript 異步處理、作用域鏈、原型繼承與記憶體管理等底層機制，結合 RPG 勇者轉職體驗與視覺化圖解，幫助開發者打造穩健強大的前端與 Node.js 開發能力。"
+keywords: [JavaScript, JS核心, 鐵人賽, 勇者轉職, 作用域, 異步處理, 原型繼承, 記憶體管理, 數位花園]
 ---
+
+import Head from '@docusaurus/Head';
+
+<Head>
+  <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Day 00: 勇者冒險的起點！JS 核心重構鐵人賽宣戰",
+        "datePublished": "2026-08-01T00:00:00.000Z",
+        "author": [{
+            "@type": "Person",
+            "name": "Liwen Chiou",
+            "url": "https://garden.liwen.studio/"
+        }],
+        "description": "本系列文為 iThome 鐵人賽「JS 核心重構：勇者轉職傳說」的前導宣言。深入探討 JavaScript 異步處理、作用域鏈、原型繼承與記憶體管理等底層機制，結合 RPG 勇者轉職體驗與視覺化圖解，幫助開發者打造穩健強大的前端與 Node.js 開發能力。"
+      }
+    `}
+  </script>
+</Head>
 
 本系列文為 2026 iThome 鐵人賽挑戰「JS 核心重構：勇者轉職傳說」的開篇宣言。在這個生成式 AI 崛起、語法糖滿天飛的時代，許多開發者能快速寫出功能，卻常在異步處理、作用域鏈、原型繼承與記憶體管理等底層機制踩坑。本系列將以 RPG 勇者轉職冒險為包裝，帶領讀者從零打通 JavaScript 核心觀點，結合實戰重構技巧，建立強固且優雅的前端與 Node.js 程式庫架構。
 
@@ -102,8 +125,9 @@ sidebar_position: 1
 
 ---
 
-## 📚 【圖書館卷軸：延伸學習】
+## 📚 【圖書館卷軸與下一步】
 
+- 🚀 **開啟第一站冒險：** [Day 01 看見世界的儀式：控制台與冒險者的第一眼](./01-day-01.md)
 - **公會前導導覽頁面：** [JS Core Remaster Loading Page](https://liwenchiou.github.io/JS-Core-Remaster-loadPage/)
 - **冒險者酒館 (QuestBoard)：** [QuestBoard Remaster](https://liwenchiou.github.io/QuestBoard-Remaster/)
 - **導師的數位花園：** [Liwen's Digital Garden](https://garden.liwen.studio/)
