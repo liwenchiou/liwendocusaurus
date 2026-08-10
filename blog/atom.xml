@@ -6,13 +6,13 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://garden.liwen.studio/blog"/>
     <subtitle>Liwen's Digital Garden Blog</subtitle>
-    <icon>https://garden.liwen.studio/img/og-image.png</icon>
+    <icon>https://garden.liwen.studio/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[🎯 從被問倒到打怪升級：圖解高頻寫入與高可用架構演進史]]></title>
         <id>https://garden.liwen.studio/blog/high-concurrency-architecture</id>
         <link href="https://garden.liwen.studio/blog/high-concurrency-architecture"/>
         <updated>2026-07-14T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[面試遇到 1000 台設備同時回傳狀態怎麼辦？這篇筆記紀錄了我是如何被面試官問倒，然後一路從最原始的一條龍架構，打怪升級到具備 Nginx、Kafka、Redis 與 K8s CQRS 的高可用監控系統架構！]]></summary>
+        <summary type="html"><![CDATA[面對 1000 台設備同時回傳狀態時，如何避免 API 與資料庫被高頻寫入壓垮？本文從單體寫入演進到 Nginx、Kafka、Redis、Kubernetes 與 CQRS 的高可用監控架構。]]></summary>
         <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="前言一場面試帶來的架構震撼教育">前言：一場面試帶來的架構震撼教育<a href="https://garden.liwen.studio/blog/high-concurrency-architecture#%E5%89%8D%E8%A8%80%E4%B8%80%E5%A0%B4%E9%9D%A2%E8%A9%A6%E5%B8%B6%E4%BE%86%E7%9A%84%E6%9E%B6%E6%A7%8B%E9%9C%87%E6%92%BC%E6%95%99%E8%82%B2" class="hash-link" aria-label="前言：一場面試帶來的架構震撼教育的直接連結" title="前言：一場面試帶來的架構震撼教育的直接連結" translate="no">​</a></h2>
 <p>今天去面試時，面試官拋出了一個問題：「如果是設備監控系統，當同時有 1000 台以上的設備回傳狀態時，你會怎麼寫入資料庫？」</p>
 <p>當時的我根本沒遇過高頻跟高併發的情境，當下只是滿頭問號看著他，心想：「阿不就把資料寫進資料庫嗎？寫個 <code>INSERT INTO</code> 語法不就好了，這有什麼好問的？」</p>
@@ -142,10 +142,11 @@
             <name>Liwen</name>
             <uri>https://github.com/liwenchiou</uri>
         </author>
-        <category label="architecture" term="architecture"/>
-        <category label="backend" term="backend"/>
-        <category label="k8s" term="k8s"/>
-        <category label="microservices" term="microservices"/>
+        <category label="High Concurrency" term="High Concurrency"/>
+        <category label="Backend Architecture" term="Backend Architecture"/>
+        <category label="Kafka" term="Kafka"/>
+        <category label="Redis" term="Redis"/>
+        <category label="Kubernetes" term="Kubernetes"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[尋找最適合你的 AI 開發節奏：淺談「敏捷式 AI 結對開發」]]></title>
@@ -760,8 +761,10 @@
             <name>Liwen</name>
             <uri>https://github.com/liwenchiou</uri>
         </author>
-        <category label="security" term="security"/>
-        <category label="ai" term="ai"/>
+        <category label="AI" term="AI"/>
+        <category label="Vibe Coding" term="Vibe Coding"/>
+        <category label="Web Security" term="Web Security"/>
+        <category label="API Security" term="API Security"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[雲端邊緣的折翼：Next.js 部署到 Cloudflare Pages 的 48 小時奮鬥實錄]]></title>
