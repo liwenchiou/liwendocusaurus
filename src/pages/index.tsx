@@ -88,7 +88,7 @@ export default function Home(): ReactNode {
 
   return (
     <Layout
-      title="首頁 | Liwen's Digital Garden"
+      title="技術、AI 協作與工程文化"
       description="這裡是 Liwen 的數位花園。我喜歡研究網頁架構、觀察工程師的職涯心理，也會在這裡分享我如何跟 AI 協作來提升生產力。探索現代網頁技術與 12 週目標管理。">
       <Head>
         <script type="application/ld+json">

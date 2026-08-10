@@ -5,7 +5,7 @@ authors: [liwen]
 tags: [AI, Prompt Engineering, Agent, Architecture]
 date: 2026-07-02
 description: "AI 總是不聽話、亂下指令？分享我如何利用軟連結掛載與 Prompt 攔截術，解決 AI 的隧道視覺 (Tunnel Vision) 問題，打造最高安全層級的跨模型協作大腦。"
-keywords: [告別, AI, 失憶症！我如何打造, 全域與本地雙層大腦, 防護架構, Prompt Engineering, Agent, Architecture]
+keywords: [AI Agent 規則管理, 全域與本地 AI 設定, Prompt Engineering, AI 協作治理, Mount Protection]
 ---
 
 

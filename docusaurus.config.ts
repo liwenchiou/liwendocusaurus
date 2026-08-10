@@ -7,7 +7,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Liwen's Digital Garden",
   tagline: "技術深耕、工程文化與 AI 協作的實踐紀錄",
-  favicon: "img/og-image.png",
+  favicon: "img/favicon.ico",
 
   markdown: {
     mermaid: true,
@@ -93,8 +93,8 @@ const config: Config = {
     navbar: {
       title: "Liwen's Garden",
       logo: {
-        alt: "LW Docusaurus Logo",
-        src: "img/og-image.png",
+        alt: "Liwen's Digital Garden logo",
+        src: "img/logo.svg",
       },
       items: [
         {

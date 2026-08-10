@@ -2,8 +2,9 @@
 title: 🎯 從被問倒到打怪升級：圖解高頻寫入與高可用架構演進史
 slug: high-concurrency-architecture
 authors: liwen
-tags: [architecture, backend, k8s, microservices]
-description: 面試遇到 1000 台設備同時回傳狀態怎麼辦？這篇筆記紀錄了我是如何被面試官問倒，然後一路從最原始的一條龍架構，打怪升級到具備 Nginx、Kafka、Redis 與 K8s CQRS 的高可用監控系統架構！
+tags: [High Concurrency, Backend Architecture, Kafka, Redis, Kubernetes]
+description: 面對 1000 台設備同時回傳狀態時，如何避免 API 與資料庫被高頻寫入壓垮？本文從單體寫入演進到 Nginx、Kafka、Redis、Kubernetes 與 CQRS 的高可用監控架構。
+keywords: [高併發架構, 高頻寫入, Kafka 削峰填谷, Redis 快取, Kubernetes CQRS]
 ---
 
 # 從被問倒到打怪升級：圖解高頻寫入與高可用架構演進史

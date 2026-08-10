@@ -6,7 +6,7 @@ tags: [Open Source, CLI, GitHub Actions, DevEx, Node.js]
 image: https://github.com/liwenchiou/ghaction-lis/raw/main/cover.png
 date: 2026-06-16
 description: "告別手動重新整理網頁！我開源了 ghaction-lis，一款專門在終端機精準監聽 GitHub Actions 部署狀態的超輕量 CLI 工具。"
-keywords: [告別, F5！我開源了專門監聽, GitHub, Actions, CLI, 工具, ghaction, lis, Open Source, GitHub Actions, DevEx, Node.js]
+keywords: [GitHub Actions CLI, 監聽部署狀態, SHA matching, GitHub Actions error log, DevEx 工具]
 ---
 
 

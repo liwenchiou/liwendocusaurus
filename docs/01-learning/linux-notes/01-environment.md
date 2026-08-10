@@ -27,7 +27,7 @@ keywords: [Linux, Rocky Linux, Docker, 環境建置]
 
 ## 透過 Docker 安裝 Rocky Linux
 
-為了方便學習與練習，本筆記將使用 Docker 來啟動 Rocky Linux 容器。如果你還不熟悉 Docker，可以先參考另一篇：[Docker 學習筆記](https://garden.liwen.studio/docs/learning/docker-notes)。
+為了方便學習與練習，本筆記將使用 Docker 來啟動 Rocky Linux 容器。如果你還不熟悉 Docker，可以先參考另一篇：[Docker 學習筆記](/docs/learning/docker-notes)。
 
 1. 確保 Docker 已經啟動後，輸入以下指令來建立並進入 Rocky Linux 容器：
 

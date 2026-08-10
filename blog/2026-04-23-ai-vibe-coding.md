@@ -4,15 +4,14 @@ title: "Vibe Coding 很爽，但別讓 AI 隱藏的「安全地雷」毀掉你�
 image: /img/og-image.png
 date: 2026-04-23T05:10:26.330989+00:00
 authors: [liwen]
-tags: [security, ai]
+tags: [AI, Vibe Coding, Web Security, API Security]
 
 description: "探討 AI 輔助開發（Vibe Coding）帶來的安全風險，包含 API Key 洩漏、SQL 注入與部署安全等實戰保命指南。"
-keywords: [Vibe, Coding, 很爽, 但別讓, AI, 隱藏的, 安全地雷, 毀掉你的產品, security, ai]
+keywords: [Vibe Coding 安全, AI 輔助開發安全, API Key 洩漏, SQL Injection, 部署安全]
 ---
 
 
 {/* truncate */}
-
 
 最近開發圈最迷人的詞莫過於 **Vibe Coding**——打幾句話，看著 AI 幫你把功能生出來，測試沒問題就光速部署。以前要花好幾天的專案，現在一個下午就能搞定。
 

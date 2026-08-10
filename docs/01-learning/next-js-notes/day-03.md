@@ -3,11 +3,24 @@ title: "Day 03 - Layout 與 Template：構建可複用的 UI 架構"
 sidebar_label: "Day 03 - Layout 與 Template"
 sidebar_position: 3
 description: "Next.js 30 天學習筆記系列 - 第 03 天：Day 03 - Layout 與 Template：構建可複用的 UI 架構。深入探討 Next.js 開發實戰技巧。"
-keywords: [Day, Layout, Template, 構建可複用的, UI, 架構, learning, next-js-notes]
+tags: [Next.js, App Router, Layout, Template, React]
+keywords: [Next.js Layout 與 Template, App Router 版面架構, Layout 狀態保留, Template 重新渲染, Next.js routing]
 ---
 
 
 # Day 03 - Layout 與 Template：構建可複用的 UI 架構
+
+## TL;DR
+
+Next.js App Router 的 `Layout` 適合放置需要跨頁保留的共用介面，例如導覽列、側邊欄與搜尋列；`Template` 則會在路由切換時重新建立，適合頁面轉場或需要重置狀態的情境。
+
+## Layout 和 Template 怎麼選？
+
+| 情境 | 建議 | 原因 |
+| :--- | :--- | :--- |
+| 導覽列、側邊欄、共用搜尋列 | `Layout` | 需要保留狀態與共用 UI |
+| 頁面切換動畫 | `Template` | 需要每次進入頁面時重新建立 |
+| 表單重置 | `Template` | 不希望沿用上一頁的狀態 |
 
 當我們開發一個網站時，導覽列 (Navbar) 和頁尾 (Footer) 通常是每個頁面都會出現的元素。
 
@@ -90,3 +103,17 @@ Layout 的設計反映了 Next.js 的美學：將「不變的」與「變動的�
 > **參考來源：**
 > 1. [Next.js - Pages and Layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts)
 > 2. [Next.js - Templates Guide](https://nextjs.org/docs/app/api-reference/file-conventions/template)
+
+## 常見問題
+
+### Layout 會在每次路由切換時重新渲染嗎？
+
+不一定。Layout 的設計目標是跨頁保留共用 UI 與狀態，但實際渲染仍取決於路由層級與資料變化；不要把它理解成完全不會重新執行的元件。
+
+### 什麼時候應該使用 Template？
+
+當頁面需要在每次進入時重新初始化，例如頁面轉場、表單重置或不應保留的區域狀態，就可以考慮使用 `Template`。
+
+### 這個系列的下一篇在哪裡？
+
+請回到 [Next.js 學習筆記](/docs/learning/nextjs-notes)，從系列目錄選擇前後篇文章繼續閱讀。

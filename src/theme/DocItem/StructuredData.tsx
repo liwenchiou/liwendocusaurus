@@ -15,11 +15,13 @@ export default function DocItemStructuredData() {
     url,
     headline: metadata.title,
     description: metadata.description,
+    image: new URL('/img/og-image.png', siteConfig.url).toString(),
     ...(frontMatter.keywords?.length ? {keywords: frontMatter.keywords} : {}),
     author: {
       '@type': 'Person',
       '@id': 'https://garden.liwen.studio/about#liwen-chiou',
       name: 'Liwen Chiou',
+      image: 'https://github.com/liwenchiou.png',
       url: 'https://garden.liwen.studio/about',
     },
     publisher: {
